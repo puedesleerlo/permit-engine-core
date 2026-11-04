@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Labels for one case",
+  "type": "object",
+  "required": ["case_id", "applies", "levels", "requirements", "allowed", "risk", "risky", "right_route"],
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {"type": "string"},
+    "applies": {
+      "type": "object",
+      "required": ["traffic_conflict", "crowd_pressure", "medical_emergency"],
+      "additionalProperties": {"type": "boolean"}
+    },
+    "levels": {
+      "type": "object",
+      "required": ["traffic.likelihood", "traffic.severity", "crowd.likelihood", "crowd.severity", "medical.likelihood", "medical.severity"],
+      "additionalProperties": {"enum": [0, 1, 2, null]}
+    },
+    "requirements": {
+      "type": "object",
+      "required": ["event_insurance"],
+      "additionalProperties": {"enum": ["met", "failed", "missing", "unclear"]}
+    },
+    "allowed": {"type": "boolean"},
+    "risk": {"type": "number", "minimum": 0},
+    "risky": {"type": "boolean"},
+    "right_route": {"enum": ["returned", "denial", "officer", "approve"]}
+  }
+}

@@ -1,0 +1,764 @@
+{
+ "corrections": 0,
+ "counts": {
+  "crowd.likelihood": [
+   [
+    2.6700562121391025,
+    27.449013529359686,
+    1.7319594791237827
+   ],
+   [
+    28.27570662604357,
+    1.249680998547521,
+    0.10229463720091778
+   ],
+   [
+    0.12994378786089733,
+    1.2509864706403186,
+    27.768040520876216
+   ],
+   [
+    0.6242933739564352,
+    29.250319001452485,
+    2.497705362799082
+   ]
+  ],
+  "crowd.severity": [
+   [
+    1.1067445141091874,
+    20.9999796924742,
+    2.147782176270022
+   ],
+   [
+    1.0977654639987744,
+    26.65692453138749,
+    1.399213769503715
+   ],
+   [
+    1.7932554858908127,
+    32.800020307525806,
+    2.1522178237299783
+   ],
+   [
+    31.902234536001238,
+    0.8830754686125094,
+    0.06078623049628497
+   ]
+  ],
+  "medical.likelihood": [
+   [
+    3.157329226560802,
+    38.96544832353154,
+    4.573525761315917
+   ],
+   [
+    36.565690459760816,
+    5.046606393503471,
+    0.22348671259098474
+   ],
+   [
+    0.10267077343919825,
+    7.5745516764684675,
+    36.626474238684075
+   ],
+   [
+    1.6343095402391759,
+    43.05339360649653,
+    3.4765132874090154
+   ]
+  ],
+  "medical.severity": [
+   [
+    3.3229826590536895,
+    37.69218551645318,
+    2.246670560325357
+   ],
+   [
+    56.45610722231907,
+    3.4063477579164756,
+    0.2152356387107094
+   ],
+   [
+    2.1770173409463105,
+    26.407814483546826,
+    1.1533294396746427
+   ],
+   [
+    11.74389277768102,
+    33.69365224208354,
+    2.4847643612892902
+   ]
+  ],
+  "traffic.likelihood": [
+   [
+    1.9672827190407047,
+    18.083719000815844,
+    0.46875774170295614
+   ],
+   [
+    18.315705185952343,
+    1.860887318888284,
+    0.0820230625039162
+   ],
+   [
+    0.2032808236942321,
+    2.580628218470166,
+    16.57030658956345
+   ],
+   [
+    0.5486197298967999,
+    17.653269298359827,
+    0.8130220752249142
+   ],
+   [
+    0.5293199414171788,
+    5.616715054485862,
+    14.081180571159909
+   ],
+   [
+    5.907819613721033,
+    14.09691233939525,
+    0.24135583091618926
+   ],
+   [
+    0.06011651584788465,
+    2.158937726228131,
+    15.679755097573686
+   ],
+   [
+    0.18785547042982623,
+    4.748931043356638,
+    11.543599031354981
+   ]
+  ],
+  "traffic.severity": [
+   [
+    0.1,
+    2.8,
+    15.1
+   ],
+   [
+    2.2,
+    29.0,
+    2.8
+   ],
+   [
+    0.6,
+    28.1,
+    3.3
+   ],
+   [
+    58.0,
+    3.84,
+    0.16
+   ]
+  ]
+ },
+ "fitted_on": {
+  "answers": "real",
+  "cases": 180,
+  "dataset_hash": "e386801ed659b18e19996844abc9a5489cb67f8e9b8884c951ec1f3de96bfa85",
+  "first_guess_dir": null,
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "settings_hash": "4a3764d0d481dc08ddf833e4be9feb6cc33b679d891b7bfe9e38a1c83809ddda"
+ },
+ "levels": {
+  "crowd.likelihood": [
+   [
+    0.083829511242617,
+    0.8617936123579732,
+    0.054376876399409774
+   ],
+   [
+    0.9543678231796096,
+    0.04217950589267373,
+    0.003452670927716725
+   ],
+   [
+    0.004457920275964978,
+    0.04291700314596965,
+    0.9526250765780654
+   ],
+   [
+    0.019284790758729083,
+    0.9035596165216578,
+    0.07715559271961306
+   ]
+  ],
+  "crowd.severity": [
+   [
+    0.04563046951520706,
+    0.8658176489347159,
+    0.08855188155007702
+   ],
+   [
+    0.037654149950265406,
+    0.9143518050399274,
+    0.047994045009807126
+   ],
+   [
+    0.04880205188083318,
+    0.8926270156898993,
+    0.058570932429267634
+   ],
+   [
+    0.9712641133255928,
+    0.026885248776339132,
+    0.0018506378980680514
+   ]
+  ],
+  "medical.likelihood": [
+   [
+    0.06761411509397668,
+    0.8344439615204399,
+    0.09794192338558351
+   ],
+   [
+    0.8740290570200842,
+    0.12062894401295052,
+    0.005341998966965348
+   ],
+   [
+    0.002317431300617316,
+    0.17096884103621368,
+    0.826713727663169
+   ],
+   [
+    0.03393202799164768,
+    0.8938875537477858,
+    0.07218041826056648
+   ]
+  ],
+  "medical.severity": [
+   [
+    0.07681094368976468,
+    0.8712571314088435,
+    0.05193192490139169
+   ],
+   [
+    0.9397183320577727,
+    0.056699046232017464,
+    0.0035826217102098816
+   ],
+   [
+    0.07320618519778661,
+    0.8880110054203731,
+    0.03878280938184019
+   ],
+   [
+    0.24506107759330947,
+    0.7030890764084163,
+    0.05184984599827414
+   ]
+  ],
+  "traffic.likelihood": [
+   [
+    0.09587260136874874,
+    0.8812831863206196,
+    0.02284421231063156
+   ],
+   [
+    0.9040946122436899,
+    0.09185658875367095,
+    0.004048799002639231
+   ],
+   [
+    0.010503180679716555,
+    0.13333675037905837,
+    0.856160068941225
+   ],
+   [
+    0.02885207966059595,
+    0.9283908403404314,
+    0.042757079998972686
+   ],
+   [
+    0.02616870026733183,
+    0.277681079526925,
+    0.6961502202057432
+   ],
+   [
+    0.2918005531113209,
+    0.6962783373147821,
+    0.011921109573897033
+   ],
+   [
+    0.003358687983491375,
+    0.12061906941740648,
+    0.8760222425991021
+   ],
+   [
+    0.011398730321889077,
+    0.28815655012128416,
+    0.7004447195568267
+   ]
+  ],
+  "traffic.severity": [
+   [
+    0.005555555555555556,
+    0.15555555555555556,
+    0.8388888888888889
+   ],
+   [
+    0.06470588235294118,
+    0.8529411764705882,
+    0.08235294117647059
+   ],
+   [
+    0.01875,
+    0.878125,
+    0.103125
+   ],
+   [
+    0.9354838709677419,
+    0.06193548387096774,
+    0.0025806451612903226
+   ]
+  ]
+ },
+ "thresholds": {
+  "notes": [
+   "the thresholds crossed, so both take their midpoint and there is no review band"
+  ],
+  "t_high": 0.20438546033367044,
+  "t_low": 0.20438546033367044
+ },
+ "trees": {
+  "crowd.likelihood": {
+   "first_levels": [
+    [
+     0.35,
+     0.5,
+     0.15
+    ],
+    [
+     0.7,
+     0.25,
+     0.05
+    ],
+    [
+     0.05,
+     0.35,
+     0.6
+    ],
+    [
+     0.25,
+     0.5,
+     0.25
+    ]
+   ],
+   "hazard": "crowd_pressure",
+   "id": "crowd.likelihood",
+   "questions": [
+    {
+     "clause": "ORD-14.1",
+     "id": "crowd_plan_adequate",
+     "instructions": "Does the crowd plan set out marked spectator areas with their capacities, a staged start, stewards in stated numbers and positions, exit routes, and who can stop the race?",
+     "kind": "jev",
+     "needs": [
+      "crowd_plan"
+     ],
+     "text": "Is the crowd plan adequate?"
+    },
+    {
+     "clause": "ORD-1.2",
+     "id": "crowd_over_800",
+     "kind": "rule",
+     "text": "Is the crowd over 800?"
+    }
+   ],
+   "scale": "likelihood",
+   "version": 1,
+   "whens": [
+    {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": true
+    },
+    {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": true
+    },
+    {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": false
+    },
+    {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": false
+    }
+   ]
+  },
+  "crowd.severity": {
+   "first_levels": [
+    [
+     0.05,
+     0.4,
+     0.55
+    ],
+    [
+     0.25,
+     0.55,
+     0.2
+    ],
+    [
+     0.4,
+     0.5,
+     0.1
+    ],
+    [
+     0.75,
+     0.22,
+     0.03
+    ]
+   ],
+   "hazard": "crowd_pressure",
+   "id": "crowd.severity",
+   "questions": [
+    {
+     "clause": "ORD-14.2",
+     "id": "narrow_venue",
+     "instructions": "Does the race plan show that the course, or its start or finish area, is mostly under about 6 metres wide or hemmed in on both sides, so that people cannot spread out?",
+     "kind": "jev",
+     "needs": [
+      "race_plan"
+     ],
+     "text": "Is the venue too confined for people to spread out?"
+    },
+    {
+     "clause": "ORD-1.2",
+     "id": "crowd_over_800",
+     "kind": "rule",
+     "text": "Is the crowd over 800?"
+    }
+   ],
+   "scale": "severity",
+   "version": 1,
+   "whens": [
+    {
+     "crowd_over_800": true,
+     "narrow_venue": true
+    },
+    {
+     "crowd_over_800": false,
+     "narrow_venue": true
+    },
+    {
+     "crowd_over_800": true,
+     "narrow_venue": false
+    },
+    {
+     "crowd_over_800": false,
+     "narrow_venue": false
+    }
+   ]
+  },
+  "medical.likelihood": {
+   "first_levels": [
+    [
+     0.1,
+     0.5,
+     0.4
+    ],
+    [
+     0.4,
+     0.5,
+     0.1
+    ],
+    [
+     0.03,
+     0.27,
+     0.7
+    ],
+    [
+     0.2,
+     0.55,
+     0.25
+    ]
+   ],
+   "hazard": "medical_emergency",
+   "id": "medical.likelihood",
+   "questions": [
+    {
+     "clause": "ORD-16.1",
+     "id": "medical_plan_adequate",
+     "instructions": "Does the medical plan set out staffed first aid positions, water and rules for extreme weather, a named receiving hospital with a transfer route, medical communications, and a named qualified lead?",
+     "kind": "jev",
+     "needs": [
+      "medical_plan"
+     ],
+     "text": "Is the medical plan adequate?"
+    },
+    {
+     "clause": "ORD-1.3",
+     "id": "hot_date",
+     "kind": "rule",
+     "text": "Is the race on a hot date?"
+    }
+   ],
+   "scale": "likelihood",
+   "version": 1,
+   "whens": [
+    {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    }
+   ]
+  },
+  "medical.severity": {
+   "first_levels": [
+    [
+     0.2,
+     0.6,
+     0.2
+    ],
+    [
+     0.4,
+     0.5,
+     0.1
+    ],
+    [
+     0.05,
+     0.45,
+     0.5
+    ],
+    [
+     0.2,
+     0.55,
+     0.25
+    ]
+   ],
+   "hazard": "medical_emergency",
+   "id": "medical.severity",
+   "questions": [
+    {
+     "clause": "ORD-16.2",
+     "evidence_types": [
+      "ambulance_agreement"
+     ],
+     "id": "ambulance_on_site",
+     "kind": "evidence",
+     "text": "Is an ambulance on site?"
+    },
+    {
+     "clause": "ORD-16.3",
+     "id": "hospital_far",
+     "kind": "rule",
+     "text": "Is the hospital more than 10 km away?"
+    }
+   ],
+   "scale": "severity",
+   "version": 1,
+   "whens": [
+    {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    }
+   ]
+  },
+  "traffic.likelihood": {
+   "first_levels": [
+    [
+     0.5,
+     0.4,
+     0.1
+    ],
+    [
+     0.7,
+     0.26,
+     0.04
+    ],
+    [
+     0.1,
+     0.5,
+     0.4
+    ],
+    [
+     0.25,
+     0.55,
+     0.2
+    ],
+    [
+     0.25,
+     0.55,
+     0.2
+    ],
+    [
+     0.45,
+     0.45,
+     0.1
+    ],
+    [
+     0.03,
+     0.27,
+     0.7
+    ],
+    [
+     0.08,
+     0.42,
+     0.5
+    ]
+   ],
+   "hazard": "traffic_conflict",
+   "id": "traffic.likelihood",
+   "questions": [
+    {
+     "clause": "ORD-12.4",
+     "evidence_types": [
+      "police_escort_letter",
+      "police_escort_email"
+     ],
+     "id": "escort_confirmed",
+     "kind": "evidence",
+     "text": "Is the police escort confirmed?"
+    },
+    {
+     "clause": "ORD-12.2",
+     "id": "traffic_plan_adequate",
+     "instructions": "Does the traffic plan cover every road closure on the route, with control at each major crossing, signed diversions, and a way through for emergency vehicles?",
+     "kind": "jev",
+     "needs": [
+      "route",
+      "traffic_plan"
+     ],
+     "text": "Is the traffic plan adequate?"
+    },
+    {
+     "clause": "ORD-12.5",
+     "id": "many_major_crossings",
+     "kind": "rule",
+     "text": "Does the route have 3 or more major crossings?"
+    }
+   ],
+   "scale": "likelihood",
+   "version": 2,
+   "whens": [
+    {
+     "escort_confirmed": true,
+     "many_major_crossings": true,
+     "traffic_plan_adequate": true
+    },
+    {
+     "escort_confirmed": true,
+     "many_major_crossings": false,
+     "traffic_plan_adequate": true
+    },
+    {
+     "escort_confirmed": true,
+     "many_major_crossings": true,
+     "traffic_plan_adequate": false
+    },
+    {
+     "escort_confirmed": true,
+     "many_major_crossings": false,
+     "traffic_plan_adequate": false
+    },
+    {
+     "escort_confirmed": false,
+     "many_major_crossings": true,
+     "traffic_plan_adequate": true
+    },
+    {
+     "escort_confirmed": false,
+     "many_major_crossings": false,
+     "traffic_plan_adequate": true
+    },
+    {
+     "escort_confirmed": false,
+     "many_major_crossings": true,
+     "traffic_plan_adequate": false
+    },
+    {
+     "escort_confirmed": false,
+     "many_major_crossings": false,
+     "traffic_plan_adequate": false
+    }
+   ]
+  },
+  "traffic.severity": {
+   "first_levels": [
+    [
+     0.05,
+     0.4,
+     0.55
+    ],
+    [
+     0.1,
+     0.5,
+     0.4
+    ],
+    [
+     0.3,
+     0.55,
+     0.15
+    ],
+    [
+     0.5,
+     0.42,
+     0.08
+    ]
+   ],
+   "hazard": "traffic_conflict",
+   "id": "traffic.severity",
+   "questions": [
+    {
+     "clause": "ORD-12.3",
+     "id": "arterial_road",
+     "kind": "rule",
+     "text": "Does the route use an arterial road?"
+    },
+    {
+     "clause": "ORD-1.2",
+     "id": "crowd_over_800",
+     "kind": "rule",
+     "text": "Is the crowd over 800?"
+    }
+   ],
+   "scale": "severity",
+   "version": 1,
+   "whens": [
+    {
+     "arterial_road": true,
+     "crowd_over_800": true
+    },
+    {
+     "arterial_road": true,
+     "crowd_over_800": false
+    },
+    {
+     "arterial_road": false,
+     "crowd_over_800": true
+    },
+    {
+     "arterial_road": false,
+     "crowd_over_800": false
+    }
+   ]
+  }
+ },
+ "version": "trained-crossings",
+ "weights_hash": "eae2399325bf60c9fb673ec2e32bd70d379f3d9af1deefc1e709e43bd7c43ddb"
+}

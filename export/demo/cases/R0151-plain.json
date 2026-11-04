@@ -1,0 +1,1159 @@
+{
+ "case_id": "R0151-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9512706773189601,
+     0.04090114064188726,
+     0.007828182039152632
+    ],
+    "before": [
+     0.951438162681255,
+     0.04073227701162273,
+     0.0078295603071222
+    ],
+    "count_after": 7.428595473770266,
+    "count_before": 7.4380756845721825,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.15491206209904235,
+     0.7330410450292696,
+     0.11204689287168801
+    ],
+    "before": [
+     0.21189060927482167,
+     0.6348502830983397,
+     0.15325910762683867
+    ],
+    "count_after": 3.713915739932789,
+    "count_before": 2.915360613080303,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.06376489811098567,
+     0.8875736760419709,
+     0.04866142584704339
+    ],
+    "before": [
+     0.06353556539576839,
+     0.8877910890407694,
+     0.0486733455634622
+    ],
+    "count_after": 5.735226656833805,
+    "count_before": 5.742150336575267,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.9355145065358933,
+     0.05722118488347756,
+     0.007264308580629124
+    ],
+    "before": [
+     0.9219027446166892,
+     0.06929957807747857,
+     0.008797677305832313
+    ],
+    "count_after": 5.729424842286893,
+    "count_before": 5.07953542271295,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.8870482532111875,
+     0.09880639751972022,
+     0.014145349269092347
+    ],
+    "before": [
+     0.8880343855561106,
+     0.09780453977722821,
+     0.014161074666661182
+    ],
+    "count_after": 8.519758829628934,
+    "count_before": 8.5598494815136,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.06791629701322718,
+     0.9046678769963465,
+     0.02741582599042624
+    ],
+    "before": [
+     0.07805919286328936,
+     0.8904305902578917,
+     0.03151021687881881
+    ],
+    "count_after": 7.623136757825804,
+    "count_before": 7.090540482856816,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9467112573873139,
+     0.04517343575682258,
+     0.008115306855863596
+    ],
+    "before": [
+     0.9410643780531449,
+     0.0499603556262338,
+     0.008975266320621275
+    ],
+    "count_after": 10.021058829987735,
+    "count_before": 9.67245148106243,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.35545861648260935,
+     0.5994770366222343,
+     0.04506434689515628
+    ],
+    "before": [
+     0.35141599729703515,
+     0.603237008334733,
+     0.04534699436823172
+    ],
+    "count_after": 6.3915667969919525,
+    "count_before": 6.397990803542517,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6354784461525941,
+     0.33226811662207595,
+     0.03225343722532993
+    ],
+    "before": [
+     0.6388075354176999,
+     0.32877006085263055,
+     0.03242240372966959
+    ],
+    "count_after": 6.239982815769987,
+    "count_before": 6.231837337906321,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.035857459098468276,
+     0.6378260002943408,
+     0.326316540607191
+    ],
+    "before": [
+     0.04046270407100859,
+     0.5913112713296063,
+     0.36822602459938514
+    ],
+    "count_after": 8.050845044304543,
+    "count_before": 7.58629108083901,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.15742733944106438,
+     0.47354794298972414,
+     0.36902471756921146
+    ],
+    "before": [
+     0.1575488757754764,
+     0.47314151388103276,
+     0.3693096103434909
+    ],
+    "count_after": 6.740688562083386,
+    "count_before": 6.7384220940099215,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.008947805300842182,
+     0.2715781349107534,
+     0.7194740597884045
+    ],
+    "before": [
+     0.0090036336688469,
+     0.2670332657970883,
+     0.7239631005340648
+    ],
+    "count_after": 7.414961261143312,
+    "count_before": 7.419424131869583,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9590343576922065,
+     0.03441113953854662,
+     0.0065545027692469745
+    ],
+    "before": [
+     0.9542165438944882,
+     0.03845810312862987,
+     0.0073253529768818795
+    ],
+    "count_after": 9.502952589657134,
+    "count_before": 9.142959773824877,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "Halden Medical Transport\nBookings Office\n\n23 July 2027\n\nDear Lucas Ferreira,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Kingsway Lions Harvest Run 7K on 12 September 2027. One ambulance and two paramedics will be on site at the top of Bell Street, in place by 06:30, and will stay until the race has finished. Booking reference AG-64068.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nInes Moreau\nBookings Manager\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "Looking after people on the day: Kingsway Lions Harvest Run 7K, Sunday 12 September 2027\n\nLucas Ferreira, Event Coordinator, Kingsway Lions Club\n\nWe expect about 650 people altogether, including 650 runners. We do not expect spectators in any number beyond the runners' own companions.\n\nWhere people will watch\nWe've set out three viewing spots with barriers: at the finish by Clocktower Square, at the turn by Vine Street, and at the start by the top of Bell Street. We measured them, and at about two people to the square metre they take around 850 between them, which is more than we expect to come.\n\nWe hired a radio or two last time for the start team, which proved useful, and we had a short briefing for anyone who turned up early. Feedback from runners has been good, and we have no reports of people being unable to find a way through.\n\nHow we start the race\nEverybody lines up together at the start just before 08:00. We have a warm-up with music and a countdown from the crowd, then off they go. It really is a highlight of the day and people look forward to it.\n\nWho's helping\nWe always get a great turnout of helpers from the club and from people's families. They'll be wearing the event T-shirt, so they're easy to spot, and they're happy to help with whatever is needed on the day.\n\nGetting everyone away\nRunners walk through a one-way funnel after the line, out to the recovery area, and leave by the north gate. Spectators have two marked ways out, and a steward stands at each to keep it clear. We reckon the whole place empties in 25 minutes.\n\nWho's in charge\nLucas Ferreira has done this for many years, and between us we've seen most things. If something comes up we'll have a quick chat and sort it out together.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. PH-73637\nIssued: July 23, 2027\n\nINSURER: Meridian Mutual Insurance\nPOLICY NUMBER: GL-636521\n\nNAMED INSURED: Kingsway Lions Club\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Kingsway Lions Harvest Run 7K\nVENUE: Northgate, Port Halden\n\nPOLICY PERIOD\nEffective: January 1, 2027\nExpiry: December 31, 2027\n\nLIMIT OF LIABILITY: $5,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Kingsway Lions Harvest Run 7K, Sunday 12 September 2027\n\nFrom Lucas Ferreira, Event Coordinator, Kingsway Lions Club\n\nThe race is a 7K with 650 runners and starts at 08:00. On-site ambulance cover is set out in the attached paperwork from Halden Medical Transport.\n\nFirst aid\nSeveral of our members have done the first aid course through work, and they're happy to help out. We keep a good first aid box at the HQ tent, and another one goes in the lead car. In all our years we've only ever had blisters and scraped knees.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at St. Brigid's Hospital, 3 km from the finish. We've walked the route out from the pick-up point at the top of Bell Street with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nWe'll all have our phones, and I'll send a list of numbers round the team the week before. The signal is usually fine around there.\n\nWho's responsible\nI take overall responsibility as organiser, along with the rest of the committee. We all care a great deal about our runners and would never let anyone come to harm.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PHPS TRAFFIC DIVISION - EVENT ATTENDANCE NOTICE\n\nTo: Kingsway Lions Club (attn Lucas Ferreira)\nFrom: Sgt. Robert Lang\nIssued: July 23, 2027\nOur ref: PH-91475\n\nEvent: Kingsway Lions Harvest Run 7K\nDate of attendance: September 12, 2027\nLocation: Northgate, starting at Bell Street\n\nAttendance is confirmed. Escort: 2 motorcycles, 1 traffic car. On station from 06:30. Stand-down when the last runner clears the course.\n\nChanges to date or route must be notified to this office, because this notice applies only to the date and route shown.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Kingsway Lions Harvest Run 7K: how the race will work\n\nPrepared by Lucas Ferreira (Event Coordinator), Kingsway Lions Club. Last updated 23 July 2027.\n\nThis is our plan for race day, Sunday 12 September 2027. We expect 650 runners over 7K (7 km). Numbers can be collected from the top of Bell Street from an hour before we go at 08:00, and we aim to have the last finisher home by 09:30.\n\nThe route takes in Bell Street, Vine Street and Tanner Street, and the City would need to close all of these for us. On the way round we cross Tram Street. We finish in Clocktower Square.\n\nThese are all big, wide streets. We measured Bell Street at 11 metres and Tanner Street at 12 metres, kerb to kerb, not counting the pavements. People watching have the pavement and the grass strip to spread out on.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Traffic arrangements for the Kingsway Lions Harvest Run 7K, Sunday 12 September 2027\n\nFrom Lucas Ferreira, Event Coordinator, Kingsway Lions Club\n\nWe have tried to think through what happens on the roads on race day. The race is a 7K, it starts at 08:00, and it goes through the Northgate area. See the attached correspondence from the police for the escort.\n\nClosing the roads\nThe big one is Bell Street, which we would like closed from about 06:30. For the rest of the route we've found in past years that cars are few at that time of the morning, and our marshals are very good at slowing them down as the runners come through.\n\nCrossings\nOur marshals are experienced and they know the area, so they will keep a good eye out at the busier junctions and let runners know when it's clear. We'll move people around on the day depending on how busy things look.\n\nGetting around the closures\nMost local people know about the race by now and tend to avoid the area that morning. Anybody caught out can ask a marshal, who'll point them in the right direction, and they'll usually find a way round within a few minutes.\n\nEmergency vehicles\nWe keep one lane clear the whole way, 3.5 metres or more, for ambulances and fire engines. Every barrier has someone with a radio on our channel, and they can have it open within two minutes. Our controller on the day has direct numbers for police and ambulance control.\n\nLetting people know\nEvery house and shop on the closed streets gets a letter three weeks before and a reminder a week before. We'll put up the yellow notice boards ten days ahead, and we've told the bus company the times.\n\nAfterwards\nOnce it's all over the team will collect the cones and barriers, and everyone can get back to normal.\n"
+   }
+  ],
+  "cover_letter": "23 July 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nPlease find our application below.\n\nWe are applying for a street race permit for the Kingsway Lions Harvest Run 7K on Sunday 12 September 2027. We expect 650 runners over 7K, starting at 08:00 in the Northgate area. The completed form and the attachments (ambulance_agreement.txt, crowd_plan.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nPlease let me know if you need anything else.\n\nYours faithfully,\n\nLucas Ferreira\nEvent Coordinator, Kingsway Lions Club\nlucas@kingswaylions.example / 555-0133\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A 7K race for 650 runners around Northgate. Requires temporary road closures. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-09-12",
+   "event_name": "Kingsway Lions Harvest Run 7K",
+   "event_type": "street_race",
+   "expected_runners": 650,
+   "fee_paid": true,
+   "hospital_distance_km": 3,
+   "organizer": "Kingsway Lions Club",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 1,
+    "road_closure": true
+   },
+   "venue": "Northgate"
+  }
+ },
+ "events": [
+  495,
+  496,
+  497,
+  498,
+  499,
+  500,
+  501,
+  502,
+  503,
+  504,
+  505,
+  506
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Halden Medical Transport",
+     "value": "Halden Medical Transport",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the Kingsway Lions Harvest Run 7K on 12 September 2027",
+     "value": "12 September 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Kingsway Lions Club",
+     "value": "Kingsway Lions Club",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Northgate, Port Halden",
+     "value": "Northgate, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: January 1, 2027",
+     "value": "January 1, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: December 31, 2027",
+     "value": "December 31, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $5,000,000 each occurrence",
+     "value": "$5,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Date of attendance: September 12, 2027",
+     "value": "September 12, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "From: Sgt. Robert Lang",
+     "value": "Sgt. Robert Lang",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.9161508252590046,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.637702144564424,
+      "entropy": 0.420121316036623,
+      "levels": [
+       0.060355125053345046,
+       0.8907318146319188,
+       0.0489130603147362
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0005090171809384806,
+      "count": 7.4380756845721825,
+      "entropy": 0.2157085341099953,
+      "levels": [
+       0.951438162681255,
+       0.04073227701162273,
+       0.0078295603071222
+      ],
+      "reach": 0.02,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.077538342004082,
+      "entropy": 0.20887849172726225,
+      "levels": [
+       0.005213040603834099,
+       0.04272331735995827,
+       0.9520636420362077
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.11142656132771436,
+      "count": 2.915360613080303,
+      "entropy": 0.9046986000904943,
+      "levels": [
+       0.21189060927482167,
+       0.6348502830983397,
+       0.15325910762683867
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.22668156034295034,
+     0.6229679229766053,
+     0.15035051668044433
+    ],
+    "questions": [
+     {
+      "answer": 0.02,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.11193557850865284
+   },
+   "name": "Crowd pressure",
+   "product": 0.015037033181114075,
+   "severity": {
+    "entropy": 0.34567150597401586,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 8.286168616523822,
+      "entropy": 0.2752939493361463,
+      "levels": [
+       0.00587911903659968,
+       0.9294505715608038,
+       0.0646703094025965
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.008202866754386938,
+      "count": 5.742150336575267,
+      "entropy": 0.4278989543925749,
+      "levels": [
+       0.06353556539576839,
+       0.8877910890407694,
+       0.0486733455634622
+      ],
+      "reach": 0.02,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.439638348047609,
+      "entropy": 0.3030904348535829,
+      "levels": [
+       0.059781280934618715,
+       0.9252733988317265,
+       0.014945320233654679
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.12613362733852282,
+      "count": 5.07953542271295,
+      "entropy": 0.301589288128013,
+      "levels": [
+       0.9219027446166892,
+       0.06929957807747857,
+       0.008797677305832313
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9047354010322707,
+     0.08566940829674438,
+     0.00959519067098491
+    ],
+    "questions": [
+     {
+      "answer": 0.02,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.13433649409290974
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.5405627513808529,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 9.017204382138651,
+      "entropy": 0.24468328806028236,
+      "levels": [
+       0.009761133002534733,
+       0.9430155492329444,
+       0.047223317764520926
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.002543157127107471,
+      "count": 8.5598494815136,
+      "entropy": 0.3931112878041627,
+      "levels": [
+       0.8880343855561106,
+       0.09780453977722821,
+       0.014161074666661182
+      ],
+      "reach": 0.08,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.835767701675366,
+      "entropy": 0.2339585846849572,
+      "levels": [
+       0.002907184734617105,
+       0.05544368684657799,
+       0.9416491284188049
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.09205272331096458,
+      "count": 7.090540482856816,
+      "entropy": 0.4113527847484093,
+      "levels": [
+       0.07805919286328936,
+       0.8904305902578917,
+       0.03151021687881881
+      ],
+      "reach": 0.92,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.14285720827871506,
+     0.8270205062194387,
+     0.0301222855018462
+    ],
+    "questions": [
+     {
+      "answer": 0.08,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.09459588043807203
+   },
+   "name": "Medical emergency",
+   "product": 0.013521308259893146,
+   "severity": {
+    "entropy": 0.402824008486597,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 9.06398205879438,
+      "entropy": 0.18585405332073315,
+      "levels": [
+       0.018743027701198865,
+       0.9625139445976023,
+       0.018743027701198865
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.11075926173878636,
+      "count": 9.67245148106243,
+      "entropy": 0.24917420350534406,
+      "levels": [
+       0.9410643780531449,
+       0.0499603556262338,
+       0.008975266320621275
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.32607526389324,
+      "entropy": 0.2543957229192723,
+      "levels": [
+       0.0057290912940172545,
+       0.9369799957658103,
+       0.05729091294017254
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.032178339743182835,
+      "count": 6.397990803542517,
+      "entropy": 0.8126855360737337,
+      "levels": [
+       0.35141599729703515,
+       0.603237008334733,
+       0.04534699436823172
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.882099539977534,
+     0.10528802089708371,
+     0.012612439125382319
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.1429376014819692
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.8849846989687705,
+    "leaves": [
+     {
+      "contribution": 0.0029905134072759684,
+      "count": 6.231837337906321,
+      "entropy": 0.7631790023001201,
+      "levels": [
+       0.6388075354176999,
+       0.32877006085263055,
+       0.03242240372966959
+      ],
+      "reach": 0.054,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.14416532755069011,
+      "count": 7.58629108083901,
+      "entropy": 0.80834078802444,
+      "levels": [
+       0.04046270407100859,
+       0.5913112713296063,
+       0.36822602459938514
+      ],
+      "reach": 0.846,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0009675480720399602,
+      "count": 6.7384220940099215,
+      "entropy": 1.0131106056801806,
+      "levels": [
+       0.1575488757754764,
+       0.47314151388103276,
+       0.3693096103434909
+      ],
+      "reach": 0.005999999999999998,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.022942798964850682,
+      "count": 7.419424131869583,
+      "entropy": 0.6288450211790287,
+      "levels": [
+       0.0090036336688469,
+       0.2670332657970883,
+       0.7239631005340648
+      ],
+      "reach": 0.09399999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.07051868937615352,
+     0.5459428948991014,
+     0.38353841572474495
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.06,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.1710661879948567
+   },
+   "name": "Traffic conflict",
+   "product": 0.020208091317928768,
+   "severity": {
+    "entropy": 0.20603713783133568,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 4.403614,
+      "entropy": 0.504227855477891,
+      "levels": [
+       0.01826583801395854,
+       0.1461267041116683,
+       0.8356074578743733
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.09536102,
+      "entropy": 0.4906005615865444,
+      "levels": [
+       0.029362080805022138,
+       0.8531895959748893,
+       0.11744832322008855
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.339645940368685,
+      "entropy": 0.23827670406594795,
+      "levels": [
+       0.03482034925510738,
+       0.947769476117339,
+       0.01741017462755369
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.11813024861778265,
+      "count": 9.142959773824877,
+      "entropy": 0.20603713783133568,
+      "levels": [
+       0.9542165438944882,
+       0.03845810312862987,
+       0.0073253529768818795
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9542165438944882,
+     0.03845810312862987,
+     0.0073253529768818795
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.11813024861778265
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.1429376014819692,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21376493779963796,
+   "t_low": 0.18382375716334348
+  },
+  "weights_version": "first-guess+41"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance requirements are met, and the overall risk is low enough to approve, although the traffic, crowd and medical plans have gaps.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.04876643275893599,
+ "t_high": 0.21376493779963796,
+ "t_low": 0.18382375716334348,
+ "title": "Kingsway Lions Harvest Run 7K",
+ "unmapped_documents": []
+}

@@ -1,0 +1,1158 @@
+{
+ "case_id": "R0324-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.0257271447437816,
+     0.95256920440342,
+     0.021703650852798517
+    ],
+    "before": [
+     0.02842372825455237,
+     0.9475977587734343,
+     0.023978512972013224
+    ],
+    "count_after": 10.192500561277011,
+    "count_before": 9.580323148706418,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.003712762224166064,
+     0.03844595783080056,
+     0.9578412799450333
+    ],
+    "before": [
+     0.0037258197963436265,
+     0.03506422731584114,
+     0.9612099528878152
+    ],
+    "count_after": 9.424343976173938,
+    "count_before": 9.724216163052073,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.004075987508544685,
+     0.9510881498974637,
+     0.044835862593991554
+    ],
+    "before": [
+     0.0045390143708011225,
+     0.9455318275503866,
+     0.04992915807881236
+    ],
+    "count_after": 9.502530959532711,
+    "count_before": 9.155501112810501,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.026777880990673856,
+     0.9665276487616578,
+     0.006694470247668464
+    ],
+    "before": [
+     0.02685928693607725,
+     0.9664258913299035,
+     0.0067148217340193125
+    ],
+    "count_after": 10.110303709375632,
+    "count_before": 10.101629637855972,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.9782951198787113,
+     0.019191669245924546,
+     0.0025132108753641038
+    ],
+    "before": [
+     0.9766259728584584,
+     0.020667545516906458,
+     0.0027064816246352348
+    ],
+    "count_after": 13.594425611156408,
+    "count_before": 13.071122801199548,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.02989417777298947,
+     0.9619856513218128,
+     0.008120170905197633
+    ],
+    "before": [
+     0.02713240317580891,
+     0.9647243087690734,
+     0.008143288055117688
+    ],
+    "count_after": 10.292230792801707,
+    "count_before": 10.657706482875327,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.005735081962657237,
+     0.9885298360746856,
+     0.005735081962657237
+    ],
+    "before": [
+     0.006195525314961681,
+     0.9876089493700767,
+     0.006195525314961681
+    ],
+    "count_after": 12.132754850137028,
+    "count_before": 11.989091147009395,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.002783502799591684,
+     0.9693814692044915,
+     0.027835027995916844
+    ],
+    "before": [
+     0.0028097140320347707,
+     0.9690931456476174,
+     0.028097140320347713
+    ],
+    "count_after": 10.538290545836118,
+    "count_before": 10.516020288406237,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.5854792720420933,
+     0.4050012618227209,
+     0.009519466135185823
+    ],
+    "before": [
+     0.5855797794630153,
+     0.40507078714025097,
+     0.009349433396733772
+    ],
+    "count_after": 11.322453273513135,
+    "count_before": 11.358775927242426,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.018375474066887037,
+     0.5492407774851755,
+     0.43238374844793753
+    ],
+    "before": [
+     0.018387242327027035,
+     0.5495925294087128,
+     0.43202022826426006
+    ],
+    "count_after": 10.56065403029316,
+    "count_before": 10.556575970201388,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.13172095497318925,
+     0.6287333065274966,
+     0.2395457384993141
+    ],
+    "before": [
+     0.14132791562651156,
+     0.674589458560955,
+     0.1840826258125335
+    ],
+    "count_after": 10.694873336988667,
+    "count_before": 10.62791022561732,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.0039503327991987315,
+     0.10436406443295863,
+     0.8916856027678426
+    ],
+    "before": [
+     0.004043995554473688,
+     0.10683854603320932,
+     0.889117458412317
+    ],
+    "count_after": 11.411398525160568,
+    "count_before": 11.201025134985155,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.007550843083720386,
+     0.06040674466976309,
+     0.9320424122465165
+    ],
+    "before": [
+     0.008728665161295238,
+     0.0698293212903619,
+     0.9214420135483429
+    ],
+    "count_after": 7.410852052686652,
+    "count_before": 6.893389303964141,
+    "leaf": {
+     "arterial_road": true,
+     "crowd_over_800": true
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": true
+ },
+ "decision": {
+  "clauses": [
+   "ORD-9.3"
+  ],
+  "reason_code": "red_flag",
+  "route": "officer",
+  "row": 1,
+  "text": "A document disagrees with the application, so an officer decides."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "Lifeline Event Medics\nBookings Office\n\nApril 22, 2027\n\nDear Carl Jensen,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Greenhill City Race 10K on September 12, 2027. One ambulance and two paramedics will be on site at the top of Canon Road, in place by 06:30, and will stay until the race has finished. Booking reference RQ-48766.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nGrace Lindqvist\nBookings Manager\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "Greenhill City Race 10K - crowd notes\nSunday 12 September 2027 / contact Carl Jensen 555-0146\ntotal 1800 incl 1260 runners. We allow for 540 spectators.\n\nVIEWING\n3 barriered areas: finish Clocktower Square, turn at Foundry Street, start the top of Canon Road. approx 2350 total @ 2 per sqm. over expected numbers\n\nSTART\n3 waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave\n\nSTEWARDS\n36 stewards (approx 1:50), 4 supervisors, rota by position, briefing 1hr before\n\nbg: committee done this race yrs. attendance growing slowly. helpers mostly members + family, many on rota before\n\nEXIT\nrunners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins\n\nCONTROL\nCarl Jensen at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF RQ-13733\nAtlas Casualty Group   POL NO GL-736377\nINSURED ....... Greenhill Primary PTA\nRISK LOCATION .. St. Anne's District\nFROM .......... 2027-09-11\nTO ............ 2027-09-13\nINDEMNITY ..... $2,000,000\nACTIVITY ...... Foot race (Greenhill City Race 10K)\nISSUED ........ 2027-04-22\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Greenhill City Race 10K, Sunday 12 September 2027\n\nFrom Carl Jensen, Race Director, Greenhill Primary PTA\n\nThe race is a 10K with 1260 runners and starts at 08:00. On-site ambulance cover is set out in the attached paperwork from Lifeline Event Medics.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 8 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at Valley Regional Hospital, 16 km from the finish. We've walked the route out from the pick-up point at the top of Canon Road with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nWho's responsible\nOur medical lead is Yuki Tanaka, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PHPS TRAFFIC DIVISION - EVENT ATTENDANCE NOTICE\n\nTo: Greenhill Primary PTA (attn Carl Jensen)\nFrom: Sgt. Robert Lang\nIssued: 2027-04-22\nOur ref: AG-57661\n\nEvent: Greenhill City Race 10K\nDate of attendance: 2027-08-29\nLocation: St. Anne's District, starting at Canon Road\n\nAttendance is confirmed. Escort: 2 motorcycles, 1 traffic car. On station from 06:30. Stand-down when the last runner clears the course.\n\nChanges to date or route must be notified to this office, because this notice applies only to the date and route shown.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Greenhill City Race 10K - race notes\nGreenhill Primary PTA / contact Carl Jensen 555-0146\nSunday 12 September 2027, gun 08:00, course closes 10:00\n10K (10k), approx 1260 entered\n\nROUTE\nCanon Road, Marine Parkway, Abbey Road, Foundry Street and Spring Way. all closed. major x-ings: Victoria Road, Dock Road, Regent Road and Ferry Road. finish Clocktower Square\n\nWIDTHS\nCanon Road 4.5m wall to wall. Foundry Street 4m w/ parked vans. Spring Way 4m. start pens end to end along Canon Road, no room side by side\n\nOTHER\nnumbers from the top of Canon Road 1hr before. chip timing. water on course. results online same day\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Greenhill City Race 10K - traffic notes\nSunday 12 September 2027 / gun 08:00 / St. Anne's District\ncontact Carl Jensen 555-0146\nSee the attached correspondence from the police for the escort.\n\nCLOSURES\nSignal Hill Traffic Services doing barriers\nCanon Road (Glebe Road-Hatter Street) 06:30-10:30\nMarine Parkway (Hatter Street-Glebe Road) 06:30-10:30\nAbbey Road (Glebe Road-Ash Avenue) 06:30-10:30\nFoundry Street (Bridge Row-Glebe Road) 06:30-10:30\nSpring Way (Mill Road-Albion Road) 06:30-10:30\n\nMAJOR X-INGS\nall staffed from 06:30 til last runner\nVictoria Road x Spring Way: 2 marshals w/ boards + sup\nDock Road x Foundry Street: 3 marshals w/ boards + sup\nRegent Road x Marine Parkway: 3 marshals w/ boards + sup\nFerry Road x Abbey Road: 4 marshals w/ boards + sup\n\nvols get note race week w/ start time, find own cover if cant make it. most done it before\n\nDIVERSIONS\nsigned by Signal Hill Traffic Services\nCanon Road: via Station Road + Canal Road, signs from Bridge Row\nMarine Parkway: via Cross Avenue + High Street, signs from Albion Road\nAbbey Road: via Church Road + Canal Road, signs from Glebe Road\nFoundry Street: via Queen's Road + Prince Street, signs from Ash Avenue\nSpring Way: via Cross Avenue + Church Road, signs from Ash Avenue\n\nEMERGENCY\n3.5m lane kept clear whole way. radio at every barrier, open in 2 mins. controller has police + ambulance control direct\n\nNOTICE\nfacebook + club newsletter\n\nREOPEN\nreopen when done and barriers picked up\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the Greenhill City Race 10K, Sunday 12 September 2027. 1260 runners, 10K, off at 08:00, around St. Anne's District. I've attached ambulance_agreement.txt, crowd_plan.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt.\n\nWe look forward to hearing from you.\n\nThanks,\nCarl\n\nCarl Jensen, Greenhill Primary PTA\n555-0146\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Greenhill City Race 10K: a 10K road race through the St. Anne's District area, organised by Greenhill. Roughly 540 friends and family usually come to watch.",
+   "event_date": "2027-09-12",
+   "event_name": "Greenhill City Race 10K",
+   "event_type": "street_race",
+   "expected_runners": 1260,
+   "fee_paid": true,
+   "hospital_distance_km": 16,
+   "organizer": "Greenhill Primary PTA",
+   "route": {
+    "arterial_road": true,
+    "major_crossings": 4,
+    "road_closure": true
+   },
+   "venue": "St. Anne's District"
+  }
+ },
+ "events": [
+  1135,
+  1136,
+  1137,
+  1138,
+  1139,
+  1140,
+  1141,
+  1142,
+  1143,
+  1144,
+  1145
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Lifeline Event Medics",
+     "value": "Lifeline Event Medics",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the Greenhill City Race 10K on September 12, 2027",
+     "value": "September 12, 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "INSURED ....... Greenhill Primary PTA",
+     "value": "Greenhill Primary PTA",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "RISK LOCATION .. St. Anne's District",
+     "value": "St. Anne's District",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "FROM .......... 2027-09-11",
+     "value": "2027-09-11",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "TO ............ 2027-09-13",
+     "value": "2027-09-13",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "INDEMNITY ..... $2,000,000",
+     "value": "$2,000,000",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": false,
+     "name": "event_date",
+     "quote": "Date of attendance: 2027-08-29",
+     "value": "2027-08-29",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "From: Sgt. Robert Lang",
+     "value": "Sgt. Robert Lang",
+     "verified": true
+    }
+   ],
+   "reason": "event_date does not match event_date on the form",
+   "source": "stored",
+   "status": "found",
+   "verdict": "contradicted"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.7653797731512049,
+    "leaves": [
+     {
+      "contribution": 0.0533113382537,
+      "count": 9.580323148706418,
+      "entropy": 0.2416623492339324,
+      "levels": [
+       0.02842372825455237,
+       0.9475977587734343,
+       0.023978512972013224
+      ],
+      "reach": 0.52,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.646741329817843,
+      "entropy": 0.13265780414604064,
+      "levels": [
+       0.9736638951692917,
+       0.022522686958088223,
+       0.0038134178726200387
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.14013308399705068,
+      "count": 9.724216163052073,
+      "entropy": 0.17634960425825072,
+      "levels": [
+       0.0037258197963436265,
+       0.03506422731584114,
+       0.9612099528878152
+      ],
+      "reach": 0.48,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.32753522592292,
+      "entropy": 0.14507690086305186,
+      "levels": [
+       0.016718660790286763,
+       0.9723398394755942,
+       0.010941499734119045
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.016568732194612173,
+     0.5095816636737897,
+     0.47384960413159816
+    ],
+    "questions": [
+     {
+      "answer": 0.52,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.19344442225075065
+   },
+   "name": "Crowd pressure",
+   "product": 0.08272013318738253,
+   "severity": {
+    "entropy": 0.22678822530618464,
+    "leaves": [
+     {
+      "contribution": 0.41573791681996564,
+      "count": 9.155501112810501,
+      "entropy": 0.22709046116815138,
+      "levels": [
+       0.0045390143708011225,
+       0.9455318275503866,
+       0.04992915807881236
+      ],
+      "reach": 0.97,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.067401058945913,
+      "entropy": 0.16256919405024828,
+      "levels": [
+       0.0184705910052237,
+       0.9681999968371352,
+       0.013329412157641161
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.011879133208787664,
+      "count": 10.101629637855972,
+      "entropy": 0.16375517564904976,
+      "levels": [
+       0.02685928693607725,
+       0.9664258913299035,
+       0.0067148217340193125
+      ],
+      "reach": 0.030000000000000027,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.00404595306817,
+      "entropy": 0.07737439221570781,
+      "levels": [
+       0.986232582523712,
+       0.012285350666405485,
+       0.0014820668098824191
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.005208622547759407,
+     0.946158649463772,
+     0.048632727988468565
+    ],
+    "questions": [
+     {
+      "answer": 0.97,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.42761705002875333
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.723173754596517,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.943155695544656,
+      "entropy": 0.15225342674576234,
+      "levels": [
+       0.00491572866252792,
+       0.9688626773415142,
+       0.026221593995957877
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.010757384878200184,
+      "count": 13.071122801199548,
+      "entropy": 0.11927305612199507,
+      "levels": [
+       0.9766259728584584,
+       0.020667545516906458,
+       0.0027064816246352348
+      ],
+      "reach": 0.48,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 12.00617019480968,
+      "entropy": 0.08521242849851339,
+      "levels": [
+       0.0005620414375130721,
+       0.015617343397586133,
+       0.9838206151649008
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.051718193985618596,
+      "count": 10.657706482875327,
+      "entropy": 0.17168714140792463,
+      "levels": [
+       0.02713240317580891,
+       0.9647243087690734,
+       0.008143288055117688
+      ],
+      "reach": 0.52,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.48288931662348067,
+     0.5115770624080334,
+     0.00553362096848611
+    ],
+    "questions": [
+     {
+      "answer": 0.48,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.062475578863818784
+   },
+   "name": "Medical emergency",
+   "product": 0.02519479713477839,
+   "severity": {
+    "entropy": 0.08434004714229772,
+    "leaves": [
+     {
+      "contribution": 0.36167279183503975,
+      "count": 11.989091147009395,
+      "entropy": 0.07530917138591472,
+      "levels": [
+       0.006195525314961681,
+       0.9876089493700767,
+       0.006195525314961681
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 14.202555153796222,
+      "entropy": 0.07271174477587906,
+      "levels": [
+       0.987360708979425,
+       0.010983862269961972,
+       0.0016554287506130578
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.04160153699825981,
+      "count": 10.516020288406237,
+      "entropy": 0.14729583249945757,
+      "levels": [
+       0.0028097140320347707,
+       0.9690931456476174,
+       0.028097140320347713
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.042955679926346,
+      "entropy": 0.5984661947429202,
+      "levels": [
+       0.24627618165088258,
+       0.7466084094387162,
+       0.007115408910401185
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.00585694418666899,
+     0.9857573689978307,
+     0.008385686815500283
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.4032743288332995
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9160626852169111,
+    "leaves": [
+     {
+      "contribution": 0.002558592950987208,
+      "count": 11.358775927242426,
+      "entropy": 0.7231191628329339,
+      "levels": [
+       0.5855797794630153,
+       0.40507078714025097,
+       0.009349433396733772
+      ],
+      "reach": 0.04650000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0006472657319334141,
+      "count": 10.556575970201388,
+      "entropy": 0.7650384709667937,
+      "levels": [
+       0.018387242327027035,
+       0.5495925294087128,
+       0.43202022826426006
+      ],
+      "reach": 0.003499999999999998,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.11088834290459285,
+      "count": 10.62791022561732,
+      "entropy": 0.8536212597847921,
+      "levels": [
+       0.14132791562651156,
+       0.674589458560955,
+       0.1840826258125335
+      ],
+      "reach": 0.8835,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.018453748140534,
+      "count": 11.201025134985155,
+      "entropy": 0.36571650510038,
+      "levels": [
+       0.004043995554473688,
+       0.10683854603320932,
+       0.889117458412317
+      ],
+      "reach": 0.06649999999999995,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.15242595425357028,
+     0.6238639154047643,
+     0.2237101303416654
+    ],
+    "questions": [
+     {
+      "answer": 0.05,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.93,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.13254794972804745
+   },
+   "name": "Traffic conflict",
+   "product": 0.12595323970339123,
+   "severity": {
+    "entropy": 0.30263681672526127,
+    "leaves": [
+     {
+      "contribution": 0.9502466085806172,
+      "count": 6.893389303964141,
+      "entropy": 0.30263681672526127,
+      "levels": [
+       0.008728665161295238,
+       0.0698293212903619,
+       0.9214420135483429
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.707959785627725,
+      "entropy": 0.13846433937025637,
+      "levels": [
+       0.005439179478042275,
+       0.9728041026097887,
+       0.0217567179121691
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.837745908381137,
+      "entropy": 0.1665124935315913,
+      "levels": [
+       0.022080908028828193,
+       0.9668786379567577,
+       0.011040454014414097
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 13.316759280116486,
+      "entropy": 0.038885322816230423,
+      "levels": [
+       0.9940775057182303,
+       0.004974895196686576,
+       0.0009475990850831572
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.008728665161295238,
+     0.0698293212903619,
+     0.9214420135483429
+    ],
+    "questions": [
+     {
+      "answer": 1.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.9502466085806172
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.9502466085806172,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.2321834711919719,
+   "t_low": 0.1859683449237186
+  },
+  "weights_version": "first-guess+95"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": true,
+  "reason": "The police escort letter is for a different date, and with four major crossings, an arterial route and about 1,800 people expected, the traffic risk is too high to approve without further action.",
+  "ruling": "deny"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.23386817002555216,
+ "t_high": 0.2321834711919719,
+ "t_low": 0.1859683449237186,
+ "title": "Greenhill City Race 10K",
+ "unmapped_documents": []
+}

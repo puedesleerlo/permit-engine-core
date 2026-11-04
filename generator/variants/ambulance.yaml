@@ -1,0 +1,87 @@
+document: ambulance
+families:
+  a:
+    style: service agreement
+    firm: |
+      EVENT MEDICAL SERVICES AGREEMENT
+      Agreement no. {ref_no}
+
+      Between: {ambulance_provider} ("the Provider")
+      And: {organizer} ("the Client")
+
+      Event: {event_name}
+      Event date: {letter_date}
+      Location: {venue}, {city}
+
+      The Provider will station one fully equipped ambulance with a crew of two paramedics on site at {start_area} from {closure_start} until the last runner has finished or {reopen_time}, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.
+
+      Fee: {fee_amount}, paid in full on signature.
+
+      Signed for the Provider: {provider_person}, Operations Manager, {today_doc}
+      Signed for the Client: {contact_name}, {today_doc}
+    soft: |
+      EVENT MEDICAL SERVICES: QUOTATION
+      Quotation no. {ref_no}
+
+      Prepared by: {ambulance_provider}
+      Prepared for: {organizer}
+
+      Event: {event_name}
+      Event date: {letter_date}
+      Location: {venue}, {city}
+
+      We can offer one ambulance with a crew of two at {start_area} on the above date, for a fee of {fee_amount}. This quotation is valid for 30 days. No crew or vehicle is reserved until the client has signed and returned the acceptance below and paid the fee.
+
+      Prepared by: {provider_person}, {today_doc}
+      Client acceptance: ____________________  Date: ________
+  b:
+    style: confirmation letter
+    firm: |
+      {ambulance_provider}
+      Bookings Office
+
+      {today_doc}
+
+      Dear {contact_name},
+
+      Thank you for your booking and payment. This letter is your agreement with us for ambulance cover at the {event_name} on {letter_date}. One ambulance and two paramedics will be on site at {start_area}, in place by {closure_start}, and will stay until the race has finished. Booking reference {ref_no}.
+
+      Our crew leader will find your race director when they arrive.
+
+      Kind regards,
+      {provider_person}
+      Bookings Manager
+    soft: |
+      {ambulance_provider}
+      Bookings Office
+
+      {today_doc}
+
+      Dear {contact_name},
+
+      Thank you for your enquiry about ambulance cover at the {event_name} on {letter_date}. We would normally charge {fee_amount} for one ambulance and two paramedics. We hold no bookings until a deposit is paid, and we have not received one, so our crews remain available to other clients for that date. Enquiry reference {ref_no}.
+
+      Kind regards,
+      {provider_person}
+      Bookings Manager
+  h:
+    test_only: true
+    style: dispatch work order
+    firm: |
+      WORK ORDER {ref_no}   STATUS: BOOKED, PAID
+      Provider: {ambulance_provider}
+      Customer: {organizer}, {contact_name}
+      Job: on-site ambulance cover, {event_name}
+      Service date: {letter_date}
+      On site at: {start_area}, from {closure_start}
+      Resources: 1 ambulance, 2 paramedics, remains on site for the whole event
+      Issued by: {provider_person}, {today_doc}
+    soft: |
+      WORK ORDER {ref_no}   STATUS: DRAFT, NOT DISPATCHED
+      Provider: {ambulance_provider}
+      Customer: {organizer}, {contact_name}
+      Job: on-site ambulance cover, {event_name}
+      Service date: {letter_date}
+      On site at: {start_area}
+      Resources: none assigned. Awaiting customer's purchase order
+      Issued by: {provider_person}, {today_doc}

@@ -1,0 +1,858 @@
+{
+ "case_id": "R0014-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.37802460244816727,
+     0.527469246939791,
+     0.09450615061204182
+    ],
+    "before": [
+     0.3792479315313465,
+     0.525940085585817,
+     0.09481198288283663
+    ],
+    "count_after": 2.096393019649958,
+    "count_before": 2.0911477552189077,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.07519194320561538,
+     0.8308181277873654,
+     0.09398992900701923
+    ],
+    "before": [
+     0.09764452980581623,
+     0.7802998079369134,
+     0.12205566225727028
+    ],
+    "count_after": 4.319512599405156,
+    "count_before": 3.5740449985918645,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.7077606695447641,
+     0.24353277537936321,
+     0.04870655507587264
+    ],
+    "before": [
+     0.6015023204194893,
+     0.33208139965042566,
+     0.06641627993008513
+    ],
+    "count_after": 3.603395146468376,
+    "count_before": 2.8209156671160667,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.23545637681891612,
+     0.5256237409369952,
+     0.23891988224408867
+    ],
+    "before": [
+     0.22065836687167723,
+     0.5357973727757218,
+     0.24354426035260082
+    ],
+    "count_after": 2.0625966213792846,
+    "count_before": 2.0381699782678027,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.7610303211721751,
+     0.20367893846293475,
+     0.03529074036489028
+    ],
+    "before": [
+     0.7613530473556958,
+     0.2037653115346048,
+     0.03488164110969939
+    ],
+    "count_after": 2.7966947026789266,
+    "count_before": 2.798757063451154,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.19565376182129982,
+     0.5516239032850098,
+     0.2527223348936904
+    ],
+    "before": [
+     0.1995164359364322,
+     0.5625142810251189,
+     0.2379692830384489
+    ],
+    "count_after": 2.1931436395343566,
+    "count_before": 2.163834462057672,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.36595394718720886,
+     0.4390589115522938,
+     0.19498714126049746
+    ],
+    "before": [
+     0.3749543792385329,
+     0.44985731919437116,
+     0.1751883015670958
+    ],
+    "count_after": 2.232332831237688,
+    "count_before": 2.2016354400407177,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.02097205676856318,
+     0.32043842899366376,
+     0.6585895142377731
+    ],
+    "before": [
+     0.026893987989694154,
+     0.41092141585798675,
+     0.5621845961523191
+    ],
+    "count_after": 4.0998584652086345,
+    "count_before": 3.3773928002667306,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.06503496503496503,
+     0.6748251748251748,
+     0.2601398601398601
+    ],
+    "before": [
+     0.1,
+     0.5,
+     0.4
+    ],
+    "count_after": 2.8600000000000003,
+    "count_before": 2.0,
+    "leaf": {
+     "arterial_road": true,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. RQ-70691\n\nBetween: Sentinel Ambulance Service (\"the Provider\")\nAnd: Beacon Food Bank (\"the Client\")\n\nEvent: Beacon Spring Dash 10K\nEvent date: 2027-05-02\nLocation: Clocktower Square, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the top of Foundry Street from 06:30 until the last runner has finished or 10:30, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $920, paid in full on signature.\n\nSigned for the Provider: Priya Raman, Operations Manager, 2027-03-21\nSigned for the Client: Fatima Haddad, 2027-03-21\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. RQ-19963\nIssued: 21 March 2027\n\nINSURER: Atlas Casualty Group\nPOLICY NUMBER: PL-916638\n\nNAMED INSURED: Beacon Food Bank\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Beacon Spring Dash 10K\nVENUE: Clocktower Square, Port Halden\n\nPOLICY PERIOD\nEffective: 1 May 2027\nExpiry: 3 May 2027\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nBeacon Spring Dash 10K, Sunday 2 May 2027\nApplicant: Beacon Food Bank\nIssue: 3.3\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n\n1. Event summary\nA 10K race with 150 runners, starting at 08:00 in the Clocktower Square area of Port Halden. An ambulance from Sentinel Ambulance Service is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 8 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nShould anyone require hospital treatment, the emergency services would be called in the normal way and would make the necessary arrangements for transfer, in line with their usual procedures.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nResponsibility for welfare on the day rests with the race director, supported by the wider committee, all of whom take the wellbeing of participants extremely seriously.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Beacon Spring Dash 10K - race notes\nBeacon Food Bank / contact Fatima Haddad 555-0141\nSunday 2 May 2027, gun 08:00, course closes 10:00\n10K (10k), approx 150 entered\n\nROUTE\nFoundry Street, Eastern Link Road, Spring Way, Bell Street and Copper Row. all closed. major x-ings: Dock Road, Church Road, Regent Road and Tram Street. finish Cathedral Close\n\nWIDTHS\nFoundry Street 12m kerb to kerb. Bell Street 14m. Copper Row 12m. pavements extra. start pens side by side across full road\n\nOTHER\nnumbers from the top of Foundry Street 1hr before. chip timing. water on course. results online same day\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Beacon Spring Dash 10K\nDate: Sunday 2 May 2027\nApplicant: Beacon Food Bank\nPrepared by: Brightway Traffic Consulting\nIssue: 3.3\n\n1. Scope\nThis plan describes how traffic will be managed for the Beacon Spring Dash 10K, a 10K race in the Clocktower Square area of Port Halden with a 08:00 start. It has been prepared to accompany the permit application and should be read with the race plan. We have not arranged any police attendance for this race.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Northline Barriers.\n- Foundry Street, Fenwick Street to Mill Road: closed 06:30 to 10:30\n- Eastern Link Road, Salter Way to Vine Street: closed 06:30 to 10:30\n- Spring Way, Vine Street to Fenwick Street: closed 06:30 to 10:30\n- Bell Street, Mill Road to Vine Street: closed 06:30 to 10:30\n- Copper Row, Quay Street to Mill Road: closed 06:30 to 10:30\n\n3. Major crossings\nBusier junctions along the course will receive appropriate supervision during the event. Staffing levels will be determined by Northline Barriers on the morning, taking account of conditions at the time, with resources deployed flexibly to where they are most needed.\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Foundry Street: traffic diverted via High Street and Ferry Road, signed from Abbey Road\n- Eastern Link Road: traffic diverted via Ferry Road and High Street, signed from Fenwick Street\n- Spring Way: traffic diverted via Cross Avenue and Station Road, signed from Fenwick Street\n- Bell Street: traffic diverted via Queen's Road and High Street, signed from Abbey Road\n- Copper Row: traffic diverted via Cross Avenue and Ferry Road, signed from Fenwick Street\n\n5. Emergency vehicle access\nThe emergency services will be made aware of the event date and general location through the usual channels ahead of the day. Any vehicle attending an incident will be accommodated by staff on the ground as circumstances allow.\n\n6. Notification\nAll frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times.\n\n7. Reopening\nRoads will be reopened following the conclusion of the event, once barriers and equipment have been removed by the contractor.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Beacon Spring Dash 10K, Sunday 2 May 2027. 150 runners, 10K, off at 08:00, around Clocktower Square. I've attached ambulance_agreement.txt, insurance.txt, medical_plan.txt, race_plan.txt, traffic_plan.txt.\n\nWe look forward to hearing from you.\n\nThanks,\nFatima\n\nFatima Haddad, Beacon Food Bank\n555-0141\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Our annual 10K on the streets of Clocktower Square. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-05-02",
+   "event_name": "Beacon Spring Dash 10K",
+   "event_type": "street_race",
+   "expected_runners": 150,
+   "fee_paid": true,
+   "hospital_distance_km": 10,
+   "organizer": "Beacon Food Bank",
+   "route": {
+    "arterial_road": true,
+    "major_crossings": 4,
+    "road_closure": true
+   },
+   "venue": "Clocktower Square"
+  }
+ },
+ "events": [
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: Sentinel Ambulance Service (\"the Provider\")",
+     "value": "Sentinel Ambulance Service",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: 2027-05-02",
+     "value": "2027-05-02",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Beacon Food Bank",
+     "value": "Beacon Food Bank",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Clocktower Square, Port Halden",
+     "value": "Clocktower Square, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 1 May 2027",
+     "value": "1 May 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 3 May 2027",
+     "value": "3 May 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $1,000,000 each occurrence",
+     "value": "$1,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.6827564205020449,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 3.5202930712480622,
+      "entropy": 0.6970417374846136,
+      "levels": [
+       0.05073230264260011,
+       0.7434101876704641,
+       0.2058575096869359
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0008862256205405963,
+      "count": 2.0911477552189077,
+      "entropy": 0.9290215301993904,
+      "levels": [
+       0.3792479315313465,
+       0.525940085585817,
+       0.09481198288283663
+      ],
+      "reach": 0.01,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.979427593342367,
+      "entropy": 0.6341739653505842,
+      "levels": [
+       0.018139857067465463,
+       0.23772322673168245,
+       0.7441369162008521
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.11543357436631888,
+      "count": 3.5740449985918645,
+      "entropy": 0.6774538329379894,
+      "levels": [
+       0.09764452980581623,
+       0.7802998079369134,
+       0.12205566225727028
+      ],
+      "reach": 0.99,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.10046056382307153,
+     0.7777562107134025,
+     0.12178322546352595
+    ],
+    "questions": [
+     {
+      "answer": 0.01,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.11631979998685947
+   },
+   "name": "Medical emergency",
+   "product": 0.03273844840267499,
+   "severity": {
+    "entropy": 0.8990565536030194,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 3.706813055936665,
+      "entropy": 0.6107300412460925,
+      "levels": [
+       0.09333084641156265,
+       0.8133383071768747,
+       0.09333084641156265
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.23345916464898392,
+      "count": 2.8209156671160667,
+      "entropy": 0.851945420755515,
+      "levels": [
+       0.6015023204194893,
+       0.33208139965042566,
+       0.06641627993008513
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 3.587228474918002,
+      "entropy": 0.6592365131300029,
+      "levels": [
+       0.024110535641858454,
+       0.7347841079395571,
+       0.2411053564185845
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.047992904615005716,
+      "count": 2.0381699782678027,
+      "entropy": 1.011778441647528,
+      "levels": [
+       0.22065836687167723,
+       0.5357973727757218,
+       0.24354426035260082
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.563417925064708,
+     0.35245299696295523,
+     0.0841290779723367
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.2814520692639896
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9526480335851155,
+    "leaves": [
+     {
+      "contribution": 0.0007370893509357475,
+      "count": 2.798757063451154,
+      "entropy": 0.6487917841795664,
+      "levels": [
+       0.7613530473556958,
+       0.2037653115346048,
+       0.03488164110969939
+      ],
+      "reach": 0.016,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.011057133505553117,
+      "count": 2.163834462057672,
+      "entropy": 0.9868605195655916,
+      "levels": [
+       0.1995164359364322,
+       0.5625142810251189,
+       0.2379692830384489
+      ],
+      "reach": 0.084,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.015125948636304459,
+      "count": 2.2016354400407177,
+      "entropy": 1.0323284608473373,
+      "levels": [
+       0.3749543792385329,
+       0.44985731919437116,
+       0.1751883015670958
+      ],
+      "reach": 0.14400000000000002,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.15897576254461396,
+      "count": 3.3773928002667306,
+      "entropy": 0.7864751799770752,
+      "levels": [
+       0.026893987989694154,
+       0.41092141585798675,
+       0.5621845961523191
+      ],
+      "reach": 0.756,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.10326631490690896,
+     0.4259474889432911,
+     0.4707861961497999
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.16,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.18589593403740726
+   },
+   "name": "Traffic conflict",
+   "product": 0.11339651976281842,
+   "severity": {
+    "entropy": 0.9433483923290392,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.8451132568429528,
+      "levels": [
+       0.05,
+       0.4,
+       0.55
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.61,
+      "count": 2.0,
+      "entropy": 0.9433483923290392,
+      "levels": [
+       0.1,
+       0.5,
+       0.4
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.403614,
+      "entropy": 0.551520642692208,
+      "levels": [
+       0.10959502808375123,
+       0.8356074578743733,
+       0.05479751404187561
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.9129821202606168,
+      "levels": [
+       0.5,
+       0.42,
+       0.08
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.1,
+     0.5,
+     0.4
+    ],
+    "questions": [
+     {
+      "answer": 1.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.61
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.61,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.207933735,
+   "t_low": 0.194608825
+  },
+  "weights_version": "first-guess+5"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The fee, date and insurance are in order, and the overall risk is below the threshold, so the race can be approved despite gaps in the traffic and medical plans.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.1461349681654934,
+ "t_high": 0.207933735,
+ "t_low": 0.194608825,
+ "title": "Beacon Spring Dash 10K",
+ "unmapped_documents": []
+}

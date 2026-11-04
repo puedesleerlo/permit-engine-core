@@ -1,0 +1,24 @@
+document: description
+intro:
+  closure:
+    - "{event_name}: a {distance} road race through the {venue} area, organised by {org_short}."
+    - "A {distance} race for {runners} runners around {venue}. Requires temporary road closures."
+    - "Our annual {distance} on the streets of {venue}."
+  path:
+    - "{event_name}: a {distance} race on the paths around {venue}, organised by {org_short}. No road closures."
+    - "A {distance} race for {runners} runners on off-road paths at {venue}."
+    - "Our annual {distance} around {venue}, all on paths."
+spectators:
+  mentioned:
+    - "We expect around {spectators} spectators at the finish."
+    - "Roughly {spectators} friends and family usually come to watch."
+    - "Allow for about {spectators} supporters along the route in addition to the runners."
+    - "Last year's crowd was {spectators} or so, and we expect the same again."
+  none:
+    - "It's mainly a participants' event, and we don't expect people to come specially to watch."
+    - ""
+    - ""
+insurance_asserted:
+  - "We carry full public liability insurance."
+  - "The event is insured under our organisation's policy."
+  - "Insurance: yes, covered."

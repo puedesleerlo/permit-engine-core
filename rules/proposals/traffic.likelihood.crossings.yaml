@@ -1,0 +1,41 @@
+# A proposed tree change, authored in advance for this experiment. It replaces rules/trees/traffic.likelihood.yaml when released.
+id: traffic.likelihood
+proposal: crossings
+authored_in_advance: true
+version: 2
+owner: policy_owner
+hazard: traffic_conflict
+scale: likelihood
+questions:
+  - id: escort_confirmed
+    kind: evidence
+    text: Is the police escort confirmed?
+    evidence_types: [police_escort_letter, police_escort_email]
+    clause: ORD-12.4
+  - id: traffic_plan_adequate
+    kind: jev
+    text: Is the traffic plan adequate?
+    instructions: Does the traffic plan cover every road closure on the route, with control at each major crossing, signed diversions, and a way through for emergency vehicles?
+    needs: [route, traffic_plan]
+    clause: ORD-12.2
+  - id: many_major_crossings
+    kind: rule
+    text: Does the route have 3 or more major crossings?
+    clause: ORD-12.5
+leaves:  # first guess, written blind; see rules/first_guess.json
+  - when: {escort_confirmed: true, traffic_plan_adequate: true, many_major_crossings: true}
+    levels: [0.5, 0.4, 0.1]
+  - when: {escort_confirmed: true, traffic_plan_adequate: true, many_major_crossings: false}
+    levels: [0.7, 0.26, 0.04]
+  - when: {escort_confirmed: true, traffic_plan_adequate: false, many_major_crossings: true}
+    levels: [0.1, 0.5, 0.4]
+  - when: {escort_confirmed: true, traffic_plan_adequate: false, many_major_crossings: false}
+    levels: [0.25, 0.55, 0.2]
+  - when: {escort_confirmed: false, traffic_plan_adequate: true, many_major_crossings: true}
+    levels: [0.25, 0.55, 0.2]
+  - when: {escort_confirmed: false, traffic_plan_adequate: true, many_major_crossings: false}
+    levels: [0.45, 0.45, 0.1]
+  - when: {escort_confirmed: false, traffic_plan_adequate: false, many_major_crossings: true}
+    levels: [0.03, 0.27, 0.7]
+  - when: {escort_confirmed: false, traffic_plan_adequate: false, many_major_crossings: false}
+    levels: [0.08, 0.42, 0.5]

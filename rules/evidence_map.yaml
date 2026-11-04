@@ -1,0 +1,88 @@
+# Owned by the steward. Holds evidence types, terms, requirements, and evidence that does not count.
+version: 1
+owner: steward
+never_sources: [form, cover_letter]
+form_values: [route]
+date_formats: ["%d %B %Y", "%B %d, %Y", "%Y-%m-%d"]
+# on_differ says what a failed comparison sets on the evidence record: field_failed or field_mismatch.
+# Comparison kinds: same_text, contains_form_value, same_date, on_or_before_form_date, on_or_after_form_date.
+evidence_types:
+  - id: certificate_of_insurance
+    name: Certificate of insurance
+    allowed_sources: [attachment]
+    whole_document: false
+    terms: [certificate of insurance, certificate of liability insurance, COI, cert of ins, proof of cover certificate, póliza]
+    claim: The organiser holds event liability insurance in force on the race date at the race venue.
+    fields:
+      - {name: named_insured, type: string, compare: {form_field: organizer, kind: same_text, on_differ: field_mismatch}}
+      - {name: venue, type: string, compare: {form_field: venue, kind: contains_form_value, on_differ: field_failed}}
+      - {name: start_date, type: date, compare: {form_field: event_date, kind: on_or_before_form_date, on_differ: field_failed}}
+      - {name: end_date, type: date, compare: {form_field: event_date, kind: on_or_after_form_date, on_differ: field_failed}}
+      - {name: coverage, type: string}
+  - id: police_escort_letter
+    name: Police escort letter
+    allowed_sources: [attachment]
+    whole_document: false
+    terms: [police letter, escort letter, event attendance notice, police service letter]
+    claim: The police have committed to escort this race on the race date.
+    fields:
+      - {name: event_date, type: date, compare: {form_field: event_date, kind: same_date, on_differ: field_mismatch}}
+      - {name: signed_by, type: string}
+  - id: police_escort_email
+    name: Police escort email
+    allowed_sources: [attachment]
+    whole_document: false
+    terms: [police email, escort email, events desk ticket]
+    claim: The police have committed to escort this race on the race date.
+    fields:
+      - {name: event_date, type: date, compare: {form_field: event_date, kind: same_date, on_differ: field_mismatch}}
+      - {name: sender, type: string}
+  - id: ambulance_agreement
+    name: Ambulance agreement
+    allowed_sources: [attachment]
+    whole_document: false
+    terms: [ambulance agreement, medical services agreement, ambulance booking, ambulance work order]
+    claim: An ambulance provider has committed to keep an ambulance on site for this race on the race date.
+    fields:
+      - {name: provider, type: string}
+      - {name: event_date, type: date, compare: {form_field: event_date, kind: same_date, on_differ: field_mismatch}}
+  - id: race_plan
+    name: Race plan
+    allowed_sources: [attachment]
+    whole_document: true
+    terms: [race plan, race notes, event information template]
+    claim: The document describes the course and its dimensions.
+    fields: []
+  - id: traffic_plan
+    name: Traffic plan
+    allowed_sources: [attachment]
+    whole_document: true
+    terms: [traffic plan, traffic management plan, traffic notes, temporary traffic arrangements]
+    claim: The document describes how traffic is managed for the race.
+    fields: []
+  - id: crowd_plan
+    name: Crowd plan
+    allowed_sources: [attachment]
+    whole_document: true
+    terms: [crowd plan, crowd management plan, crowd notes, public assembly template]
+    claim: The document describes how the crowd is managed for the race.
+    fields: []
+  - id: medical_plan
+    name: Medical plan
+    allowed_sources: [attachment]
+    whole_document: true
+    terms: [medical plan, event medical plan, medical notes, medical cover]
+    claim: The document describes medical cover for the race.
+    fields: []
+requirements:
+  - id: event_insurance
+    name: Event liability insurance
+    evidence_type: certificate_of_insurance
+    clause: ORD-7.1
+does_not_count:
+  - what: A statement in the form or in a cover letter that the event is insured
+    reason: The form and cover letter are the applicant's own claims and are never sources of proof.
+    clause: ORD-9.1
+  - what: A report by the applicant of a verbal promise from the police or an ambulance provider
+    reason: A commitment must be in the provider's own document.
+    clause: ORD-9.1

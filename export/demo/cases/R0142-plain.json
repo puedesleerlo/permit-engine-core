@@ -1,0 +1,838 @@
+{
+ "case_id": "R0142-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.8585471689564627,
+     0.12354118921843832,
+     0.01791164182509908
+    ],
+    "before": [
+     0.8380394700075924,
+     0.141452075112955,
+     0.02050845487945262
+    ],
+    "count_after": 7.447824808893465,
+    "count_before": 6.7696510859226064,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.06979173007634683,
+     0.8926813248229486,
+     0.03752694510070461
+    ],
+    "before": [
+     0.06184864067415941,
+     0.9003039699874705,
+     0.03784738933837015
+    ],
+    "count_after": 6.725679497783833,
+    "count_before": 6.8901095177696,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9345678854232545,
+     0.05546750175264968,
+     0.009964612824095841
+    ],
+    "before": [
+     0.9356900204220634,
+     0.054333402250273014,
+     0.009976577327663641
+    ],
+    "count_after": 9.300125764820775,
+    "count_before": 9.356628414024915,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.34737035825506446,
+     0.6069997887645772,
+     0.045629852980358425
+    ],
+    "before": [
+     0.4107952343459136,
+     0.5352435519155431,
+     0.0539612137385434
+    ],
+    "count_after": 6.404640453611328,
+    "count_before": 5.781326014277809,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6719159100777806,
+     0.29120583824696866,
+     0.03687825167525069
+    ],
+    "before": [
+     0.672208498348741,
+     0.2913326449074872,
+     0.03645885674377174
+    ],
+    "count_after": 5.122034620764814,
+    "count_before": 5.132080953690126,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.03894110655324238,
+     0.6520799286851446,
+     0.30897896476161296
+    ],
+    "before": [
+     0.039144781740568756,
+     0.6554905277508164,
+     0.3053646905086148
+    ],
+    "count_after": 7.286312766092945,
+    "count_before": 7.283730431108555,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.15837591597402553,
+     0.46745479084074815,
+     0.3741692931852263
+    ],
+    "before": [
+     0.1631964774335547,
+     0.4816829298538083,
+     0.355120592712637
+    ],
+    "count_after": 6.616432704336292,
+    "count_before": 6.560891009316288,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.00907459663968513,
+     0.27365904036275596,
+     0.7172663629975589
+    ],
+    "before": [
+     0.010138251876789968,
+     0.3057352728412311,
+     0.6841264752819789
+    ],
+    "count_after": 7.286086806744768,
+    "count_before": 6.8133920031645765,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9542165438944882,
+     0.03845810312862987,
+     0.0073253529768818795
+    ],
+    "before": [
+     0.948594085061684,
+     0.043180968548185476,
+     0.008224946390130567
+    ],
+    "count_after": 9.142959773824877,
+    "count_before": 8.755870724542879,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF RQ-96397\nHarbourline Insurance Company   POL NO EL-288048\nINSURED ....... South Pier Running Collective\nRISK LOCATION .. Northgate\nFROM .......... 1 January 2027\nTO ............ 31 December 2027\nINDEMNITY ..... $1,000,000\nACTIVITY ...... Foot race (South Pier Open Race 5K)\nISSUED ........ 7 August 2027\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the South Pier Open Race 5K, Saturday 16 October 2027\n\nFrom Anita Bose, Race Director, South Pier Running Collective\n\nRunners get an email in race week telling them to dress for the weather and to keep a phone with them if they can. Most have run with us before. The list of entrants includes an emergency contact for each runner, which is kept at the start.\n\nThe race is a 5K with 299 runners and starts at 10:00. No ambulance will be stationed at the race; any ambulance would come through the 911 system.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 8 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at St. Brigid's Hospital, 2 km from the finish. We've walked the route out from the pick-up point at the top of Glebe Road with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nWho's responsible\nOur medical lead is Joan Kowalczyk, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "South Pier Open Race 5K - race notes\nSouth Pier Running Collective / contact Anita Bose 555-0157\nSaturday 16 October 2027, gun 10:00, course closes 11:15\n5K (5k), approx 299 entered\n\nROUTE\nGlebe Road, Brook Street and Hatter Street. all closed. major x-ings: Queen's Road, High Street, Station Road, Victoria Road and Dock Road. finish Ferry Park lawn\n\nWIDTHS\nstart Glebe Road (14m). Brook Street 16m. Hatter Street 16m + wide pavements + verge most of way\n\nOTHER\nnumbers from the top of Glebe Road 1hr before. chip timing. water on course. results online same day\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "South Pier Open Race 5K - traffic notes\nSaturday 16 October 2027 / gun 10:00 / Northgate\ncontact Anita Bose 555-0157\nWe have not arranged any police attendance for this race.\n\nCLOSURES\nPathfinder Road Crews doing barriers\nGlebe Road (Market Row-Foundry Street) 08:45-11:45\nBrook Street (Albion Road-Rope Walk) 08:45-11:45\nHatter Street (Albion Road-Canon Road) 08:45-11:45\n\nvols get note race week w/ start time, find own cover if cant make it. most done it before\n\nMAJOR X-INGS\nvols at busier junctions, numbers tbc nearer the time depending who signs up. move ppl around on the day as needed. they know the area + most have done it before\n\nDIVERSIONS\nsigned by Pathfinder Road Crews\nGlebe Road: via Regent Road + Tram Street, signs from Canon Road\nBrook Street: via Canal Road + Prince Street, signs from Union Row\nHatter Street: via Prince Street + Ferry Road, signs from Albion Road\n\nEMERGENCY\nwill let services know the date + general area beforehand. team will sort it out if anyone needs to get through, everybody knows to move barriers + get out of the way\n\nNOTICE\nletter drop all frontages -21 days, reminder -7. boards up -10. bus co told\n\nREOPEN\nsweep behind last runner. closures off in order. all open by 11:45\n"
+   }
+  ],
+  "cover_letter": "7 August 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nPlease find our application below.\n\nWe are applying for a street race permit for the South Pier Open Race 5K on Saturday 16 October 2027. We expect 299 runners over 5K, starting at 10:00 in the Northgate area. The completed form and the attachments (insurance.txt, medical_plan.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nPlease let me know if you need anything else.\n\nYours faithfully,\n\nAnita Bose\nRace Director, South Pier Running Collective\nanita@southpierrun.example / 555-0157\n",
+  "form": {
+   "attachments": [
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A 5K race for 299 runners around Northgate. Requires temporary road closures.",
+   "event_date": "2027-10-16",
+   "event_name": "South Pier Open Race 5K",
+   "event_type": "street_race",
+   "expected_runners": 299,
+   "fee_paid": true,
+   "hospital_distance_km": 2,
+   "organizer": "South Pier Running Collective",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 5,
+    "road_closure": true
+   },
+   "venue": "Northgate"
+  }
+ },
+ "events": [
+  434,
+  435,
+  436,
+  437,
+  438,
+  439,
+  440,
+  441,
+  442,
+  443,
+  444,
+  445
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "INSURED ....... South Pier Running Collective",
+     "value": "South Pier Running Collective",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "RISK LOCATION .. Northgate",
+     "value": "Northgate",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "FROM .......... 1 January 2027",
+     "value": "1 January 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "TO ............ 31 December 2027",
+     "value": "31 December 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "INDEMNITY ..... $1,000,000",
+     "value": "$1,000,000",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.8023271062269047,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 8.609440333692325,
+      "entropy": 0.2674017348740991,
+      "levels": [
+       0.010977006810419658,
+       0.9359174079488967,
+       0.053105585240683574
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.02038219335640572,
+      "count": 6.7696510859226064,
+      "entropy": 0.5044391075960172,
+      "levels": [
+       0.8380394700075924,
+       0.141452075112955,
+       0.02050845487945262
+      ],
+      "reach": 0.55,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.847394902213027,
+      "entropy": 0.23359591211988517,
+      "levels": [
+       0.0029075811700248317,
+       0.0553148833472107,
+       0.9417775354827644
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.046179713976183576,
+      "count": 6.8901095177696,
+      "entropy": 0.3906009338149674,
+      "levels": [
+       0.06184864067415941,
+       0.9003039699874705,
+       0.03784738933837015
+      ],
+      "reach": 0.44999999999999996,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.4887535968075476,
+     0.4829354278064869,
+     0.02831097538596551
+    ],
+    "questions": [
+     {
+      "answer": 0.55,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.06656190733258929
+   },
+   "name": "Medical emergency",
+   "product": 0.019353023400851387,
+   "severity": {
+    "entropy": 0.8557189481989396,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 8.29356604620831,
+      "entropy": 0.2222562416721792,
+      "levels": [
+       0.023512557708507856,
+       0.9529748845829843,
+       0.023512557708507856
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.012527894026997919,
+      "count": 9.356628414024915,
+      "entropy": 0.2664158551639831,
+      "levels": [
+       0.9356900204220634,
+       0.054333402250273014,
+       0.009976577327663641
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.849643427954733,
+      "entropy": 0.2818584091035563,
+      "levels": [
+       0.006581803353167127,
+       0.9276001631151616,
+       0.06581803353167126
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.2782243421454168,
+      "count": 5.781326014277809,
+      "entropy": 0.8575525601963935,
+      "levels": [
+       0.4107952343459136,
+       0.5352435519155431,
+       0.0539612137385434
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.4632847129535286,
+     0.48715253694901606,
+     0.04956275009745543
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.29075223617241475
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9016428762673065,
+    "leaves": [
+     {
+      "contribution": 0.0017659980188682173,
+      "count": 5.132080953690126,
+      "entropy": 0.7470258852337589,
+      "levels": [
+       0.672208498348741,
+       0.2913326449074872,
+       0.03645885674377174
+      ],
+      "reach": 0.033,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.010582070822685988,
+      "count": 7.283730431108555,
+      "entropy": 0.7659470798119976,
+      "levels": [
+       0.039144781740568756,
+       0.6554905277508164,
+       0.3053646905086148
+      ],
+      "reach": 0.06699999999999999,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.04691661490330939,
+      "count": 6.560891009316288,
+      "entropy": 1.0153527749194324,
+      "levels": [
+       0.1631964774335547,
+       0.4816829298538083,
+       0.355120592712637
+      ],
+      "reach": 0.29700000000000004,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.1423165836484703,
+      "count": 6.8133920031645765,
+      "entropy": 0.668559320053019,
+      "levels": [
+       0.010138251876789968,
+       0.3057352728412311,
+       0.6841264752819789
+      ],
+      "reach": 0.603,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.07938830050159666,
+     0.3809500423310952,
+     0.5396616571673082
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.33,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.2015812673933339
+   },
+   "name": "Traffic conflict",
+   "product": 0.02426166465530614,
+   "severity": {
+    "entropy": 0.22523588241757772,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.8600000000000003,
+      "entropy": 0.706602182006408,
+      "levels": [
+       0.032517482517482516,
+       0.2601398601398601,
+       0.7073426573426573
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.403614,
+      "entropy": 0.5668033625789871,
+      "levels": [
+       0.03653167602791708,
+       0.8173416198604146,
+       0.1461267041116683
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.339645940368685,
+      "entropy": 0.23827670406594795,
+      "levels": [
+       0.03482034925510738,
+       0.947769476117339,
+       0.01741017462755369
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.12035674231557317,
+      "count": 8.755870724542879,
+      "entropy": 0.22523588241757772,
+      "levels": [
+       0.948594085061684,
+       0.043180968548185476,
+       0.008224946390130567
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.948594085061684,
+     0.043180968548185476,
+     0.008224946390130567
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.12035674231557317
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.29075223617241475,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.18941409706377926,
+   "t_low": 0.18941409706377926
+  },
+  "weights_version": "first-guess+36"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The paperwork, fee, date and insurance are in order. Gaps in police cover and crossing staffing are offset by the small field on non-arterial roads, so overall risk is low.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.04361468805615753,
+ "t_high": 0.18941409706377926,
+ "t_low": 0.18941409706377926,
+ "title": "South Pier Open Race 5K",
+ "unmapped_documents": []
+}

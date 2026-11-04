@@ -1,0 +1,116 @@
+document: insurance
+certificate:
+  families:
+    a:
+      style: broker-issued certificate form
+      text: |
+        CERTIFICATE OF LIABILITY INSURANCE
+        Certificate no. {ref_no}
+        Issued: {today_doc}
+
+        INSURER: {insurer}
+        POLICY NUMBER: {policy_no}
+
+        NAMED INSURED: {organizer}
+        DESCRIPTION OF OPERATIONS: Public liability for a foot race, the {event_name}
+        VENUE: {insured_venue}, {city}
+
+        POLICY PERIOD
+        Effective: {period_start}
+        Expiry: {period_end}
+
+        LIMIT OF LIABILITY: {coverage} each occurrence
+
+        This certificate is issued for information only and confers no rights upon the holder beyond those of the policy.
+
+        Certificate holder: City of {city}, Events Office
+    b:
+      style: letterhead insurer note
+      text: |
+        {insurer}
+        Certificate of Insurance
+
+        We certify that a policy of event public liability insurance has been issued as follows.
+
+        Policy: {policy_no}
+        Insured: {organizer}
+        Event covered: {event_name}
+        Location of event: {insured_venue}
+        Cover starts: {period_start}
+        Cover ends: {period_end}
+        Limit of indemnity: {coverage} any one event
+
+        Signed on behalf of the insurer, {today_doc}
+        Certificate reference {ref_no}
+    c:
+      style: scanned-looking text
+      text: |
+        CERT OF INS.   REF {ref_no}
+        {insurer}   POL NO {policy_no}
+        INSURED ....... {organizer}
+        RISK LOCATION .. {insured_venue}
+        FROM .......... {period_start}
+        TO ............ {period_end}
+        INDEMNITY ..... {coverage}
+        ACTIVITY ...... Foot race ({event_name})
+        ISSUED ........ {today_doc}
+    h:
+      test_only: true
+      style: wallet-style summary
+      text: |
+        Your Event Cover Summary
+        Thanks for choosing {insurer}. This is your certificate of insurance. Please keep it safe.
+
+        Who is covered: {organizer}
+        What is covered: public liability at the {event_name}
+        Where you are covered: {insured_venue} only
+        When you are covered: {period_start} to {period_end}
+        How much: up to {coverage} per claim
+        Policy number: {policy_no}
+        Certificate: {ref_no}, issued {today_doc}
+broker_letter:
+  families:
+    a:
+      style: broker's letter
+      text: |
+        {broker}
+        Independent Insurance Brokers
+
+        {today_doc}
+
+        To whom it may concern
+
+        Re: {organizer} - {event_name}
+
+        We act as insurance brokers for the above organisation and have done so for several years. We are arranging public liability cover for their forthcoming race and have every expectation that terms will be confirmed by underwriters shortly. We see no reason why cover should not be in place in good time for the event.
+
+        Please contact the undersigned with any questions.
+
+        Yours faithfully,
+        {broker_person}
+        Account Executive
+    b:
+      style: short broker email printout
+      text: |
+        From: {broker_person} <{broker_person_email}>
+        To: {contact_email}
+        Date: {today_doc}
+        Subject: Cover for your race
+
+        Hi {contact_first},
+
+        Just a note you can pass on to the council. {broker} looks after {organizer}'s insurance, and we'll be able to sort out event liability for the {event_name} as we did last year. Let me know the final numbers when you have them and I'll get a price from the market.
+
+        Best,
+        {broker_person}
+    h:
+      test_only: true
+      style: broker's statement of intent
+      text: |
+        STATEMENT OF INTENT TO PLACE COVER
+
+        Client: {organizer}
+        Event: {event_name}
+        Prepared by: {broker}, {broker_person}, {today_doc}
+
+        {broker} intends to approach the market on the client's behalf for public liability of up to {coverage}. This statement is not a policy, a certificate or a cover note, and it does not bind any insurer.

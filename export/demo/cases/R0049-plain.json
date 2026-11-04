@@ -1,0 +1,838 @@
+{
+ "case_id": "R0049-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.026639564502601066,
+     0.8632615363312527,
+     0.11009889916614628
+    ],
+    "before": [
+     0.03244542022594856,
+     0.8334606065219299,
+     0.13409397325212152
+    ],
+    "count_after": 5.55932779166214,
+    "count_before": 4.900977510957496,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.012615176612934332,
+     0.21459660700666194,
+     0.7727882163804036
+    ],
+    "before": [
+     0.012632178160590419,
+     0.21353811423839306,
+     0.7738297076010165
+    ],
+    "count_after": 3.8647299095069876,
+    "count_before": 3.865134240614346,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.0689691652073793,
+     0.8620616695852414,
+     0.0689691652073793
+    ],
+    "before": [
+     0.07054784623582754,
+     0.8589043075283449,
+     0.07054784623582754
+    ],
+    "count_after": 4.597804037562336,
+    "count_before": 4.527655472070565,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.012782128561999886,
+     0.8593965858180014,
+     0.12782128561999884
+    ],
+    "before": [
+     0.015261416423462347,
+     0.8321244193419143,
+     0.15261416423462343
+    ],
+    "count_after": 5.522236112763668,
+    "count_before": 4.937290223878037,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.7411464114101759,
+     0.20331417665197496,
+     0.055539411937849247
+    ],
+    "before": [
+     0.7461529683256992,
+     0.2046875948881965,
+     0.04915943678610433
+    ],
+    "count_after": 2.7871348703814176,
+    "count_before": 2.7869789769358126,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.08597319392282331,
+     0.4392546895742441,
+     0.47477211650293255
+    ],
+    "before": [
+     0.08629712621616066,
+     0.44090972613227525,
+     0.4727931476515641
+    ],
+    "count_after": 4.166561474909136,
+    "count_before": 4.153332094138375,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.26327020358309006,
+     0.31695871087801847,
+     0.4197710855388914
+    ],
+    "before": [
+     0.3549048089400254,
+     0.42728029680175,
+     0.21781489425822465
+    ],
+    "count_after": 2.8883167994727676,
+    "count_before": 2.275258628790025,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.01476431015195512,
+     0.2358878130524969,
+     0.7493478767955479
+    ],
+    "before": [
+     0.015394484644374953,
+     0.24595604389623169,
+     0.7386494714593934
+    ],
+    "count_after": 5.3721702556771564,
+    "count_before": 5.179251502115861,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.8173416198604146,
+     0.15343303931725172,
+     0.029225340822333662
+    ],
+    "before": [
+     0.7636756106891087,
+     0.1985124870211487,
+     0.03781190228974261
+    ],
+    "count_after": 4.403614,
+    "count_before": 3.6598,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. RQ-86939\nIssued: 15 July 2027\n\nINSURER: Northern Shield Assurance\nPOLICY NUMBER: PL-400529\n\nNAMED INSURED: Port Halden Road Runners\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the PHRR Summer Run Half Marathon\nVENUE: Harbourside, Port Halden\n\nPOLICY PERIOD\nEffective: 20 August 2027\nExpiry: 22 August 2027\n\nLIMIT OF LIABILITY: $2,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "PHRR Summer Run Half Marathon - medical notes\nSaturday 21 August 2027 / gun 08:00 / 100 runners / half marathon\ncontact Tomas Reyes 555-0174\nWe are not booking a dedicated ambulance for this race.\n\nFIRST AID\n3 posts (start, finish, midpoint). 6 qualified first aiders. nowhere more than 1.5km from a post. 2 bike responders w/ defibs\n\nWEATHER / WATER\nwater every 2.5k. forecast check -48h and -2h. >28C earlier start or shorter course. >32C cancel. foil + warm tent at finish if cold/wet\n\nHOSPITAL\nNorthshore District Hospital, 12km from finish. pickup point the top of Tanner Street, route walked w/ first aiders. ED told date + numbers\n\nCOMMS\nradios on medical channel at all posts + bikes, phones backup. amb calls go via medical lead, who gives crew the barrier to come to\n\nLEAD\nHelen Achterberg, registered paramedic, on site from -1hr til last runner in. can withdraw any runner\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nPHRR Summer Run Half Marathon | Saturday 21 August 2027\nOrganiser: Port Halden Road Runners\nRace director: Tomas Reyes\nReference: AG-26683\n\nOverview\nThe PHRR Summer Run Half Marathon is a half marathon race of 21 km for 100 entrants, based in the Harbourside area of Port Halden. The start is at 08:00 and the course closes at 11:30.\n\nCourse\nThe course runs in order along Tanner Street, Orchard Road, Quay Street, Canon Road and Lamb Street, all of which are closed to traffic for the race. Major roads crossed: Cross Avenue, Dock Road, Church Road, Regent Road, High Street and Queen's Road. The finish is in Cathedral Close.\n\nCourse dimensions\nSurvey widths: Tanner Street 12 m, Quay Street 10 m, Lamb Street 16 m, kerb to kerb, excluding footways. Start pens sit side by side across the full carriageway, and spectators have the pavement and a grassed verge along most of the route.\n\nSupport\nEntrants collect numbers from the top of Tanner Street from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the PHRR website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: PHRR Summer Run Half Marathon\nDate: Saturday 21 August 2027\nApplicant: Port Halden Road Runners\nPrepared by: Brightway Traffic Consulting\nIssue: 2.2\n\n1. Scope\nThis plan describes how traffic will be managed for the PHRR Summer Run Half Marathon, a half marathon race in the Harbourside area of Port Halden with a 08:00 start. It has been prepared to accompany the permit application and should be read with the race plan. We have not arranged any police attendance for this race.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Northline Barriers.\n- Tanner Street, Linden Avenue to Hatter Street: closed 06:45 to 12:00\n- Orchard Road, Hatter Street to Linden Avenue: closed 06:45 to 12:00\n- Quay Street, Linden Avenue to Dyer Street: closed 06:45 to 12:00\n- Canon Road, Linden Avenue to Bridge Row: closed 06:45 to 12:00\n- Lamb Street, Dyer Street to Spring Way: closed 06:45 to 12:00\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 06:45 until the last runner has passed.\n- Cross Avenue at Quay Street: 4 traffic marshals with stop/go boards, one supervisor\n- Dock Road at Orchard Road: 4 traffic marshals with stop/go boards, one supervisor\n- Church Road at Orchard Road: 3 traffic marshals with stop/go boards, one supervisor\n- Regent Road at Tanner Street: 2 traffic marshals with stop/go boards, one supervisor\n- High Street at Tanner Street: 2 traffic marshals with stop/go boards, one supervisor\n- Queen's Road at Tanner Street: 3 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Tanner Street: traffic diverted via Canal Road and Ferry Road, signed from Bridge Row\n- Orchard Road: traffic diverted via Tram Street and Prince Street, signed from Linden Avenue\n- Quay Street: traffic diverted via Victoria Road and Canal Road, signed from Linden Avenue\n- Canon Road: traffic diverted via Prince Street and Ferry Road, signed from Spring Way\n- Lamb Street: traffic diverted via Tram Street and Ferry Road, signed from Bridge Row\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\n6. Notification\nAll frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times.\n\n7. Reopening\nRoads will be reopened following the conclusion of the event, once barriers and equipment have been removed by the contractor.\n"
+   }
+  ],
+  "cover_letter": "15 July 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the PHRR Summer Run Half Marathon on Saturday 21 August 2027. We expect 100 runners over half marathon, starting at 08:00 in the Harbourside area. The completed form and the attachments (insurance.txt, medical_plan.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nTomas Reyes\nVolunteer Coordinator, Port Halden Road Runners\ntomas@phrr.example / 555-0174\n",
+  "form": {
+   "attachments": [
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A half marathon race for 100 runners around Harbourside. Requires temporary road closures.",
+   "event_date": "2027-08-21",
+   "event_name": "PHRR Summer Run Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 100,
+   "fee_paid": true,
+   "hospital_distance_km": 12,
+   "organizer": "Port Halden Road Runners",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 6,
+    "road_closure": true
+   },
+   "venue": "Harbourside"
+  }
+ },
+ "events": [
+  135,
+  136,
+  137,
+  138,
+  139,
+  140,
+  141,
+  142,
+  143,
+  144,
+  145,
+  146
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Port Halden Road Runners",
+     "value": "Port Halden Road Runners",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Harbourside, Port Halden",
+     "value": "Harbourside, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 20 August 2027",
+     "value": "20 August 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 22 August 2027",
+     "value": "22 August 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $2,000,000 each occurrence",
+     "value": "$2,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.5538866166756089,
+    "leaves": [
+     {
+      "contribution": 0.12173869781170146,
+      "count": 4.900977510957496,
+      "entropy": 0.5324833578457824,
+      "levels": [
+       0.03244542022594856,
+       0.8334606065219299,
+       0.13409397325212152
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.9804468096731624,
+      "entropy": 0.8563216968279684,
+      "levels": [
+       0.5768421756232431,
+       0.36187309033460757,
+       0.06128473404214935
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0050751073453471265,
+      "count": 3.865134240614346,
+      "entropy": 0.5833242934980507,
+      "levels": [
+       0.012632178160590419,
+       0.21353811423839306,
+       0.7738297076010165
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.995083014736743,
+      "entropy": 0.495221298033844,
+      "levels": [
+       0.06137665128172296,
+       0.8623736115306275,
+       0.0762497371876495
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0320491553846414,
+     0.8210621566762591,
+     0.14688868793909945
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.1268138051570486
+   },
+   "name": "Medical emergency",
+   "product": 0.06092230330888803,
+   "severity": {
+    "entropy": 0.5107031443145537,
+    "leaves": [
+     {
+      "contribution": 0.042116435387074824,
+      "count": 4.527655472070565,
+      "entropy": 0.5047475912460347,
+      "levels": [
+       0.07054784623582754,
+       0.8589043075283449,
+       0.07054784623582754
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.031015942708971,
+      "entropy": 0.5596889809137836,
+      "levels": [
+       0.8163190286901207,
+       0.15306747609156607,
+       0.030613495218313212
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.43829106625236186,
+      "count": 4.937290223878037,
+      "entropy": 0.5036425914440967,
+      "levels": [
+       0.015261416423462347,
+       0.8321244193419143,
+       0.15261416423462343
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.102770493148919,
+      "entropy": 1.0330281885756594,
+      "levels": [
+       0.2608692205667498,
+       0.5081524108603594,
+       0.23097836857289064
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.020790059404698864,
+     0.8348024081605574,
+     0.14440753243474383
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.4804075016394367
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 1.0781313977442901,
+    "leaves": [
+     {
+      "contribution": 0.004612847789987174,
+      "count": 2.7869789769358126,
+      "entropy": 0.691283820654295,
+      "levels": [
+       0.7461529683256992,
+       0.2046875948881965,
+       0.04915943678610433
+      ],
+      "reach": 0.09200000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.001501238875464159,
+      "count": 4.153332094138375,
+      "entropy": 0.9266601371288878,
+      "levels": [
+       0.08629712621616066,
+       0.44090972613227525,
+       0.4727931476515641
+      ],
+      "reach": 0.007999999999999997,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.09536125194497473,
+      "count": 2.275258628790025,
+      "entropy": 1.0629445599120908,
+      "levels": [
+       0.3549048089400254,
+       0.42728029680175,
+       0.21781489425822465
+      ],
+      "reach": 0.8280000000000001,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.017747880157463657,
+      "count": 5.179251502115861,
+      "entropy": 0.6329916292299599,
+      "levels": [
+       0.015394484644374953,
+       0.24595604389623169,
+       0.7386494714593934
+      ],
+      "reach": 0.07199999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.3643060347924297,
+     0.39385545745115,
+     0.24183850775642043
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.92,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.11922321876788973
+   },
+   "name": "Traffic conflict",
+   "product": 0.023079762206121106,
+   "severity": {
+    "entropy": 0.6507106779011407,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.8451132568429528,
+      "levels": [
+       0.05,
+       0.4,
+       0.55
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.8600000000000003,
+      "entropy": 0.7934270068588588,
+      "levels": [
+       0.06503496503496503,
+       0.6748251748251748,
+       0.2601398601398601
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.7386857486,
+      "entropy": 0.4140870078692604,
+      "levels": [
+       0.07273669266204923,
+       0.8908949610069262,
+       0.03636834633102461
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.19358445816711298,
+      "count": 3.6598,
+      "entropy": 0.6507106779011407,
+      "levels": [
+       0.7636756106891087,
+       0.1985124870211487,
+       0.03781190228974261
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.7636756106891087,
+     0.1985124870211487,
+     0.03781190228974261
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.19358445816711298
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.4804075016394367,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.19714787312166646,
+   "t_low": 0.1831142813095249
+  },
+  "weights_version": "first-guess+11"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The application is complete, the fee is paid, insurance covers the race date and venue, and the assessed overall risk is below the threshold for further review.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.08400206551500913,
+ "t_high": 0.19714787312166646,
+ "t_low": 0.1831142813095249,
+ "title": "PHRR Summer Run Half Marathon",
+ "unmapped_documents": []
+}

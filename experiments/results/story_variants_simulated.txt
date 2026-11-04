@@ -1,0 +1,39 @@
+answers=simulated, officer accuracy 0.9, mean of 5 officer seeds, read on 90 held-out cases. All synthetic.
+Reference: trained with EM on the other 90 labelled train cases: loss 0.487, right level 0.829, decided without officer 0.644, approved 0.611, precision 0.927
+
+=== A: corrections only ===
+ reviews  taught   loss  right level  no officer  approved  precision  t_low  t_high
+       0     0.0  0.777        0.681       0.622     0.589      0.925  0.203   0.223
+      20     5.0  0.800        0.650       0.569     0.536      0.921  0.194   0.236
+      40     6.8  0.806        0.646       0.564     0.531      0.912  0.195   0.241
+      60    10.2  0.809        0.681       0.573     0.540      0.921  0.200   0.244
+      80    14.0  0.825        0.688       0.553     0.520      0.918  0.215   0.272
+     100    16.8  0.822        0.685       0.576     0.542      0.918  0.210   0.254
+
+=== B: every review teaches, discount 0.93 ===
+ reviews  taught   loss  right level  no officer  approved  precision  t_low  t_high
+       0     0.0  0.777        0.681       0.622     0.589      0.925  0.203   0.223
+      20    20.0  0.627        0.755       0.600     0.567      0.937  0.184   0.222
+      40    40.0  0.560        0.818       0.622     0.589      0.928  0.174   0.212
+      60    60.0  0.532        0.834       0.624     0.591      0.929  0.179   0.223
+      80    80.0  0.519        0.841       0.620     0.587      0.932  0.172   0.212
+     100   100.0  0.508        0.842       0.616     0.582      0.939  0.164   0.205
+
+=== C: every review teaches, no discount ===
+ reviews  taught   loss  right level  no officer  approved  precision  t_low  t_high
+       0     0.0  0.777        0.681       0.622     0.589      0.925  0.203   0.223
+      20    20.0  0.631        0.752       0.600     0.567      0.937  0.186   0.221
+      40    40.0  0.571        0.822       0.622     0.589      0.928  0.177   0.212
+      60    60.0  0.546        0.827       0.629     0.596      0.929  0.181   0.215
+      80    80.0  0.532        0.840       0.622     0.589      0.928  0.174   0.214
+     100   100.0  0.525        0.839       0.624     0.591      0.929  0.167   0.204
+
+=== D: refit with EM from officer labels ===
+ reviews  taught   loss  right level  no officer  approved  precision  t_low  t_high
+       0     0.0  0.777        0.681       0.622     0.589      0.925  0.203   0.223
+      20    20.0  0.635        0.750       0.598     0.564      0.941  0.187   0.225
+      40    40.0  0.569        0.817       0.616     0.582      0.935  0.174   0.218
+      60    60.0  0.537        0.830       0.624     0.591      0.929  0.178   0.220
+      80    80.0  0.521        0.842       0.622     0.589      0.928  0.171   0.212
+     100   100.0  0.514        0.843       0.620     0.587      0.932  0.166   0.212
+

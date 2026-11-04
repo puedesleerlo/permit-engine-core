@@ -1,0 +1,106 @@
+{
+  "video1": [
+    {
+      "id": "1.1",
+      "text": "A city office gets a request to hold a street race. One AI model could answer yes or no. But when it's wrong, there's nothing to check or fix."
+    },
+    {
+      "id": "1.2",
+      "text": "Permit Engine splits that decision into parts you can inspect. It's automatic and AI assisted, yet every step leaves a trace."
+    },
+    {
+      "id": "1.3",
+      "text": "First, evidence. The AI must quote its source. This police letter promises an escort, but for the wrong date. A separate check compares the dates, and rejects the letter."
+    },
+    {
+      "id": "1.4",
+      "text": "Second, escalation. Small question trees score risk. A contradiction, missing insurance, or a risk that isn't clearly low goes to an officer, with the reason attached."
+    },
+    {
+      "id": "1.5",
+      "text": "Third, learning. Officer reviews adjust the numbers inside those trees. The written rules never change by themselves."
+    },
+    {
+      "id": "1.6",
+      "text": "In this demo, an AI plays the officer. On cases set aside, the trees matched our answer key 70 percent of the time at first, and 87 percent after 115 reviews."
+    },
+    {
+      "id": "1.7",
+      "text": "This pattern isn't only for races. In a bank, income papers are the evidence, fraud and default are the risks, and a mismatch goes to an analyst."
+    },
+    {
+      "id": "1.8",
+      "text": "In government benefits, the law supplies the rules, and a caseworker takes the hard cases."
+    },
+    {
+      "id": "1.9",
+      "text": "And when an AI agent is about to move money or delete data, treat that action as an application. What supports it? What could go wrong? Does it need a person?"
+    },
+    {
+      "id": "1.10",
+      "text": "We've only tested on made-up permits, so it shows the method can learn, not that it predicts real risk. Automatic where it can be, traceable every time, and a person for the hard cases."
+    }
+  ],
+  "video2": [
+    {
+      "id": "2.1",
+      "text": "Let's follow one made-up application: a race with 900 runners and a closed road."
+    },
+    {
+      "id": "2.2",
+      "text": "Written rules pick three hazards: traffic, crowd pressure, medical."
+    },
+    {
+      "id": "2.3",
+      "text": "Each hazard gets two small question trees: how likely, and how bad. Take one: how likely is a traffic conflict?"
+    },
+    {
+      "id": "2.4",
+      "text": "First: is the police escort confirmed? The letter names the wrong date, so a fixed low value applies: point zero five."
+    },
+    {
+      "id": "2.5",
+      "text": "Second: is the traffic plan adequate? An AI model, Jev, reads the whole plan and returns one probability: point nine six."
+    },
+    {
+      "id": "2.6",
+      "text": "So the case splits, like water through pipes. 91 percent reaches one leaf: no confirmed escort, but a good plan."
+    },
+    {
+      "id": "2.7",
+      "text": "Each leaf holds a mix of three levels: rare, possible, likely. Blended by flow, that's 12, 60 and 28 percent."
+    },
+    {
+      "id": "2.8",
+      "text": "Each level stands for a fixed number. Multiply each share by its number, and add. That's the likelihood."
+    },
+    {
+      "id": "2.9",
+      "text": "Severity works the same way. Multiply the two for this hazard's risk."
+    },
+    {
+      "id": "2.10",
+      "text": "Add all three hazards, and total risk falls below the approval line."
+    },
+    {
+      "id": "2.11",
+      "text": "So, approved? No. Rules outrank arithmetic: the wrong-date letter sends it to an officer."
+    },
+    {
+      "id": "2.12",
+      "text": "Our simulated officer calls it risky, so this leaf moves: from 27 percent likely to 35. That's the learning."
+    },
+    {
+      "id": "2.13",
+      "text": "We ran three tests. First, does training help? On a sealed test, trained trees matched our answer key 89 percent of the time. Untrained, 68. Trained on shuffled answers, 55."
+    },
+    {
+      "id": "2.14",
+      "text": "Second: learning only from disagreements made its probabilities worse. Learning from agreements too made them much better."
+    },
+    {
+      "id": "2.15",
+      "text": "Third, does a pushy cover letter help? In 60 comparisons, no decision changed. All made-up data, so this shows the method can learn, not that it predicts real risk."
+    }
+  ]
+}

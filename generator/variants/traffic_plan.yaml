@@ -1,0 +1,246 @@
+document: traffic_plan
+essential: [closures, crossings, detours, emergency]
+optional: [notice, reopening]
+families:
+  a:
+    style: consultant report
+    layout: |
+      TRAFFIC MANAGEMENT PLAN
+      Event: {event_name}
+      Date: {date_plain}
+      Applicant: {organizer}
+      Prepared by: {consultant}
+      Issue: {version}
+
+      1. Scope
+      This plan describes how traffic will be managed for the {event_name}, a {distance} race in the {venue} area of {city} with a {start_time} start. It has been prepared to accompany the permit application and should be read with the race plan. {escort_line}
+
+      2. Road closures
+      {closures}
+
+      3. Major crossings
+      {crossings}
+
+      4. Diversions
+      {detours}
+
+      5. Emergency vehicle access
+      {emergency}
+
+      6. Notification
+      {notice}
+
+      7. Reopening
+      {reopening}
+    passages:
+      closures:
+        full:
+          - "Temporary closures will be in force as follows, with barriers and advance signing supplied by {contractor}.\n{closure_lines}"
+        thin:
+          - "The principal closure will be on {partial_streets}. Elsewhere on the course, traffic will be held dynamically by the appointed contractor as the field passes, in line with accepted industry practice. {contractor} will confirm the detailed arrangements following a pre-event site visit."
+      crossings:
+        full:
+          - "Each major crossing has its own control point, staffed from {closure_start} until the last runner has passed.\n{crossing_lines}"
+        thin:
+          - "Busier junctions along the course will receive appropriate supervision during the event. Staffing levels will be determined by {contractor} on the morning, taking account of conditions at the time, with resources deployed flexibly to where they are most needed."
+        none:
+          - "The course does not cross any major road, so no separate crossing control is proposed."
+      detours:
+        full:
+          - "Signed diversions will operate for the duration of the closures.\n{detour_lines}"
+        thin:
+          - "Drivers will be advised to expect delays in the area and to allow additional time for their journeys. Advance information boards will be used where practical, and through traffic is expected to find alternative routes across the wider network."
+      emergency:
+        full:
+          - "A clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms."
+        thin:
+          - "The emergency services will be made aware of the event date and general location through the usual channels ahead of the day. Any vehicle attending an incident will be accommodated by staff on the ground as circumstances allow."
+      notice:
+        full:
+          - "All frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times."
+        thin:
+          - "Details of the event will be published on the organiser's website and shared through social media in the weeks leading up to race day."
+      reopening:
+        full:
+          - "A sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by {reopen_time}."
+        thin:
+          - "Roads will be reopened following the conclusion of the event, once barriers and equipment have been removed by the contractor."
+  b:
+    style: club secretary letter style
+    layout: |
+      Traffic arrangements for the {event_name}, {date_plain}
+
+      From {contact_name}, {contact_role}, {organizer}
+
+      We have tried to think through what happens on the roads on race day. The race is a {distance}, it starts at {start_time}, and it goes through the {venue} area. {escort_line}
+
+      Closing the roads
+      {closures}
+
+      Crossings
+      {crossings}
+
+      Getting around the closures
+      {detours}
+
+      Emergency vehicles
+      {emergency}
+
+      Letting people know
+      {notice}
+
+      Afterwards
+      {reopening}
+    passages:
+      closures:
+        full:
+          - "We need the following closures, and {contractor} will put out the barriers and signs for us. {closure_sentences}"
+        thin:
+          - "The big one is {partial_streets}, which we would like closed from about {closure_start}. For the rest of the route we've found in past years that cars are few at that time of the morning, and our marshals are very good at slowing them down as the runners come through."
+      crossings:
+        full:
+          - "Where we cross a major road we will have people stationed from {closure_start} until the last runner is through. {crossing_sentences}"
+        thin:
+          - "Our marshals are experienced and they know the area, so they will keep a good eye out at the busier junctions and let runners know when it's clear. We'll move people around on the day depending on how busy things look."
+        none:
+          - "We don't cross any major roads on this route, so there's nothing special to arrange here."
+      detours:
+        full:
+          - "We've worked out the way round for drivers and {contractor} will sign it. {detour_sentences}"
+        thin:
+          - "Most local people know about the race by now and tend to avoid the area that morning. Anybody caught out can ask a marshal, who'll point them in the right direction, and they'll usually find a way round within a few minutes."
+      emergency:
+        full:
+          - "We keep one lane clear the whole way, 3.5 metres or more, for ambulances and fire engines. Every barrier has someone with a radio on our channel, and they can have it open within two minutes. Our controller on the day has direct numbers for police and ambulance control."
+        thin:
+          - "I've no doubt an ambulance or a fire engine would get through if one were needed. Everybody on our team knows to get out of the way and to help in any way they can, and we'll be sure to mention the race to the fire station."
+      notice:
+        full:
+          - "Every house and shop on the closed streets gets a letter three weeks before and a reminder a week before. We'll put up the yellow notice boards ten days ahead, and we've told the bus company the times."
+        thin:
+          - "We put the race on our Facebook page and in the club newsletter, and the local paper usually gives us a mention."
+      reopening:
+        full:
+          - "Our sweep vehicle follows the last runner, and each closure comes off in turn once it has passed and the road is clear. Everything will be open again by {reopen_time}."
+        thin:
+          - "Once it's all over the team will collect the cones and barriers, and everyone can get back to normal."
+  c:
+    style: terse notes
+    layout: |
+      {event_name} - traffic notes
+      {date_plain} / gun {start_time} / {venue}
+      contact {contact_name} {contact_phone}
+      {escort_line}
+
+      CLOSURES
+      {closures}
+
+      MAJOR X-INGS
+      {crossings}
+
+      DIVERSIONS
+      {detours}
+
+      EMERGENCY
+      {emergency}
+
+      NOTICE
+      {notice}
+
+      REOPEN
+      {reopening}
+    passages:
+      closures:
+        full:
+          - "{contractor} doing barriers\n{closure_terse}"
+        thin:
+          - "{partial_streets} closed from {closure_start}. rest of route rolling closure, marshals hold cars as runners come thru then let them go. worked ok last yr. {contractor} to confirm final details after site visit"
+      crossings:
+        full:
+          - "all staffed from {closure_start} til last runner\n{crossing_terse}"
+        thin:
+          - "vols at busier junctions, numbers tbc nearer the time depending who signs up. move ppl around on the day as needed. they know the area + most have done it before"
+        none:
+          - "none on this route"
+      detours:
+        full:
+          - "signed by {contractor}\n{detour_terse}"
+        thin:
+          - "drivers find own way round. delay boards if we can get them from {contractor}. locals know the drill, race is same weekend most yrs + it gets a mention in the paper"
+      emergency:
+        full:
+          - "3.5m lane kept clear whole way. radio at every barrier, open in 2 mins. controller has police + ambulance control direct"
+        thin:
+          - "will let services know the date + general area beforehand. team will sort it out if anyone needs to get through, everybody knows to move barriers + get out of the way"
+      notice:
+        full:
+          - "letter drop all frontages -21 days, reminder -7. boards up -10. bus co told"
+        thin:
+          - "facebook + club newsletter"
+      reopening:
+        full:
+          - "sweep behind last runner. closures off in order. all open by {reopen_time}"
+        thin:
+          - "reopen when done and barriers picked up"
+  h:
+    test_only: true
+    style: city question-and-answer template
+    layout: |
+      CITY OF {city_upper} - TEMPORARY TRAFFIC ARRANGEMENTS TEMPLATE
+
+      Event: {event_name}, {date_plain}, start {start_time}
+      Applicant: {organizer}
+      Person completing this form: {contact_name}
+
+      {escort_line}
+
+      Q1. List the roads to be closed, with the section and times for each.
+      A: {closures}
+
+      Q2. How will each major road crossing be controlled?
+      A: {crossings}
+
+      Q3. Give the diversion route for traffic displaced by each closure.
+      A: {detours}
+
+      Q4. How will emergency vehicles get through?
+      A: {emergency}
+
+      Q5. How will residents and businesses be told?
+      A: {notice}
+
+      Q6. How and when will the roads reopen?
+      A: {reopening}
+    passages:
+      closures:
+        full:
+          - "Barriers by {contractor}.\n{closure_lines}"
+        thin:
+          - "{partial_streets}, from {closure_start}. Remaining sections to be managed on the day by rolling control behind the lead vehicle, with details to be confirmed with {contractor} nearer the event following a site visit."
+      crossings:
+        full:
+          - "A control point at each one, staffed from {closure_start} until the last runner passes.\n{crossing_lines}"
+        thin:
+          - "Marshals will be present in the area of the main junctions and will use their judgement about when runners should cross. Final numbers depend on volunteer availability and will be reviewed the week before the event."
+        none:
+          - "The route has no major road crossings."
+      detours:
+        full:
+          - "Signed throughout.\n{detour_lines}"
+        thin:
+          - "Local traffic can use the surrounding streets, which are familiar to most residents. Temporary signs will be considered if resources permit, and marshals can give directions to anyone who asks on the day."
+      emergency:
+        full:
+          - "A lane of 3.5 m or more stays clear. Every barrier has a radio and can be opened within two minutes on the controller's request. The controller has direct numbers for police and ambulance control."
+        thin:
+          - "Emergency services will be informed of the date and general location beforehand. Staff on the ground will assist any attending vehicle in the normal way, and barriers can be moved by hand if required."
+      notice:
+        full:
+          - "Letters to all frontages at 21 and 7 days. Notice boards from 10 days before. Bus operators informed."
+        thin:
+          - "Website notice and social media posts."
+      reopening:
+        full:
+          - "Sweep vehicle follows the last runner. Closures lifted in the listed order. All open by {reopen_time}."
+        thin:
+          - "After the event has finished and equipment has been cleared."

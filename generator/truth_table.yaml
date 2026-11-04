@@ -1,0 +1,56 @@
+# Hidden rules that set each tree's level from the case facts. Nothing outside generator/ may read this file.
+# Levels: likelihood 0 rare, 1 possible, 2 likely; severity 0 minor, 1 serious, 2 critical.
+anchors:
+  likelihood: [0.02, 0.10, 0.30]
+  severity: [0.1, 0.4, 1.0]
+hazards:
+  traffic_conflict: {likelihood: traffic.likelihood, severity: traffic.severity}
+  crowd_pressure: {likelihood: crowd.likelihood, severity: crowd.severity}
+  medical_emergency: {likelihood: medical.likelihood, severity: medical.severity}
+trees:
+  traffic.likelihood:
+    factors: [escort_arranged, traffic_plan_adequate, many_major_crossings]
+    rows:
+      - [true, true, false, 0]
+      - [true, true, true, 1]
+      - [true, false, false, 1]
+      - [true, false, true, 2]
+      - [false, true, false, 1]
+      - [false, true, true, 2]
+      - [false, false, false, 2]
+      - [false, false, true, 2]
+  traffic.severity:
+    factors: [arterial_road, crowd_over_800]
+    rows:
+      - [false, false, 0]
+      - [true, false, 1]
+      - [false, true, 1]
+      - [true, true, 2]
+  crowd.likelihood:
+    factors: [crowd_plan_adequate, crowd_over_800]
+    rows:
+      - [true, false, 0]
+      - [true, true, 1]
+      - [false, false, 1]
+      - [false, true, 2]
+  crowd.severity:
+    factors: [narrow_venue, crowd_over_800]
+    rows:
+      - [false, false, 0]
+      - [true, false, 1]
+      - [false, true, 1]
+      - [true, true, 1]
+  medical.likelihood:
+    factors: [medical_plan_adequate, hot_date]
+    rows:
+      - [true, false, 0]
+      - [true, true, 1]
+      - [false, false, 1]
+      - [false, true, 2]
+  medical.severity:
+    factors: [ambulance_arranged, hospital_far]
+    rows:
+      - [true, false, 0]
+      - [true, true, 1]
+      - [false, false, 1]
+      - [false, true, 1]

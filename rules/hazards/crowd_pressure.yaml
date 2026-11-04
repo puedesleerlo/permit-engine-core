@@ -1,0 +1,7 @@
+id: crowd_pressure
+name: Crowd pressure
+description: People gather more densely than the space allows, at the start, along the course or at the finish.
+applies_when: The crowd is 300 or more.
+applies_rule: data.permit.screen.applies.crowd_pressure
+clause: ORD-5.2
+trees: {likelihood: crowd.likelihood, severity: crowd.severity}

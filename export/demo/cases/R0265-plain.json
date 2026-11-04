@@ -1,0 +1,858 @@
+{
+ "case_id": "R0265-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.005864542826775795,
+     0.9633499153830437,
+     0.030785541790180518
+    ],
+    "before": [
+     0.005864712663166986,
+     0.9633778138702601,
+     0.030757473466572954
+    ],
+    "count_after": 11.017304239573912,
+    "count_before": 11.024983193361386,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.0009522138181009282,
+     0.02328335687930315,
+     0.9757644293025959
+    ],
+    "before": [
+     0.0010428064482307289,
+     0.02549851118377816,
+     0.973458682367991
+    ],
+    "count_after": 11.50726873559525,
+    "count_before": 11.290285078526052,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9797910541640631,
+     0.01744184184162218,
+     0.0027671039943146405
+    ],
+    "before": [
+     0.9780729411132557,
+     0.018924702765764106,
+     0.0030023561209802153
+    ],
+    "count_after": 12.57313488060596,
+    "count_before": 12.3700711560541,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.13370652796988433,
+     0.8517486483818005,
+     0.014544823648315173
+    ],
+    "before": [
+     0.13243134517958277,
+     0.8530024212118482,
+     0.014566233608568985
+    ],
+    "count_after": 10.083780300988138,
+    "count_before": 10.14229572293674,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.5967493887617433,
+     0.3861900255718478,
+     0.017060585666408955
+    ],
+    "before": [
+     0.5967653792584884,
+     0.3862003739198531,
+     0.017034246821658494
+    ],
+    "count_after": 9.242561466498707,
+    "count_before": 9.249694687340858,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.02387952457782495,
+     0.5475357878911742,
+     0.4285846875310009
+    ],
+    "before": [
+     0.024004508877640364,
+     0.5504015642532802,
+     0.42559392686907943
+    ],
+    "count_after": 9.615189632254378,
+    "count_before": 9.627105312030247,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.13687633632746712,
+     0.5641921471114908,
+     0.29893151656104217
+    ],
+    "before": [
+     0.13745902537690366,
+     0.5665939398151868,
+     0.2959470348079094
+    ],
+    "count_after": 9.135254550873602,
+    "count_before": 9.16211953029243,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004720378550170419,
+     0.12294077549254166,
+     0.8723388459572878
+    ],
+    "before": [
+     0.005159372961267694,
+     0.1343742469320816,
+     0.8604663801066507
+    ],
+    "count_after": 10.706300194105468,
+    "count_before": 10.381604491206458,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9878016295077299,
+     0.010246631213506883,
+     0.001951739278763216
+    ],
+    "before": [
+     0.9867338273279128,
+     0.011143585044553206,
+     0.002122587627533944
+    ],
+    "count_after": 12.42381119165731,
+    "count_before": 12.283667948018612,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "Lifeline Event Medics\nBookings Office\n\n3 April 2027\n\nDear Carl Jensen,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Eastfield Heritage Run 10K on 21 August 2027. One ambulance and two paramedics will be on site at the top of Canon Road, in place by 08:30, and will stay until the race has finished. Booking reference EV-67381.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nHelen Achterberg\nBookings Manager\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "Atlas Casualty Group\nCertificate of Insurance\n\nWe certify that a policy of event public liability insurance has been issued as follows.\n\nPolicy: EL-295372\nInsured: Eastfield Athletics\nEvent covered: Eastfield Heritage Run 10K\nLocation of event: Tanners Row\nCover starts: 20 August 2027\nCover ends: 22 August 2027\nLimit of indemnity: $1,000,000 any one event\n\nSigned on behalf of the insurer, 3 April 2027\nCertificate reference EV-64123\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Eastfield Heritage Run 10K, Saturday 21 August 2027\n\nRunners get an email in race week telling them to dress for the weather and to keep a phone with them if they can. Most have run with us before. The list of entrants includes an emergency contact for each runner, which is kept at the start.\n\nFrom Carl Jensen, Volunteer Coordinator, Eastfield Athletics\n\nThe race is a 10K with 280 runners and starts at 10:00. On-site ambulance cover is set out in the attached paperwork from Lifeline Event Medics.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 10 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nIf someone needed the hospital we'd dial 911 and the paramedics would take it from there. They know what they're doing far better than we do, and the city's service is very good.\n\nStaying in touch\nWe'll all have our phones, and I'll send a list of numbers round the team the week before. The signal is usually fine around there.\n\nWho's responsible\nOur medical lead is Ellis Grant, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Eastfield Heritage Run 10K: how the race will work\n\nPrepared by Carl Jensen (Volunteer Coordinator), Eastfield Athletics. Last updated 3 April 2027.\n\nThis is our plan for race day, Saturday 21 August 2027. We expect 280 runners over 10K (10 km). Numbers can be collected from the top of Canon Road from an hour before we go at 10:00, and we aim to have the last finisher home by 12:00.\n\nThe route takes in Canon Road, Glebe Road and Dyer Street, and the City would need to close all of these for us. On the way round we cross Queen's Road. We finish in Foundry Yard.\n\nAnyone who knows the area will know these are old streets. Canon Road is only about 4 metres wall to wall, Glebe Road is around 5 metres once you allow for parked vans we can't move, and Dyer Street is about 5 metres. We line everyone up along Canon Road because there's nowhere else to put them. The last stretch has shopfronts tight on both sides.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Traffic arrangements for the Eastfield Heritage Run 10K, Saturday 21 August 2027\n\nFrom Carl Jensen, Volunteer Coordinator, Eastfield Athletics\n\nWe have tried to think through what happens on the roads on race day. The race is a 10K, it starts at 10:00, and it goes through the Tanners Row area. We have not arranged any police attendance for this race.\n\nClosing the roads\nWe need the following closures, and Northline Barriers will put out the barriers and signs for us. Canon Road from Cooper Street to Spring Way, 08:30 until 12:30. Glebe Road from Linden Avenue to Tanner Street, 08:30 until 12:30. Dyer Street from Linden Avenue to Chapel Row, 08:30 until 12:30.\n\nCrossings\nOur marshals are experienced and they know the area, so they will keep a good eye out at the busier junctions and let runners know when it's clear. We'll move people around on the day depending on how busy things look.\n\nVolunteers get a short note about the day in race week, with their start time, and are asked to find a replacement if they cannot make it. Most of them have done this before and know the area well.\n\nGetting around the closures\nWe've worked out the way round for drivers and Northline Barriers will sign it. Traffic off Canon Road goes via Regent Road and Church Road, signed from Tanner Street. Traffic off Glebe Road goes via Victoria Road and Church Road, signed from Linden Avenue. Traffic off Dyer Street goes via Station Road and Cross Avenue, signed from Salter Way.\n\nEmergency vehicles\nI've no doubt an ambulance or a fire engine would get through if one were needed. Everybody on our team knows to get out of the way and to help in any way they can, and we'll be sure to mention the race to the fire station.\n\nLetting people know\nEvery house and shop on the closed streets gets a letter three weeks before and a reminder a week before. We'll put up the yellow notice boards ten days ahead, and we've told the bus company the times.\n\nAfterwards\nOnce it's all over the team will collect the cones and barriers, and everyone can get back to normal.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Eastfield Heritage Run 10K, Saturday 21 August 2027. 280 runners, 10K, off at 10:00, around Tanners Row. I've attached ambulance_agreement.txt, insurance.txt, medical_plan.txt, race_plan.txt, traffic_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nCarl\n\nCarl Jensen, Eastfield Athletics\n555-0152\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A 10K race for 280 runners around Tanners Row. Requires temporary road closures.",
+   "event_date": "2027-08-21",
+   "event_name": "Eastfield Heritage Run 10K",
+   "event_type": "street_race",
+   "expected_runners": 280,
+   "fee_paid": true,
+   "hospital_distance_km": 3,
+   "organizer": "Eastfield Athletics",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 1,
+    "road_closure": true
+   },
+   "venue": "Tanners Row"
+  }
+ },
+ "events": [
+  863,
+  864,
+  865,
+  866,
+  867,
+  868,
+  869,
+  870,
+  871,
+  872,
+  873,
+  874
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Lifeline Event Medics",
+     "value": "Lifeline Event Medics",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "This letter is your agreement with us for ambulance cover at the Eastfield Heritage Run 10K on 21 August 2027.",
+     "value": "21 August 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "Insured: Eastfield Athletics",
+     "value": "Eastfield Athletics",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "Location of event: Tanners Row",
+     "value": "Tanners Row",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Cover starts: 20 August 2027",
+     "value": "20 August 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Cover ends: 22 August 2027",
+     "value": "22 August 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "Limit of indemnity: $1,000,000 any one event",
+     "value": "$1,000,000 any one event",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.1598004673040341,
+    "leaves": [
+     {
+      "contribution": 0.0010568231768026124,
+      "count": 11.024983193361386,
+      "entropy": 0.17316675507721757,
+      "levels": [
+       0.005864712663166986,
+       0.9633778138702601,
+       0.030757473466572954
+      ],
+      "reach": 0.01,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.178564733395502,
+      "entropy": 0.24334427699915745,
+      "levels": [
+       0.9416649904621746,
+       0.05154467278487673,
+       0.00679033675294864
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.29166222883816234,
+      "count": 11.290285078526052,
+      "entropy": 0.12690316588237444,
+      "levels": [
+       0.0010428064482307289,
+       0.02549851118377816,
+       0.973458682367991
+      ],
+      "reach": 0.99,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.107100897541775,
+      "entropy": 0.20918367255303277,
+      "levels": [
+       0.03411857752729693,
+       0.9548275031445856,
+       0.011053919328117473
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0010910255103800913,
+     0.03487730421064298,
+     0.9640316702789768
+    ],
+    "questions": [
+     {
+      "answer": 0.01,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.29271905201496495
+   },
+   "name": "Medical emergency",
+   "product": 0.03935391389579537,
+   "severity": {
+    "entropy": 0.3566785507347109,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.043851167475616,
+      "entropy": 0.10755562602936412,
+      "levels": [
+       0.009528525476458917,
+       0.9809429490470822,
+       0.009528525476458917
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.09754157820475029,
+      "count": 12.3700711560541,
+      "entropy": 0.11420337408092548,
+      "levels": [
+       0.9780729411132557,
+       0.018924702765764106,
+       0.0030023561209802153
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.578524891246898,
+      "entropy": 0.1897874280692375,
+      "levels": [
+       0.003891073802285777,
+       0.9571981881748565,
+       0.038910738022857785
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.03690103366112665,
+      "count": 10.14229572293674,
+      "entropy": 0.46495788896302676,
+      "levels": [
+       0.13243134517958277,
+       0.8530024212118482,
+       0.014566233608568985
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.8935087815198883,
+     0.1023324746103725,
+     0.004158743869739092
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.13444261186587692
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.6386157162889379,
+    "leaves": [
+     {
+      "contribution": 0.0006123218092601789,
+      "count": 9.249694687340858,
+      "entropy": 0.7448720315456996,
+      "levels": [
+       0.5967653792584884,
+       0.3862003739198531,
+       0.017034246821658494
+      ],
+      "reach": 0.011000000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.016304659795060815,
+      "count": 9.627105312030247,
+      "entropy": 0.7817458099992767,
+      "levels": [
+       0.024004508877640364,
+       0.5504015642532802,
+       0.42559392686907943
+      ],
+      "reach": 0.08900000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.014671075808211528,
+      "count": 9.16211953029243,
+      "entropy": 0.9550044124923066,
+      "levels": [
+       0.13745902537690366,
+       0.5665939398151868,
+       0.2959470348079094
+      ],
+      "reach": 0.099,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.21761610147372742,
+      "count": 10.381604491206458,
+      "entropy": 0.42619173824541134,
+      "levels": [
+       0.005159372961267694,
+       0.1343742469320816,
+       0.8604663801066507
+      ],
+      "reach": 0.801,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.026441921716242253,
+     0.2169605151659612,
+     0.7565975631177966
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.11,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.24920415888625994
+   },
+   "name": "Traffic conflict",
+   "product": 0.026229586107971395,
+   "severity": {
+    "entropy": 0.07635405587313526,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.336977746198,
+      "entropy": 0.3389373878667739,
+      "levels": [
+       0.010209759436778442,
+       0.08167807549422754,
+       0.9081121650689941
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.755870724542879,
+      "entropy": 0.2283578944154639,
+      "levels": [
+       0.01028118298766321,
+       0.948594085061684,
+       0.04112473195065284
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.19798295964703655,
+      "levels": [
+       0.02747007366330705,
+       0.9587948895050394,
+       0.013735036831653525
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.10525340437814652,
+      "count": 12.283667948018612,
+      "entropy": 0.07635405587313526,
+      "levels": [
+       0.9867338273279128,
+       0.011143585044553206,
+       0.002122587627533944
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9867338273279128,
+     0.011143585044553206,
+     0.002122587627533944
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.10525340437814652
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.13444261186587692,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21646268154544307,
+   "t_low": 0.18447068450010728
+  },
+  "weights_version": "first-guess+72"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order. Gaps in the traffic and medical plans are offset by a small field, no arterial roads, a booked ambulance and a nearby hospital, so overall risk is low.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.06558350000376677,
+ "t_high": 0.21646268154544307,
+ "t_low": 0.18447068450010728,
+ "title": "Eastfield Heritage Run 10K",
+ "unmapped_documents": []
+}

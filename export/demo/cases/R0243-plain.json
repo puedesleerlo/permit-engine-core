@@ -1,0 +1,878 @@
+{
+ "case_id": "R0243-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.005865225732826115,
+     0.9634620942016187,
+     0.030672680065555225
+    ],
+    "before": [
+     0.005865396023093958,
+     0.9634900672457184,
+     0.030644536731187715
+    ],
+    "count_after": 11.048045531452455,
+    "count_before": 11.055745093381871,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.001257877835239522,
+     0.030757397122064014,
+     0.9679847250426964
+    ],
+    "before": [
+     0.0013862085146500972,
+     0.033895315256080374,
+     0.9647184762292695
+    ],
+    "count_after": 10.798383388032002,
+    "count_before": 10.528597568275766,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9723604406255313,
+     0.023783833065980184,
+     0.0038557263084884707
+    ],
+    "before": [
+     0.9698709621111035,
+     0.025926028627288246,
+     0.004203009261608303
+    ],
+    "count_after": 11.888516163026072,
+    "count_before": 11.642301730919504,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.15871514697964395,
+     0.8232044596028968,
+     0.018080393417459227
+    ],
+    "before": [
+     0.15714877553627427,
+     0.824737167523344,
+     0.018114056940381724
+    ],
+    "count_after": 9.51615422484345,
+    "count_before": 9.567650988989733,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.5908359425633819,
+     0.3910073894498467,
+     0.01815666798677143
+    ],
+    "before": [
+     0.5400864350621977,
+     0.43950488595093506,
+     0.020408678986867414
+    ],
+    "count_after": 8.863374927991421,
+    "count_before": 8.379153573928054,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.02565457161659378,
+     0.510354504498886,
+     0.46399092388452035
+    ],
+    "before": [
+     0.025293474973256055,
+     0.5105436440926259,
+     0.464162880934118
+    ],
+    "count_after": 9.306052044921486,
+    "count_before": 9.345232909139158,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.09364087958020831,
+     0.5564361374383953,
+     0.34992298298139646
+    ],
+    "before": [
+     0.09169034980999008,
+     0.5576336155978209,
+     0.35067603459218916
+    ],
+    "count_after": 8.59120197786014,
+    "count_before": 8.630806820812612,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004474482395430304,
+     0.14387298418239058,
+     0.8516525334221791
+    ],
+    "before": [
+     0.004467948119589473,
+     0.1438739285135484,
+     0.8516581233668621
+    ],
+    "count_after": 10.309318346756701,
+    "count_before": 10.314489057170533,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.01028118298766321,
+     0.948594085061684,
+     0.04112473195065284
+    ],
+    "before": [
+     0.011606783085035793,
+     0.9419660845748211,
+     0.046427132340143173
+    ],
+    "count_after": 8.755870724542879,
+    "count_before": 8.339645940368685,
+    "leaf": {
+     "arterial_road": true,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. EV-91607\n\nBetween: Halden Medical Transport (\"the Provider\")\nAnd: Clocktower Merchants' Guild (\"the Client\")\n\nEvent: Clocktower Harvest Run 5K\nEvent date: 14 August 2027\nLocation: Tanners Row, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the top of Ash Avenue from 06:30 until the last runner has finished or 09:45, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $1150, paid in full on signature.\n\nSigned for the Provider: Ellis Grant, Operations Manager, 13 July 2027\nSigned for the Client: Daniel Mwangi, 13 July 2027\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF RQ-85309\nMeridian Mutual Insurance   POL NO EL-642139\nINSURED ....... Clocktower Merchants' Guild\nRISK LOCATION .. Tanners Row\nFROM .......... 13 August 2027\nTO ............ 15 August 2027\nINDEMNITY ..... $1,000,000\nACTIVITY ...... Foot race (Clocktower Harvest Run 5K)\nISSUED ........ 13 July 2027\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nClocktower Harvest Run 5K, Saturday 14 August 2027\nApplicant: Clocktower Merchants' Guild\nIssue: 2.3\n\n1. Event summary\nA 5K race with 180 runners, starting at 08:00 in the Tanners Row area of Port Halden. An ambulance from Halden Medical Transport is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 10 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nShould anyone require hospital treatment, the emergency services would be called in the normal way and would make the necessary arrangements for transfer, in line with their usual procedures.\n\n5. Communications\nMembers of the team will have their mobile phones with them, and a list of contact numbers will be circulated in the week before the event. Coverage in the area is generally reported to be good.\n\n6. Clinical lead\nThe medical lead is Grace Lindqvist, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PHPS TRAFFIC DIVISION - EVENT ATTENDANCE NOTICE\n\nTo: Clocktower Merchants' Guild (attn Daniel Mwangi)\nFrom: Sgt. Aidan Burke\nIssued: 13 July 2027\nOur ref: RQ-52390\n\nEvent: Clocktower Harvest Run 5K\nDate of attendance: 14 August 2027\nLocation: Tanners Row, starting at Ash Avenue\n\nAttendance is confirmed. Escort: 2 motorcycles, 1 traffic car. On station from 06:30. Stand-down when the last runner clears the course.\n\nChanges to date or route must be notified to this office, because this notice applies only to the date and route shown.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Clocktower Harvest Run 5K - race notes\nClocktower Merchants' Guild / contact Daniel Mwangi 555-0151\nSaturday 14 August 2027, gun 08:00, course closes 09:15\n5K (5k), approx 180 entered\n\nROUTE\nAsh Avenue, Kings Parkway, Dyer Street, Glebe Road and Salter Way. all closed. major x-ings: Station Road and High Street. finish Clocktower Square\n\nWIDTHS\nstart Ash Avenue (4m). Glebe Road 5m. Salter Way 5m incl pavement. shopfronts both sides all the way\n\nOTHER\nnumbers from the top of Ash Avenue 1hr before. chip timing. water on course. results online same day\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Clocktower Harvest Run 5K\nDate: Saturday 14 August 2027\nApplicant: Clocktower Merchants' Guild\nPrepared by: Brightway Traffic Consulting\nIssue: 2.3\n\n1. Scope\nThis plan describes how traffic will be managed for the Clocktower Harvest Run 5K, a 5K race in the Tanners Row area of Port Halden with a 08:00 start. It has been prepared to accompany the permit application and should be read with the race plan. See the attached correspondence from the police for the escort.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Signal Hill Traffic Services.\n- Ash Avenue, Spring Way to Mill Road: closed 06:30 to 09:45\n- Kings Parkway, Spring Way to Mill Road: closed 06:30 to 09:45\n- Dyer Street, Vine Street to Spring Way: closed 06:30 to 09:45\n- Glebe Road, Spring Way to Canon Road: closed 06:30 to 09:45\n- Salter Way, Garrison Street to Canon Road: closed 06:30 to 09:45\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 06:30 until the last runner has passed.\n- Station Road at Salter Way: 2 traffic marshals with stop/go boards, one supervisor\n- High Street at Dyer Street: 4 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Ash Avenue: traffic diverted via Regent Road and Tram Street, signed from Canon Road\n- Kings Parkway: traffic diverted via Dock Road and Ferry Road, signed from Vine Street\n- Dyer Street: traffic diverted via Church Road and Prince Street, signed from Orchard Road\n- Glebe Road: traffic diverted via Cross Avenue and Queen's Road, signed from Mill Road\n- Salter Way: traffic diverted via Queen's Road and Regent Road, signed from Garrison Street\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\n6. Notification\nDetails of the event will be published on the organiser's website and shared through social media in the weeks leading up to race day.\n\nSome background. Our committee has run races in this part of Port Halden for a number of years, and most of our members live locally. The council's traffic controller looked over an early sketch of the route last year, though not this version of the plan.\n\n7. Reopening\nRoads will be reopened following the conclusion of the event, once barriers and equipment have been removed by the contractor.\n"
+   }
+  ],
+  "cover_letter": "13 July 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Clocktower Harvest Run 5K on Saturday 14 August 2027. We expect 180 runners over 5K, starting at 08:00 in the Tanners Row area. The completed form and the attachments (ambulance_agreement.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nDaniel Mwangi\nEvent Secretary, Clocktower Merchants' Guild\ndaniel@clocktowerguild.example / 555-0151\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Clocktower Harvest Run 5K: a 5K road race through the Tanners Row area, organised by Clocktower. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-08-14",
+   "event_name": "Clocktower Harvest Run 5K",
+   "event_type": "street_race",
+   "expected_runners": 180,
+   "fee_paid": true,
+   "hospital_distance_km": 6,
+   "organizer": "Clocktower Merchants' Guild",
+   "route": {
+    "arterial_road": true,
+    "major_crossings": 2,
+    "road_closure": true
+   },
+   "venue": "Tanners Row"
+  }
+ },
+ "events": [
+  765,
+  766,
+  767,
+  768,
+  769,
+  770,
+  771,
+  772,
+  773,
+  774,
+  775,
+  776
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: Halden Medical Transport (\"the Provider\")",
+     "value": "Halden Medical Transport",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: 14 August 2027",
+     "value": "14 August 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "INSURED ....... Clocktower Merchants' Guild",
+     "value": "Clocktower Merchants' Guild",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "RISK LOCATION .. Tanners Row",
+     "value": "Tanners Row",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "FROM .......... 13 August 2027",
+     "value": "13 August 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "TO ............ 15 August 2027",
+     "value": "15 August 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "INDEMNITY ..... $1,000,000",
+     "value": "$1,000,000",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Date of attendance: 14 August 2027",
+     "value": "14 August 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "From: Sgt. Aidan Burke",
+     "value": "Sgt. Aidan Burke",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.18869571310371558,
+    "leaves": [
+     {
+      "contribution": 0.0010565967566439005,
+      "count": 11.055745093381871,
+      "entropy": 0.172781037628076,
+      "levels": [
+       0.005865396023093958,
+       0.9634900672457184,
+       0.030644536731187715
+      ],
+      "reach": 0.01,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.183227693981564,
+      "entropy": 0.2981667780689685,
+      "levels": [
+       0.9234241949792275,
+       0.06751487507523489,
+       0.009060929945537538
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.2899044705790351,
+      "count": 10.528597568275766,
+      "entropy": 0.15849253568871333,
+      "levels": [
+       0.0013862085146500972,
+       0.033895315256080374,
+       0.9647184762292695
+      ],
+      "reach": 0.99,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.715171570865708,
+      "entropy": 0.23514515457328417,
+      "levels": [
+       0.03868287339735722,
+       0.9477184449770335,
+       0.013598681625609173
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0014310003897345356,
+     0.04319126277597675,
+     0.9553777368342887
+    ],
+    "questions": [
+     {
+      "answer": 0.01,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.29096106733567895
+   },
+   "name": "Medical emergency",
+   "product": 0.03979673691903899,
+   "severity": {
+    "entropy": 0.3716206207201222,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 10.594174376039105,
+      "entropy": 0.12382726179592946,
+      "levels": [
+       0.011319045881952832,
+       0.9773619082360943,
+       0.011319045881952832
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.10040446523127056,
+      "count": 11.642301730919504,
+      "entropy": 0.14736422874260244,
+      "levels": [
+       0.9698709621111035,
+       0.025926028627288246,
+       0.004203009261608303
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.520431733080207,
+      "entropy": 0.19281712100990622,
+      "levels": [
+       0.003972051469231092,
+       0.9563074338384581,
+       0.03972051469231093
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.03637238015033467,
+      "count": 9.567650988989733,
+      "entropy": 0.5223893374406043,
+      "levels": [
+       0.15714877553627427,
+       0.824737167523344,
+       0.018114056940381724
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.8885987434536206,
+     0.1058071425168938,
+     0.0055941140294856456
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.13677684538160523
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9248263476148599,
+    "leaves": [
+     {
+      "contribution": 0.05095222517063687,
+      "count": 8.379153573928054,
+      "entropy": 0.7734535280914312,
+      "levels": [
+       0.5400864350621977,
+       0.43950488595093506,
+       0.020408678986867414
+      ],
+      "reach": 0.8370000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.012020973185904667,
+      "count": 9.345232909139158,
+      "entropy": 0.792491416734883,
+      "levels": [
+       0.025293474973256055,
+       0.5105436440926259,
+       0.464162880934118
+      ],
+      "reach": 0.06299999999999996,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.015140398040828392,
+      "count": 8.630806820812612,
+      "entropy": 0.9122376840633784,
+      "levels": [
+       0.09169034980999008,
+       0.5576336155978209,
+       0.35067603459218916
+      ],
+      "reach": 0.09299999999999999,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0018898193217666349,
+      "count": 10.314489057170533,
+      "entropy": 0.43987145889846224,
+      "levels": [
+       0.004467948119589473,
+       0.1438739285135484,
+       0.8516581233668621
+      ],
+      "reach": 0.006999999999999993,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.4622043132395408,
+     0.45289688286896024,
+     0.08489880389149906
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.93,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.08000341571913656
+   },
+   "name": "Traffic conflict",
+   "product": 0.03395138910151395,
+   "severity": {
+    "entropy": 0.25056345848046285,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 5.7386857486,
+      "entropy": 0.3826994441368005,
+      "levels": [
+       0.012122782110341538,
+       0.0969822568827323,
+       0.8908949610069262
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.42437424447857525,
+      "count": 8.339645940368685,
+      "entropy": 0.25056345848046285,
+      "levels": [
+       0.011606783085035793,
+       0.9419660845748211,
+       0.046427132340143173
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.19798295964703655,
+      "levels": [
+       0.02747007366330705,
+       0.9587948895050394,
+       0.013735036831653525
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.796712091793333,
+      "entropy": 0.09437651834631425,
+      "levels": [
+       0.9828262993744066,
+       0.014425908525498413,
+       0.002747792100094936
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.011606783085035793,
+     0.9419660845748211,
+     0.046427132340143173
+    ],
+    "questions": [
+     {
+      "answer": 1.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.42437424447857525
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.42437424447857525,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.2163286760605767,
+   "t_low": 0.18481364075531698
+  },
+  "weights_version": "first-guess+64"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order, police escort and ambulance are booked, and the overall risk is below the threshold, so the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.07374812602055295,
+ "t_high": 0.2163286760605767,
+ "t_low": 0.18481364075531698,
+ "title": "Clocktower Harvest Run 5K",
+ "unmapped_documents": []
+}

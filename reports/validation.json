@@ -1,0 +1,81 @@
+{
+ "answers": "real",
+ "arms": [
+  {
+   "approved": 0.45,
+   "approved_count": 54,
+   "cases": 120,
+   "interval": [
+    0.0,
+    0.0664135880908964
+   ],
+   "loss": 0.7830243716892472,
+   "name": "First guess",
+   "per_tree_loss": {
+    "crowd.likelihood": 0.6912864657000377,
+    "crowd.severity": 0.702422494323875,
+    "medical.likelihood": 0.7439368362956074,
+    "medical.severity": 0.8655479167716813,
+    "traffic.likelihood": 0.9759458750444953,
+    "traffic.severity": 0.7190066419997866
+   },
+   "risky_among_approved": 0.0,
+   "t_high": 0.27967159999999996,
+   "t_low": 0.168815136,
+   "threshold_notes": []
+  },
+  {
+   "approved": 0.5666666666666667,
+   "approved_count": 68,
+   "cases": 120,
+   "interval": [
+    0.0026006835761068076,
+    0.07870973128160871
+   ],
+   "loss": 0.4641713661603303,
+   "name": "Trained on labelled cases",
+   "per_tree_loss": {
+    "crowd.likelihood": 0.4019243251290665,
+    "crowd.severity": 0.33193720351335293,
+    "medical.likelihood": 0.39289884157866184,
+    "medical.severity": 0.44694647865344767,
+    "traffic.likelihood": 0.8077881738452521,
+    "traffic.severity": 0.4035331742422006
+   },
+   "risky_among_approved": 0.014705882352941176,
+   "t_high": 0.2144905376255656,
+   "t_low": 0.20385187024846646,
+   "threshold_notes": []
+  },
+  {
+   "approved": 0.30833333333333335,
+   "approved_count": 37,
+   "cases": 120,
+   "interval": [
+    0.014950976833157673,
+    0.17704654350813104
+   ],
+   "loss": 0.9016608901305716,
+   "name": "Shuffled labels (control)",
+   "per_tree_loss": {
+    "crowd.likelihood": 0.9783907610128345,
+    "crowd.severity": 0.6439679666677233,
+    "medical.likelihood": 1.0672764975484454,
+    "medical.severity": 0.7269319764515616,
+    "traffic.likelihood": 1.1485269448921607,
+    "traffic.severity": 0.8448711942107041
+   },
+   "risky_among_approved": 0.05405405405405406,
+   "t_high": 0.19038259847161693,
+   "t_low": 0.09834994717353135,
+   "threshold_notes": []
+  }
+ ],
+ "crossings": {
+  "loss_after": 0.4789865462786626,
+  "loss_before": 0.8077881738452521
+ },
+ "note": "Thresholds are chosen on these same validation cases, so these are optimistic beside a held-out test.",
+ "split": "validation",
+ "synthetic": true
+}

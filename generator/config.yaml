@@ -1,0 +1,30 @@
+# Generator values. The pipeline must not read this file.
+seed: 20261108
+version: "1.0"
+label_noise: 0.08
+risky_cut: 0.18
+sizes: {train: 180, validation: 120, test: 100}
+tones:
+  requests: 20
+  extra: [persuasive, insistent, mayor]
+min_training_cases_per_leaf: 15
+mix:
+  basic_fail: 0.04
+  basic_fail_kinds: {form_incomplete: 0.5, fee_unpaid: 0.25, date_not_allowed: 0.25}
+  crowd: {under_300: 0.334, from_300_to_800: 0.333, over_800: 0.333}
+  spectators_mentioned: 0.35
+  road_closure: 0.80
+  arterial_given_closure: 0.34
+  escort_evidence: {letter: 0.40, email: 0.15, none: 0.40, contradicting: 0.05}
+  escort_arranged_given: {letter: 0.97, email: 0.85, none: 0.30, contradicting: 0.0}
+  ambulance_evidence: {letter: 0.60, none: 0.40}
+  ambulance_arranged_given: {letter: 0.97, none: 0.30}
+  crowd_plan_adequate: 0.50
+  medical_plan_adequate: 0.50
+  hot_date: 0.50
+  narrow_venue: 0.40
+  hospital_far: 0.40
+  insurance: {valid: 0.76, expired: 0.06, wrong_venue: 0.06, broker_letter: 0.06, missing: 0.06}
+  asserted_given_missing: 0.65
+  hidden_instruction: 0.05
+  held_out_family_in_test: 0.35

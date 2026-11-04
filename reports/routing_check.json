@@ -1,0 +1,40 @@
+{
+ "answers": "real",
+ "calibration_on_train": {
+  "crowd_plan_adequate": {
+   "above_limit": true,
+   "cases": 115,
+   "error": 0.10156521739130434
+  },
+  "medical_plan_adequate": {
+   "above_limit": false,
+   "cases": 173,
+   "error": 0.08104046242774568
+  },
+  "narrow_venue": {
+   "above_limit": false,
+   "cases": 115,
+   "error": 0.033652173913043475
+  },
+  "traffic_plan_adequate": {
+   "above_limit": true,
+   "cases": 138,
+   "error": 0.11688405797101449
+  }
+ },
+ "synthetic": true,
+ "validation": {
+  "hard": {
+   "approved": 0.5666666666666667,
+   "decided_without_officer": 0.5916666666666667,
+   "loss": 0.45402347977884144,
+   "precision": 0.9852941176470589
+  },
+  "soft": {
+   "approved": 0.5666666666666667,
+   "decided_without_officer": 0.5916666666666667,
+   "loss": 0.4641713661603303,
+   "precision": 0.9852941176470589
+  }
+ }
+}

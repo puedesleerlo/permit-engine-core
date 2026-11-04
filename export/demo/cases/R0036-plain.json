@@ -1,0 +1,1138 @@
+{
+ "case_id": "R0036-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.10459699437908354,
+     0.8491697050542986,
+     0.04623330056661799
+    ],
+    "before": [
+     0.10462388697493481,
+     0.8493880323382011,
+     0.045988080686864004
+    ],
+    "count_after": 5.075734170232781,
+    "count_before": 5.0817999448115385,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.02313189289828777,
+     0.1821894059852348,
+     0.7946787011164774
+    ],
+    "before": [
+     0.031722773546614284,
+     0.24985215408331676,
+     0.7184250723700689
+    ],
+    "count_after": 3.687792565880242,
+    "count_before": 2.8873086818821245,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.015022949906013265,
+     0.8197246011278408,
+     0.1652524489661459
+    ],
+    "before": [
+     0.018675129373478802,
+     0.7758984475182544,
+     0.20542642310826684
+    ],
+    "count_after": 5.012023628536141,
+    "count_before": 4.329038220467766,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.18369941657385414,
+     0.7703757292826824,
+     0.045924854143463534
+    ],
+    "before": [
+     0.18467804258432174,
+     0.7691524467695978,
+     0.046169510646080436
+    ],
+    "count_after": 3.742067115421271,
+    "count_before": 3.7276439857399297,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.03252476514241424,
+     0.8354988252209444,
+     0.1319764096366413
+    ],
+    "before": [
+     0.03889785097561096,
+     0.8032655376956346,
+     0.15783661132875454
+    ],
+    "count_after": 4.9103558573571275,
+    "count_before": 4.273029650030588,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.016970292707292813,
+     0.28687089880463557,
+     0.6961588084880717
+    ],
+    "before": [
+     0.018120261665108578,
+     0.23854666872595773,
+     0.7433330696089337
+    ],
+    "count_after": 3.080204276188265,
+    "count_before": 2.980485826992881,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.09063352283646445,
+     0.8187329543270712,
+     0.09063352283646445
+    ],
+    "before": [
+     0.09333084641156265,
+     0.8133383071768747,
+     0.09333084641156265
+    ],
+    "count_after": 3.789529763001396,
+    "count_before": 3.706813055936665,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.019059853211242768,
+     0.7903416146763296,
+     0.19059853211242764
+    ],
+    "before": [
+     0.024110535641858454,
+     0.7347841079395571,
+     0.2411053564185845
+    ],
+    "count_after": 4.250901082922369,
+    "count_before": 3.587228474918002,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.7525511114333479,
+     0.20644275848071525,
+     0.041006130085936794
+    ],
+    "before": [
+     0.7571763918221941,
+     0.2077115834518212,
+     0.035112024725984695
+    ],
+    "count_after": 2.800633096337382,
+    "count_before": 2.803595419766551,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.10857443247390215,
+     0.5547290551382303,
+     0.3366965123878675
+    ],
+    "before": [
+     0.13511894547380562,
+     0.6903504190268266,
+     0.1745306354993678
+    ],
+    "count_after": 3.5022877129112664,
+    "count_before": 2.982691245420905,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.36368077539367794,
+     0.43784593991669724,
+     0.19847328468962483
+    ],
+    "before": [
+     0.3653971672312909,
+     0.43991235433354814,
+     0.19469047843516102
+    ],
+    "count_after": 2.2438420486837107,
+    "count_before": 2.235085484195457,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.01933059380886596,
+     0.30884284139585777,
+     0.6718265647952762
+    ],
+    "before": [
+     0.020669661857564886,
+     0.3302369891945096,
+     0.6490933489479256
+    ],
+    "count_after": 4.388681250957459,
+    "count_before": 4.130958957148371,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.07273669266204923,
+     0.8908949610069262,
+     0.03636834633102461
+    ],
+    "before": [
+     0.08808624241506641,
+     0.8678706363774004,
+     0.044043121207533203
+    ],
+    "count_after": 5.7386857486,
+    "count_before": 5.09536102,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": true
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": true
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.2"
+  ],
+  "reason_code": "high_risk",
+  "route": "officer",
+  "row": 5,
+  "text": "The risk is at or above the upper threshold, so an officer decides."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "Women on the Move Spring Dash Half Marathon - crowd notes\nSaturday 3 July 2027 / contact Carl Jensen 555-0148\ntotal 950 incl 700 runners. We allow for 250 spectators.\n\nVIEWING\n3 barriered areas: finish Market Square, turn at Castle Way, start the top of Dyer Street. approx 1250 total @ 2 per sqm. over expected numbers\n\nSTART\nall start together 10:00 after warm-up + countdown. popular w/ runners\n\nSTEWARDS\nclub vols + family helpers, event t-shirts. around all day\n\nEXIT\nrunners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins\n\nCONTROL\nCarl Jensen at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. EV-40012\nIssued: 2027-04-27\n\nINSURER: Northern Shield Assurance\nPOLICY NUMBER: PL-574419\n\nNAMED INSURED: Women on the Move Port Halden\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Women on the Move Spring Dash Half Marathon\nVENUE: Cathedral Green, Port Halden\n\nPOLICY PERIOD\nEffective: 2027-01-01\nExpiry: 2027-12-31\n\nLIMIT OF LIABILITY: $2,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Women on the Move Spring Dash Half Marathon, Saturday 3 July 2027\n\nFrom Carl Jensen, Volunteer Coordinator, Women on the Move Port Halden\n\nThe race is a half marathon with 700 runners and starts at 10:00. No ambulance will be stationed at the race; any ambulance would come through the 911 system.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 8 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nIn recent years the last runner has usually finished well inside the time limit, and past incidents have been limited to a few blisters and one twisted ankle. A number of members have first aid certificates from work and are glad to be there in a general helping role.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at Northshore District Hospital, 12 km from the finish. We've walked the route out from the pick-up point at the top of Dyer Street with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nWho's responsible\nOur medical lead is Ruth Abernathy, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PORT HALDEN POLICE SERVICE\nTraffic and Events Division\n200 Prince Street, Port Halden\n\n27 April 2027\n\nCarl Jensen\nWomen on the Move Port Halden\n\nRe: Women on the Move Spring Dash Half Marathon, 3 July 2027\n\nDear Carl Jensen,\n\nI confirm that this Division will provide a police escort for the above event on 3 July 2027. Two motorcycle officers will accompany the lead runner along the route through Cathedral Green, and one traffic unit will be stationed at Dyer Street from 08:30 until the last runner has cleared the course.\n\nPlease send your final course map to this office no later than seven days before the event.\n\nYours sincerely,\n\nSgt. Karen Holt\nTraffic and Events Division\nReference EV-29923\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nWomen on the Move Spring Dash Half Marathon | Saturday 3 July 2027\nOrganiser: Women on the Move Port Halden\nRace director: Carl Jensen\nReference: AG-46941\n\nOverview\nThe Women on the Move Spring Dash Half Marathon is a half marathon race of 21 km for 700 entrants, based in the Cathedral Green area of Port Halden. The start is at 10:00 and the course closes at 13:30.\n\nCourse\nThe course runs in order along Dyer Street, Castle Way and Fenwick Street, all of which are closed to traffic for the race. Major roads crossed: Prince Street, Regent Road and Church Road. The finish is in Market Square.\n\nCourse dimensions\nSurvey widths: Dyer Street 5 m, Castle Way 4 m, Fenwick Street 4.5 m, including footways, with continuous walls or shopfronts on both sides. There is no verge, and the start pens have to be set end to end along Dyer Street because they cannot sit side by side.\n\nSupport\nEntrants collect numbers from the top of Dyer Street from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Women on the Move website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Women on the Move Spring Dash Half Marathon\nDate: Saturday 3 July 2027\nApplicant: Women on the Move Port Halden\nPrepared by: Tessera Event Transport\nIssue: 3.1\n\n1. Scope\nThis plan describes how traffic will be managed for the Women on the Move Spring Dash Half Marathon, a half marathon race in the Cathedral Green area of Port Halden with a 10:00 start. It has been prepared to accompany the permit application and should be read with the race plan. See the attached correspondence from the police for the escort.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Pathfinder Road Crews.\n- Dyer Street, Linden Avenue to Salter Way: closed 08:30 to 14:00\n- Castle Way, Linden Avenue to Salter Way: closed 08:30 to 14:00\n- Fenwick Street, Market Row to Linden Avenue: closed 08:30 to 14:00\n\n3. Major crossings\nBusier junctions along the course will receive appropriate supervision during the event. Staffing levels will be determined by Pathfinder Road Crews on the morning, taking account of conditions at the time, with resources deployed flexibly to where they are most needed.\n\n4. Diversions\nDrivers will be advised to expect delays in the area and to allow additional time for their journeys. Advance information boards will be used where practical, and through traffic is expected to find alternative routes across the wider network.\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\n6. Notification\nAll frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times.\n\nVolunteers get a short note about the day in race week, with their start time, and are asked to find a replacement if they cannot make it. Most of them have done this before and know the area well.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 14:00.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the Women on the Move Spring Dash Half Marathon, Saturday 3 July 2027. 700 runners, half marathon, off at 10:00, around Cathedral Green. I've attached crowd_plan.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt.\n\nWe look forward to hearing from you.\n\nThanks,\nCarl\n\nCarl Jensen, Women on the Move Port Halden\n555-0148\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A half marathon race for 700 runners around Cathedral Green. Requires temporary road closures. Last year's crowd was 250 or so, and we expect the same again.",
+   "event_date": "2027-07-03",
+   "event_name": "Women on the Move Spring Dash Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 700,
+   "fee_paid": true,
+   "hospital_distance_km": 12,
+   "organizer": "Women on the Move Port Halden",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 3,
+    "road_closure": true
+   },
+   "venue": "Cathedral Green"
+  }
+ },
+ "events": [
+  99,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Women on the Move Port Halden",
+     "value": "Women on the Move Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Cathedral Green, Port Halden",
+     "value": "Cathedral Green, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 2027-01-01",
+     "value": "2027-01-01",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 2027-12-31",
+     "value": "2027-12-31",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $2,000,000 each occurrence",
+     "value": "$2,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "I confirm that this Division will provide a police escort for the above event on 3 July 2027.",
+     "value": "3 July 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "Sgt. Karen Holt",
+     "value": "Sgt. Karen Holt",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.7103322833702808,
+    "leaves": [
+     {
+      "contribution": 0.0020165541035875602,
+      "count": 5.0817999448115385,
+      "entropy": 0.5164440609904064,
+      "levels": [
+       0.10462388697493481,
+       0.8493880323382011,
+       0.045988080686864004
+      ],
+      "reach": 0.02,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 3.6238118073825145,
+      "entropy": 0.4801620618588801,
+      "levels": [
+       0.8545980963176478,
+       0.12116825306862689,
+       0.02423365061372538
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.23632424873847893,
+      "count": 2.8873086818821245,
+      "entropy": 0.6935616198060466,
+      "levels": [
+       0.031722773546614284,
+       0.24985215408331676,
+       0.7184250723700689
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0455294143262477,
+      "entropy": 1.0505489910445749,
+      "levels": [
+       0.27778425987669914,
+       0.4814771600822006,
+       0.2407385800411003
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.03318079581518069,
+     0.26184287164841447,
+     0.7049763325364048
+    ],
+    "questions": [
+     {
+      "answer": 0.02,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.2383408028420665
+   },
+   "name": "Crowd pressure",
+   "product": 0.12268502605342392,
+   "severity": {
+    "entropy": 0.604167328516146,
+    "leaves": [
+     {
+      "contribution": 0.5073002487518582,
+      "count": 4.329038220467766,
+      "entropy": 0.5963307467687807,
+      "levels": [
+       0.018675129373478802,
+       0.7758984475182544,
+       0.20542642310826684
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.852365958375649,
+      "entropy": 0.8102274038818583,
+      "levels": [
+       0.16538344017389586,
+       0.7041985119919318,
+       0.13041804783417227
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0074459658722470425,
+      "count": 3.7276439857399297,
+      "entropy": 0.655815098329219,
+      "levels": [
+       0.18467804258432174,
+       0.7691524467695978,
+       0.046169510646080436
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.8646552362641944,
+      "entropy": 0.5100311557308829,
+      "levels": [
+       0.8337009895415788,
+       0.14682022666146816,
+       0.019478783796953156
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.021995187637695663,
+     0.7757635275032814,
+     0.20224128485902312
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.5147462146241053
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.7973895274534417,
+    "leaves": [
+     {
+      "contribution": 0.07065052180323614,
+      "count": 4.273029650030588,
+      "entropy": 0.5936626515899441,
+      "levels": [
+       0.03889785097561096,
+       0.8032655376956346,
+       0.15783661132875454
+      ],
+      "reach": 0.55,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.9490557546441725,
+      "entropy": 0.8527204527870151,
+      "levels": [
+       0.5885083309506497,
+       0.3489675020101909,
+       0.06252416703915939
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.11124764684486012,
+      "count": 2.980485826992881,
+      "entropy": 0.6350389608306742,
+      "levels": [
+       0.018120261665108578,
+       0.23854666872595773,
+       0.7433330696089337
+      ],
+      "reach": 0.44999999999999996,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.318384174745031,
+      "entropy": 0.5717432152890396,
+      "levels": [
+       0.07562135570598351,
+       0.830432357262354,
+       0.0939462870316625
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.02954793578588489,
+     0.54914204665928,
+     0.42131001755483516
+    ],
+    "questions": [
+     {
+      "answer": 0.55,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.18189816864809624
+   },
+   "name": "Medical emergency",
+   "product": 0.09576701624854045,
+   "severity": {
+    "entropy": 0.665006977497961,
+    "leaves": [
+     {
+      "contribution": 0.04279992539234689,
+      "count": 3.706813055936665,
+      "entropy": 0.6107300412460925,
+      "levels": [
+       0.09333084641156265,
+       0.8133383071768747,
+       0.09333084641156265
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.031015942708971,
+      "entropy": 0.5596889809137836,
+      "levels": [
+       0.8163190286901207,
+       0.15306747609156607,
+       0.030613495218313212
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.48368704784273386,
+      "count": 3.587228474918002,
+      "entropy": 0.6592365131300029,
+      "levels": [
+       0.024110535641858454,
+       0.7347841079395571,
+       0.2411053564185845
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.102770493148919,
+      "entropy": 1.0330281885756594,
+      "levels": [
+       0.2608692205667498,
+       0.5081524108603594,
+       0.23097836857289064
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.031032566718828876,
+     0.7426395278632889,
+     0.2263279054178823
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.5264869732350808
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9413599647745803,
+    "leaves": [
+     {
+      "contribution": 0.00459838106634272,
+      "count": 2.803595419766551,
+      "entropy": 0.6546535756603207,
+      "levels": [
+       0.7571763918221941,
+       0.2077115834518212,
+       0.035112024725984695
+      ],
+      "reach": 0.099,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.09940138578103726,
+      "count": 2.982691245420905,
+      "entropy": 0.830937790615717,
+      "levels": [
+       0.13511894547380562,
+       0.6903504190268266,
+       0.1745306354993678
+      ],
+      "reach": 0.801,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0012067695453938181,
+      "count": 2.235085484195457,
+      "entropy": 1.047698821252081,
+      "levels": [
+       0.3653971672312909,
+       0.43991235433354814,
+       0.19469047843516102
+      ],
+      "reach": 0.010999999999999998,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.02030669361884721,
+      "count": 4.130958957148371,
+      "entropy": 0.7265881197405066,
+      "levels": [
+       0.020669661857564886,
+       0.3302369891945096,
+       0.6490933489479256
+      ],
+      "reach": 0.08899999999999998,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.189049706859783,
+     0.6077642603381987,
+     0.20318603280201822
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.11,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.125513230011621
+   },
+   "name": "Traffic conflict",
+   "product": 0.050205292004648405,
+   "severity": {
+    "entropy": 0.4745167979857062,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.8451132568429528,
+      "levels": [
+       0.05,
+       0.4,
+       0.55
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.8600000000000003,
+      "entropy": 0.7934270068588588,
+      "levels": [
+       0.06503496503496503,
+       0.6748251748251748,
+       0.2601398601398601
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.4,
+      "count": 5.09536102,
+      "entropy": 0.4745167979857062,
+      "levels": [
+       0.08808624241506641,
+       0.8678706363774004,
+       0.044043121207533203
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.9129821202606168,
+      "levels": [
+       0.5,
+       0.42,
+       0.08
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.08808624241506641,
+     0.8678706363774004,
+     0.044043121207533203
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.4
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.5264869732350808,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.207933735,
+   "t_low": 0.194608825
+  },
+  "weights_version": "first-guess+8"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": true,
+  "reason": "The crowd of about 950 on narrow, walled streets lacks a staged start and set steward posts, three major crossings have no staffed controls or signed diversions, and no ambulance is booked for a July race, so it cannot be approved as it stands.",
+  "ruling": "deny"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.26865733430661276,
+ "t_high": 0.207933735,
+ "t_low": 0.194608825,
+ "title": "Women on the Move Spring Dash Half Marathon",
+ "unmapped_documents": []
+}

@@ -1,0 +1,16 @@
+{"evidence": [
+  {"evidence_type": "certificate_of_insurance", "status": "found", "document": "insurance.txt", "fields": [
+    {"name": "named_insured", "value": "Test Club", "quote": "NAMED INSURED: Test Club"},
+    {"name": "venue", "value": "South Pier", "quote": "VENUE: South Pier, Port Halden"},
+    {"name": "start_date", "value": "2027-01-01", "quote": "Effective: 2027-01-01"},
+    {"name": "end_date", "value": "2027-12-31", "quote": "Expiry: 2027-12-31"},
+    {"name": "coverage", "value": "$2,000,000", "quote": "LIMIT OF LIABILITY: $2,000,000 each occurrence"}]},
+  {"evidence_type": "traffic_plan", "status": "found", "document": "traffic_plan.txt", "fields": []},
+  {"evidence_type": "race_plan", "status": "found", "document": "race_plan.txt", "fields": []},
+  {"evidence_type": "crowd_plan", "status": "found", "document": "crowd_plan.txt", "fields": []},
+  {"evidence_type": "medical_plan", "status": "found", "document": "medical_plan.txt", "fields": []},
+  {"evidence_type": "police_escort_letter", "status": "absent", "document": null, "fields": []},
+  {"evidence_type": "police_escort_email", "status": "absent", "document": null, "fields": []},
+  {"evidence_type": "ambulance_agreement", "status": "absent", "document": null, "fields": []}],
+ "expected_spectators": {"value": null, "quote": null},
+ "unmapped_documents": []}

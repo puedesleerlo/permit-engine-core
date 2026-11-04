@@ -1,0 +1,117 @@
+{
+ "case_id": "R0264-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": false
+  }
+ ],
+ "correction": null,
+ "decision": {
+  "clauses": [
+   "ORD-3.3"
+  ],
+  "reason_code": "basic_rule_failed",
+  "route": "proposed_denial",
+  "row": 0,
+  "text": "A basic rule was not met, so a denial is proposed for an officer to sign."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. RQ-33120\n\nBetween: Lifeline Event Medics (\"the Provider\")\nAnd: Westbrook Youth League (\"the Client\")\n\nEvent: Westbrook Charity Run 5K\nEvent date: February 7, 2027\nLocation: Saltmarsh Reach, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the top of Bridge Row from 07:45 until the last runner has finished or 10:45, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $920, paid in full on signature.\n\nSigned for the Provider: Nadia Petrov, Operations Manager, November 24, 2026\nSigned for the Client: Owen Cartwright, November 24, 2026\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "Westbrook Charity Run 5K - crowd notes\nSunday 7 February 2027 / contact Owen Cartwright 555-0127\ntotal 750 incl 450 runners. We allow for 300 spectators.\n\nVIEWING\n3 barriered areas: finish Market Square, turn at Glebe Road, start the top of Bridge Row. approx 1000 total @ 2 per sqm. over expected numbers\n\nSTART\n3 waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave\n\nSTEWARDS\n15 stewards (approx 1:50), 2 supervisors, rota by position, briefing 1hr before\n\nEXIT\nrunners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins\n\nCONTROL\nOwen Cartwright at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Westbrook Charity Run 5K, Sunday 7 February 2027\n\nFrom Owen Cartwright, Club Chair, Westbrook Youth League\n\nThe race is a 5K with 450 runners and starts at 09:00. On-site ambulance cover is set out in the attached paperwork from Lifeline Event Medics.\n\nFirst aid\nSeveral of our members have done the first aid course through work, and they're happy to help out. We keep a good first aid box at the HQ tent, and another one goes in the lead car. In all our years we've only ever had blisters and scraped knees.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at Harbourside Medical Centre, 6 km from the finish. We've walked the route out from the pick-up point at the top of Bridge Row with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nWe'll all have our phones, and I'll send a list of numbers round the team the week before. The signal is usually fine around there.\n\nWho's responsible\nOur medical lead is Yuki Tanaka, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PHPS TRAFFIC DIVISION - EVENT ATTENDANCE NOTICE\n\nTo: Westbrook Youth League (attn Owen Cartwright)\nFrom: Sgt. Robert Lang\nIssued: 2026-11-24\nOur ref: EV-45223\n\nEvent: Westbrook Charity Run 5K\nDate of attendance: 2027-02-07\nLocation: Saltmarsh Reach, starting at Bridge Row\n\nAttendance is confirmed. Escort: 2 motorcycles, 1 traffic car. On station from 07:45. Stand-down when the last runner clears the course.\n\nChanges to date or route must be notified to this office, because this notice applies only to the date and route shown.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Westbrook Charity Run 5K - race notes\nWestbrook Youth League / contact Owen Cartwright 555-0127\nSunday 7 February 2027, gun 09:00, course closes 10:15\n5K (5k), approx 450 entered\n\nROUTE\nBridge Row, Northern Avenue, Glebe Road and Brook Street. all closed. major x-ings: Church Road and Regent Road. finish Market Square\n\nWIDTHS\nBridge Row 10m kerb to kerb. Glebe Road 12m. Brook Street 14m. pavements extra. start pens side by side across full road\n\nOTHER\nnumbers from the top of Bridge Row 1hr before. chip timing. water on course. results online same day\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Westbrook Charity Run 5K - traffic notes\nSunday 7 February 2027 / gun 09:00 / Saltmarsh Reach\ncontact Owen Cartwright 555-0127\nPolice attendance is covered in the attached correspondence.\n\nCLOSURES\nSignal Hill Traffic Services doing barriers\nBridge Row (Union Row-Linden Avenue) 07:45-10:45\nNorthern Avenue (Linden Avenue-Canon Road) 07:45-10:45\nGlebe Road (Abbey Road-Mill Road) 07:45-10:45\nBrook Street (Union Row-Abbey Road) 07:45-10:45\n\nMAJOR X-INGS\nvols at busier junctions, numbers tbc nearer the time depending who signs up. move ppl around on the day as needed. they know the area + most have done it before\n\nDIVERSIONS\ndrivers find own way round. delay boards if we can get them from Signal Hill Traffic Services. locals know the drill, race is same weekend most yrs + it gets a mention in the paper\n\nEMERGENCY\n3.5m lane kept clear whole way. radio at every barrier, open in 2 mins. controller has police + ambulance control direct\n\nNOTICE\nfacebook + club newsletter\n\nREOPEN\nreopen when done and barriers picked up\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the Westbrook Charity Run 5K, Sunday 7 February 2027. 450 runners, 5K, off at 09:00, around Saltmarsh Reach. I've attached ambulance_agreement.txt, crowd_plan.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt.\n\nWe look forward to hearing from you.\n\nThanks,\nOwen\n\nOwen Cartwright, Westbrook Youth League\n555-0127\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Westbrook Charity Run 5K: a 5K road race through the Saltmarsh Reach area, organised by Westbrook. Last year's crowd was 300 or so, and we expect the same again.",
+   "event_date": "2027-02-07",
+   "event_name": "Westbrook Charity Run 5K",
+   "event_type": "street_race",
+   "expected_runners": 450,
+   "fee_paid": true,
+   "hospital_distance_km": 6,
+   "organizer": "Westbrook Youth League",
+   "route": {
+    "arterial_road": true,
+    "major_crossings": 2,
+    "road_closure": true
+   },
+   "venue": "Saltmarsh Reach"
+  }
+ },
+ "events": [
+  859,
+  860,
+  861,
+  862
+ ],
+ "evidence": [],
+ "hazards": [],
+ "highest_severity": 0.0,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21646268154544307,
+   "t_low": 0.18447068450010728
+  },
+  "weights_version": "first-guess+72"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [],
+  "outcome_risky": false,
+  "reason": "The race date of 7 February falls outside the permitted season of 1 March to 30 November, and no certificate of insurance was supplied, so the application cannot be approved.",
+  "ruling": "deny"
+ },
+ "requirements": [],
+ "risk": 0.0,
+ "t_high": 0.21646268154544307,
+ "t_low": 0.18447068450010728,
+ "title": "Westbrook Charity Run 5K",
+ "unmapped_documents": []
+}

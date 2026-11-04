@@ -1,0 +1,878 @@
+{
+ "case_id": "R0080-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.7857373355727963,
+     0.18632076579888315,
+     0.027941898628320447
+    ],
+    "before": [
+     0.7390526979241954,
+     0.22691728064660166,
+     0.03403002142920288
+    ],
+    "count_after": 5.3156230015036465,
+    "count_before": 4.552267268137042,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.061051043035650475,
+     0.8751691633607314,
+     0.06377979360361817
+    ],
+    "before": [
+     0.0525987038359638,
+     0.883047362245734,
+     0.06435393391830223
+    ],
+    "count_after": 5.4935533029390795,
+    "count_before": 5.613044866218236,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9015368691066332,
+     0.08256069553854278,
+     0.015902435354823927
+    ],
+    "before": [
+     0.8865875553213436,
+     0.09509559802172794,
+     0.01831684665692852
+    ],
+    "count_after": 7.404434254928815,
+    "count_before": 6.862307213481888,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.20266297217967716,
+     0.6483880738962479,
+     0.14894895392407512
+    ],
+    "before": [
+     0.1961628785666485,
+     0.6536738978713594,
+     0.15016322356199208
+    ],
+    "count_after": 2.9672460432173935,
+    "count_before": 2.964688981510949,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6991619124706091,
+     0.24278427880473982,
+     0.05805380872465112
+    ],
+    "before": [
+     0.7119710949746949,
+     0.22891150599668034,
+     0.05911739902862469
+    ],
+    "count_after": 2.8835402712714178,
+    "count_before": 2.849596731542188,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.06748946984233711,
+     0.5580683773784947,
+     0.3744421527791682
+    ],
+    "before": [
+     0.06774740726585579,
+     0.5563793627162562,
+     0.3758732300178881
+    ],
+    "count_after": 4.948697231741844,
+    "count_before": 4.9345089723882145,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.12850018171941557,
+     0.5050890966976248,
+     0.3664107215829597
+    ],
+    "before": [
+     0.15442656934060175,
+     0.40523513738582967,
+     0.4403382932735685
+    ],
+    "count_after": 4.923195345270666,
+    "count_before": 4.336173369556606,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.012163489243354997,
+     0.34844450001295846,
+     0.6393920107436866
+    ],
+    "before": [
+     0.012375665547061137,
+     0.3370789588527867,
+     0.6505453756001521
+    ],
+    "count_after": 5.992214999706688,
+    "count_before": 5.939699773419136,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9244915691627961,
+     0.06342708190325125,
+     0.012081348933952619
+    ],
+    "before": [
+     0.9127133483870477,
+     0.07332078735488,
+     0.01396586425807238
+    ],
+    "count_after": 7.410852052686652,
+    "count_before": 6.893389303964141,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "St. Luke Ambulance Brigade\nBookings Office\n\n27 January 2027\n\nDear Fatima Haddad,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Dockside Summer Run Half Marathon on 18 April 2027. One ambulance and two paramedics will be on site at the top of Bridge Row, in place by 09:00, and will stay until the race has finished. Booking reference EV-84774.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nRuth Abernathy\nBookings Manager\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. RQ-41855\nIssued: January 27, 2027\n\nINSURER: Harbourline Insurance Company\nPOLICY NUMBER: GL-850831\n\nNAMED INSURED: Dockside Sports Trust\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Dockside Summer Run Half Marathon\nVENUE: Ferry Park, Port Halden\n\nPOLICY PERIOD\nEffective: April 17, 2027\nExpiry: April 19, 2027\n\nLIMIT OF LIABILITY: $2,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Dockside Summer Run Half Marathon, Sunday 18 April 2027\n\nFrom Fatima Haddad, Race Director, Dockside Sports Trust\n\nThe race is a half marathon with 299 runners and starts at 10:00. An ambulance from St. Luke Ambulance Brigade is on site for the race; the paperwork is attached.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 10 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at Harbourside Medical Centre, 6 km from the finish. We've walked the route out from the pick-up point at the top of Bridge Row with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n\nWho's responsible\nOur medical lead is Rhys Morgan, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PHPS TRAFFIC DIVISION - REQUEST RECEIVED\n\nTo: Dockside Sports Trust (attn Fatima Haddad)\nFrom: Sgt. Robert Lang\nIssued: 27 January 2027\nOur ref: AG-80210\n\nEvent: Dockside Summer Run Half Marathon\nDate requested: 18 April 2027\nLocation: Ferry Park, starting at Bridge Row\n\nYour request for attendance has been received and is waiting for roster review. No resources have been allocated. A further notice will follow if attendance can be arranged.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nDockside Summer Run Half Marathon | Sunday 18 April 2027\nOrganiser: Dockside Sports Trust\nRace director: Fatima Haddad\nReference: AG-85341\n\nOverview\nThe Dockside Summer Run Half Marathon is a half marathon race of 21 km for 299 entrants, based in the Ferry Park area of Port Halden. The start is at 10:00 and the course closes at 13:30.\n\nCourse\nThe course runs in order along Bridge Row, Copper Row and Lamb Street, all of which are closed to traffic for the race. Major roads crossed: Tram Street and Church Road. The finish is in the Civic Plaza.\n\nCourse dimensions\nMost of the course follows the older street grid. Measured building line to building line, Bridge Row is about 5 m, Lamb Street about 4.5 m, and parked vehicles on Copper Row leave around 4.5 m. The field assembles on Bridge Row over that width, and the finish chute is laid out in the same street, ahead of the Civic Plaza.\n\nSupport\nEntrants collect numbers from the top of Bridge Row from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Dockside website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Dockside Summer Run Half Marathon - traffic notes\nSunday 18 April 2027 / gun 10:00 / Ferry Park\ncontact Fatima Haddad 555-0116\nWe have asked the police about attendance, and their reply is attached.\n\nmembers walk route week before, note roadworks, barriers left out, new cycle lanes etc\n\nCLOSURES\nNorthline Barriers doing barriers\nBridge Row (Foundry Street-Castle Way) 09:00-14:00\nCopper Row (Castle Way-Weir Street) 09:00-14:00\nLamb Street (Foundry Street-Weir Street) 09:00-14:00\n\nMAJOR X-INGS\nall staffed from 09:00 til last runner\nTram Street x Bridge Row: 3 marshals w/ boards + sup\nChurch Road x Copper Row: 4 marshals w/ boards + sup\n\nDIVERSIONS\nsigned by Northline Barriers\nBridge Row: via Ferry Road + Cross Avenue, signs from Foundry Street\nCopper Row: via Cross Avenue + High Street, signs from Mill Road\nLamb Street: via Regent Road + Station Road, signs from Foundry Street\n\nEMERGENCY\n3.5m lane kept clear whole way. radio at every barrier, open in 2 mins. controller has police + ambulance control direct\n\nNOTICE\nfacebook + club newsletter\n\nREOPEN\nsweep behind last runner. closures off in order. all open by 14:00\n"
+   }
+  ],
+  "cover_letter": "27 January 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Dockside Summer Run Half Marathon on Sunday 18 April 2027. We expect 299 runners over half marathon, starting at 10:00 in the Ferry Park area. The completed form and the attachments (ambulance_agreement.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nFatima Haddad\nRace Director, Dockside Sports Trust\nfatima@docksidesports.example / 555-0116\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Our annual half marathon on the streets of Ferry Park.",
+   "event_date": "2027-04-18",
+   "event_name": "Dockside Summer Run Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 299,
+   "fee_paid": true,
+   "hospital_distance_km": 6,
+   "organizer": "Dockside Sports Trust",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 2,
+    "road_closure": true
+   },
+   "venue": "Ferry Park"
+  }
+ },
+ "events": [
+  242,
+  243,
+  244,
+  245,
+  246,
+  247,
+  248,
+  249,
+  250,
+  251,
+  252,
+  253
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "St. Luke Ambulance Brigade",
+     "value": "St. Luke Ambulance Brigade",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the Dockside Summer Run Half Marathon on 18 April 2027",
+     "value": "18 April 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Dockside Sports Trust",
+     "value": "Dockside Sports Trust",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Ferry Park, Port Halden",
+     "value": "Ferry Park, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: April 17, 2027",
+     "value": "April 17, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: April 19, 2027",
+     "value": "April 19, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $2,000,000 each occurrence",
+     "value": "$2,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Date requested: 18 April 2027",
+     "value": "18 April 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "From: Sgt. Robert Lang",
+     "value": "Sgt. Robert Lang",
+     "verified": true
+    }
+   ],
+   "reason": "The letter only acknowledges the request is pending roster review; no resources have been allocated and no escort is committed.",
+   "source": "stored",
+   "status": "found",
+   "verdict": "unsupported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.848206710826404,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.103143457361047,
+      "entropy": 0.42064092102769024,
+      "levels": [
+       0.02224207816047031,
+       0.8817276117962092,
+       0.09603031004332051
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.027655437302104863,
+      "count": 4.552267268137042,
+      "entropy": 0.6750749698792907,
+      "levels": [
+       0.7390526979241954,
+       0.22691728064660166,
+       0.03403002142920288
+      ],
+      "reach": 0.58,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 6.530926750701529,
+      "entropy": 0.35209818662872117,
+      "levels": [
+       0.005665951789962169,
+       0.09667472707651191,
+       0.8976593211335259
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.04563841400024901,
+      "count": 5.613044866218236,
+      "entropy": 0.44128265649210985,
+      "levels": [
+       0.0525987038359638,
+       0.883047362245734,
+       0.06435393391830223
+      ],
+      "reach": 0.42000000000000004,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.4507420204071381,
+     0.5024919149182373,
+     0.04676606467462461
+    ],
+    "questions": [
+     {
+      "answer": 0.58,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.07329385130235389
+   },
+   "name": "Medical emergency",
+   "product": 0.012726551160614177,
+   "severity": {
+    "entropy": 0.5590374691297357,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 4.853896862137666,
+      "entropy": 0.46846989509028447,
+      "levels": [
+       0.06346116816233681,
+       0.8730776636753264,
+       0.06346116816233681
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.13051245725797866,
+      "count": 6.862307213481888,
+      "entropy": 0.4037373311902489,
+      "levels": [
+       0.8865875553213436,
+       0.09509559802172794,
+       0.01831684665692852
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.533087008062055,
+      "entropy": 0.3014170743337438,
+      "levels": [
+       0.007215788317303302,
+       0.9206263285096636,
+       0.072157883173033
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.04312490705672006,
+      "count": 2.964688981510949,
+      "entropy": 0.8821336756743654,
+      "levels": [
+       0.1961628785666485,
+       0.6536738978713594,
+       0.15016322356199208
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.8175450876458741,
+     0.1509534280066911,
+     0.03150148434743487
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.17363736431469873
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 1.0425942402382042,
+    "leaves": [
+     {
+      "contribution": 0.004773323922074193,
+      "count": 2.849596731542188,
+      "entropy": 0.746578626977284,
+      "levels": [
+       0.7119710949746949,
+       0.22891150599668034,
+       0.05911739902862469
+      ],
+      "reach": 0.08700000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0022068130944900193,
+      "count": 4.9345089723882145,
+      "entropy": 0.8763750920941827,
+      "levels": [
+       0.06774740726585579,
+       0.5563793627162562,
+       0.3758732300178881
+      ],
+      "reach": 0.013000000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.13758369642314555,
+      "count": 4.336173369556606,
+      "entropy": 1.0156891848836087,
+      "levels": [
+       0.15442656934060175,
+       0.40523513738582967,
+       0.4403382932735685
+      ],
+      "reach": 0.783,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.02680692555952307,
+      "count": 5.939699773419136,
+      "entropy": 0.7006049344457644,
+      "levels": [
+       0.012375665547061137,
+       0.3370789588527867,
+       0.6505453756001521
+      ],
+      "reach": 0.117,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.1851861582199519,
+     0.38388558349590324,
+     0.4309282582841448
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.87,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.1713707589992328
+   },
+   "name": "Traffic conflict",
+   "product": 0.02306059427593893,
+   "severity": {
+    "entropy": 0.334592077110804,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.8451132568429528,
+      "levels": [
+       0.05,
+       0.4,
+       0.55
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.8600000000000003,
+      "entropy": 0.7934270068588588,
+      "levels": [
+       0.06503496503496503,
+       0.6748251748251748,
+       0.2601398601398601
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.7386857486,
+      "entropy": 0.4140870078692604,
+      "levels": [
+       0.07273669266204923,
+       0.8908949610069262,
+       0.03636834633102461
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.13456551403872916,
+      "count": 6.893389303964141,
+      "entropy": 0.334592077110804,
+      "levels": [
+       0.9127133483870477,
+       0.07332078735488,
+       0.01396586425807238
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9127133483870477,
+     0.07332078735488,
+     0.01396586425807238
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.13456551403872916
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.17363736431469873,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.18965913513454657,
+   "t_low": 0.18965913513454657
+  },
+  "weights_version": "first-guess+20"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order, and the traffic and medical plans are complete with a booked ambulance and a nearby hospital, so overall risk is low.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.035787145436553106,
+ "t_high": 0.18965913513454657,
+ "t_low": 0.18965913513454657,
+ "title": "Dockside Summer Run Half Marathon",
+ "unmapped_documents": []
+}

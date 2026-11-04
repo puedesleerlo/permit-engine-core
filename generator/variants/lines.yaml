@@ -1,0 +1,62 @@
+escort_line:
+  firm:
+    - "Police attendance is covered in the attached correspondence."
+    - "See the attached correspondence from the police for the escort."
+  soft:
+    - "We have asked the police about attendance, and their reply is attached."
+    - "Police attendance has been requested; see the attached correspondence."
+  unproven:
+    - "The police traffic unit has told us by phone that it will attend."
+    - "We have a verbal assurance that the police will be there on the day."
+  none:
+    - "Police attendance has been requested, but we have not had an answer yet."
+    - "We have not arranged any police attendance for this race."
+ambulance_line:
+  firm:
+    - "On-site ambulance cover is set out in the attached paperwork from {ambulance_provider}."
+    - "An ambulance from {ambulance_provider} is on site for the race; the paperwork is attached."
+  soft:
+    - "We have been in touch with {ambulance_provider} about an ambulance; their paperwork is attached."
+    - "We are talking to {ambulance_provider} about ambulance cover; see the attached."
+  unproven:
+    - "{ambulance_provider} has told us informally that it will have a crew on site."
+    - "We expect a crew from {ambulance_provider} on the day, though we have nothing in writing yet."
+  none:
+    - "We are not booking a dedicated ambulance for this race."
+    - "No ambulance will be stationed at the race; any ambulance would come through the 911 system."
+spectator_sentence:
+  mentioned:
+    - "About {spectators} of those are spectators."
+    - "We allow for {spectators} spectators."
+  none:
+    - "We do not expect spectators in any number beyond the runners' own companions."
+    - "Few people come just to watch."
+plan_background:
+  traffic_plan:
+    prose:
+      - "Some background. Our committee has run races in this part of {city} for a number of years, and most of our members live locally. The council's traffic controller looked over an early sketch of the route last year, though not this version of the plan."
+      - "We have a good working relationship with local residents. Several members walk the route the week before, noting anything that has changed, such as new roadworks, a barrier left in place, or a lane marked for cycles."
+      - "Volunteers get a short note about the day in race week, with their start time, and are asked to find a replacement if they cannot make it. Most of them have done this before and know the area well."
+      - "The route has changed little from last time. Where it has changed, we have tried to keep a clear run for the field, and we welcome any comments from the Events Office on how signed diversions are usually handled in the city."
+    terse:
+      - "bg: committee running races here for yrs, most members local. council traffic controller saw early sketch last yr, not this version"
+      - "members walk route week before, note roadworks, barriers left out, new cycle lanes etc"
+      - "vols get note race week w/ start time, find own cover if cant make it. most done it before"
+  crowd_plan:
+    prose:
+      - "Some background. Our committee has put on this race for a number of years, and attendance has grown slowly. Most of our helpers are members or their families, and many have been on the rota before, so they know the site and can find their way around it."
+      - "We hired a radio or two last time for the start team, which proved useful, and we had a short briefing for anyone who turned up early. Feedback from runners has been good, and we have no reports of people being unable to find a way through."
+      - "Families are welcome, and there is usually a friendly atmosphere at the finish. Local shops have been supportive, and some stay open for the day. The prize-giving takes place at the end, and there is often a queue for tea."
+    terse:
+      - "bg: committee done this race yrs. attendance growing slowly. helpers mostly members + family, many on rota before"
+      - "hired radio or 2 last time for start team, useful. short briefing for early arrivals. no complaints from runners"
+      - "families welcome. local shops supportive, some open. prizes at end + tea queue"
+  medical_plan:
+    prose:
+      - "Some background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day."
+      - "Runners get an email in race week telling them to dress for the weather and to keep a phone with them if they can. Most have run with us before. The list of entrants includes an emergency contact for each runner, which is kept at the start."
+      - "In recent years the last runner has usually finished well inside the time limit, and past incidents have been limited to a few blisters and one twisted ankle. A number of members have first aid certificates from work and are glad to be there in a general helping role."
+    terse:
+      - "bg: committee done this race yrs. one long time member is retired paramedic but runs race herself, not on duty"
+      - "race week email: dress for weather, carry phone if poss. most have run w/ us before. entrant list w/ emergency contacts kept at start"
+      - "past yrs: last runner well inside limit, only blisters + one twisted ankle. some members have work first aid certs, general helping"

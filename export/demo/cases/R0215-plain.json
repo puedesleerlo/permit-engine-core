@@ -1,0 +1,858 @@
+{
+ "case_id": "R0215-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9154740772161102,
+     0.07450462774686797,
+     0.01002129503702184
+    ],
+    "before": [
+     0.9156287900673353,
+     0.07434822132160647,
+     0.010022988611058213
+    ],
+    "count_after": 9.631079122751167,
+    "count_before": 9.64343823660759,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.04480336943265457,
+     0.938292779587199,
+     0.016903850980146486
+    ],
+    "before": [
+     0.05019862869900339,
+     0.9308619444301864,
+     0.01893942687081028
+    ],
+    "count_after": 9.289069405384087,
+    "count_before": 8.901798123761276,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.012495668097954549,
+     0.9750086638040908,
+     0.012495668097954549
+    ],
+    "before": [
+     0.013692610669057012,
+     0.972614778661886,
+     0.013692610669057012
+    ],
+    "count_after": 10.318926226321587,
+    "count_before": 10.052476703815351,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.004432753382835254,
+     0.9512397127888123,
+     0.044327533828352556
+    ],
+    "before": [
+     0.004480606427592361,
+     0.9507133292964839,
+     0.04480606427592362
+    ],
+    "count_after": 9.17307600970076,
+    "count_before": 9.141205445186381,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.4819961234037639,
+     0.4983317385488816,
+     0.019672138047354525
+    ],
+    "before": [
+     0.4868590415695225,
+     0.4932703457630488,
+     0.019870612667428705
+    ],
+    "count_after": 8.099371986650898,
+    "count_before": 8.068673045431407,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.029870150875145444,
+     0.6130535269013597,
+     0.3570763222234947
+    ],
+    "before": [
+     0.02992617597643634,
+     0.6123277617239383,
+     0.3577460622996253
+    ],
+    "count_after": 8.732571876693981,
+    "count_before": 8.72508363268398,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.10056169715811199,
+     0.6282211103022879,
+     0.2712171925396001
+    ],
+    "before": [
+     0.11221930754473629,
+     0.5851226586199012,
+     0.30265803383536255
+    ],
+    "count_after": 8.31395239290562,
+    "count_before": 7.880735305153847,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.005147180282970536,
+     0.16603332002080803,
+     0.8288194996962214
+    ],
+    "before": [
+     0.005168160170175815,
+     0.1626340750134375,
+     0.8321977648163866
+    ],
+    "count_after": 9.62667950082171,
+    "count_before": 9.67567064690206,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9828262993744066,
+     0.014425908525498413,
+     0.002747792100094936
+    ],
+    "before": [
+     0.9812356576605604,
+     0.01576204756512916,
+     0.0030022947743103164
+    ],
+    "count_after": 11.796712091793333,
+    "count_before": 11.609367840637992,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. RQ-44472\n\nBetween: Halden Medical Transport (\"the Provider\")\nAnd: Millbank Community Association (\"the Client\")\n\nEvent: Millbank Charity Run 10K\nEvent date: November 28, 2027\nLocation: Lakeshore, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the top of Abbey Road from 07:30 until the last runner has finished or 11:30, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $1150, paid in full on signature.\n\nSigned for the Provider: Tomas Reyes, Operations Manager, September 9, 2027\nSigned for the Client: Daniel Mwangi, September 9, 2027\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. PH-45010\nIssued: 9 September 2027\n\nINSURER: Harbourline Insurance Company\nPOLICY NUMBER: PL-896806\n\nNAMED INSURED: Millbank Community Association\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Millbank Charity Run 10K\nVENUE: Lakeshore, Port Halden\n\nPOLICY PERIOD\nEffective: 27 November 2027\nExpiry: 29 November 2027\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Millbank Charity Run 10K, Sunday 28 November 2027\n\nFrom Daniel Mwangi, Event Coordinator, Millbank Community Association\n\nThe race is a 10K with 299 runners and starts at 09:00. On-site ambulance cover is set out in the attached paperwork from Halden Medical Transport.\n\nFirst aid\nSeveral of our members have done the first aid course through work, and they're happy to help out. We keep a good first aid box at the HQ tent, and another one goes in the lead car. In all our years we've only ever had blisters and scraped knees.\n\nHeat, cold and water\nWe always tell runners to dress sensibly for the weather and to keep drinking, and it's all in the email we send them the week before. We'll be watching the forecast, and people here are used to all sorts of weather.\n\nIf someone needs hospital\nThe nearest emergency department is at Valley Regional Hospital, 14 km from the finish. We've walked the route out from the pick-up point at the top of Abbey Road with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nWe'll all have our phones, and I'll send a list of numbers round the team the week before. The signal is usually fine around there.\n\nWho's responsible\nOur medical lead is Rhys Morgan, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nMillbank Charity Run 10K | Sunday 28 November 2027\nOrganiser: Millbank Community Association\nRace director: Daniel Mwangi\nReference: PH-34658\n\nOverview\nThe Millbank Charity Run 10K is a 10K race of 10 km for 299 entrants, based in the Lakeshore area of Port Halden. The start is at 09:00 and the course closes at 11:00.\n\nCourse\nThe course runs in order along Abbey Road, Bell Street, Albion Road and Vine Street, all of which are closed to traffic for the race. Major roads crossed: Victoria Road, Cross Avenue, Tram Street, Canal Road and Prince Street. The finish is in Clocktower Square.\n\nCourse dimensions\nThe course uses wide carriageways throughout. Abbey Road offers 16 m kerb to kerb, Albion Road about 9 m and Vine Street about 9 m, with footways of a further 3 m on each side. The field assembles on Abbey Road, and the finish is in Clocktower Square, an open paved area of around one and a half hectares.\n\nSupport\nEntrants collect numbers from the top of Abbey Road from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Millbank website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Traffic arrangements for the Millbank Charity Run 10K, Sunday 28 November 2027\n\nFrom Daniel Mwangi, Event Coordinator, Millbank Community Association\n\nWe have tried to think through what happens on the roads on race day. The race is a 10K, it starts at 09:00, and it goes through the Lakeshore area. The police traffic unit has told us by phone that it will attend.\n\nClosing the roads\nWe need the following closures, and Signal Hill Traffic Services will put out the barriers and signs for us. Abbey Road from Linden Avenue to Ash Avenue, 07:30 until 11:30. Bell Street from Hatter Street to Ash Avenue, 07:30 until 11:30. Albion Road from Ash Avenue to Hatter Street, 07:30 until 11:30. Vine Street from Linden Avenue to Hatter Street, 07:30 until 11:30.\n\nCrossings\nWhere we cross a major road we will have people stationed from 07:30 until the last runner is through. At Victoria Road, where it meets Albion Road, there will be 4 traffic marshals with stop/go boards and a supervisor. At Cross Avenue, where it meets Bell Street, there will be 2 traffic marshals with stop/go boards and a supervisor. At Tram Street, where it meets Bell Street, there will be 4 traffic marshals with stop/go boards and a supervisor. At Canal Road, where it meets Abbey Road, there will be 2 traffic marshals with stop/go boards and a supervisor. At Prince Street, where it meets Abbey Road, there will be 4 traffic marshals with stop/go boards and a supervisor.\n\nGetting around the closures\nWe've worked out the way round for drivers and Signal Hill Traffic Services will sign it. Traffic off Abbey Road goes via Dock Road and Ferry Road, signed from Ash Avenue. Traffic off Bell Street goes via Station Road and Queen's Road, signed from Bridge Row. Traffic off Albion Road goes via Station Road and High Street, signed from Hatter Street. Traffic off Vine Street goes via Station Road and Church Road, signed from Hatter Street.\n\nEmergency vehicles\nWe keep one lane clear the whole way, 3.5 metres or more, for ambulances and fire engines. Every barrier has someone with a radio on our channel, and they can have it open within two minutes. Our controller on the day has direct numbers for police and ambulance control.\n\nLetting people know\nWe put the race on our Facebook page and in the club newsletter, and the local paper usually gives us a mention.\n\nAfterwards\nOnce it's all over the team will collect the cones and barriers, and everyone can get back to normal.\n"
+   }
+  ],
+  "cover_letter": "9 September 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Millbank Charity Run 10K on Sunday 28 November 2027. We expect 299 runners over 10K, starting at 09:00 in the Lakeshore area. The completed form and the attachments (ambulance_agreement.txt, insurance.txt, medical_plan.txt, race_plan.txt, traffic_plan.txt) are enclosed. The police have said they will look after the escort, though I haven't got anything in writing yet.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nDaniel Mwangi\nEvent Coordinator, Millbank Community Association\ndaniel@millbankca.example / 555-0132\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A 10K race for 299 runners around Lakeshore. Requires temporary road closures.",
+   "event_date": "2027-11-28",
+   "event_name": "Millbank Charity Run 10K",
+   "event_type": "street_race",
+   "expected_runners": 299,
+   "fee_paid": true,
+   "hospital_distance_km": 14,
+   "organizer": "Millbank Community Association",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 5,
+    "road_closure": true
+   },
+   "venue": "Lakeshore"
+  }
+ },
+ "events": [
+  683,
+  684,
+  685,
+  686,
+  687,
+  688,
+  689,
+  690,
+  691,
+  692,
+  693,
+  694
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: Halden Medical Transport (\"the Provider\")",
+     "value": "Halden Medical Transport",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: November 28, 2027",
+     "value": "November 28, 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Millbank Community Association",
+     "value": "Millbank Community Association",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Lakeshore, Port Halden",
+     "value": "Lakeshore, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 27 November 2027",
+     "value": "27 November 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 29 November 2027",
+     "value": "29 November 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $1,000,000 each occurrence",
+     "value": "$1,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.33899603409631074,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 10.857641000136315,
+      "entropy": 0.18532260602754302,
+      "levels": [
+       0.006449973849035269,
+       0.9600867221503142,
+       0.03346330400065047
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0005750858903364963,
+      "count": 9.64343823660759,
+      "entropy": 0.3200726588012858,
+      "levels": [
+       0.9156287900673353,
+       0.07434822132160647,
+       0.010022988611058213
+      ],
+      "reach": 0.02,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.89871678482381,
+      "entropy": 0.18501071080930598,
+      "levels": [
+       0.0016973182047753845,
+       0.04146108478732448,
+       0.9568415970079001
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.09777655517667697,
+      "count": 8.901798123761276,
+      "entropy": 0.2919969975673785,
+      "levels": [
+       0.05019862869900339,
+       0.9308619444301864,
+       0.01893942687081028
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.06750723192637002,
+     0.9137316699680148,
+     0.01876109810561524
+    ],
+    "questions": [
+     {
+      "answer": 0.02,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.09835164106701345
+   },
+   "name": "Medical emergency",
+   "product": 0.03995544767107321,
+   "severity": {
+    "entropy": 0.15348729550330692,
+    "leaves": [
+     {
+      "contribution": 0.36369700488064544,
+      "count": 10.052476703815351,
+      "entropy": 0.1445139933133987,
+      "levels": [
+       0.013692610669057012,
+       0.972614778661886,
+       0.013692610669057012
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.872632498745247,
+      "entropy": 0.1810005822226003,
+      "levels": [
+       0.9608941112355297,
+       0.03359131141360166,
+       0.005514577350868545
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.04255394566372763,
+      "count": 9.141205445186381,
+      "entropy": 0.21142400727302618,
+      "levels": [
+       0.004480606427592361,
+       0.9507133292964839,
+       0.04480606427592362
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.318903111410274,
+      "entropy": 0.5511324103253004,
+      "levels": [
+       0.1699391044131166,
+       0.8097711445287396,
+       0.02028975105814396
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.012771410244910547,
+     0.9704246337253457,
+     0.01680395602974367
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.40625095054437305
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9707342070196833,
+    "leaves": [
+     {
+      "contribution": 0.005592184331881459,
+      "count": 8.068673045431407,
+      "entropy": 0.7768880852438043,
+      "levels": [
+       0.4868590415695225,
+       0.4932703457630488,
+       0.019870612667428705
+      ],
+      "reach": 0.08600000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0023681716573453427,
+      "count": 8.72508363268398,
+      "entropy": 0.773089342624442,
+      "levels": [
+       0.02992617597643634,
+       0.6123277617239383,
+       0.3577460622996253
+      ],
+      "reach": 0.014000000000000002,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.11730284411454404,
+      "count": 7.880735305153847,
+      "entropy": 0.9207665819964178,
+      "levels": [
+       0.11221930754473629,
+       0.5851226586199012,
+       0.30265803383536255
+      ],
+      "reach": 0.774,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.03351928861885758,
+      "count": 9.67567064690206,
+      "entropy": 0.47545853440264924,
+      "levels": [
+       0.005168160170175815,
+       0.1626340750134375,
+       0.8321977648163866
+      ],
+      "reach": 0.12600000000000003,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.12979777625971708,
+     0.524370669623254,
+     0.345831554117029
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.86,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.15878248872262843
+   },
+   "name": "Traffic conflict",
+   "product": 0.017058110666719077,
+   "severity": {
+    "entropy": 0.10144051059114842,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 5.09536102,
+      "entropy": 0.43650554882702186,
+      "levels": [
+       0.014681040402511069,
+       0.11744832322008855,
+       0.8678706363774004
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.410852052686652,
+      "entropy": 0.30544453948673744,
+      "levels": [
+       0.015101686167440773,
+       0.9244915691627961,
+       0.06040674466976309
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.339645940368685,
+      "entropy": 0.23827670406594795,
+      "levels": [
+       0.03482034925510738,
+       0.947769476117339,
+       0.01741017462755369
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.10743067956641802,
+      "count": 11.609367840637992,
+      "entropy": 0.10144051059114842,
+      "levels": [
+       0.9812356576605604,
+       0.01576204756512916,
+       0.0030022947743103164
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9812356576605604,
+     0.01576204756512916,
+     0.0030022947743103164
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.10743067956641802
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.40625095054437305,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.2146801153888449,
+   "t_low": 0.18323025540523333
+  },
+  "weights_version": "first-guess+57"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order, and the overall risk is below the threshold. The medical plan has gaps and the hospital is far, but an ambulance is booked and the traffic arrangements are complete.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.057013558337792286,
+ "t_high": 0.2146801153888449,
+ "t_low": 0.18323025540523333,
+ "title": "Millbank Charity Run 10K",
+ "unmapped_documents": []
+}

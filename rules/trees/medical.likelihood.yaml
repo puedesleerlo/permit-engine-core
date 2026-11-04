@@ -1,0 +1,25 @@
+id: medical.likelihood
+version: 1
+owner: policy_owner
+hazard: medical_emergency
+scale: likelihood
+questions:
+  - id: medical_plan_adequate
+    kind: jev
+    text: Is the medical plan adequate?
+    instructions: Does the medical plan set out staffed first aid positions, water and rules for extreme weather, a named receiving hospital with a transfer route, medical communications, and a named qualified lead?
+    needs: [medical_plan]
+    clause: ORD-16.1
+  - id: hot_date
+    kind: rule
+    text: Is the race on a hot date?
+    clause: ORD-1.3
+leaves:  # first guess, written blind; see rules/first_guess.json
+  - when: {medical_plan_adequate: true, hot_date: true}
+    levels: [0.1, 0.5, 0.4]
+  - when: {medical_plan_adequate: true, hot_date: false}
+    levels: [0.4, 0.5, 0.1]
+  - when: {medical_plan_adequate: false, hot_date: true}
+    levels: [0.03, 0.27, 0.7]
+  - when: {medical_plan_adequate: false, hot_date: false}
+    levels: [0.2, 0.55, 0.25]

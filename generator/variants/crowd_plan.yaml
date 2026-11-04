@@ -1,0 +1,204 @@
+document: crowd_plan
+essential: [areas, release, stewards, egress, control]
+families:
+  a:
+    style: consultant report
+    layout: |
+      CROWD MANAGEMENT PLAN
+      {event_name}, {date_plain}
+      Applicant: {organizer}
+      Prepared by {contact_name}, {contact_role}
+      Issue: {version}
+
+      1. Attendance
+      We expect {crowd} people in total at the event, including {runners} runners. {spectator_sentence}
+
+      2. Spectator areas
+      {areas}
+
+      3. Start procedure
+      {release}
+
+      4. Stewarding
+      {stewards}
+
+      5. Exit and dispersal
+      {egress}
+
+      6. Event control
+      {control}
+    passages:
+      areas:
+        full:
+          - "Spectators will be directed to three marked viewing areas behind pedestrian barriers: the finish area by {finish_area}, the turn at {mid_point} and the start at {start_area}. Together these hold approximately {capacity} people at a planning density of two persons per square metre, which exceeds the expected attendance."
+        thin:
+          - "We anticipate that spectators will gather naturally around the start and finish, as well as at convenient points along the course, creating an enjoyable atmosphere for all participants. Signage will be placed around the site to help visitors find their way, and refreshments will be on sale close to the finish."
+      release:
+        full:
+          - "Runners will self-seed into {waves} pens by expected finish time and be released at intervals of four minutes, so that the field is spread out before the first turn. Pens are closed five minutes before each release."
+        thin:
+          - "All entrants will assemble in the start area shortly before {start_time} and will start together following a short welcome and warm-up led by a local sports personality, which has always proved popular in previous years."
+      stewards:
+        full:
+          - "{steward_count} stewards in high-visibility tabards, led by {supervisors} supervisors, are allocated by position on the attached rota. That is around one steward for every 50 people expected. All attend a briefing at the site one hour before the start."
+        thin:
+          - "Members of the organising committee and other willing volunteers will be present across the site throughout the day. Volunteers are chosen for their friendly and helpful approach and are recognisable from their event T-shirts."
+      egress:
+        full:
+          - "Finishers walk through a one-way funnel to the recovery area and leave by the north gate. Spectators leave by two marked exits. Stewards hold the exits open and keep them clear, and we estimate that the whole area will empty within 25 minutes of the last finisher."
+        thin:
+          - "Following the race, participants and their families are welcome to stay and enjoy the prize-giving and refreshments before making their own way home at their leisure. There are good public transport links nearby."
+      control:
+        full:
+          - "The event controller, {contact_name}, sits at the control point with radio contact to all supervisors and can hold a start, stop the race or use the public address to move people. A supervisor reports to the controller if any pen or viewing area appears to be filling beyond its marked capacity."
+        thin:
+          - "The race director has many years of experience of events of this type and will be available on the day to deal with any issues as they arise, consulting colleagues as appropriate."
+  b:
+    style: club secretary letter style
+    layout: |
+      Looking after people on the day: {event_name}, {date_plain}
+
+      {contact_name}, {contact_role}, {organizer}
+
+      We expect about {crowd} people altogether, including {runners} runners. {spectator_sentence}
+
+      Where people will watch
+      {areas}
+
+      How we start the race
+      {release}
+
+      Who's helping
+      {stewards}
+
+      Getting everyone away
+      {egress}
+
+      Who's in charge
+      {control}
+    passages:
+      areas:
+        full:
+          - "We've set out three viewing spots with barriers: at the finish by {finish_area}, at the turn by {mid_point}, and at the start by {start_area}. We measured them, and at about two people to the square metre they take around {capacity} between them, which is more than we expect to come."
+        thin:
+          - "People always find a good spot! Most folks gather near the start and finish and others cheer from their own front doors along the way, which the runners love. We'll have a coffee stall near the finish, and it's a nice atmosphere for families."
+      release:
+        full:
+          - "We set off in {waves} waves, four minutes apart, with runners sorted by the time they expect to run. That thins everyone out before the first corner. The pens close five minutes before each wave goes."
+        thin:
+          - "Everybody lines up together at the start just before {start_time}. We have a warm-up with music and a countdown from the crowd, then off they go. It really is a highlight of the day and people look forward to it."
+      stewards:
+        full:
+          - "We've got {steward_count} stewards in tabards, about one for every 50 people, with {supervisors} supervisors in charge of sections. Each has a set position on a rota, and all come to a briefing an hour before the start."
+        thin:
+          - "We always get a great turnout of helpers from the club and from people's families. They'll be wearing the event T-shirt, so they're easy to spot, and they're happy to help with whatever is needed on the day."
+      egress:
+        full:
+          - "Runners walk through a one-way funnel after the line, out to the recovery area, and leave by the north gate. Spectators have two marked ways out, and a steward stands at each to keep it clear. We reckon the whole place empties in 25 minutes."
+        thin:
+          - "Afterwards there's the prize-giving and tea and cake, and people drift off when they're ready. Plenty of buses go past, and there's parking a short walk away."
+      control:
+        full:
+          - "{contact_name} runs the event from the control point with a radio to every supervisor. They can hold a wave, stop the race, or make an announcement over the speakers to move people along. Supervisors call it in if a pen or viewing spot looks to be getting too full."
+        thin:
+          - "{contact_name} has done this for many years, and between us we've seen most things. If something comes up we'll have a quick chat and sort it out together."
+  c:
+    style: terse notes
+    layout: |
+      {event_name} - crowd notes
+      {date_plain} / contact {contact_name} {contact_phone}
+      total {crowd} incl {runners} runners. {spectator_sentence}
+
+      VIEWING
+      {areas}
+
+      START
+      {release}
+
+      STEWARDS
+      {stewards}
+
+      EXIT
+      {egress}
+
+      CONTROL
+      {control}
+    passages:
+      areas:
+        full:
+          - "3 barriered areas: finish {finish_area}, turn at {mid_point}, start {start_area}. approx {capacity} total @ 2 per sqm. over expected numbers"
+        thin:
+          - "spectators wherever along course, mostly start + finish. stall near finish. signs to help ppl find their way"
+      release:
+        full:
+          - "{waves} waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave"
+        thin:
+          - "all start together {start_time} after warm-up + countdown. popular w/ runners"
+      stewards:
+        full:
+          - "{steward_count} stewards (approx 1:50), {supervisors} supervisors, rota by position, briefing 1hr before"
+        thin:
+          - "club vols + family helpers, event t-shirts. around all day"
+      egress:
+        full:
+          - "runners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins"
+        thin:
+          - "prizes then tea. people head off when ready. buses nearby"
+      control:
+        full:
+          - "{contact_name} at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full"
+        thin:
+          - "{contact_name} on the day, sorts stuff out as it comes up. lots of experience"
+  h:
+    test_only: true
+    style: city question-and-answer template
+    layout: |
+      CITY OF {city_upper} - PUBLIC ASSEMBLY TEMPLATE
+
+      Event: {event_name}, {date_plain}
+      Applicant: {organizer}
+      Person completing this form: {contact_name}
+
+      Q1. How many people do you expect in total, including participants?
+      A: {crowd}, of whom {runners} are runners. {spectator_sentence}
+
+      Q2. Where will spectators stand, and how many does each place hold?
+      A: {areas}
+
+      Q3. How will participants be started?
+      A: {release}
+
+      Q4. How many stewards will you have and how are they organised?
+      A: {stewards}
+
+      Q5. How will people leave the site?
+      A: {egress}
+
+      Q6. Who can stop the event, and how will they tell people?
+      A: {control}
+    passages:
+      areas:
+        full:
+          - "Three barriered areas: {finish_area} (finish), {mid_point} (turn) and {start_area} (start). Together about {capacity} at two persons per square metre, which is above the expected number."
+        thin:
+          - "Spectators may watch from the start, the finish and the pavements along the route. Directional signs and refreshments will be provided near the finish."
+      release:
+        full:
+          - "In {waves} waves, four minutes apart, seeded by expected finish time. Pens close five minutes before each wave."
+        thin:
+          - "All together at {start_time} following a short warm-up and countdown."
+      stewards:
+        full:
+          - "{steward_count} stewards (about 1 per 50 people) under {supervisors} supervisors, each with a fixed position, and a briefing one hour before the start."
+        thin:
+          - "Volunteers from the organising body and their families will be on site and identifiable by event T-shirts."
+      egress:
+        full:
+          - "Runners through a one-way funnel to recovery and out by the north gate. Spectators by two marked exits, each with a steward. Estimated to clear in 25 minutes."
+        thin:
+          - "People may stay for the prize-giving and leave when they wish. Public transport is close by."
+      control:
+        full:
+          - "{contact_name}, at the control point with radio to all supervisors. Can hold a wave, stop the race, and use the public address system. Supervisors report any area that appears to be filling up."
+        thin:
+          - "{contact_name} will be on site as the person in charge and will decide what to do if anything comes up."

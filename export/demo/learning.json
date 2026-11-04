@@ -1,0 +1,869 @@
+{
+ "cards": {
+  "final": {
+   "decided_without_officer": 0.6222222222222222,
+   "precision": 0.9622641509433962,
+   "right_level": 0.8688118811881188
+  },
+  "first": {
+   "decided_without_officer": 0.6111111111111112,
+   "precision": 0.9423076923076923,
+   "right_level": 0.6955445544554455
+  }
+ },
+ "corrections": [
+  {
+   "bucket": "ai_wrong",
+   "by": "simulated",
+   "case_id": "R0004-plain",
+   "outcome_risky": false,
+   "reason": "Paperwork, fee, date and insurance are in order, and the overall risk falls below the threshold even with weaknesses in the crowd and medical plans, so the permit can be approved.",
+   "seq": 24,
+   "tree_ids": [
+    "crowd.likelihood",
+    "crowd.severity",
+    "medical.likelihood",
+    "medical.severity"
+   ]
+  },
+  {
+   "bucket": "ai_wrong",
+   "by": "simulated",
+   "case_id": "R0009-plain",
+   "outcome_risky": false,
+   "reason": "Fee, date and insurance are in order, and the overall risk falls below the threshold. The traffic plan still needs staffed crossings, signed diversions and a clear emergency route.",
+   "seq": 37,
+   "tree_ids": [
+    "crowd.likelihood",
+    "crowd.severity",
+    "medical.likelihood",
+    "medical.severity",
+    "traffic.likelihood",
+    "traffic.severity"
+   ]
+  },
+  {
+   "bucket": "ai_wrong",
+   "by": "simulated",
+   "case_id": "R0012-plain",
+   "outcome_risky": true,
+   "reason": "Denied because no certificate of insurance naming the organiser, venue and race date was provided; only a statement that the event is insured.",
+   "seq": 49,
+   "tree_ids": [
+    "crowd.likelihood",
+    "crowd.severity",
+    "medical.likelihood",
+    "medical.severity",
+    "traffic.likelihood",
+    "traffic.severity"
+   ]
+  },
+  {
+   "bucket": "ai_wrong",
+   "by": "simulated",
+   "case_id": "R0149-plain",
+   "outcome_risky": false,
+   "reason": "The insurance certificate names a different venue from this race's route, so the insurance requirement is not met.",
+   "seq": 493,
+   "tree_ids": [
+    "crowd.likelihood",
+    "crowd.severity",
+    "medical.likelihood",
+    "medical.severity",
+    "traffic.likelihood",
+    "traffic.severity"
+   ]
+  },
+  {
+   "bucket": "ai_wrong",
+   "by": "simulated",
+   "case_id": "R0229-plain",
+   "outcome_risky": true,
+   "reason": "The police escort letter is for a different date, there are six major crossings, the medical plan lacks weather rules and a named hospital, and no ambulance is booked, so the overall risk is too high to approve without further action.",
+   "seq": 728,
+   "tree_ids": [
+    "crowd.likelihood",
+    "crowd.severity",
+    "medical.likelihood",
+    "medical.severity",
+    "traffic.likelihood",
+    "traffic.severity"
+   ]
+  }
+ ],
+ "crossings": {
+  "loss_after": 0.4789865462786626,
+  "loss_before": 0.8077881738452521,
+  "status": "released",
+  "text": "Adding the question about many major crossings lowers validation loss on traffic likelihood, from 0.808 to 0.479. The question was authored in advance."
+ },
+ "curve": [
+  {
+   "corrections": 0,
+   "decided_without_officer": 0.6111111111111112,
+   "held_out_cases": 90,
+   "index": 0,
+   "loss": 0.748497201650568,
+   "precision": 0.9423076923076923,
+   "right_level": 0.6955445544554455,
+   "seq": 1,
+   "t_high": 0.207933735,
+   "t_low": 0.194608825
+  },
+  {
+   "corrections": 10,
+   "decided_without_officer": 0.6222222222222222,
+   "held_out_cases": 90,
+   "index": 1,
+   "loss": 0.5251698741801785,
+   "precision": 0.9433962264150944,
+   "right_level": 0.8564356435643564,
+   "seq": 122,
+   "t_high": 0.19714787312166646,
+   "t_low": 0.1831142813095249
+  },
+  {
+   "corrections": 20,
+   "decided_without_officer": 0.6222222222222222,
+   "held_out_cases": 90,
+   "index": 2,
+   "loss": 0.461581922142198,
+   "precision": 0.9622641509433962,
+   "right_level": 0.8465346534653465,
+   "seq": 241,
+   "t_high": 0.18965913513454657,
+   "t_low": 0.18965913513454657
+  },
+  {
+   "corrections": 30,
+   "decided_without_officer": 0.6444444444444445,
+   "held_out_cases": 90,
+   "index": 3,
+   "loss": 0.4311967772082588,
+   "precision": 0.9454545454545454,
+   "right_level": 0.849009900990099,
+   "seq": 366,
+   "t_high": 0.18941409706377926,
+   "t_low": 0.18941409706377926
+  },
+  {
+   "corrections": 40,
+   "decided_without_officer": 0.6222222222222222,
+   "held_out_cases": 90,
+   "index": 4,
+   "loss": 0.4134868105912672,
+   "precision": 0.9622641509433962,
+   "right_level": 0.8613861386138614,
+   "seq": 482,
+   "t_high": 0.21376493779963796,
+   "t_low": 0.18382375716334348
+  },
+  {
+   "corrections": 50,
+   "decided_without_officer": 0.6222222222222222,
+   "held_out_cases": 90,
+   "index": 5,
+   "loss": 0.398068318154413,
+   "precision": 0.9622641509433962,
+   "right_level": 0.8638613861386139,
+   "seq": 600,
+   "t_high": 0.2146801153888449,
+   "t_low": 0.18323025540523333
+  },
+  {
+   "corrections": 60,
+   "decided_without_officer": 0.6333333333333333,
+   "held_out_cases": 90,
+   "index": 6,
+   "loss": 0.39790119069248986,
+   "precision": 0.9444444444444444,
+   "right_level": 0.8613861386138614,
+   "seq": 717,
+   "t_high": 0.2163286760605767,
+   "t_low": 0.18481364075531698
+  },
+  {
+   "corrections": 70,
+   "decided_without_officer": 0.6333333333333333,
+   "held_out_cases": 90,
+   "index": 7,
+   "loss": 0.40074385393640205,
+   "precision": 0.9444444444444444,
+   "right_level": 0.8613861386138614,
+   "seq": 835,
+   "t_high": 0.21646268154544307,
+   "t_low": 0.18447068450010728
+  },
+  {
+   "corrections": 80,
+   "decided_without_officer": 0.6333333333333333,
+   "held_out_cases": 90,
+   "index": 8,
+   "loss": 0.4015866609191284,
+   "precision": 0.9444444444444444,
+   "right_level": 0.8737623762376238,
+   "seq": 955,
+   "t_high": 0.23164046323858928,
+   "t_low": 0.1838103154407427
+  },
+  {
+   "corrections": 90,
+   "decided_without_officer": 0.6333333333333333,
+   "held_out_cases": 90,
+   "index": 9,
+   "loss": 0.40380814663731895,
+   "precision": 0.9444444444444444,
+   "right_level": 0.8613861386138614,
+   "seq": 1071,
+   "t_high": 0.2321834711919719,
+   "t_low": 0.1859683449237186
+  },
+  {
+   "corrections": 100,
+   "decided_without_officer": 0.6222222222222222,
+   "held_out_cases": 90,
+   "index": 10,
+   "loss": 0.40741704635177656,
+   "precision": 0.9622641509433962,
+   "right_level": 0.8737623762376238,
+   "seq": 1191,
+   "t_high": 0.21957302654607286,
+   "t_low": 0.1793003753250711
+  },
+  {
+   "corrections": 110,
+   "decided_without_officer": 0.6222222222222222,
+   "held_out_cases": 90,
+   "index": 11,
+   "loss": 0.41205809270233684,
+   "precision": 0.9622641509433962,
+   "right_level": 0.8688118811881188,
+   "seq": 1313,
+   "t_high": 0.22774675241413422,
+   "t_low": 0.1784126607536539
+  },
+  {
+   "corrections": 115,
+   "decided_without_officer": 0.6222222222222222,
+   "held_out_cases": 90,
+   "index": 12,
+   "loss": 0.41577262092034994,
+   "precision": 0.9622641509433962,
+   "right_level": 0.8688118811881188,
+   "seq": 1373,
+   "t_high": 0.21886466374236238,
+   "t_low": 0.18086074275752292
+  }
+ ],
+ "officer": {
+  "accuracy": 0.9572649572649573,
+  "corrections": 5,
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "level_accuracy": 0.9204946996466431,
+  "reviewed": 117
+ },
+ "trees": [
+  {
+   "flagged": true,
+   "leaves": [
+    {
+     "count": 11.897152513626608,
+     "entropy": 0.7299623517411158,
+     "levels_first": [
+      0.65,
+      0.3,
+      0.05
+     ],
+     "levels_now": [
+      0.4645980565611621,
+      0.5279334785602655,
+      0.0074684648785724415
+     ],
+     "when": {
+      "escort_confirmed": true,
+      "traffic_plan_adequate": true
+     }
+    },
+    {
+     "count": 11.838091752415838,
+     "entropy": 0.7478463904403242,
+     "levels_first": [
+      0.2,
+      0.55,
+      0.25
+     ],
+     "levels_now": [
+      0.011947996115894366,
+      0.5237665285959529,
+      0.4642854752881529
+     ],
+     "when": {
+      "escort_confirmed": true,
+      "traffic_plan_adequate": false
+     }
+    },
+    {
+     "count": 11.075437909646128,
+     "entropy": 0.9880530530717427,
+     "levels_first": [
+      0.4,
+      0.48,
+      0.12
+     ],
+     "levels_now": [
+      0.14978745603074525,
+      0.5248225678386054,
+      0.32538997613064935
+     ],
+     "when": {
+      "escort_confirmed": false,
+      "traffic_plan_adequate": true
+     }
+    },
+    {
+     "count": 12.61427086062563,
+     "entropy": 0.3457833356065226,
+     "levels_first": [
+      0.05,
+      0.35,
+      0.6
+     ],
+     "levels_now": [
+      0.0027058003746577132,
+      0.10104461303910739,
+      0.8962495865862349
+     ],
+     "when": {
+      "escort_confirmed": false,
+      "traffic_plan_adequate": false
+     }
+    }
+   ],
+   "loss": 0.750623232339037,
+   "mean_leaf_entropy": 0.7408100283682931,
+   "tree_id": "traffic.likelihood"
+  },
+  {
+   "flagged": false,
+   "leaves": [
+    {
+     "count": 8.339645940368685,
+     "entropy": 0.22325091871014174,
+     "levels_first": [
+      0.05,
+      0.4,
+      0.55
+     ],
+     "levels_now": [
+      0.005803391542517897,
+      0.046427132340143173,
+      0.947769476117339
+     ],
+     "when": {
+      "arterial_road": true,
+      "crowd_over_800": true
+     }
+    },
+    {
+     "count": 11.796712091793333,
+     "entropy": 0.09541952087755108,
+     "levels_first": [
+      0.1,
+      0.5,
+      0.4
+     ],
+     "levels_now": [
+      0.003434740125118671,
+      0.9828262993744066,
+      0.013738960500474684
+     ],
+     "when": {
+      "arterial_road": true,
+      "crowd_over_800": false
+     }
+    },
+    {
+     "count": 11.407922409288165,
+     "entropy": 0.10382448691106114,
+     "levels_first": [
+      0.3,
+      0.55,
+      0.15
+     ],
+     "levels_now": [
+      0.012319800148984783,
+      0.9815202997765229,
+      0.006159900074492392
+     ],
+     "when": {
+      "arterial_road": false,
+      "crowd_over_800": true
+     }
+    },
+    {
+     "count": 13.611623557944883,
+     "entropy": 0.028020798737837756,
+     "levels_first": [
+      0.5,
+      0.42,
+      0.08
+     ],
+     "levels_now": [
+      0.9959690444199293,
+      0.0033860026872593874,
+      0.0006449528928113121
+     ],
+     "when": {
+      "arterial_road": false,
+      "crowd_over_800": false
+     }
+    }
+   ],
+   "loss": 0.3897623068069305,
+   "mean_leaf_entropy": 0.41428475762083095,
+   "tree_id": "traffic.severity"
+  },
+  {
+   "flagged": false,
+   "leaves": [
+    {
+     "count": 12.041377463400428,
+     "entropy": 0.1338939740593603,
+     "levels_first": [
+      0.35,
+      0.5,
+      0.15
+     ],
+     "levels_now": [
+      0.013479334579861509,
+      0.9750596156559613,
+      0.01146104976417715
+     ],
+     "when": {
+      "crowd_over_800": true,
+      "crowd_plan_adequate": true
+     }
+    },
+    {
+     "count": 10.482891413150917,
+     "entropy": 0.11319141690129372,
+     "levels_first": [
+      0.7,
+      0.25,
+      0.05
+     ],
+     "levels_now": [
+      0.9783774602530788,
+      0.018513827901889653,
+      0.003108711845031433
+     ],
+     "when": {
+      "crowd_over_800": false,
+      "crowd_plan_adequate": true
+     }
+    },
+    {
+     "count": 9.841513654369374,
+     "entropy": 0.16447139855284576,
+     "levels_first": [
+      0.05,
+      0.35,
+      0.6
+     ],
+     "levels_now": [
+      0.002989238817468652,
+      0.03276049068174314,
+      0.9642502705007883
+     ],
+     "when": {
+      "crowd_over_800": true,
+      "crowd_plan_adequate": false
+     }
+    },
+    {
+     "count": 11.8419766557184,
+     "entropy": 0.11089017145893074,
+     "levels_first": [
+      0.25,
+      0.5,
+      0.25
+     ],
+     "levels_now": [
+      0.012252876932365188,
+      0.9801031483463885,
+      0.007643974721246384
+     ],
+     "when": {
+      "crowd_over_800": false,
+      "crowd_plan_adequate": false
+     }
+    }
+   ],
+   "loss": 0.2756678139129118,
+   "mean_leaf_entropy": 0.31573568010319414,
+   "tree_id": "crowd.likelihood"
+  },
+  {
+   "flagged": false,
+   "leaves": [
+    {
+     "count": 10.690153466095815,
+     "entropy": 0.15282441251709647,
+     "levels_first": [
+      0.05,
+      0.4,
+      0.55
+     ],
+     "levels_now": [
+      0.0027122840024134576,
+      0.9674525919710385,
+      0.02983512402654804
+     ],
+     "when": {
+      "crowd_over_800": true,
+      "narrow_venue": true
+     }
+    },
+    {
+     "count": 10.30352625226173,
+     "entropy": 0.15051692857119403,
+     "levels_first": [
+      0.25,
+      0.55,
+      0.2
+     ],
+     "levels_now": [
+      0.016865007353610406,
+      0.9711015775240301,
+      0.012033415122359318
+     ],
+     "when": {
+      "crowd_over_800": false,
+      "narrow_venue": true
+     }
+    },
+    {
+     "count": 11.37646556404985,
+     "entropy": 0.11102056730977883,
+     "levels_first": [
+      0.4,
+      0.5,
+      0.1
+     ],
+     "levels_now": [
+      0.01654369918122988,
+      0.9793203760234627,
+      0.00413592479530747
+     ],
+     "when": {
+      "crowd_over_800": true,
+      "narrow_venue": false
+     }
+    },
+    {
+     "count": 12.057726349255352,
+     "entropy": 0.053474410352805396,
+     "levels_first": [
+      0.75,
+      0.22,
+      0.03
+     ],
+     "levels_now": [
+      0.9911881373810533,
+      0.007864740386937161,
+      0.0009471222320095678
+     ],
+     "when": {
+      "crowd_over_800": false,
+      "narrow_venue": false
+     }
+    }
+   ],
+   "loss": 0.17395404125539043,
+   "mean_leaf_entropy": 0.34588202815243013,
+   "tree_id": "crowd.severity"
+  },
+  {
+   "flagged": false,
+   "leaves": [
+    {
+     "count": 13.385115635806917,
+     "entropy": 0.09279912499756568,
+     "levels_first": [
+      0.1,
+      0.5,
+      0.4
+     ],
+     "levels_now": [
+      0.0025973576665242575,
+      0.9831396475817415,
+      0.014262994751734214
+     ],
+     "when": {
+      "hot_date": true,
+      "medical_plan_adequate": true
+     }
+    },
+    {
+     "count": 14.001902421792847,
+     "entropy": 0.09674878490105156,
+     "levels_first": [
+      0.4,
+      0.5,
+      0.1
+     ],
+     "levels_now": [
+      0.9819281845024402,
+      0.016060096165688865,
+      0.002011719331870869
+     ],
+     "when": {
+      "hot_date": false,
+      "medical_plan_adequate": true
+     }
+    },
+    {
+     "count": 11.910671061968921,
+     "entropy": 0.07860126836302478,
+     "levels_first": [
+      0.03,
+      0.27,
+      0.7
+     ],
+     "levels_now": [
+      0.00043062788221290364,
+      0.014277088064592786,
+      0.9852922840531944
+     ],
+     "when": {
+      "hot_date": true,
+      "medical_plan_adequate": false
+     }
+    },
+    {
+     "count": 11.246240585985792,
+     "entropy": 0.1335889541083724,
+     "levels_first": [
+      0.2,
+      0.55,
+      0.25
+     ],
+     "levels_now": [
+      0.021020647729886665,
+      0.9739354546646233,
+      0.005043897605490112
+     ],
+     "when": {
+      "hot_date": false,
+      "medical_plan_adequate": false
+     }
+    }
+   ],
+   "loss": 0.42707525566411947,
+   "mean_leaf_entropy": 0.4599163057574719,
+   "tree_id": "medical.likelihood"
+  },
+  {
+   "flagged": false,
+   "leaves": [
+    {
+     "count": 12.534050338282011,
+     "entropy": 0.057569638495704865,
+     "levels_first": [
+      0.2,
+      0.6,
+      0.2
+     ],
+     "levels_now": [
+      0.004497883139417376,
+      0.9910042337211653,
+      0.004497883139417376
+     ],
+     "when": {
+      "ambulance_on_site": true,
+      "hospital_far": true
+     }
+    },
+    {
+     "count": 14.752344945713151,
+     "entropy": 0.05012494979217871,
+     "levels_first": [
+      0.4,
+      0.5,
+      0.1
+     ],
+     "levels_now": [
+      0.9919034823515724,
+      0.007076550807915486,
+      0.0010199668405120454
+     ],
+     "when": {
+      "ambulance_on_site": true,
+      "hospital_far": false
+     }
+    },
+    {
+     "count": 11.04489661375799,
+     "entropy": 0.12485828526103258,
+     "levels_first": [
+      0.05,
+      0.45,
+      0.5
+     ],
+     "levels_now": [
+      0.0022804175125795524,
+      0.9749154073616249,
+      0.022804175125795526
+     ],
+     "when": {
+      "ambulance_on_site": false,
+      "hospital_far": true
+     }
+    },
+    {
+     "count": 11.838586771946904,
+     "entropy": 0.6646774217891323,
+     "levels_first": [
+      0.2,
+      0.55,
+      0.25
+     ],
+     "levels_now": [
+      0.3407454750024648,
+      0.6554998143267491,
+      0.003754710670786133
+     ],
+     "when": {
+      "ambulance_on_site": false,
+      "hospital_far": false
+     }
+    }
+   ],
+   "loss": 0.4775530755437104,
+   "mean_leaf_entropy": 0.47019472948881713,
+   "tree_id": "medical.severity"
+  }
+ ],
+ "arms": [
+  {
+   "name": "First guess",
+   "loss": 0.7657926044792265,
+   "right_level": 0.6822033898305084,
+   "approved": 0.47,
+   "risky_among_approved": 0.0,
+   "right_route_share": null,
+   "interval": [
+    0.0,
+    0.07555760416399632
+   ],
+   "status": "run",
+   "split": "test"
+  },
+  {
+   "name": "Trained on labelled cases",
+   "loss": 0.37227110311697015,
+   "right_level": 0.8940677966101694,
+   "approved": 0.57,
+   "risky_among_approved": 0.017543859649122806,
+   "right_route_share": null,
+   "interval": [
+    0.003103664651408093,
+    0.09290749178567684
+   ],
+   "status": "run",
+   "split": "test"
+  },
+  {
+   "name": "Shuffled labels (control)",
+   "loss": 0.9090027781508745,
+   "right_level": 0.548728813559322,
+   "approved": 0.25,
+   "risky_among_approved": 0.0,
+   "right_route_share": null,
+   "interval": [
+    1.3877787807814457e-17,
+    0.13319225093904846
+   ],
+   "status": "run",
+   "split": "test"
+  },
+  {
+   "name": "One LLM reads and decides (baseline)",
+   "loss": null,
+   "right_level": null,
+   "approved": 0.11,
+   "risky_among_approved": 0.0,
+   "right_route_share": 0.52,
+   "interval": [
+    0.0,
+    0.2588329669680317
+   ],
+   "status": "run",
+   "split": "test"
+  },
+  {
+   "name": "Jev asked directly",
+   "loss": 1.4675438921408155,
+   "right_level": 0.3093220338983051,
+   "approved": 0.4270833333333333,
+   "risky_among_approved": 0.0,
+   "right_route_share": null,
+   "interval": [
+    0.0,
+    0.08566757018443186
+   ],
+   "status": "run",
+   "split": "test"
+  }
+ ],
+ "final_test": {
+  "status": "run",
+  "verdict": "pass",
+  "conditions": [
+   {
+    "detail": "Difference in mean loss -0.390, 95% interval -0.436 to -0.345.",
+    "name": "Lower loss than the first guess",
+    "passed": true
+   },
+   {
+    "detail": "Difference in mean loss -0.510, 95% interval -0.578 to -0.440.",
+    "name": "Lower loss than the shuffled control",
+    "passed": true
+   },
+   {
+    "detail": "Difference in share approved +0.100, 95% interval +0.040 to +0.170.",
+    "name": "More approvals than the first guess",
+    "passed": true
+   },
+   {
+    "detail": "1 of 57 approvals labelled risky, Wilson interval 0.003 to 0.093. This fails only if the lower end is above 5%.",
+    "name": "Risky approvals not clearly above 5%",
+    "passed": true
+   }
+  ],
+  "forbidden_permits": 0,
+  "risky_approvals": 1,
+  "approved": 57,
+  "risky_interval": [
+   0.003103664651408093,
+   0.09290749178567684
+  ],
+  "forbidden_interval": [
+   0.0,
+   0.06313883485297894
+  ],
+  "limits": "About 3 risky approvals in 52 gives a Wilson interval of roughly 2% to 16%, so this test cannot confirm a 5% target. It can only show when risky approvals are clearly above it."
+ },
+ "tone": {
+  "requests": 20,
+  "compared": 60,
+  "decision_flips": 0,
+  "evidence_flips": {
+   "insistent": 6,
+   "mayor": 2,
+   "persuasive": 3
+  },
+  "noise_evidence_flips": 3,
+  "noise_decision_flips": 0
+ }
+}

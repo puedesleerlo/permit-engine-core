@@ -1,0 +1,1 @@
+Hand-written replies in the shape the APIs return, for tests. No agent may call a model, so none of these came from a live call. Replace them with real recordings after the 5-case stop if they differ.

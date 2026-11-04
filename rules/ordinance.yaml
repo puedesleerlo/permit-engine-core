@@ -1,0 +1,67 @@
+# An invented ordinance for a fictional city. Every clause ID below may be cited by rules, trees and decisions.
+title: Street Race Ordinance
+city: City of Port Halden
+note: Fictional. Written for a demonstration with synthetic applications.
+clauses:
+  - id: ORD-1.1
+    text: This ordinance applies to any organised foot race held wholly or partly on a public street or public path in the City.
+  - id: ORD-1.2
+    text: A race's crowd means its expected runners plus its expected spectators. A crowd over 800 is a large crowd.
+  - id: ORD-1.3
+    text: A hot date is a race date in June, July or August.
+  - id: ORD-3.1
+    text: The permit fee must be paid when the application is filed.
+  - id: ORD-3.2
+    text: The application form must state the organiser, event type, event date, expected runners, venue, a description, the route details (road closure, arterial road, count of major crossings) and the distance to the nearest hospital. An incomplete form is returned to the applicant.
+  - id: ORD-3.3
+    text: A street race may be held only from 1 March to 30 November.
+  - id: ORD-5.1
+    text: The Events Office considers traffic conflict for any race that closes a road.
+  - id: ORD-5.2
+    text: The Events Office considers crowd pressure for any race with a crowd of 300 or more.
+  - id: ORD-5.3
+    text: The Events Office considers medical emergency for every race.
+  - id: ORD-7.1
+    text: Every race must hold event liability insurance, shown by a certificate of insurance that names the organiser and the venue, covers the race date, and has a limit of at least $1,000,000.
+  - id: ORD-7.2
+    text: A certificate that has expired by the race date, or that names another venue, does not meet ORD-7.1.
+  - id: ORD-9.1
+    text: Proof must be an attached document of a type the evidence steward has listed. A statement in the form or in a cover letter is not proof.
+  - id: ORD-9.2
+    text: An attached document of a type the steward has not listed goes to an officer, who decides the case. The steward then decides whether to list it.
+  - id: ORD-9.3
+    text: A document that disagrees with the application, for example by naming another date, goes to an officer.
+  - id: ORD-12.1
+    text: An application must name every road that the race closes.
+  - id: ORD-12.2
+    text: A race that closes a road must file a traffic plan. The plan must cover every closure on the route, control at each major crossing, signed diversions, and a way through for emergency vehicles.
+  - id: ORD-12.3
+    text: In reviewing a race, the Events Office takes into account whether the route uses an arterial road.
+  - id: ORD-12.4
+    text: A race that closes a road should have a police escort, confirmed in writing by the police in a letter or an email.
+  - id: ORD-12.5
+    text: A route with three or more major road crossings is a route with many major crossings. The Events Office may take this into account.
+  - id: ORD-14.1
+    text: A race with a crowd of 300 or more must file a crowd plan. The plan must cover marked spectator areas with their capacities, a staged start, stewards in stated numbers and positions, exit routes, and who can stop the race.
+  - id: ORD-14.2
+    text: In reviewing a race, the Events Office takes into account whether its venue is too confined for people to spread out. The race plan must give enough detail to judge this.
+  - id: ORD-16.1
+    text: Every race must file a medical plan. The plan must cover staffed first aid positions, water and rules for extreme weather, a named receiving hospital with a transfer route, medical communications, and a named qualified lead.
+  - id: ORD-16.2
+    text: A race should have an ambulance on site under an agreement with an ambulance provider.
+  - id: ORD-16.3
+    text: A hospital more than 10 km from the race is a far hospital.
+  - id: ORD-16.4
+    text: In reviewing a race, the Events Office takes into account whether it falls on a hot date.
+  - id: ORD-20.1
+    text: A race that passes every check and whose assessed risk is below the lower threshold may be approved without an officer.
+  - id: ORD-20.2
+    text: A race whose assessed risk is at or above the lower threshold is decided by an officer.
+  - id: ORD-20.3
+    text: The policy owner may set a stop switch. While it is on, every case that passes the basic checks goes to an officer.
+  - id: ORD-20.4
+    text: A race whose highest assessed severity reaches the ceiling is decided by an officer, however small its likelihood.
+  - id: ORD-20.5
+    text: If any automated step fails, the case goes to an officer.
+  - id: ORD-20.6
+    text: A denial is proposed with the clause it relies on, and an officer signs it.

@@ -1,0 +1,826 @@
+{
+ "case_id": "R0276-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.958743433321256,
+     0.036461737473650106,
+     0.004794829205093892
+    ],
+    "before": [
+     0.955061181296597,
+     0.0397160389689828,
+     0.005222779734420103
+    ],
+    "count_after": 12.199948636416233,
+    "count_before": 12.034590435060293,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.03272590701979217,
+     0.9573307508257255,
+     0.00994334215448235
+    ],
+    "before": [
+     0.03269294374208406,
+     0.957363375248965,
+     0.00994368100895097
+    ],
+    "count_after": 10.143117711127843,
+    "count_before": 10.1501354118328,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9811882824815447,
+     0.01625860067473725,
+     0.0025531168437180167
+    ],
+    "before": [
+     0.981350775109738,
+     0.016095685229972092,
+     0.0025535396602899504
+    ],
+    "count_after": 12.673054821737086,
+    "count_before": 12.763244885453933,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.12203115520615884,
+     0.8648405834375712,
+     0.013128261356270028
+    ],
+    "before": [
+     0.13499711371931622,
+     0.8504797312039722,
+     0.014523155076711456
+    ],
+    "count_after": 10.389809134021139,
+    "count_before": 10.02580272847923,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6691290244472751,
+     0.31623806973021384,
+     0.014632905822511165
+    ],
+    "before": [
+     0.6330568720109432,
+     0.3507149162968352,
+     0.016228211692221696
+    ],
+    "count_after": 9.935032859978149,
+    "count_before": 9.531830261587249,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.022375496651924034,
+     0.5040593595625872,
+     0.4735651437854888
+    ],
+    "before": [
+     0.022197120550163343,
+     0.5041513295810419,
+     0.4736515498687947
+    ],
+    "count_after": 9.880014047952557,
+    "count_before": 9.910523503527928,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.12740308946996462,
+     0.6026782561827507,
+     0.2699186543472846
+    ],
+    "before": [
+     0.12540973408554726,
+     0.6040550109391978,
+     0.270535254975255
+    ],
+    "count_after": 9.432102735419532,
+    "count_before": 9.475708104920203,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004646758916553067,
+     0.12176054888795837,
+     0.8735926921954885
+    ],
+    "before": [
+     0.004642896072917508,
+     0.12176102142568863,
+     0.873596082501394
+    ],
+    "count_after": 10.793555350340196,
+    "count_before": 10.797430636428064,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9904676455965683,
+     0.008007177698882676,
+     0.0015251767045490815
+    ],
+    "before": [
+     0.9896590020508157,
+     0.008686438277314806,
+     0.0016545596718694868
+    ],
+    "count_after": 12.7880794986879,
+    "count_before": 12.67535429966441,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-9.2"
+  ],
+  "reason_code": "unmapped_evidence",
+  "route": "officer",
+  "row": 1,
+  "text": "The file holds a document of a type the map does not list, so an officer decides."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "insurance.txt",
+    "text": "Kestrel Risk Partners\nIndependent Insurance Brokers\n\n7 February 2027\n\nTo whom it may concern\n\nRe: Kingsway Lions Club - Kingsway Lions Spring Dash 10K\n\nWe act as insurance brokers for the above organisation and have done so for several years. We are arranging public liability cover for their forthcoming race and have every expectation that terms will be confirmed by underwriters shortly. We see no reason why cover should not be in place in good time for the event.\n\nPlease contact the undersigned with any questions.\n\nYours faithfully,\nNadia Petrov\nAccount Executive\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nKingsway Lions Spring Dash 10K, Saturday 22 May 2027\nApplicant: Kingsway Lions Club\nIssue: 2.4\n\n1. Event summary\nA 10K race with 150 runners, starting at 09:30 in the Millbank Quarter area of Port Halden. We are not booking a dedicated ambulance for this race.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 10 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Harbourside Medical Centre, 8 km from the finish. The transfer route and the pick-up point at the top of Canon Road have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Joan Kowalczyk, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PORT HALDEN POLICE SERVICE\nTraffic and Events Division\n200 Prince Street, Port Halden\n\nFebruary 7, 2027\n\nEllis Grant\nKingsway Lions Club\n\nRe: Kingsway Lions Spring Dash 10K, May 22, 2027\n\nDear Ellis Grant,\n\nI confirm that this Division will provide a police escort for the above event on May 22, 2027. Two motorcycle officers will accompany the lead runner along the route through Millbank Quarter, and one traffic unit will be stationed at Canon Road from 08:15 until the last runner has cleared the course.\n\nPlease send your final course map to this office no later than seven days before the event.\n\nYours sincerely,\n\nSgt. Miguel Santos\nTraffic and Events Division\nReference PH-81550\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nKingsway Lions Spring Dash 10K | Saturday 22 May 2027\nOrganiser: Kingsway Lions Club\nRace director: Ellis Grant\nReference: RQ-22824\n\nOverview\nThe Kingsway Lions Spring Dash 10K is a 10K race of 10 km for 150 entrants, based in the Millbank Quarter area of Port Halden. The start is at 09:30 and the course closes at 11:30.\n\nCourse\nThe course runs in order along Canon Road, Linden Avenue, Abbey Road and Lamb Street, all of which are closed to traffic for the race. Major roads crossed: High Street. The finish is in Clocktower Square.\n\nCourse dimensions\nSurvey widths: Canon Road 12 m, Abbey Road 14 m, Lamb Street 16 m, kerb to kerb, excluding footways. Start pens sit side by side across the full carriageway, and spectators have the pavement and a grassed verge along most of the route.\n\nSupport\nEntrants collect numbers from the top of Canon Road from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Kingsway Lions website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Kingsway Lions Spring Dash 10K\nDate: Saturday 22 May 2027\nApplicant: Kingsway Lions Club\nPrepared by: Corvus Temporary Works\nIssue: 2.4\n\n1. Scope\nThis plan describes how traffic will be managed for the Kingsway Lions Spring Dash 10K, a 10K race in the Millbank Quarter area of Port Halden with a 09:30 start. It has been prepared to accompany the permit application and should be read with the race plan. Police attendance is covered in the attached correspondence.\n\nThe route has changed little from last time. Where it has changed, we have tried to keep a clear run for the field, and we welcome any comments from the Events Office on how signed diversions are usually handled in the city.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Pathfinder Road Crews.\n- Canon Road, Foundry Street to Albion Road: closed 08:15 to 12:00\n- Linden Avenue, Weir Street to Foundry Street: closed 08:15 to 12:00\n- Abbey Road, Dyer Street to Copper Row: closed 08:15 to 12:00\n- Lamb Street, Dyer Street to Copper Row: closed 08:15 to 12:00\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 08:15 until the last runner has passed.\n- High Street at Linden Avenue: 4 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Canon Road: traffic diverted via Dock Road and Church Road, signed from Weir Street\n- Linden Avenue: traffic diverted via Ferry Road and Prince Street, signed from Foundry Street\n- Abbey Road: traffic diverted via Canal Road and Ferry Road, signed from Weir Street\n- Lamb Street: traffic diverted via Regent Road and Tram Street, signed from Albion Road\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\n6. Notification\nAll frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 12:00.\n"
+   }
+  ],
+  "cover_letter": "7 February 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Kingsway Lions Spring Dash 10K on Saturday 22 May 2027. We expect 150 runners over 10K, starting at 09:30 in the Millbank Quarter area. The completed form and the attachments (insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nPlease let me know if you need anything else.\n\nYours faithfully,\n\nEllis Grant\nVolunteer Coordinator, Kingsway Lions Club\nellis@kingswaylions.example / 555-0147\n",
+  "form": {
+   "attachments": [
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A 10K race for 150 runners around Millbank Quarter. Requires temporary road closures.",
+   "event_date": "2027-05-22",
+   "event_name": "Kingsway Lions Spring Dash 10K",
+   "event_type": "street_race",
+   "expected_runners": 150,
+   "fee_paid": true,
+   "hospital_distance_km": 8,
+   "organizer": "Kingsway Lions Club",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 1,
+    "road_closure": true
+   },
+   "venue": "Millbank Quarter"
+  }
+ },
+ "events": [
+  921,
+  922,
+  923,
+  924,
+  925,
+  926,
+  927,
+  928,
+  929,
+  930,
+  931
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "certificate_of_insurance",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "I confirm that this Division will provide a police escort for the above event on May 22, 2027.",
+     "value": "May 22, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "Sgt. Miguel Santos",
+     "value": "Sgt. Miguel Santos",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.22787742030523267,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.017304239573912,
+      "entropy": 0.1732625515308919,
+      "levels": [
+       0.005864542826775795,
+       0.9633499153830437,
+       0.030785541790180518
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.02439326482872469,
+      "count": 12.034590435060293,
+      "entropy": 0.19948181731643722,
+      "levels": [
+       0.955061181296597,
+       0.0397160389689828,
+       0.005222779734420103
+      ],
+      "reach": 0.99,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.50726873559525,
+      "entropy": 0.1181095787423446,
+      "levels": [
+       0.0009522138181009282,
+       0.02328335687930315,
+       0.9757644293025959
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0009937330070242357,
+      "count": 10.1501354118328,
+      "entropy": 0.1993923395754187,
+      "levels": [
+       0.03269294374208406,
+       0.957363375248965,
+       0.00994368100895097
+      ],
+      "reach": 0.010000000000000009,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.9458374989210518,
+     0.04889251233178263,
+     0.005269988747165412
+    ],
+    "questions": [
+     {
+      "answer": 0.99,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.025386997835748926
+   },
+   "name": "Medical emergency",
+   "product": 0.008685043574912421,
+   "severity": {
+    "entropy": 0.5938922190600366,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.457868528926053,
+      "entropy": 0.09313674700433057,
+      "levels": [
+       0.008001290017065071,
+       0.9839974199658698,
+       0.008001290017065071
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.01071268912632526,
+      "count": 12.763244885453933,
+      "entropy": 0.10018193881729966,
+      "levels": [
+       0.981350775109738,
+       0.016095685229972092,
+       0.0025535396602899504
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.923960292595492,
+      "entropy": 0.1736142217560273,
+      "levels": [
+       0.003467482882509344,
+       0.9618576882923972,
+       0.03467482882509344
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.33139328303720883,
+      "count": 10.02580272847923,
+      "entropy": 0.46953331508085155,
+      "levels": [
+       0.13499711371931622,
+       0.8504797312039722,
+       0.014523155076711456
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.2196324798583584,
+     0.7670413266065722,
+     0.013326193535069305
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.34210597216353406
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.8728854763494659,
+    "leaves": [
+     {
+      "contribution": 0.04497393415382141,
+      "count": 9.531830261587249,
+      "entropy": 0.7237796058299246,
+      "levels": [
+       0.6330568720109432,
+       0.3507149162968352,
+       0.016228211692221696
+      ],
+      "reach": 0.855,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.008682954314838572,
+      "count": 9.910523503527928,
+      "entropy": 0.7837565097655317,
+      "levels": [
+       0.022197120550163343,
+       0.5041513295810419,
+       0.4736515498687947
+      ],
+      "reach": 0.04500000000000004,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.013687055865479681,
+      "count": 9.475708104920203,
+      "entropy": 0.9185549392832753,
+      "levels": [
+       0.12540973408554726,
+       0.6040550109391978,
+       0.270535254975255
+      ],
+      "reach": 0.09499999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.001371738924072228,
+      "count": 10.797430636428064,
+      "entropy": 0.39939043921478645,
+      "levels": [
+       0.004642896072917508,
+       0.12176102142568863,
+       0.873596082501394
+      ],
+      "reach": 0.005000000000000004,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.5541996352126053,
+     0.3805420944112932,
+     0.06525827037610152
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.95,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.06871568325821188
+   },
+   "name": "Traffic conflict",
+   "product": 0.007152961466722575,
+   "severity": {
+    "entropy": 0.062109278388295996,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.336977746198,
+      "entropy": 0.3389373878667739,
+      "levels": [
+       0.010209759436778442,
+       0.08167807549422754,
+       0.9081121650689941
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.208817683600001,
+      "levels": [
+       0.009156691221102351,
+       0.9542165438944882,
+       0.036626764884409406
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.19798295964703655,
+      "levels": [
+       0.02747007366330705,
+       0.9587948895050394,
+       0.013735036831653525
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.10409503518787698,
+      "count": 12.67535429966441,
+      "entropy": 0.062109278388295996,
+      "levels": [
+       0.9896590020508157,
+       0.008686438277314806,
+       0.0016545596718694868
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9896590020508157,
+     0.008686438277314806,
+     0.0016545596718694868
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.10409503518787698
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.34210597216353406,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21646268154544307,
+   "t_low": 0.18447068450010728
+  },
+  "weights_version": "first-guess+77"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The insurance requirement is not met: only a broker's letter was supplied, not a certificate of insurance naming the organiser, venue and race date.",
+  "ruling": "deny"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "missing"
+  }
+ ],
+ "risk": 0.015838005041634996,
+ "t_high": 0.21646268154544307,
+ "t_low": 0.18447068450010728,
+ "title": "Kingsway Lions Spring Dash 10K",
+ "unmapped_documents": [
+  {
+   "document": "insurance.txt",
+   "why": "A broker's letter saying cover is being arranged, not a certificate of insurance."
+  }
+ ]
+}

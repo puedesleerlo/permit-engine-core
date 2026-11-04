@@ -1,0 +1,106 @@
+WEBVTT
+
+00:00.400 --> 00:03.361
+A city office gets a request to hold a street race.
+
+00:03.686 --> 00:06.286
+One AI model could answer yes or no.
+
+00:06.611 --> 00:10.059
+But when it's wrong, there's nothing to check or fix.
+
+00:10.559 --> 00:13.276
+Permit Engine splits that decision into parts you can
+
+00:13.322 --> 00:16.434
+inspect. It's automatic and AI assisted,
+
+00:16.643 --> 00:19.104
+yet every step leaves a trace.
+
+00:19.904 --> 00:23.468
+First, evidence. The AI must quote its source.
+
+00:23.793 --> 00:25.976
+This police letter promises an escort,
+
+00:26.092 --> 00:28.948
+but for the wrong date. A separate check compares the
+
+00:29.006 --> 00:31.096
+dates, and rejects the letter.
+
+00:31.896 --> 00:36.180
+Second, escalation. Small question trees score risk.
+
+00:36.424 --> 00:38.583
+A contradiction, missing insurance,
+
+00:38.792 --> 00:42.090
+or a risk that isn't clearly low goes to an officer,
+
+00:42.148 --> 00:43.970
+with the reason attached.
+
+00:44.770 --> 00:49.031
+Third, learning. Officer reviews adjust the numbers inside
+
+00:49.077 --> 00:53.176
+those trees. The written rules never change by themselves.
+
+00:53.676 --> 00:56.544
+In this demo, an AI plays the officer.
+
+00:56.822 --> 00:59.655
+On cases set aside, the trees matched our answer key
+
+00:59.771 --> 01:01.559
+70 percent of the time at first,
+
+01:01.733 --> 01:05.379
+and 87 percent after 115 reviews.
+
+01:06.179 --> 01:08.408
+This pattern isn't only for races.
+
+01:08.733 --> 01:11.241
+In a bank, income papers are the evidence,
+
+01:11.450 --> 01:13.633
+fraud and default are the risks,
+
+01:13.842 --> 01:16.210
+and a mismatch goes to an analyst.
+
+01:16.710 --> 01:19.682
+In government benefits, the law supplies the rules,
+
+01:19.856 --> 01:22.283
+and a caseworker takes the hard cases.
+
+01:22.783 --> 01:26.103
+And when an AI agent is about to move money or delete
+
+01:26.150 --> 01:28.855
+data, treat that action as an application.
+
+01:29.134 --> 01:31.444
+What supports it? What could go wrong?
+
+01:31.653 --> 01:33.278
+Does it need a person?
+
+01:33.778 --> 01:35.775
+We've only tested on made-up permits,
+
+01:35.949 --> 01:37.598
+so it shows the method can learn,
+
+01:37.714 --> 01:39.537
+not that it predicts real risk.
+
+01:39.862 --> 01:41.394
+Automatic where it can be,
+
+01:41.603 --> 01:45.156
+traceable every time, and a person for the hard cases.

@@ -1,0 +1,819 @@
+{
+ "case_id": "R0003-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.8043014570308429,
+     0.16308211914096427,
+     0.03261642382819285
+    ],
+    "before": [
+     0.7,
+     0.25,
+     0.05
+    ],
+    "count_after": 2.8554656998471994,
+    "count_before": 2.0,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.2527075898271953,
+     0.49819494011520304,
+     0.24909747005760152
+    ],
+    "before": [
+     0.25,
+     0.5,
+     0.25
+    ],
+    "count_after": 2.004335167884448,
+    "count_before": 2.0,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.16340834735410478,
+     0.7058649747626113,
+     0.13072667788328382
+    ],
+    "before": [
+     0.25,
+     0.55,
+     0.2
+    ],
+    "count_after": 2.8518338966591554,
+    "count_before": 2.0,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.7454354777065799,
+     0.22474710318515698,
+     0.029817419108263195
+    ],
+    "before": [
+     0.75,
+     0.22,
+     0.03
+    ],
+    "count_after": 2.0078704541137506,
+    "count_before": 2.0,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.3806225680457029,
+     0.5242217899428715,
+     0.09515564201142572
+    ],
+    "before": [
+     0.4,
+     0.5,
+     0.1
+    ],
+    "count_after": 2.0851081040736332,
+    "count_before": 2.0,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.1351821782345857,
+     0.6958400989721821,
+     0.16897772279323212
+    ],
+    "before": [
+     0.2,
+     0.55,
+     0.25
+    ],
+    "count_after": 2.773897284742095,
+    "count_before": 2.0,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.18779589061128016,
+     0.6244082187774398,
+     0.18779589061128016
+    ],
+    "before": [
+     0.2,
+     0.6,
+     0.2
+    ],
+    "count_after": 2.1145706573849496,
+    "count_before": 2.0,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.034132574503254506,
+     0.6245416804642004,
+     0.3413257450325451
+    ],
+    "before": [
+     0.05,
+     0.45,
+     0.5
+    ],
+    "count_after": 2.7445149879989192,
+    "count_before": 2.0,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "Looking after people on the day: Eastfield Community Run Half Marathon, Sunday 24 October 2027\n\nMaria Ostrowski, Race Director, Eastfield Athletics\n\nWe expect about 550 people altogether, including 550 runners. We do not expect spectators in any number beyond the runners' own companions.\n\nWe hired a radio or two last time for the start team, which proved useful, and we had a short briefing for anyone who turned up early. Feedback from runners has been good, and we have no reports of people being unable to find a way through.\n\nWhere people will watch\nWe've set out three viewing spots with barriers: at the finish by the bandstand, at the turn by Pier Promenade, and at the start by the rowing club. We measured them, and at about two people to the square metre they take around 750 between them, which is more than we expect to come.\n\nHow we start the race\nWe set off in 3 waves, four minutes apart, with runners sorted by the time they expect to run. That thins everyone out before the first corner. The pens close five minutes before each wave goes.\n\nWho's helping\nWe've got 11 stewards in tabards, about one for every 50 people, with 2 supervisors in charge of sections. Each has a set position on a rota, and all come to a briefing an hour before the start.\n\nGetting everyone away\nRunners walk through a one-way funnel after the line, out to the recovery area, and leave by the north gate. Spectators have two marked ways out, and a steward stands at each to keep it clear. We reckon the whole place empties in 25 minutes.\n\nWho's in charge\nMaria Ostrowski runs the event from the control point with a radio to every supervisor. They can hold a wave, stop the race, or make an announcement over the speakers to move people along. Supervisors call it in if a pen or viewing spot looks to be getting too full.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. EV-26902\nIssued: 2027-07-31\n\nINSURER: Meridian Mutual Insurance\nPOLICY NUMBER: EL-530311\n\nNAMED INSURED: Eastfield Athletics\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Eastfield Community Run Half Marathon\nVENUE: Greenhill, Port Halden\n\nPOLICY PERIOD\nEffective: 2027-01-01\nExpiry: 2027-12-31\n\nLIMIT OF LIABILITY: $2,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nEastfield Community Run Half Marathon, Sunday 24 October 2027\nApplicant: Eastfield Athletics\nIssue: 2.4\n\n1. Event summary\nA half marathon race with 550 runners, starting at 09:00 in the Greenhill area of Port Halden. We are not booking a dedicated ambulance for this race.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 12 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nParticipants are reminded in their pre-race information to dress appropriately for the conditions and to drink plenty of fluids before, during and after the race. Our experienced committee will keep a close eye on the weather in the days leading up to the event.\n\n4. Transfer to hospital\nThe receiving hospital is Valley Regional Hospital, 18 km from the finish. The transfer route and the pick-up point at the rowing club have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nMembers of the team will have their mobile phones with them, and a list of contact numbers will be circulated in the week before the event. Coverage in the area is generally reported to be good.\n\n6. Clinical lead\nThe medical lead is Fatima Haddad, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nEastfield Community Run Half Marathon | Sunday 24 October 2027\nOrganiser: Eastfield Athletics\nRace director: Maria Ostrowski\nReference: RQ-76013\n\nOverview\nThe Eastfield Community Run Half Marathon is a half marathon race of 21 km for 550 entrants, based in the Greenhill area of Port Halden. The start is at 09:00 and the course closes at 12:30.\n\nCourse\nThe course stays entirely on the Saltmarsh Boardwalk and the Pier Promenade, away from the highway, and no road is closed for the race. The finish is at the bandstand.\n\nCourse dimensions\nThe Saltmarsh Boardwalk is a surfaced path about 2.5 m wide, with a railing on one side and a retaining wall on the other. The Pier Promenade section is about 2 m wide and passes under two low bridges. Runners can go two or three abreast at most, and the start pens have to be strung along the path.\n\nSupport\nEntrants collect numbers from the rowing club from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Eastfield website the same day.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the Eastfield Community Run Half Marathon, Sunday 24 October 2027. 550 runners, half marathon, off at 09:00, around Greenhill. I've attached crowd_plan.txt, insurance.txt, medical_plan.txt, race_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nMaria\n\nMaria Ostrowski, Eastfield Athletics\n555-0196\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "A half marathon race for 550 runners on off-road paths at Greenhill.",
+   "event_date": "2027-10-24",
+   "event_name": "Eastfield Community Run Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 550,
+   "fee_paid": true,
+   "hospital_distance_km": 18,
+   "organizer": "Eastfield Athletics",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Greenhill"
+  }
+ },
+ "events": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Eastfield Athletics",
+     "value": "Eastfield Athletics",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Greenhill, Port Halden",
+     "value": "Greenhill, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 2027-01-01",
+     "value": "2027-01-01",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 2027-12-31",
+     "value": "2027-12-31",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $2,000,000 each occurrence",
+     "value": "$2,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.7614733182288077,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.9985793315873921,
+      "levels": [
+       0.35,
+       0.5,
+       0.15
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.05292,
+      "count": 2.0,
+      "entropy": 0.7460326647147849,
+      "levels": [
+       0.7,
+       0.25,
+       0.05
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.8237197315118312,
+      "levels": [
+       0.05,
+       0.35,
+       0.6
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0026000000000000025,
+      "count": 2.0,
+      "entropy": 1.0397207708399179,
+      "levels": [
+       0.25,
+       0.5,
+       0.25
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.691,
+     0.255,
+     0.054000000000000006
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.05552
+   },
+   "name": "Crowd pressure",
+   "product": 0.0242866688,
+   "severity": {
+    "entropy": 1.0033427339521677,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.8451132568429528,
+      "levels": [
+       0.05,
+       0.4,
+       0.55
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.43165000000000003,
+      "count": 2.0,
+      "entropy": 0.997271523182384,
+      "levels": [
+       0.25,
+       0.55,
+       0.2
+      ],
+      "reach": 0.97,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.9433483923290392,
+      "levels": [
+       0.4,
+       0.5,
+       0.1
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.005790000000000005,
+      "count": 2.0,
+      "entropy": 0.6540663924369857,
+      "levels": [
+       0.75,
+       0.22,
+       0.03
+      ],
+      "reach": 0.030000000000000027,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.265,
+     0.5401,
+     0.19490000000000002
+    ],
+    "questions": [
+     {
+      "answer": 0.97,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.43744000000000005
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 1.004764790579444,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.9433483923290392,
+      "levels": [
+       0.1,
+       0.5,
+       0.4
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.00968,
+      "count": 2.0,
+      "entropy": 0.9433483923290392,
+      "levels": [
+       0.4,
+       0.5,
+       0.1
+      ],
+      "reach": 0.11,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.7083891940723279,
+      "levels": [
+       0.03,
+       0.27,
+       0.7
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.11926,
+      "count": 2.0,
+      "entropy": 0.997271523182384,
+      "levels": [
+       0.2,
+       0.55,
+       0.25
+      ],
+      "reach": 0.89,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.22200000000000003,
+     0.5445000000000001,
+     0.2335
+    ],
+    "questions": [
+     {
+      "answer": 0.11,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.12894000000000003
+   },
+   "name": "Medical emergency",
+   "product": 0.08542275000000003,
+   "severity": {
+    "entropy": 0.8885883463298709,
+    "leaves": [
+     {
+      "contribution": 0.046000000000000006,
+      "count": 2.0,
+      "entropy": 0.9502705392332347,
+      "levels": [
+       0.2,
+       0.6,
+       0.2
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.9433483923290392,
+      "levels": [
+       0.4,
+       0.5,
+       0.1
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.6165,
+      "count": 2.0,
+      "entropy": 0.8556886672556694,
+      "levels": [
+       0.05,
+       0.45,
+       0.5
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.997271523182384,
+      "levels": [
+       0.2,
+       0.55,
+       0.25
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.065,
+     0.465,
+     0.47000000000000003
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.6625000000000001
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.6625000000000001,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.207933735,
+   "t_low": 0.194608825
+  },
+  "weights_version": "first-guess"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The paperwork, fee and insurance are in order, and the overall risk is low, though the narrow paths, the lack of an ambulance and a weak weather and communications plan were noted.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.10970941880000004,
+ "t_high": 0.207933735,
+ "t_low": 0.194608825,
+ "title": "Eastfield Community Run Half Marathon",
+ "unmapped_documents": []
+}

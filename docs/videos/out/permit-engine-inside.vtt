@@ -1,0 +1,130 @@
+WEBVTT
+
+00:00.400 --> 00:02.455
+Let's follow one made-up application:
+
+00:02.745 --> 00:05.973
+a race with 900 runners and a closed road.
+
+00:06.473 --> 00:08.400
+Written rules pick three hazards:
+
+00:08.540 --> 00:11.349
+traffic, crowd pressure, medical.
+
+00:12.149 --> 00:14.784
+Each hazard gets two small question trees:
+
+00:15.075 --> 00:17.733
+how likely, and how bad. Take one:
+
+00:18.024 --> 00:20.508
+how likely is a traffic conflict?
+
+00:21.008 --> 00:23.504
+First: is the police escort confirmed?
+
+00:23.760 --> 00:25.222
+The letter names the wrong date,
+
+00:25.292 --> 00:27.301
+so a fixed low value applies:
+
+00:27.440 --> 00:28.856
+0.05.
+
+00:29.356 --> 00:31.748
+Second: is the traffic plan adequate?
+
+00:32.038 --> 00:35.312
+An AI model, Jev, reads the whole plan and returns one
+
+00:35.358 --> 00:37.669
+probability: 0.96.
+
+00:38.169 --> 00:40.932
+So the case splits, like water through pipes.
+
+00:41.478 --> 00:43.335
+91 percent reaches one leaf:
+
+00:43.521 --> 00:46.435
+no confirmed escort, but a good plan.
+
+00:46.935 --> 00:49.176
+Each leaf holds a mix of three levels:
+
+00:49.466 --> 00:53.007
+rare, possible, likely. Blended by flow,
+
+00:53.042 --> 00:56.084
+that's 12, 60 and 28 percent.
+
+00:56.884 --> 00:58.974
+Each level stands for a fixed number.
+
+00:59.229 --> 01:01.133
+Multiply each share by its number,
+
+01:01.156 --> 01:03.386
+and add. That's the likelihood.
+
+01:03.886 --> 01:05.419
+Severity works the same way.
+
+01:05.674 --> 01:07.880
+Multiply the two for this hazard's risk.
+
+01:08.380 --> 01:10.911
+Add all three hazards, and total risk falls below the
+
+01:10.957 --> 01:12.002
+approval line.
+
+01:12.802 --> 01:15.763
+So, approved? No. Rules outrank arithmetic:
+
+01:15.786 --> 01:18.143
+the wrong-date letter sends it to an officer.
+
+01:18.643 --> 01:20.756
+Our simulated officer calls it risky,
+
+01:20.826 --> 01:24.529
+so this leaf moves: from 27 percent likely to 35.
+
+01:24.820 --> 01:25.841
+That's the learning.
+
+01:26.641 --> 01:28.719
+We ran three tests. First,
+
+01:28.777 --> 01:31.308
+does training help? On a sealed test,
+
+01:31.413 --> 01:34.234
+trained trees matched our answer key 89 percent of the
+
+01:34.269 --> 01:38.205
+time. Untrained, 68. Trained on shuffled answers,
+
+01:38.425 --> 01:39.644
+55.
+
+01:40.144 --> 01:43.743
+Second: learning only from disagreements made its probabilities
+
+01:43.813 --> 01:47.528
+worse. Learning from agreements too made them much better.
+
+01:48.028 --> 01:50.280
+Third, does a pushy cover letter help?
+
+01:50.571 --> 01:53.078
+In 60 comparisons, no decision changed.
+
+01:53.299 --> 01:56.120
+All made-up data, so this shows the method can learn,
+
+01:56.225 --> 01:58.059
+not that it predicts real risk.

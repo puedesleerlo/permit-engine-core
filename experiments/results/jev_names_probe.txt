@@ -1,0 +1,14 @@
+requests 60; input tokens 93484; output tokens 16313; returned model ['jev-1.14.0']; 2 s
+No world shift: 98 tree judgments, 21 truly wrong
+  flags a truly wrong tree (sensitivity) 0.048; clears a right tree (specificity) 0.883
+  picks the right level, all trees 0.745; on truly wrong trees 0.048; the trained system itself on all trees 0.786
+After the world shift: 178 tree judgments, 46 truly wrong
+  flags a truly wrong tree (sensitivity) 0.217; clears a right tree (specificity) 0.902
+  picks the right level, all trees 0.742; on truly wrong trees 0.130; the trained system itself on all trees 0.742
+  on the shifted tree alone: flagged 0.114, right level 0.286 (n=35)
+measured, all cases: --sens 0.164 --spec 0.895 --level 0.104
+
+Applying the same 40 corrections after the shift (one seed; gradient step 1.5; thresholds fixed):
+  none     shifted tree loss 1.699, other trees 0.475, all 0.679; auto 0.833, wrong among approved 0.146, band 0.052
+  officer  shifted tree loss 1.097, other trees 0.570, all 0.658; auto 0.705, wrong among approved 0.071, band 0.088
+  jev      shifted tree loss 1.740, other trees 0.508, all 0.713; auto 0.845, wrong among approved 0.157, band 0.049

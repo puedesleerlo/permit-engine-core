@@ -1,0 +1,172 @@
+1
+00:00:00,400 --> 00:00:02,455
+Let's follow one made-up application:
+
+2
+00:00:02,745 --> 00:00:05,973
+a race with 900 runners and a closed road.
+
+3
+00:00:06,473 --> 00:00:08,400
+Written rules pick three hazards:
+
+4
+00:00:08,540 --> 00:00:11,349
+traffic, crowd pressure, medical.
+
+5
+00:00:12,149 --> 00:00:14,784
+Each hazard gets two small question trees:
+
+6
+00:00:15,075 --> 00:00:17,733
+how likely, and how bad. Take one:
+
+7
+00:00:18,024 --> 00:00:20,508
+how likely is a traffic conflict?
+
+8
+00:00:21,008 --> 00:00:23,504
+First: is the police escort confirmed?
+
+9
+00:00:23,760 --> 00:00:25,222
+The letter names the wrong date,
+
+10
+00:00:25,292 --> 00:00:27,301
+so a fixed low value applies:
+
+11
+00:00:27,440 --> 00:00:28,856
+0.05.
+
+12
+00:00:29,356 --> 00:00:31,748
+Second: is the traffic plan adequate?
+
+13
+00:00:32,038 --> 00:00:35,312
+An AI model, Jev, reads the whole plan and returns one
+
+14
+00:00:35,358 --> 00:00:37,669
+probability: 0.96.
+
+15
+00:00:38,169 --> 00:00:40,932
+So the case splits, like water through pipes.
+
+16
+00:00:41,478 --> 00:00:43,335
+91 percent reaches one leaf:
+
+17
+00:00:43,521 --> 00:00:46,435
+no confirmed escort, but a good plan.
+
+18
+00:00:46,935 --> 00:00:49,176
+Each leaf holds a mix of three levels:
+
+19
+00:00:49,466 --> 00:00:53,007
+rare, possible, likely. Blended by flow,
+
+20
+00:00:53,042 --> 00:00:56,084
+that's 12, 60 and 28 percent.
+
+21
+00:00:56,884 --> 00:00:58,974
+Each level stands for a fixed number.
+
+22
+00:00:59,229 --> 00:01:01,133
+Multiply each share by its number,
+
+23
+00:01:01,156 --> 00:01:03,386
+and add. That's the likelihood.
+
+24
+00:01:03,886 --> 00:01:05,419
+Severity works the same way.
+
+25
+00:01:05,674 --> 00:01:07,880
+Multiply the two for this hazard's risk.
+
+26
+00:01:08,380 --> 00:01:10,911
+Add all three hazards, and total risk falls below the
+
+27
+00:01:10,957 --> 00:01:12,002
+approval line.
+
+28
+00:01:12,802 --> 00:01:15,763
+So, approved? No. Rules outrank arithmetic:
+
+29
+00:01:15,786 --> 00:01:18,143
+the wrong-date letter sends it to an officer.
+
+30
+00:01:18,643 --> 00:01:20,756
+Our simulated officer calls it risky,
+
+31
+00:01:20,826 --> 00:01:24,529
+so this leaf moves: from 27 percent likely to 35.
+
+32
+00:01:24,820 --> 00:01:25,841
+That's the learning.
+
+33
+00:01:26,641 --> 00:01:28,719
+We ran three tests. First,
+
+34
+00:01:28,777 --> 00:01:31,308
+does training help? On a sealed test,
+
+35
+00:01:31,413 --> 00:01:34,234
+trained trees matched our answer key 89 percent of the
+
+36
+00:01:34,269 --> 00:01:38,205
+time. Untrained, 68. Trained on shuffled answers,
+
+37
+00:01:38,425 --> 00:01:39,644
+55.
+
+38
+00:01:40,144 --> 00:01:43,743
+Second: learning only from disagreements made its probabilities
+
+39
+00:01:43,813 --> 00:01:47,528
+worse. Learning from agreements too made them much better.
+
+40
+00:01:48,028 --> 00:01:50,280
+Third, does a pushy cover letter help?
+
+41
+00:01:50,571 --> 00:01:53,078
+In 60 comparisons, no decision changed.
+
+42
+00:01:53,299 --> 00:01:56,120
+All made-up data, so this shows the method can learn,
+
+43
+00:01:56,225 --> 00:01:58,059
+not that it predicts real risk.
+

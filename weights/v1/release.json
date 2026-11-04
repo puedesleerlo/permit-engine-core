@@ -1,0 +1,23 @@
+{
+ "content_hash": "d49d5af90ef619a5ba198a6300debb1c11c4a1334869db22c5d1ae939504e386",
+ "fitted_on": {
+  "answers": "real",
+  "cases": 180,
+  "dataset_hash": "e386801ed659b18e19996844abc9a5489cb67f8e9b8884c951ec1f3de96bfa85",
+  "first_guess_dir": null,
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "settings_hash": "4a3764d0d481dc08ddf833e4be9feb6cc33b679d891b7bfe9e38a1c83809ddda"
+ },
+ "kind": "crossings",
+ "released_at": "2026-11-04T03:46:06+00:00",
+ "role": "policy_owner",
+ "thresholds": {
+  "notes": [
+   "the thresholds crossed, so both take their midpoint and there is no review band"
+  ],
+  "t_high": 0.20438546033367044,
+  "t_low": 0.20438546033367044
+ },
+ "version": "v1",
+ "weights_hash": "eae2399325bf60c9fb673ec2e32bd70d379f3d9af1deefc1e709e43bd7c43ddb"
+}

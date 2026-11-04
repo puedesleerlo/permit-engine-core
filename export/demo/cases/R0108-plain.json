@@ -1,0 +1,839 @@
+{
+ "case_id": "R0108-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.07284348771724516,
+     0.893781421404176,
+     0.03337509087857876
+    ],
+    "before": [
+     0.07284777219445983,
+     0.8938339914588906,
+     0.03331823634664944
+    ],
+    "count_after": 6.299093707748988,
+    "count_before": 6.303295918234051,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.008582826620129462,
+     0.07005414290955618,
+     0.9213630304703144
+    ],
+    "before": [
+     0.010032113187637666,
+     0.08188340765073167,
+     0.9080844791616306
+    ],
+    "count_after": 6.9195401096838705,
+    "count_before": 6.360877444796251,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.007660750965291613,
+     0.9080709884165006,
+     0.08426826061820777
+    ],
+    "before": [
+     0.008812097843442994,
+     0.8942548258786841,
+     0.09693307627787295
+    ],
+    "count_after": 7.35239411025626,
+    "count_before": 6.852943982928536,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.095649474846869,
+     0.8804381564414138,
+     0.02391236871171725
+    ],
+    "before": [
+     0.09630538192350849,
+     0.8796182725956144,
+     0.024076345480877122
+    ],
+    "count_after": 5.780768865956679,
+    "count_before": 5.75808828442529,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.8130062961300931,
+     0.1631976537206946,
+     0.023796050149212343
+    ],
+    "before": [
+     0.8143034938510901,
+     0.16186248805016354,
+     0.02383401809874634
+    ],
+    "count_after": 6.045576298671362,
+    "count_before": 6.057887025893261,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.06071079031480207,
+     0.8948174753090506,
+     0.04447173437614731
+    ],
+    "before": [
+     0.07153943032050356,
+     0.8760566637817562,
+     0.052403905897740334
+    ],
+    "count_after": 6.542876660292522,
+    "count_before": 5.94881333091992,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.03387366935804553,
+     0.9322526612839089,
+     0.03387366935804553
+    ],
+    "before": [
+     0.0388681351299363,
+     0.9222637297401275,
+     0.0388681351299363
+    ],
+    "count_after": 7.002852466122911,
+    "count_before": 6.514916641520817,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.006837702320695924,
+     0.9247852744723448,
+     0.06837702320695921
+    ],
+    "before": [
+     0.006927546283053868,
+     0.9237969908864074,
+     0.06927546283053865
+    ],
+    "count_after": 7.722177098572198,
+    "count_before": 7.677542273951208,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. RQ-78572\n\nBetween: Halden Medical Transport (\"the Provider\")\nAnd: Saltmarsh Running Group (\"the Client\")\n\nEvent: Saltmarsh Founders Race 10K\nEvent date: 2027-10-03\nLocation: Westbrook, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the pavilion from 07:30 until the last runner has finished or 11:30, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $780, paid in full on signature.\n\nSigned for the Provider: Joan Kowalczyk, Operations Manager, 2027-07-29\nSigned for the Client: Yuki Tanaka, 2027-07-29\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "CROWD MANAGEMENT PLAN\nSaltmarsh Founders Race 10K, Sunday 3 October 2027\nApplicant: Saltmarsh Running Group\nPrepared by Yuki Tanaka, Race Director\nIssue: 1.2\n\n1. Attendance\nWe expect 1400 people in total at the event, including 1170 runners. About 230 of those are spectators.\n\n2. Spectator areas\nWe anticipate that spectators will gather naturally around the start and finish, as well as at convenient points along the course, creating an enjoyable atmosphere for all participants. Signage will be placed around the site to help visitors find their way, and refreshments will be on sale close to the finish.\n\n3. Start procedure\nRunners will self-seed into 4 pens by expected finish time and be released at intervals of four minutes, so that the field is spread out before the first turn. Pens are closed five minutes before each release.\n\n4. Stewarding\nMembers of the organising committee and other willing volunteers will be present across the site throughout the day. Volunteers are chosen for their friendly and helpful approach and are recognisable from their event T-shirts.\n\n5. Exit and dispersal\nFinishers walk through a one-way funnel to the recovery area and leave by the north gate. Spectators leave by two marked exits. Stewards hold the exits open and keep them clear, and we estimate that the whole area will empty within 25 minutes of the last finisher.\n\n6. Event control\nThe race director has many years of experience of events of this type and will be available on the day to deal with any issues as they arise, consulting colleagues as appropriate.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. EV-90177\nIssued: July 29, 2027\n\nINSURER: Meridian Mutual Insurance\nPOLICY NUMBER: PL-926778\n\nNAMED INSURED: Saltmarsh Running Group\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Saltmarsh Founders Race 10K\nVENUE: Westbrook, Port Halden\n\nPOLICY PERIOD\nEffective: October 2, 2027\nExpiry: October 4, 2027\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nSaltmarsh Founders Race 10K, Sunday 3 October 2027\nApplicant: Saltmarsh Running Group\nIssue: 1.2\n\n1. Event summary\nA 10K race with 1170 runners, starting at 09:00 in the Westbrook area of Port Halden. An ambulance from Halden Medical Transport is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 8 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nParticipants are reminded in their pre-race information to dress appropriately for the conditions and to drink plenty of fluids before, during and after the race. Our experienced committee will keep a close eye on the weather in the days leading up to the event.\n\n4. Transfer to hospital\nThe receiving hospital is Northshore District Hospital, 11 km from the finish. The transfer route and the pick-up point at the pavilion have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n\n6. Clinical lead\nResponsibility for welfare on the day rests with the race director, supported by the wider committee, all of whom take the wellbeing of participants extremely seriously.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Saltmarsh Founders Race 10K: how the race will work\n\nPrepared by Yuki Tanaka (Race Director), Saltmarsh Running Group. Last updated 29 July 2027.\n\nThis is our plan for race day, Sunday 3 October 2027. We expect 1170 runners over 10K (10 km). Numbers can be collected from the pavilion from an hour before we go at 09:00, and we aim to have the last finisher home by 11:00.\n\nHappily we are off-road the whole way. We use the Gardens Loop and then the Pier Promenade, so no streets need closing at all. We finish at the lock keeper's cottage.\n\nThe Gardens Loop is lovely but tight, about 2.5 metres, and it stays like that until the Pier Promenade, which is 2.5 metres. There's no way off either of them for long stretches, except the small clearing where we finish.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Saltmarsh Founders Race 10K, Sunday 3 October 2027. 1170 runners, 10K, off at 09:00, around Westbrook. I've attached ambulance_agreement.txt, crowd_plan.txt, insurance.txt, medical_plan.txt, race_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nYuki\n\nYuki Tanaka, Saltmarsh Running Group\n555-0181\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "A 10K race for 1170 runners on off-road paths at Westbrook. Last year's crowd was 230 or so, and we expect the same again.",
+   "event_date": "2027-10-03",
+   "event_name": "Saltmarsh Founders Race 10K",
+   "event_type": "street_race",
+   "expected_runners": 1170,
+   "fee_paid": true,
+   "hospital_distance_km": 11,
+   "organizer": "Saltmarsh Running Group",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Westbrook"
+  }
+ },
+ "events": [
+  339,
+  340,
+  341,
+  342,
+  343,
+  344,
+  345,
+  346,
+  347,
+  348,
+  349,
+  350
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: Halden Medical Transport (\"the Provider\")",
+     "value": "Halden Medical Transport",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: 2027-10-03",
+     "value": "2027-10-03",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Saltmarsh Running Group",
+     "value": "Saltmarsh Running Group",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Westbrook, Port Halden",
+     "value": "Westbrook, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: October 2, 2027",
+     "value": "October 2, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: October 4, 2027",
+     "value": "October 4, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $1,000,000 each occurrence",
+     "value": "$1,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.3605474898717994,
+    "leaves": [
+     {
+      "contribution": 0.001008358254937731,
+      "count": 6.303295918234051,
+      "entropy": 0.40447288008224536,
+      "levels": [
+       0.07284777219445983,
+       0.8938339914588906,
+       0.03331823634664944
+      ],
+      "reach": 0.01,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.700040723124989,
+      "entropy": 0.3053151213949687,
+      "levels": [
+       0.9230261086862941,
+       0.06456349340889064,
+       0.012410397904815221
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.27800618350954187,
+      "count": 6.360877444796251,
+      "entropy": 0.33863285382852903,
+      "levels": [
+       0.010032113187637666,
+       0.08188340765073167,
+       0.9080844791616306
+      ],
+      "reach": 0.99,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.906623101857427,
+      "entropy": 0.8861610392432044,
+      "levels": [
+       0.19094970617972865,
+       0.6517189290181935,
+       0.15733136480207793
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.010660269777705888,
+     0.09000291348881326,
+     0.8993368167334808
+    ],
+    "questions": [
+     {
+      "answer": 0.01,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.27901454176447965
+   },
+   "name": "Crowd pressure",
+   "product": 0.12631483150958792,
+   "severity": {
+    "entropy": 0.3768882409693751,
+    "leaves": [
+     {
+      "contribution": 0.4372955677571433,
+      "count": 6.852943982928536,
+      "entropy": 0.36785759338001517,
+      "levels": [
+       0.008812097843442994,
+       0.8942548258786841,
+       0.09693307627787295
+      ],
+      "reach": 0.96,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.40481950155137,
+      "entropy": 0.5674730398475011,
+      "levels": [
+       0.0947258412618825,
+       0.8321247093904676,
+       0.0731494493476498
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.015422167708458966,
+      "count": 5.75808828442529,
+      "entropy": 0.42792417529927335,
+      "levels": [
+       0.09630538192350849,
+       0.8796182725956144,
+       0.024076345480877122
+      ],
+      "reach": 0.040000000000000036,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.3940753872073826,
+      "entropy": 0.3489991494005215,
+      "levels": [
+       0.904554790792907,
+       0.08447784536627422,
+       0.010967363840818731
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.012311829206645617,
+     0.8936693637473613,
+     0.09401880704599312
+    ],
+    "questions": [
+     {
+      "answer": 0.96,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.45271773546560223
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.539089932320323,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 7.7456770445124405,
+      "entropy": 0.321181687548752,
+      "levels": [
+       0.014147974032438356,
+       0.9180598714096222,
+       0.06779215455793941
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.001981126205583103,
+      "count": 6.057887025893261,
+      "entropy": 0.551088053531957,
+      "levels": [
+       0.8143034938510901,
+       0.16186248805016354,
+       0.02383401809874634
+      ],
+      "reach": 0.05,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.504440964717953,
+      "entropy": 0.3071189742755307,
+      "levels": [
+       0.004249319505223587,
+       0.08051717321334545,
+       0.9152335072814309
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0995197454162124,
+      "count": 5.94881333091992,
+      "entropy": 0.45913676094552763,
+      "levels": [
+       0.07153943032050356,
+       0.8760566637817562,
+       0.052403905897740334
+      ],
+      "reach": 0.95,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.10867763349703288,
+     0.8403469549951765,
+     0.050975411507790634
+    ],
+    "questions": [
+     {
+      "answer": 0.05,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.10150087162179551
+   },
+   "name": "Medical emergency",
+   "product": 0.04206633567107909,
+   "severity": {
+    "entropy": 0.32635162899636416,
+    "leaves": [
+     {
+      "contribution": 0.3704943964850829,
+      "count": 6.514916641520817,
+      "entropy": 0.327088117554463,
+      "levels": [
+       0.0388681351299363,
+       0.9222637297401275,
+       0.0388681351299363
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.655026641658239,
+      "entropy": 0.2967718962230317,
+      "levels": [
+       0.9258171896808123,
+       0.062416155641473875,
+       0.011766654677713732
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.04394870138134069,
+      "count": 7.677542273951208,
+      "entropy": 0.29261059747615004,
+      "levels": [
+       0.006927546283053868,
+       0.9237969908864074,
+       0.06927546283053865
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.138023426983892,
+      "entropy": 0.8716336692501561,
+      "levels": [
+       0.28352851967088116,
+       0.6240944559151983,
+       0.09237702441392048
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.03567407624524806,
+     0.9224170558547555,
+     0.04190886789999654
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.4144430978664236
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.45271773546560223,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.18965913513454657,
+   "t_low": 0.18965913513454657
+  },
+  "weights_version": "first-guess+28"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The fee is paid, the insurance is valid and the date is in season. The crowd and medical plans have gaps, but the overall risk falls below the threshold, so the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.168381167180667,
+ "t_high": 0.18965913513454657,
+ "t_low": 0.18965913513454657,
+ "title": "Saltmarsh Founders Race 10K",
+ "unmapped_documents": []
+}

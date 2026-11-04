@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hazard",
+  "type": "object",
+  "required": ["id", "name", "description", "applies_when", "applies_rule", "clause", "trees"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "applies_when": {"type": "string"},
+    "applies_rule": {"type": "string", "pattern": "^data\\.permit\\.screen\\.applies\\."},
+    "clause": {"type": "string"},
+    "trees": {
+      "type": "object",
+      "required": ["likelihood", "severity"],
+      "additionalProperties": false,
+      "properties": {"likelihood": {"type": "string"}, "severity": {"type": "string"}}
+    }
+  }
+}

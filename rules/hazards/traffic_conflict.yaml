@@ -1,0 +1,7 @@
+id: traffic_conflict
+name: Traffic conflict
+description: Runners and traffic meet, or a closed road blocks other traffic.
+applies_when: The race closes a road.
+applies_rule: data.permit.screen.applies.traffic_conflict
+clause: ORD-5.1
+trees: {likelihood: traffic.likelihood, severity: traffic.severity}

@@ -1,0 +1,5735 @@
+{
+ "model_returned": [
+  "jev-1.14.0"
+ ],
+ "usage": [
+  {
+   "input_tokens": 1408,
+   "output_tokens": 239
+  },
+  {
+   "input_tokens": 1897,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1412,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1894,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1895,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1427,
+   "output_tokens": 233
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1411,
+   "output_tokens": 239
+  },
+  {
+   "input_tokens": 1894,
+   "output_tokens": 352
+  },
+  {
+   "input_tokens": 1896,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 940,
+   "output_tokens": 118
+  },
+  {
+   "input_tokens": 1895,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1413,
+   "output_tokens": 239
+  },
+  {
+   "input_tokens": 1896,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1407,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1426,
+   "output_tokens": 234
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1408,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1895,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1899,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1899,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1408,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1407,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 941,
+   "output_tokens": 118
+  },
+  {
+   "input_tokens": 1408,
+   "output_tokens": 239
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1898,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1428,
+   "output_tokens": 233
+  },
+  {
+   "input_tokens": 1900,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1412,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 941,
+   "output_tokens": 118
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1897,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1898,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1899,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1413,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1427,
+   "output_tokens": 233
+  },
+  {
+   "input_tokens": 1896,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1898,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1410,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1900,
+   "output_tokens": 353
+  },
+  {
+   "input_tokens": 1413,
+   "output_tokens": 237
+  },
+  {
+   "input_tokens": 1409,
+   "output_tokens": 238
+  },
+  {
+   "input_tokens": 1897,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1899,
+   "output_tokens": 352
+  },
+  {
+   "input_tokens": 1899,
+   "output_tokens": 354
+  },
+  {
+   "input_tokens": 1411,
+   "output_tokens": 238
+  }
+ ],
+ "drift": [
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.93,
+      "likely": 0.06
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.35,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.57,
+      "critical": 0.42
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.06,
+      "likely": 0.94
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.41
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.53,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.69,
+      "critical": 0.3
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 0,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.62
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.74,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.83,
+      "likely": 0.16
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.97,
+      "critical": 0.02
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.51
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.85,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.9,
+      "likely": 0.08
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.44
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.74,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.15,
+      "critical": 0.83
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.6,
+     "probabilities": {
+      "rare": 0.73,
+      "possible": 0.26,
+      "likely": 0.01
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.21
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.83,
+     "probabilities": {
+      "minor": 0.89,
+      "serious": 0.1,
+      "critical": 0.01
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 0,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.47
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.94,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.96,
+      "likely": 0.02
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.94,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.96,
+      "critical": 0.03
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.88,
+      "likely": 0.11
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.8,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.12,
+      "critical": 0.87
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 0,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.67,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.22,
+      "likely": 0.78
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.97,
+      "critical": 0.02
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.8,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.13,
+      "likely": 0.87
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.38,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.41,
+      "critical": 0.59
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.44
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.38,
+     "probabilities": {
+      "rare": 0.59,
+      "possible": 0.39,
+      "likely": 0.02
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.29
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.88,
+      "critical": 0.1
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.94,
+      "likely": 0.05
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.52,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.32,
+      "likely": 0.68
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.55
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.77,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.85,
+      "critical": 0.14
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.8,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.87,
+      "likely": 0.12
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.89,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.06,
+      "critical": 0.93
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.62,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.75,
+      "likely": 0.24
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.7,
+     "probabilities": {
+      "minor": 0.8,
+      "serious": 0.16,
+      "critical": 0.04
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.41
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.83,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.89,
+      "likely": 0.1
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.92,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.05,
+      "critical": 0.95
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.39
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.88,
+      "likely": 0.11
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.61
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.33,
+     "probabilities": {
+      "minor": 0.55,
+      "serious": 0.32,
+      "critical": 0.13
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 1,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.68,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.21,
+      "likely": 0.79
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.98,
+      "critical": 0.01
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.94,
+      "likely": 0.04
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.49,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.66,
+      "critical": 0.33
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.44
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.83,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.89,
+      "likely": 0.1
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.52
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.46,
+     "probabilities": {
+      "minor": 0.64,
+      "serious": 0.32,
+      "critical": 0.04
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.39
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.66,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.77,
+      "likely": 0.22
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.03,
+      "critical": 0.97
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.86,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.09,
+      "likely": 0.91
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.58
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.67,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.78,
+      "critical": 0.21
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "under 300",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 0,
+    "crowd.L": 1,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.62,
+     "probabilities": {
+      "rare": 0.2,
+      "possible": 0.75,
+      "likely": 0.05
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.94,
+      "serious": 0.05,
+      "critical": 0.01
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.53
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.83,
+     "probabilities": {
+      "rare": 0.04,
+      "possible": 0.89,
+      "likely": 0.07
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.39
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.8,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.12,
+      "critical": 0.87
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.49,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.66,
+      "likely": 0.33
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.03,
+      "critical": 0.97
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.86,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.09,
+      "likely": 0.91
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.66
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.4,
+     "probabilities": {
+      "minor": 0.6,
+      "serious": 0.27,
+      "critical": 0.13
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.95,
+      "likely": 0.04
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.94,
+      "critical": 0.05
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.05,
+      "likely": 0.95
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.62,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.75,
+      "critical": 0.24
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.67
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.67,
+     "probabilities": {
+      "rare": 0.1,
+      "possible": 0.78,
+      "likely": 0.12
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.05,
+      "critical": 0.94
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.53
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.83,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.89,
+      "likely": 0.11
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.09,
+      "critical": 0.91
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.66
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.52,
+     "probabilities": {
+      "rare": 0.28,
+      "possible": 0.68,
+      "likely": 0.04
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.79,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.13,
+      "critical": 0.86
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.38
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.62,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.75,
+      "likely": 0.23
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.97,
+      "critical": 0.02
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.56
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.68,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.79,
+      "likely": 0.2
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.83,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.1,
+      "critical": 0.89
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.43,
+     "probabilities": {
+      "rare": 0.62,
+      "possible": 0.37,
+      "likely": 0.01
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.85,
+     "probabilities": {
+      "minor": 0.9,
+      "serious": 0.09,
+      "critical": 0.01
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "under 300",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 0,
+    "crowd.L": 1,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.61,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.25,
+      "likely": 0.74
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.88,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.07,
+      "critical": 0.92
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 0,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.63
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.56,
+     "probabilities": {
+      "rare": 0.22,
+      "possible": 0.71,
+      "likely": 0.07
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.92,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.04,
+      "critical": 0.95
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.94,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.96,
+      "likely": 0.04
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.74,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.17,
+      "critical": 0.83
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.86,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.09,
+      "likely": 0.91
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.64
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.88,
+      "critical": 0.11
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.22
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.97,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.02,
+      "likely": 0.98
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.98,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.01,
+      "critical": 0.99
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.67,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.78,
+      "likely": 0.21
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.68,
+     "probabilities": {
+      "minor": 0.79,
+      "serious": 0.16,
+      "critical": 0.05
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.2
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.05,
+      "likely": 0.95
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.26,
+     "probabilities": {
+      "rare": 0.51,
+      "possible": 0.47,
+      "likely": 0.02
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.77,
+     "probabilities": {
+      "minor": 0.85,
+      "serious": 0.12,
+      "critical": 0.03
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.49
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.44,
+     "probabilities": {
+      "rare": 0.63,
+      "possible": 0.35,
+      "likely": 0.02
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.06,
+      "serious": 0.91,
+      "critical": 0.03
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.77,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.85,
+      "likely": 0.14
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.91,
+      "critical": 0.07
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.53
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.62,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.75,
+      "likely": 0.24
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.97,
+      "critical": 0.02
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.47
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.94,
+      "likely": 0.04
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.73,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.16,
+      "critical": 0.82
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.44
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.42,
+     "probabilities": {
+      "rare": 0.61,
+      "possible": 0.37,
+      "likely": 0.02
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.29
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.88,
+     "probabilities": {
+      "minor": 0.05,
+      "serious": 0.92,
+      "critical": 0.03
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.05,
+      "likely": 0.95
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.98,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.01,
+      "critical": 0.99
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.77,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.85,
+      "likely": 0.15
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.74,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.83,
+      "critical": 0.16
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.29
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.07,
+      "likely": 0.93
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.88,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.92,
+      "likely": 0.06
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.76,
+     "probabilities": {
+      "minor": 0.84,
+      "serious": 0.13,
+      "critical": 0.03
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.2
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.96,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.03,
+      "likely": 0.97
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.03,
+      "critical": 0.97
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.74,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.83,
+      "likely": 0.16
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.44
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.8,
+     "probabilities": {
+      "minor": 0.87,
+      "serious": 0.11,
+      "critical": 0.02
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "under 300",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.38
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.28,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.47,
+      "likely": 0.52
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.97,
+      "critical": 0.03
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.07,
+      "likely": 0.93
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.92,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.05,
+      "critical": 0.95
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.52
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.93,
+      "likely": 0.05
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.38
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.67,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.21,
+      "critical": 0.78
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.83,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.89,
+      "likely": 0.1
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.57
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.53,
+     "probabilities": {
+      "minor": 0.69,
+      "serious": 0.25,
+      "critical": 0.06
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.06,
+      "likely": 0.94
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.88,
+      "likely": 0.1
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.8,
+     "probabilities": {
+      "minor": 0.87,
+      "serious": 0.1,
+      "critical": 0.03
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.21
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.05,
+      "likely": 0.95
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.97,
+      "critical": 0.02
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.4,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.6,
+      "likely": 0.4
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.7,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.2,
+      "critical": 0.8
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.59
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.94,
+      "likely": 0.05
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.76,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.84,
+      "critical": 0.15
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.98,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.01,
+      "likely": 0.99
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.98,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.01,
+      "critical": 0.99
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.86,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.09,
+      "likely": 0.91
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.52,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.68,
+      "critical": 0.32
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.76,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.84,
+      "likely": 0.15
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.8,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.87,
+      "critical": 0.11
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 0,
+    "crowd.L": 2,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.35,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.42,
+      "likely": 0.57
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.47
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.94,
+      "serious": 0.05,
+      "critical": 0.01
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.48
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.95,
+      "likely": 0.05
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.44
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.85,
+     "probabilities": {
+      "minor": 0.08,
+      "serious": 0.9,
+      "critical": 0.02
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.57
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.67,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.78,
+      "likely": 0.21
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.09,
+      "critical": 0.91
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.41
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.94,
+      "likely": 0.05
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.85,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.9,
+      "likely": 0.09
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.49
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.79,
+     "probabilities": {
+      "minor": 0.03,
+      "serious": 0.86,
+      "critical": 0.11
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.39
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.94,
+      "likely": 0.05
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.03,
+      "critical": 0.97
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.8,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.87,
+      "likely": 0.13
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.48
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.62,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.75,
+      "critical": 0.24
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 0,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.83,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.89,
+      "likely": 0.1
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.94,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.04,
+      "critical": 0.96
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.88,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.08,
+      "likely": 0.92
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.64
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.88,
+      "critical": 0.1
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.67,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.22,
+      "likely": 0.78
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.98,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.01,
+      "critical": 0.99
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.64,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.76,
+      "likely": 0.23
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.66,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.77,
+      "critical": 0.21
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 0,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.18
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.94,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.04,
+      "likely": 0.96
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.88,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.08,
+      "critical": 0.92
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.61
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.28,
+     "probabilities": {
+      "rare": 0.41,
+      "possible": 0.52,
+      "likely": 0.07
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.47
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.79,
+     "probabilities": {
+      "minor": 0.1,
+      "serious": 0.86,
+      "critical": 0.04
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "under 300",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 1,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.56,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.29,
+      "likely": 0.71
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.22
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.03,
+      "critical": 0.97
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 0,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.88,
+     "probabilities": {
+      "rare": 0.05,
+      "possible": 0.92,
+      "likely": 0.03
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.98,
+      "critical": 0.02
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.79,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.14,
+      "likely": 0.86
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.77,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.85,
+      "critical": 0.14
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.44
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.88,
+      "likely": 0.11
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.11,
+      "critical": 0.88
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.64,
+     "probabilities": {
+      "rare": 0.76,
+      "possible": 0.22,
+      "likely": 0.02
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.88,
+      "serious": 0.1,
+      "critical": 0.02
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.93,
+      "likely": 0.07
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.92,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.05,
+      "critical": 0.95
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.8,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.87,
+      "likely": 0.12
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.06,
+      "critical": 0.94
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 0,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.6,
+     "probabilities": {
+      "rare": 0.03,
+      "possible": 0.73,
+      "likely": 0.24
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.94,
+      "serious": 0.05,
+      "critical": 0.01
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.95,
+      "likely": 0.05
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.94,
+      "critical": 0.05
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.85,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.1,
+      "likely": 0.9
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.09,
+      "critical": 0.91
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "under 300",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 0,
+    "crowd.L": 1,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.61
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.44,
+     "probabilities": {
+      "rare": 0.33,
+      "possible": 0.63,
+      "likely": 0.04
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.91,
+      "serious": 0.06,
+      "critical": 0.03
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.58
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.67,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.78,
+      "likely": 0.21
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.85,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.09,
+      "critical": 0.9
+     }
+    }
+   }
+  }
+ ],
+ "stable": [
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 2,
+    "crowd.L": 0,
+    "crowd.S": 1,
+    "medical.L": 1,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.3,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.53,
+      "likely": 0.46
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.43
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.94,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.96,
+      "critical": 0.04
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.48
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.34,
+     "probabilities": {
+      "rare": 0.56,
+      "possible": 0.41,
+      "likely": 0.03
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.39
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.06,
+      "serious": 0.88,
+      "critical": 0.06
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.59
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.42,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.61,
+      "likely": 0.38
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.85,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.1,
+      "critical": 0.9
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 0,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.83,
+     "probabilities": {
+      "rare": 0.89,
+      "possible": 0.1,
+      "likely": 0.01
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.77,
+     "probabilities": {
+      "minor": 0.85,
+      "serious": 0.12,
+      "critical": 0.03
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.8,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.12,
+      "likely": 0.87
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.05,
+      "critical": 0.94
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "under 300",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 0,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.11,
+      "likely": 0.88
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.92,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.05,
+      "critical": 0.95
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 0,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.05,
+      "likely": 0.95
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.53
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.28,
+     "probabilities": {
+      "rare": 0.52,
+      "possible": 0.44,
+      "likely": 0.04
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.62,
+     "probabilities": {
+      "minor": 0.75,
+      "serious": 0.18,
+      "critical": 0.07
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 1,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.39
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.62,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.75,
+      "likely": 0.24
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.94,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.96,
+      "critical": 0.04
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.93,
+      "likely": 0.07
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.83,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.1,
+      "critical": 0.89
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.62
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.88,
+      "likely": 0.11
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.21
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.06,
+      "critical": 0.94
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 1,
+    "crowd.S": 1,
+    "medical.L": 0,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.28,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.52,
+      "likely": 0.47
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.96,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.03,
+      "critical": 0.97
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.29
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.07,
+      "likely": 0.93
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.26,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.51,
+      "critical": 0.49
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.41
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.76,
+     "probabilities": {
+      "rare": 0.11,
+      "possible": 0.84,
+      "likely": 0.05
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.11,
+      "critical": 0.88
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 0,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.6,
+     "probabilities": {
+      "rare": 0.04,
+      "possible": 0.73,
+      "likely": 0.23
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.83,
+     "probabilities": {
+      "minor": 0.89,
+      "serious": 0.09,
+      "critical": 0.02
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.52
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.34,
+     "probabilities": {
+      "rare": 0.41,
+      "possible": 0.56,
+      "likely": 0.03
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.76,
+     "probabilities": {
+      "minor": 0.1,
+      "serious": 0.84,
+      "critical": 0.06
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.22
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.12,
+      "likely": 0.88
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.22
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.88,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.08,
+      "critical": 0.92
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 0,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 0,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.05,
+      "likely": 0.95
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.98,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.01,
+      "critical": 0.99
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.48
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.6,
+     "probabilities": {
+      "rare": 0.23,
+      "possible": 0.73,
+      "likely": 0.04
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.35
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.74,
+     "probabilities": {
+      "minor": 0.04,
+      "serious": 0.83,
+      "critical": 0.13
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 0,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.51
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.58,
+     "probabilities": {
+      "rare": 0.72,
+      "possible": 0.27,
+      "likely": 0.01
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.47
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.92,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.95,
+      "critical": 0.04
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.8,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.87,
+      "likely": 0.12
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.29
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.09,
+      "critical": 0.91
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "under 300",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 0,
+    "crowd.L": 1,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.21
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.96,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.03,
+      "likely": 0.97
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.61
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.88,
+      "serious": 0.1,
+      "critical": 0.02
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.22
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.06,
+      "likely": 0.94
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.94,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.04,
+      "critical": 0.96
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 1,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 0
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.88,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.08,
+      "likely": 0.92
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.94,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.96,
+      "critical": 0.03
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.98,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.01,
+      "likely": 0.99
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.24
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.98,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.01,
+      "critical": 0.99
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.86,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.09,
+      "likely": 0.91
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.43
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.74,
+     "probabilities": {
+      "minor": 0.83,
+      "serious": 0.13,
+      "critical": 0.04
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 0,
+    "crowd.S": 1,
+    "medical.L": 2,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.46
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.49,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.66,
+      "likely": 0.32
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.45
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.05,
+      "critical": 0.94
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.88,
+     "probabilities": {
+      "rare": 0.03,
+      "possible": 0.92,
+      "likely": 0.05
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.91,
+      "critical": 0.08
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.07,
+      "likely": 0.93
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.38
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.77,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.85,
+      "critical": 0.13
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.2
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.96,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.03,
+      "likely": 0.97
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.25
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.7,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.8,
+      "likely": 0.2
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.5
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.82,
+     "probabilities": {
+      "minor": 0.02,
+      "serious": 0.88,
+      "critical": 0.1
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "yes",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 0,
+    "crowd.L": 0,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.21
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.96,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.03,
+      "likely": 0.97
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.69
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.79,
+     "probabilities": {
+      "minor": 0.86,
+      "serious": 0.1,
+      "critical": 0.04
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.88,
+     "probabilities": {
+      "rare": 0.07,
+      "possible": 0.92,
+      "likely": 0.01
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.31,
+     "probabilities": {
+      "minor": 0.45,
+      "serious": 0.54,
+      "critical": 0.01
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.88,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.08,
+      "likely": 0.92
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.88,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.08,
+      "critical": 0.92
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "300 to 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 0,
+    "crowd.S": 0,
+    "medical.L": 2,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.33
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "rare",
+     "confidence": 0.85,
+     "probabilities": {
+      "rare": 0.9,
+      "possible": 0.09,
+      "likely": 0.01
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "minor",
+     "confidence": 0.79,
+     "probabilities": {
+      "minor": 0.86,
+      "serious": 0.12,
+      "critical": 0.02
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.73,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.17,
+      "likely": 0.82
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.85,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.09,
+      "critical": 0.9
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "yes",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event risky, but the system had approved it automatically.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 2,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.37
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.92,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.95,
+      "likely": 0.04
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.94,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.04,
+      "critical": 0.96
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.85,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.9,
+      "likely": 0.09
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.43
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.74,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.83,
+      "critical": 0.16
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "yes",
+    "hot_date": "no",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 0,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.59
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.34,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.56,
+      "likely": 0.42
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.54
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.05,
+      "critical": 0.94
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.86,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.09,
+      "likely": 0.91
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.89,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.93,
+      "critical": 0.07
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.29
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.3,
+     "probabilities": {
+      "rare": 0.45,
+      "possible": 0.53,
+      "likely": 0.02
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.23
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.76,
+     "probabilities": {
+      "minor": 0.03,
+      "serious": 0.84,
+      "critical": 0.13
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "yes",
+    "traffic_plan_adequate": "no",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "no",
+    "hot_date": "no",
+    "ambulance_on_site": "no",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 0,
+    "traffic.S": 2,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 1,
+    "medical.S": 2
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.38
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.49,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.34,
+      "likely": 0.66
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.89,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.07,
+      "likely": 0.93
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.29
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.83,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.11,
+      "critical": 0.89
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.42
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.82,
+     "probabilities": {
+      "rare": 0.02,
+      "possible": 0.88,
+      "likely": 0.1
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.3
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.91,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.06,
+      "critical": 0.94
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "yes",
+    "arterial_road": "yes",
+    "many_major_crossings": "yes",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "no",
+    "medical_plan_adequate": "yes",
+    "hot_date": "yes",
+    "ambulance_on_site": "no",
+    "hospital_far": "no"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 2,
+    "traffic.S": 1,
+    "crowd.L": 2,
+    "crowd.S": 1,
+    "medical.L": 1,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__traffic.L": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__traffic.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.58,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.27,
+      "likely": 0.72
+     }
+    },
+    "wrong__traffic.S": {
+     "type": "noul",
+     "noul": 0.36
+    },
+    "level__traffic.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.26
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.94,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.04,
+      "likely": 0.96
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.86,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.91,
+      "critical": 0.09
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.27
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "possible",
+     "confidence": 0.8,
+     "probabilities": {
+      "rare": 0.01,
+      "possible": 0.87,
+      "likely": 0.12
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.28
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.8,
+     "probabilities": {
+      "minor": 0.03,
+      "serious": 0.87,
+      "critical": 0.1
+     }
+    }
+   }
+  },
+  {
+   "facts": {
+    "expected_crowd": "over 800",
+    "road_closure": "no",
+    "arterial_road": "no",
+    "many_major_crossings": "no",
+    "police_escort_arranged": "no",
+    "traffic_plan_adequate": "yes",
+    "crowd_plan_adequate": "no",
+    "narrow_venue": "yes",
+    "medical_plan_adequate": "no",
+    "hot_date": "yes",
+    "ambulance_on_site": "yes",
+    "hospital_far": "yes"
+   },
+   "finding": "The officer ruled this event not risky, but the system had rated it high risk.",
+   "labels": {
+    "traffic.L": 1,
+    "traffic.S": 1,
+    "crowd.L": 1,
+    "crowd.S": 2,
+    "medical.L": 2,
+    "medical.S": 1
+   },
+   "answers": {
+    "wrong__crowd.L": {
+     "type": "noul",
+     "noul": 0.32
+    },
+    "level__crowd.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.06,
+      "likely": 0.94
+     }
+    },
+    "wrong__crowd.S": {
+     "type": "noul",
+     "noul": 0.4
+    },
+    "level__crowd.S": {
+     "type": "choice",
+     "choice": "critical",
+     "confidence": 0.97,
+     "probabilities": {
+      "minor": 0.0,
+      "serious": 0.02,
+      "critical": 0.98
+     }
+    },
+    "wrong__medical.L": {
+     "type": "noul",
+     "noul": 0.31
+    },
+    "level__medical.L": {
+     "type": "choice",
+     "choice": "likely",
+     "confidence": 0.91,
+     "probabilities": {
+      "rare": 0.0,
+      "possible": 0.06,
+      "likely": 0.94
+     }
+    },
+    "wrong__medical.S": {
+     "type": "noul",
+     "noul": 0.34
+    },
+    "level__medical.S": {
+     "type": "choice",
+     "choice": "serious",
+     "confidence": 0.48,
+     "probabilities": {
+      "minor": 0.01,
+      "serious": 0.65,
+      "critical": 0.34
+     }
+    }
+   }
+  }
+ ]
+}

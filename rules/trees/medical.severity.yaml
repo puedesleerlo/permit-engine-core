@@ -1,0 +1,24 @@
+id: medical.severity
+version: 1
+owner: policy_owner
+hazard: medical_emergency
+scale: severity
+questions:
+  - id: ambulance_on_site
+    kind: evidence
+    text: Is an ambulance on site?
+    evidence_types: [ambulance_agreement]
+    clause: ORD-16.2
+  - id: hospital_far
+    kind: rule
+    text: Is the hospital more than 10 km away?
+    clause: ORD-16.3
+leaves:  # first guess, written blind; see rules/first_guess.json
+  - when: {ambulance_on_site: true, hospital_far: true}
+    levels: [0.2, 0.6, 0.2]
+  - when: {ambulance_on_site: true, hospital_far: false}
+    levels: [0.4, 0.5, 0.1]
+  - when: {ambulance_on_site: false, hospital_far: true}
+    levels: [0.05, 0.45, 0.5]
+  - when: {ambulance_on_site: false, hospital_far: false}
+    levels: [0.2, 0.55, 0.25]

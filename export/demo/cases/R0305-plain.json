@@ -1,0 +1,878 @@
+{
+ "case_id": "R0305-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9725771704461846,
+     0.024247536574412736,
+     0.0031752929794027014
+    ],
+    "before": [
+     0.9726563682327551,
+     0.02416808022103293,
+     0.0031755515462119207
+    ],
+    "count_after": 12.853540367834524,
+    "count_before": 12.889856556072894,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.027055005976008024,
+     0.964801058123582,
+     0.008143935900409991
+    ],
+    "before": [
+     0.029846693047972172,
+     0.9611690341251267,
+     0.00898427282690118
+    ],
+    "count_after": 10.680085211448553,
+    "count_before": 10.379645045604818,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.006302511453192731,
+     0.9873949770936145,
+     0.006302511453192731
+    ],
+    "before": [
+     0.006816812251195318,
+     0.9863663754976094,
+     0.006816812251195318
+    ],
+    "count_after": 11.957879274121801,
+    "count_before": 11.801897040827118,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.0033663993882462185,
+     0.9629696067292917,
+     0.03366399388246219
+    ],
+    "before": [
+     0.003399650991986503,
+     0.9626038390881485,
+     0.03399650991986504
+    ],
+    "count_after": 10.001809744476711,
+    "count_before": 9.976118489982667,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6195248348947067,
+     0.36996339210490015,
+     0.010511773000393208
+    ],
+    "before": [
+     0.6248299706790198,
+     0.3645682415544954,
+     0.010601787766484773
+    ],
+    "count_after": 10.956137769690422,
+    "count_before": 10.955743291490382,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.018541748057061786,
+     0.548253471604783,
+     0.4332047803381553
+    ],
+    "before": [
+     0.02020298036415596,
+     0.5077796217132698,
+     0.47201739792257413
+    ],
+    "count_after": 10.545071863467852,
+    "count_before": 10.243836282643382,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.11315858313074263,
+     0.649180118992147,
+     0.23766129787711032
+    ],
+    "before": [
+     0.11336807141700235,
+     0.6485306529629263,
+     0.23810127562007138
+    ],
+    "count_after": 9.950211580712738,
+    "count_before": 9.941199279805765,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.00421663894054198,
+     0.11503713586107443,
+     0.8807462251983835
+    ],
+    "before": [
+     0.004224853247079013,
+     0.11331316652378204,
+     0.882461980229139
+    ],
+    "count_after": 11.057776097009192,
+    "count_before": 11.106176280769121,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9925043256530494,
+     0.006296366451438558,
+     0.001199307895512106
+    ],
+    "before": [
+     0.991883878344997,
+     0.0068175421902024755,
+     0.0012985794648004716
+    ],
+    "count_after": 13.081081261326107,
+    "count_before": 12.990409958415167,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "Sentinel Ambulance Service\nBookings Office\n\n11 December 2026\n\nDear Owen Cartwright,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Marina Tri City Race 10K on 13 March 2027. One ambulance and two paramedics will be on site at the top of Albion Road, in place by 07:00, and will stay until the race has finished. Booking reference EV-92279.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nOwen Cartwright\nBookings Manager\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF PH-37323\nAtlas Casualty Group   POL NO PL-229107\nINSURED ....... Marina Tri Club\nRISK LOCATION .. Millbank Quarter\nFROM .......... 2027-01-01\nTO ............ 2027-12-31\nINDEMNITY ..... $5,000,000\nACTIVITY ...... Foot race (Marina Tri City Race 10K)\nISSUED ........ 2026-12-11\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nMarina Tri City Race 10K, Saturday 13 March 2027\nApplicant: Marina Tri Club\nIssue: 1.2\n\n1. Event summary\nA 10K race with 80 runners, starting at 08:00 in the Millbank Quarter area of Port Halden. An ambulance from Sentinel Ambulance Service is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 8 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nParticipants are reminded in their pre-race information to dress appropriately for the conditions and to drink plenty of fluids before, during and after the race. Our experienced committee will keep a close eye on the weather in the days leading up to the event.\n\n4. Transfer to hospital\nThe receiving hospital is Thornton County Hospital, 16 km from the finish. The transfer route and the pick-up point at the top of Albion Road have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n\n5. Communications\nMembers of the team will have their mobile phones with them, and a list of contact numbers will be circulated in the week before the event. Coverage in the area is generally reported to be good.\n\n6. Clinical lead\nResponsibility for welfare on the day rests with the race director, supported by the wider committee, all of whom take the wellbeing of participants extremely seriously.\n"
+   },
+   {
+    "name": "police_email.txt",
+    "text": "From: miguel.santos@phps.example\nTo: owen@marinatri.example\nDate: 11 December 2026\nSubject: RE: Escort request - Marina Tri City Race 10K\n\nHi Owen,\n\nConfirmed for 13 March 2027. I've got two bikes and a car down for your race, on station at Albion Road from 07:00. Send me the final map when you have it.\n\nSgt. Miguel Santos\nTraffic & Events, PHPS\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Marina Tri City Race 10K: how the race will work\n\nPrepared by Owen Cartwright (Race Director), Marina Tri Club. Last updated 11 December 2026.\n\nThis is our plan for race day, Saturday 13 March 2027. We expect 80 runners over 10K (10 km). Numbers can be collected from the top of Albion Road from an hour before we go at 08:00, and we aim to have the last finisher home by 10:00.\n\nThe route takes in Albion Road, Dyer Street and Rope Walk, and the City would need to close all of these for us. On the way round we cross none. We finish in the Civic Plaza.\n\nThere's plenty of room. Albion Road is about 16 metres across, Dyer Street about 14 metres and Rope Walk about 9 metres, and all have broad pavements too. We line up across the full width of Albion Road, and the finish opens out into the Civic Plaza, where there's space for everyone.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Marina Tri City Race 10K\nDate: Saturday 13 March 2027\nApplicant: Marina Tri Club\nPrepared by: Halloway Road Management\nIssue: 1.2\n\n1. Scope\nThis plan describes how traffic will be managed for the Marina Tri City Race 10K, a 10K race in the Millbank Quarter area of Port Halden with a 08:00 start. It has been prepared to accompany the permit application and should be read with the race plan. See the attached correspondence from the police for the escort.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Signal Hill Traffic Services.\n- Albion Road, Hatter Street to Salter Way: closed 07:00 to 10:30\n- Dyer Street, Brook Street to Hatter Street: closed 07:00 to 10:30\n- Rope Walk, Tanner Street to Salter Way: closed 07:00 to 10:30\n\n3. Major crossings\nThe course does not cross any major road, so no separate crossing control is proposed.\n\n4. Diversions\nDrivers will be advised to expect delays in the area and to allow additional time for their journeys. Advance information boards will be used where practical, and through traffic is expected to find alternative routes across the wider network.\n\n5. Emergency vehicle access\nThe emergency services will be made aware of the event date and general location through the usual channels ahead of the day. Any vehicle attending an incident will be accommodated by staff on the ground as circumstances allow.\n\n6. Notification\nAll frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times.\n\n7. Reopening\nRoads will be reopened following the conclusion of the event, once barriers and equipment have been removed by the contractor.\n"
+   }
+  ],
+  "cover_letter": "11 December 2026\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Marina Tri City Race 10K on Saturday 13 March 2027. We expect 80 runners over 10K, starting at 08:00 in the Millbank Quarter area. The completed form and the attachments (ambulance_agreement.txt, insurance.txt, medical_plan.txt, police_email.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nOwen Cartwright\nRace Director, Marina Tri Club\nowen@marinatri.example / 555-0199\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_email.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Marina Tri City Race 10K: a 10K road race through the Millbank Quarter area, organised by Marina Tri. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-03-13",
+   "event_name": "Marina Tri City Race 10K",
+   "event_type": "street_race",
+   "expected_runners": 80,
+   "fee_paid": true,
+   "hospital_distance_km": 16,
+   "organizer": "Marina Tri Club",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": true
+   },
+   "venue": "Millbank Quarter"
+  }
+ },
+ "events": [
+  1048,
+  1049,
+  1050,
+  1051,
+  1052,
+  1053,
+  1054,
+  1055,
+  1056,
+  1057,
+  1058,
+  1059
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Sentinel Ambulance Service",
+     "value": "Sentinel Ambulance Service",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "This letter is your agreement with us for ambulance cover at the Marina Tri City Race 10K on 13 March 2027.",
+     "value": "13 March 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "INSURED ....... Marina Tri Club",
+     "value": "Marina Tri Club",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "RISK LOCATION .. Millbank Quarter",
+     "value": "Millbank Quarter",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "FROM .......... 2027-01-01",
+     "value": "2027-01-01",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "TO ............ 2027-12-31",
+     "value": "2027-12-31",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "INDEMNITY ..... $5,000,000",
+     "value": "$5,000,000",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "police_email.txt",
+   "evidence_type": "police_escort_email",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Confirmed for 13 March 2027.",
+     "value": "13 March 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "sender",
+     "quote": "Sgt. Miguel Santos",
+     "value": "Sgt. Miguel Santos",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.2968481446884176,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.448486640564344,
+      "entropy": 0.16222177504290625,
+      "levels": [
+       0.005356352448738848,
+       0.966275398312399,
+       0.02836824923886221
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0009129040340248788,
+      "count": 12.889856556072894,
+      "entropy": 0.13520403877248358,
+      "levels": [
+       0.9726563682327551,
+       0.02416808022103293,
+       0.0031755515462119207
+      ],
+      "reach": 0.04,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.804259583978752,
+      "entropy": 0.099350245024311,
+      "levels": [
+       0.0007316309261483705,
+       0.018804747962794188,
+       0.9804636211110574
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.09543275435668076,
+      "count": 10.379645045604818,
+      "entropy": 0.18521556960476954,
+      "levels": [
+       0.029846693047972172,
+       0.9611690341251267,
+       0.00898427282690118
+      ],
+      "reach": 0.96,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.06755908005536349,
+     0.9236889959689628,
+     0.008751923975673608
+    ],
+    "questions": [
+     {
+      "answer": 0.04,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.09634565839070564
+   },
+   "name": "Medical emergency",
+   "product": 0.0389022900471677,
+   "severity": {
+    "entropy": 0.09287768575537668,
+    "leaves": [
+     {
+      "contribution": 0.3618405393078228,
+      "count": 11.801897040827118,
+      "entropy": 0.08154973387978336,
+      "levels": [
+       0.006816812251195318,
+       0.9863663754976094,
+       0.006816812251195318
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 13.431805517237144,
+      "entropy": 0.0774080245304332,
+      "levels": [
+       0.9863698682938004,
+       0.011828154041382941,
+       0.001801977664816793
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0419378010654323,
+      "count": 9.976118489982667,
+      "entropy": 0.17097104843344546,
+      "levels": [
+       0.003399650991986503,
+       0.9626038390881485,
+       0.03399650991986504
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.947199708769105,
+      "entropy": 0.4400239764491626,
+      "levels": [
+       0.13110650053771908,
+       0.8595729066220495,
+       0.009320592840231293
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.006475096125274437,
+     0.9839901218566633,
+     0.00953478201806229
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.4037783403732551
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.934504728279822,
+    "leaves": [
+     {
+      "contribution": 0.0060996733081801185,
+      "count": 10.955743291490382,
+      "entropy": 0.7099103490783555,
+      "levels": [
+       0.6248299706790198,
+       0.3645682415544954,
+       0.010601787766484773
+      ],
+      "reach": 0.117,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.15095240982466437,
+      "count": 10.243836282643382,
+      "entropy": 0.7773187716122328,
+      "levels": [
+       0.02020298036415596,
+       0.5077796217132698,
+       0.47201739792257413
+      ],
+      "reach": 0.783,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.001801160522338503,
+      "count": 9.941199279805765,
+      "entropy": 0.8693484131113417,
+      "levels": [
+       0.11336807141700235,
+       0.6485306529629263,
+       0.23810127562007138
+      ],
+      "reach": 0.012999999999999998,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.024025433477387344,
+      "count": 11.106176280769121,
+      "entropy": 0.38018971439339094,
+      "levels": [
+       0.004224853247079013,
+       0.11331316652378204,
+       0.882461980229139
+      ],
+      "reach": 0.08699999999999998,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.09076538735549634,
+     0.4585350720394534,
+     0.4506995406050503
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.13,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.18287867713257036
+   },
+   "name": "Traffic conflict",
+   "product": 0.01887563688757576,
+   "severity": {
+    "entropy": 0.05072173201096268,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.893389303964141,
+      "entropy": 0.30263681672526127,
+      "levels": [
+       0.008728665161295238,
+       0.0698293212903619,
+       0.9214420135483429
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.438666436158845,
+      "entropy": 0.1497435015496203,
+      "levels": [
+       0.005999459866316521,
+       0.9700027006684174,
+       0.023997839465266083
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.502952589657136,
+      "entropy": 0.18133063813197886,
+      "levels": [
+       0.02457938538467615,
+       0.9631309219229858,
+       0.012289692692338075
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.10321398417538118,
+      "count": 12.990409958415167,
+      "entropy": 0.05072173201096268,
+      "levels": [
+       0.991883878344997,
+       0.0068175421902024755,
+       0.0012985794648004716
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.991883878344997,
+     0.0068175421902024755,
+     0.0012985794648004716
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.10321398417538118
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.4037783403732551,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.23164046323858928,
+   "t_low": 0.1838103154407427
+  },
+  "weights_version": "first-guess+88"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The fee is paid, the date and insurance are in order, and the assessed risk for this small 80-runner race is low, so the permit is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.05777792693474346,
+ "t_high": 0.23164046323858928,
+ "t_low": 0.1838103154407427,
+ "title": "Marina Tri City Race 10K",
+ "unmapped_documents": []
+}

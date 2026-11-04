@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tree file",
+  "description": "An empty leaves list means the first guess is pending. It is not a finished tree.",
+  "type": "object",
+  "required": ["id", "version", "owner", "hazard", "scale", "questions", "leaves"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string"},
+    "version": {"type": "integer", "minimum": 1},
+    "owner": {"const": "policy_owner"},
+    "hazard": {"type": "string"},
+    "scale": {"enum": ["likelihood", "severity"]},
+    "proposal": {"type": "string"},
+    "authored_in_advance": {"type": "boolean"},
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "text", "clause"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"enum": ["evidence", "rule", "jev"]},
+          "text": {"type": "string"},
+          "clause": {"type": "string"},
+          "evidence_types": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "instructions": {"type": "string"},
+          "needs": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        },
+        "additionalProperties": false,
+        "allOf": [
+          {"if": {"properties": {"kind": {"const": "evidence"}}}, "then": {"required": ["evidence_types"]}},
+          {"if": {"properties": {"kind": {"const": "jev"}}}, "then": {"required": ["instructions", "needs"]}}
+        ]
+      }
+    },
+    "leaves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["when", "levels"],
+        "additionalProperties": false,
+        "properties": {
+          "when": {"type": "object", "additionalProperties": {"type": "boolean"}},
+          "levels": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number", "minimum": 0, "maximum": 1}}
+        }
+      }
+    }
+  }
+}

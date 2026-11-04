@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Application form",
+  "description": "An incomplete form may omit or null any field the basic check requires, so only the structure is fixed here.",
+  "type": "object",
+  "required": ["event_type", "description", "route", "fee_paid", "attachments"],
+  "additionalProperties": false,
+  "properties": {
+    "organizer": {"type": ["string", "null"]},
+    "event_name": {"type": "string"},
+    "event_type": {"const": "street_race"},
+    "event_date": {"type": ["string", "null"]},
+    "expected_runners": {"type": ["integer", "null"]},
+    "venue": {"type": ["string", "null"]},
+    "description": {"type": "string"},
+    "route": {
+      "type": "object",
+      "required": ["road_closure", "arterial_road", "major_crossings"],
+      "additionalProperties": false,
+      "properties": {
+        "road_closure": {"type": "boolean"},
+        "arterial_road": {"type": "boolean"},
+        "major_crossings": {"type": ["integer", "null"]}
+      }
+    },
+    "hospital_distance_km": {"type": ["number", "null"]},
+    "fee_paid": {"type": "boolean"},
+    "attachments": {"type": "array", "items": {"type": "string"}}
+  }
+}

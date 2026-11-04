@@ -1,0 +1,102 @@
+{
+ "case_id": "R0099-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": false
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": null,
+ "decision": {
+  "clauses": [
+   "ORD-3.1"
+  ],
+  "reason_code": "basic_rule_failed",
+  "route": "proposed_denial",
+  "row": 0,
+  "text": "A basic rule was not met, so a denial is proposed for an officer to sign."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. EV-35002\nIssued: May 27, 2027\n\nINSURER: Harbourline Insurance Company\nPOLICY NUMBER: EL-527044\n\nNAMED INSURED: St. Anne's Parish Fun Run Committee\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the St. Anne's Charity Run 7K\nVENUE: Summerhill Sports Park, Port Halden\n\nPOLICY PERIOD\nEffective: August 27, 2027\nExpiry: August 29, 2027\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the St. Anne's Charity Run 7K, Saturday 28 August 2027\n\nFrom Owen Cartwright, Event Secretary, St. Anne's Parish Fun Run Committee\n\nThe race is a 7K with 180 runners and starts at 10:00. We expect a crew from Halden Medical Transport on the day, though we have nothing in writing yet.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 6 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nWe always tell runners to dress sensibly for the weather and to keep drinking, and it's all in the email we send them the week before. We'll be watching the forecast, and people here are used to all sorts of weather.\n\nRunners get an email in race week telling them to dress for the weather and to keep a phone with them if they can. Most have run with us before. The list of entrants includes an emergency contact for each runner, which is kept at the start.\n\nIf someone needs hospital\nIf someone needed the hospital we'd dial 911 and the paramedics would take it from there. They know what they're doing far better than we do, and the city's service is very good.\n\nStaying in touch\nWe'll all have our phones, and I'll send a list of numbers round the team the week before. The signal is usually fine around there.\n\nWho's responsible\nOur medical lead is Ruth Abernathy, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "St. Anne's Charity Run 7K - race notes\nSt. Anne's Parish Fun Run Committee / contact Owen Cartwright 555-0191\nSaturday 28 August 2027, gun 10:00, course closes 11:30\n7K (7k), approx 180 entered\n\nROUTE\nSaltmarsh Boardwalk then Riverside Path. no roads, no closures. finish the bandstand\n\nWIDTHS\nSaltmarsh Boardwalk 2m, Riverside Path 2m. water/fence both sides nearly whole way. finish area approx 15x10m\n\nOTHER\nnumbers from the rowing club 1hr before. chip timing. water on course. results online same day\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the St. Anne's Charity Run 7K, Saturday 28 August 2027. 180 runners, 7K, off at 10:00, around Clocktower Square. I've attached insurance.txt, medical_plan.txt, race_plan.txt. We have also lined up Halden Medical Transport for the day.\n\nWe look forward to hearing from you.\n\nThanks,\nOwen\n\nOwen Cartwright, St. Anne's Parish Fun Run Committee\n555-0191\n",
+  "form": {
+   "attachments": [
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "A 7K race for 180 runners on off-road paths at Clocktower Square. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-08-28",
+   "event_name": "St. Anne's Charity Run 7K",
+   "event_type": "street_race",
+   "expected_runners": 180,
+   "fee_paid": false,
+   "hospital_distance_km": 2,
+   "organizer": "St. Anne's Parish Fun Run Committee",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Clocktower Square"
+  }
+ },
+ "events": [
+  324,
+  325,
+  326,
+  327
+ ],
+ "evidence": [],
+ "hazards": [],
+ "highest_severity": 0.0,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.18965913513454657,
+   "t_low": 0.18965913513454657
+  },
+  "weights_version": "first-guess+27"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [],
+  "outcome_risky": false,
+  "reason": "The permit fee has not been paid, and the insurance certificate names a different venue from the one applied for.",
+  "ruling": "deny"
+ },
+ "requirements": [],
+ "risk": 0.0,
+ "t_high": 0.18965913513454657,
+ "t_low": 0.18965913513454657,
+ "title": "St. Anne's Charity Run 7K",
+ "unmapped_documents": []
+}

@@ -1,0 +1,97 @@
+{
+ "case_id": "R0110-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": false
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": false
+  }
+ ],
+ "correction": null,
+ "decision": {
+  "clauses": [
+   "ORD-3.2"
+  ],
+  "reason_code": "form_returned",
+  "route": "returned",
+  "row": 0,
+  "text": "The form is incomplete, so it goes back to the applicant."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "Looking after people on the day: St. Anne's Community Run Half Marathon, Saturday 13 November 2027\n\nFamilies are welcome, and there is usually a friendly atmosphere at the finish. Local shops have been supportive, and some stay open for the day. The prize-giving takes place at the end, and there is often a queue for tea.\n\nOwen Cartwright, Race Director, St. Anne's Parish Fun Run Committee\n\nWe expect about 400 people altogether, including 310 runners. We allow for 90 spectators.\n\nWhere people will watch\nWe've set out three viewing spots with barriers: at the finish by the rowing club, at the turn by Ferry Park ring path, and at the start by the boathouse. We measured them, and at about two people to the square metre they take around 550 between them, which is more than we expect to come.\n\nHow we start the race\nWe set off in 5 waves, four minutes apart, with runners sorted by the time they expect to run. That thins everyone out before the first corner. The pens close five minutes before each wave goes.\n\nWho's helping\nWe always get a great turnout of helpers from the club and from people's families. They'll be wearing the event T-shirt, so they're easy to spot, and they're happy to help with whatever is needed on the day.\n\nGetting everyone away\nAfterwards there's the prize-giving and tea and cake, and people drift off when they're ready. Plenty of buses go past, and there's parking a short walk away.\n\nWho's in charge\nOwen Cartwright runs the event from the control point with a radio to every supervisor. They can hold a wave, stop the race, or make an announcement over the speakers to move people along. Supervisors call it in if a pen or viewing spot looks to be getting too full.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF RQ-66085\nMeridian Mutual Insurance   POL NO GL-641639\nINSURED ....... St. Anne's Parish Fun Run Committee\nRISK LOCATION .. Saltmarsh Reach\nFROM .......... 1 November 2026\nTO ............ 31 October 2027\nINDEMNITY ..... $5,000,000\nACTIVITY ...... Foot race (St. Anne's Community Run Half Marathon)\nISSUED ........ 14 November 2026\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the St. Anne's Community Run Half Marathon, Saturday 13 November 2027\n\nFrom Owen Cartwright, Race Director, St. Anne's Parish Fun Run Committee\n\nThe race is a half marathon with 310 runners and starts at 09:30. No ambulance will be stationed at the race; any ambulance would come through the 911 system.\n\nRunners get an email in race week telling them to dress for the weather and to keep a phone with them if they can. Most have run with us before. The list of entrants includes an emergency contact for each runner, which is kept at the start.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 6 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at Thornton County Hospital, 12 km from the finish. We've walked the route out from the pick-up point at the boathouse with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nWho's responsible\nOur medical lead is Joan Kowalczyk, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nSt. Anne's Community Run Half Marathon | Saturday 13 November 2027\nOrganiser: St. Anne's Parish Fun Run Committee\nRace director: Owen Cartwright\nReference: PH-67409\n\nOverview\nThe St. Anne's Community Run Half Marathon is a half marathon race of 21 km for 310 entrants, based in the Saltmarsh Reach area of Port Halden. The start is at 09:30 and the course closes at 13:00.\n\nCourse\nThe course stays entirely on the Reservoir Walk and the Ferry Park ring path, away from the highway, and no road is closed for the race. The finish is at the rowing club.\n\nCourse dimensions\nThe Reservoir Walk is a surfaced path about 3 m wide, with a railing on one side and a retaining wall on the other. The Ferry Park ring path section is about 2.5 m wide and passes under two low bridges. Runners can go two or three abreast at most, and the start pens have to be strung along the path.\n\nSupport\nEntrants collect numbers from the boathouse from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the St. Anne's website the same day.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the St. Anne's Community Run Half Marathon, Saturday 13 November 2027. 310 runners, half marathon, off at 09:30, around Saltmarsh Reach. I've attached crowd_plan.txt, insurance.txt, medical_plan.txt, race_plan.txt.\n\nWe look forward to hearing from you.\n\nThanks,\nOwen\n\nOwen Cartwright, St. Anne's Parish Fun Run Committee\n555-0139\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Our annual half marathon around Saltmarsh Reach, all on paths. Roughly 90 friends and family usually come to watch.",
+   "event_name": "St. Anne's Community Run Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 310,
+   "fee_paid": true,
+   "hospital_distance_km": 12,
+   "organizer": "St. Anne's Parish Fun Run Committee",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Saltmarsh Reach"
+  }
+ },
+ "events": [
+  351,
+  352,
+  353
+ ],
+ "evidence": [],
+ "hazards": [],
+ "highest_severity": 0.0,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.18965913513454657,
+   "t_low": 0.18965913513454657
+  },
+  "weights_version": "first-guess+29"
+ },
+ "officer": null,
+ "requirements": [],
+ "risk": 0.0,
+ "t_high": 0.18965913513454657,
+ "t_low": 0.18965913513454657,
+ "title": "St. Anne's Community Run Half Marathon",
+ "unmapped_documents": []
+}

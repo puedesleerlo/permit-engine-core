@@ -1,0 +1,7 @@
+id: medical_emergency
+name: Medical emergency
+description: A runner or spectator needs urgent care during the race.
+applies_when: Always, for a race.
+applies_rule: data.permit.screen.applies.medical_emergency
+clause: ORD-5.3
+trees: {likelihood: medical.likelihood, severity: medical.severity}

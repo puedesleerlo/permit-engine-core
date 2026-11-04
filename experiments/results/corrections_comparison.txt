@@ -1,0 +1,48 @@
+Scenario: trained on 180, then crowd.L truth rises one level. Mean of 20 seeds, test 800 per seed. Thresholds held fixed.
+  K                method  made  drifted tree loss  other trees loss    all   auto  wrong|auto   band   eta
+  5                  none   5.0              1.800             0.476  0.696  0.810       0.125  0.083   0.0
+  5             level-all   5.0              1.745             0.475  0.687  0.807       0.122  0.084   0.0
+  5           level-named   5.0              1.747             0.476  0.688  0.808       0.124  0.083   0.0
+  5            grad-named   5.0              1.612             0.488  0.675  0.798       0.118  0.087   1.1
+  5      grad-named-limit   5.0              1.649             0.479  0.674  0.799       0.118  0.086   2.7
+  5             grad-risk   5.0              1.684             0.493  0.691  0.777       0.102  0.085   2.0
+  5         bayes-outcome   5.0              1.781             0.475  0.693  0.807       0.123  0.084   0.0
+  5  bayes-outcome-forget   5.0              1.776             0.475  0.692  0.807       0.123  0.084   0.8
+  5    bayes-named-forget   5.0              1.736             0.476  0.686  0.808       0.123  0.083   0.9
+  5        jev-sim-random   5.0              1.756             0.484  0.696  0.814       0.127  0.082   0.5
+  5            jev-sim-70   5.0              1.702             0.487  0.690  0.811       0.128  0.082   0.8
+  5            jev-sim-90   5.0              1.627             0.488  0.678  0.801       0.118  0.085   1.1
+  5          jev-measured   5.0              1.764             0.478  0.693  0.811       0.126  0.082   0.6
+     grad-risk: share of its change landing on the drifted tree 0.227; mean weight gap, forward v reverse order 0.0460 (level-named 0.0039)
+ 20                  none  20.0              1.800             0.476  0.696  0.810       0.125  0.083   0.0
+ 20             level-all  20.0              1.526             0.474  0.649  0.796       0.115  0.086   0.0
+ 20           level-named  20.0              1.535             0.477  0.653  0.802       0.118  0.084   0.0
+ 20            grad-named  20.0              1.061             0.520  0.610  0.757       0.093  0.098   1.5
+ 20      grad-named-limit  20.0              1.394             0.488  0.639  0.788       0.111  0.090   2.5
+ 20             grad-risk  20.0              1.444             0.618  0.756  0.730       0.080  0.115   2.0
+ 20         bayes-outcome  20.0              1.719             0.475  0.682  0.801       0.118  0.084   0.0
+ 20  bayes-outcome-forget  20.0              1.647             0.475  0.670  0.792       0.112  0.087   0.8
+ 20    bayes-named-forget  20.0              1.427             0.477  0.635  0.792       0.112  0.087   0.8
+ 20        jev-sim-random  20.0              1.739             0.492  0.700  0.824       0.134  0.078   0.3
+ 20            jev-sim-70  20.0              1.453             0.502  0.660  0.801       0.119  0.084   0.9
+ 20            jev-sim-90  20.0              1.188             0.505  0.619  0.771       0.099  0.092   1.2
+ 20          jev-measured  20.0              1.764             0.483  0.697  0.818       0.130  0.080   0.3
+     grad-risk: share of its change landing on the drifted tree 0.220; mean weight gap, forward v reverse order 0.1080 (level-named 0.0098)
+ 60                  none  60.0              1.800             0.476  0.696  0.810       0.125  0.083   0.0
+ 60             level-all  60.0              1.228             0.473  0.599  0.769       0.096  0.093   0.0
+ 60           level-named  60.0              1.246             0.481  0.609  0.780       0.104  0.092   0.0
+ 60            grad-named  59.8              0.752             0.522  0.560  0.735       0.081  0.101   1.7
+ 60      grad-named-limit  60.0              1.313             0.493  0.629  0.786       0.111  0.088   2.5
+ 60             grad-risk  57.2              1.293             0.780  0.866  0.710       0.061  0.115   2.0
+ 60         bayes-outcome  60.0              1.563             0.477  0.658  0.782       0.106  0.090   0.0
+ 60  bayes-outcome-forget  59.8              1.336             0.487  0.628  0.734       0.071  0.102   0.9
+ 60    bayes-named-forget  59.7              1.064             0.487  0.583  0.758       0.089  0.097   0.8
+ 60        jev-sim-random  60.0              1.677             0.530  0.721  0.837       0.145  0.077   0.2
+ 60            jev-sim-70  60.0              1.187             0.517  0.629  0.783       0.115  0.085   1.1
+ 60            jev-sim-90  59.7              0.929             0.528  0.595  0.756       0.091  0.102   1.4
+ 60          jev-measured  60.0              1.754             0.491  0.701  0.823       0.133  0.078   0.2
+     grad-risk: share of its change landing on the drifted tree 0.216; mean weight gap, forward v reverse order 0.1128 (level-named 0.0123)
+
+=== Requirement mix (reviewer finding 3): share of cases reaching the risk rows ===
+  valid insurance 20%, contradicting letter 25%: 15.0%, so 18 of 120 validation, 15 of 100 test; ~12 test approvals at 80%, SE at 6% wrong = 0.069
+  valid insurance 70%, contradicting letter 5%: 66.5%, so 80 of 120 validation, 66 of 100 test; ~53 test approvals at 80%, SE at 6% wrong = 0.033

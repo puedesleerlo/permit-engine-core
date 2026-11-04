@@ -1,0 +1,1139 @@
+{
+ "case_id": "R0167-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9552420510351488,
+     0.03789858078102595,
+     0.006859368183825198
+    ],
+    "before": [
+     0.9568101909410416,
+     0.03631918043180734,
+     0.0068706286271511706
+    ],
+    "count_after": 7.838718984966579,
+    "count_before": 7.951819014915056,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.10231481623141643,
+     0.8277324831376406,
+     0.06995270063094305
+    ],
+    "before": [
+     0.12643201470981813,
+     0.787126341734288,
+     0.08644164355589398
+    ],
+    "count_after": 5.175051065963367,
+    "count_before": 4.431792414327072,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.054297759257984524,
+     0.9046920284563116,
+     0.04101021228570385
+    ],
+    "before": [
+     0.0540339416603983,
+     0.9049444056499149,
+     0.04102165268968685
+    ],
+    "count_after": 6.328872511117384,
+    "count_before": 6.34089735396515,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.9530877805407901,
+     0.04168577103451203,
+     0.005226448424697818
+    ],
+    "before": [
+     0.945136185893052,
+     0.048751485632242256,
+     0.00611232847470572
+    ],
+    "count_after": 6.887546423850058,
+    "count_before": 6.318821149011097,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.8969546669019032,
+     0.09051890420090859,
+     0.012526428897188288
+    ],
+    "before": [
+     0.8996723928897127,
+     0.0877632237850721,
+     0.012564383325215207
+    ],
+    "count_after": 8.81846990744096,
+    "count_before": 8.93332405800158,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.059991105954491086,
+     0.9158650948783206,
+     0.024143799167188285
+    ],
+    "before": [
+     0.06810728900005951,
+     0.9044825027486291,
+     0.02741020825131141
+    ],
+    "count_after": 8.168001237872021,
+    "count_before": 7.613640557671327,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9553824487129483,
+     0.03792279851910985,
+     0.006694752767941839
+    ],
+    "before": [
+     0.9560103597573664,
+     0.03729048744702934,
+     0.006699152795604374
+    ],
+    "count_after": 10.58282504648954,
+    "count_before": 10.652903225177822,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.311743466674145,
+     0.650098290114386,
+     0.038158243211468885
+    ],
+    "before": [
+     0.36354542082345886,
+     0.5919556367153104,
+     0.044498942461230644
+    ],
+    "count_after": 6.969205729433816,
+    "count_before": 6.379509862441425,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.49344387226578207,
+     0.48112991137672706,
+     0.02542621635749087
+    ],
+    "before": [
+     0.49362114979217975,
+     0.48130276491764373,
+     0.025076085290176534
+    ],
+    "count_after": 7.073070143591477,
+    "count_before": 7.089026171559418,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.03179432300278576,
+     0.5798020841149516,
+     0.3884035928822626
+    ],
+    "before": [
+     0.03508786314542831,
+     0.6398631660462478,
+     0.3250489708083239
+    ],
+    "count_after": 8.419031742760872,
+    "count_before": 8.1224218403922,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.15155246506609796,
+     0.48978547162950137,
+     0.3586620633044007
+    ],
+    "before": [
+     0.15164127718197223,
+     0.4900724935795629,
+     0.3582862292384649
+    ],
+    "count_after": 6.885587066948017,
+    "count_before": 6.883552255047449,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.007685451879097142,
+     0.23394187450126855,
+     0.7583726736196343
+    ],
+    "before": [
+     0.007884528462540466,
+     0.2400016807212134,
+     0.7521137908162461
+    ],
+    "count_after": 8.046666118332,
+    "count_before": 7.898330468050063,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9700027006684174,
+     0.02519773143852938,
+     0.004799567893053216
+    ],
+    "before": [
+     0.9668245716886004,
+     0.02786735978157567,
+     0.005308068529823937
+    ],
+    "count_after": 10.438666436158845,
+    "count_before": 10.149103694794457,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "CROWD MANAGEMENT PLAN\nSt. Anne's Sunset Run Half Marathon, Sunday 28 November 2027\nApplicant: St. Anne's Parish Fun Run Committee\nPrepared by Patrick Doyle, Race Director\nIssue: 3.0\n\n1. Attendance\nWe expect 650 people in total at the event, including 430 runners. About 220 of those are spectators.\n\nFamilies are welcome, and there is usually a friendly atmosphere at the finish. Local shops have been supportive, and some stay open for the day. The prize-giving takes place at the end, and there is often a queue for tea.\n\n2. Spectator areas\nSpectators will be directed to three marked viewing areas behind pedestrian barriers: the finish area by the Civic Plaza, the turn at Orchard Road and the start at the top of Union Row. Together these hold approximately 850 people at a planning density of two persons per square metre, which exceeds the expected attendance.\n\n3. Start procedure\nAll entrants will assemble in the start area shortly before 08:00 and will start together following a short welcome and warm-up led by a local sports personality, which has always proved popular in previous years.\n\n4. Stewarding\n13 stewards in high-visibility tabards, led by 2 supervisors, are allocated by position on the attached rota. That is around one steward for every 50 people expected. All attend a briefing at the site one hour before the start.\n\n5. Exit and dispersal\nFollowing the race, participants and their families are welcome to stay and enjoy the prize-giving and refreshments before making their own way home at their leisure. There are good public transport links nearby.\n\n6. Event control\nThe event controller, Patrick Doyle, sits at the control point with radio contact to all supervisors and can hold a start, stop the race or use the public address to move people. A supervisor reports to the controller if any pen or viewing area appears to be filling beyond its marked capacity.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. AG-33427\nIssued: 2027-09-16\n\nINSURER: Harbourline Insurance Company\nPOLICY NUMBER: GL-175712\n\nNAMED INSURED: St. Anne's Parish Fun Run Committee\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the St. Anne's Sunset Run Half Marathon\nVENUE: Clocktower Square, Port Halden\n\nPOLICY PERIOD\nEffective: 2027-11-27\nExpiry: 2027-11-29\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the St. Anne's Sunset Run Half Marathon, Sunday 28 November 2027\n\nFrom Patrick Doyle, Race Director, St. Anne's Parish Fun Run Committee\n\nThe race is a half marathon with 430 runners and starts at 08:00. No ambulance will be stationed at the race; any ambulance would come through the 911 system.\n\nFirst aid\nSeveral of our members have done the first aid course through work, and they're happy to help out. We keep a good first aid box at the HQ tent, and another one goes in the lead car. In all our years we've only ever had blisters and scraped knees.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at Harbourside Medical Centre, 4 km from the finish. We've walked the route out from the pick-up point at the top of Union Row with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nWe'll all have our phones, and I'll send a list of numbers round the team the week before. The signal is usually fine around there.\n\nWho's responsible\nOur medical lead is Ellis Grant, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PORT HALDEN POLICE SERVICE\nTraffic and Events Division\n200 Prince Street, Port Halden\n\nSeptember 16, 2027\n\nPatrick Doyle\nSt. Anne's Parish Fun Run Committee\n\nRe: St. Anne's Sunset Run Half Marathon, November 28, 2027\n\nDear Patrick Doyle,\n\nI confirm that this Division will provide a police escort for the above event on November 28, 2027. Two motorcycle officers will accompany the lead runner along the route through Clocktower Square, and one traffic unit will be stationed at Union Row from 06:45 until the last runner has cleared the course.\n\nPlease send your final course map to this office no later than seven days before the event.\n\nYours sincerely,\n\nInsp. Hannah Weiss\nTraffic and Events Division\nReference AG-61318\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nSt. Anne's Sunset Run Half Marathon | Sunday 28 November 2027\nOrganiser: St. Anne's Parish Fun Run Committee\nRace director: Patrick Doyle\nReference: EV-68103\n\nOverview\nThe St. Anne's Sunset Run Half Marathon is a half marathon race of 21 km for 430 entrants, based in the Clocktower Square area of Port Halden. The start is at 08:00 and the course closes at 11:30.\n\nCourse\nThe course runs in order along Union Row, Ash Avenue, Orchard Road and Rope Walk, all of which are closed to traffic for the race. Major roads crossed: High Street, Dock Road and Tram Street. The finish is in the Civic Plaza.\n\nCourse dimensions\nThe course uses wide carriageways throughout. Union Row offers 11 m kerb to kerb, Orchard Road about 9 m and Rope Walk about 14 m, with footways of a further 3 m on each side. The field assembles on Union Row, and the finish is in the Civic Plaza, an open paved area of around one and a half hectares.\n\nSupport\nEntrants collect numbers from the top of Union Row from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the St. Anne's website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: St. Anne's Sunset Run Half Marathon\nDate: Sunday 28 November 2027\nApplicant: St. Anne's Parish Fun Run Committee\nPrepared by: Brightway Traffic Consulting\nIssue: 3.0\n\n1. Scope\nThis plan describes how traffic will be managed for the St. Anne's Sunset Run Half Marathon, a half marathon race in the Clocktower Square area of Port Halden with a 08:00 start. It has been prepared to accompany the permit application and should be read with the race plan. Police attendance is covered in the attached correspondence.\n\n2. Road closures\nThe principal closure will be on Union Row. Elsewhere on the course, traffic will be held dynamically by the appointed contractor as the field passes, in line with accepted industry practice. Signal Hill Traffic Services will confirm the detailed arrangements following a pre-event site visit.\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 06:45 until the last runner has passed.\n- High Street at Orchard Road: 4 traffic marshals with stop/go boards, one supervisor\n- Dock Road at Union Row: 2 traffic marshals with stop/go boards, one supervisor\n- Tram Street at Union Row: 3 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nDrivers will be advised to expect delays in the area and to allow additional time for their journeys. Advance information boards will be used where practical, and through traffic is expected to find alternative routes across the wider network.\n\n5. Emergency vehicle access\nThe emergency services will be made aware of the event date and general location through the usual channels ahead of the day. Any vehicle attending an incident will be accommodated by staff on the ground as circumstances allow.\n\n6. Notification\nAll frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 12:00.\n\nVolunteers get a short note about the day in race week, with their start time, and are asked to find a replacement if they cannot make it. Most of them have done this before and know the area well.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the St. Anne's Sunset Run Half Marathon, Sunday 28 November 2027. 430 runners, half marathon, off at 08:00, around Clocktower Square. I've attached crowd_plan.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nPatrick\n\nPatrick Doyle, St. Anne's Parish Fun Run Committee\n555-0157\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "St. Anne's Sunset Run Half Marathon: a half marathon road race through the Clocktower Square area, organised by St. Anne's. Roughly 220 friends and family usually come to watch.",
+   "event_date": "2027-11-28",
+   "event_name": "St. Anne's Sunset Run Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 430,
+   "fee_paid": true,
+   "hospital_distance_km": 4,
+   "organizer": "St. Anne's Parish Fun Run Committee",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 3,
+    "road_closure": true
+   },
+   "venue": "Clocktower Square"
+  }
+ },
+ "events": [
+  542,
+  543,
+  544,
+  545,
+  546,
+  547,
+  548,
+  549,
+  550,
+  551,
+  552,
+  553
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: St. Anne's Parish Fun Run Committee",
+     "value": "St. Anne's Parish Fun Run Committee",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Clocktower Square, Port Halden",
+     "value": "Clocktower Square, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 2027-11-27",
+     "value": "2027-11-27",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 2027-11-29",
+     "value": "2027-11-29",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $1,000,000 each occurrence",
+     "value": "$1,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "I confirm that this Division will provide a police escort for the above event on November 28, 2027.",
+     "value": "November 28, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "Insp. Hannah Weiss",
+     "value": "Insp. Hannah Weiss",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.8426506071004122,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.637702144564424,
+      "entropy": 0.420121316036623,
+      "levels": [
+       0.060355125053345046,
+       0.8907318146319188,
+       0.0489130603147362
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.005462448299032321,
+      "count": 7.951819014915056,
+      "entropy": 0.19687551600378783,
+      "levels": [
+       0.9568101909410416,
+       0.03631918043180734,
+       0.0068706286271511706
+      ],
+      "reach": 0.22,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.077538342004082,
+      "entropy": 0.20887849172726225,
+      "levels": [
+       0.005213040603834099,
+       0.04272331735995827,
+       0.9520636420362077
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.08359553867682681,
+      "count": 4.431792414327072,
+      "entropy": 0.6615133235114081,
+      "levels": [
+       0.12643201470981813,
+       0.787126341734288,
+       0.08644164355589398
+      ],
+      "reach": 0.78,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.30911521348068727,
+     0.6219487662477422,
+     0.06893602027157057
+    ],
+    "questions": [
+     {
+      "answer": 0.22,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.08905798697585914
+   },
+   "name": "Crowd pressure",
+   "product": 0.011468427075148386,
+   "severity": {
+    "entropy": 0.30690991248888266,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 8.286168616523822,
+      "entropy": 0.2752939493361463,
+      "levels": [
+       0.00587911903659968,
+       0.9294505715608038,
+       0.0646703094025965
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.012252084273470779,
+      "count": 6.34089735396515,
+      "entropy": 0.3790752247486082,
+      "levels": [
+       0.0540339416603983,
+       0.9049444056499149,
+       0.04102165268968685
+      ],
+      "reach": 0.03,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.439638348047609,
+      "entropy": 0.3030904348535829,
+      "levels": [
+       0.059781280934618715,
+       0.9252733988317265,
+       0.014945320233654679
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.1165227450774006,
+      "count": 6.318821149011097,
+      "entropy": 0.231766957941122,
+      "levels": [
+       0.945136185893052,
+       0.048751485632242256,
+       0.00611232847470572
+      ],
+      "reach": 0.97,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9184031185660725,
+     0.07443727323277242,
+     0.007159608201155154
+    ],
+    "questions": [
+     {
+      "answer": 0.03,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.12877482935087137
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.6701643326002134,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 8.887791316176191,
+      "entropy": 0.24889707244503306,
+      "levels": [
+       0.009746407010790227,
+       0.9415928825005744,
+       0.04866071048863544
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.006718598751450526,
+      "count": 8.93332405800158,
+      "entropy": 0.3636482252256501,
+      "levels": [
+       0.8996723928897127,
+       0.0877632237850721,
+       0.012564383325215207
+      ],
+      "reach": 0.22,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.68381872651689,
+      "entropy": 0.19821400136559494,
+      "levels": [
+       0.002331148372049169,
+       0.044457945445915026,
+       0.9532109061820359
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.07802609765360087,
+      "count": 7.613640557671327,
+      "entropy": 0.3723751039361415,
+      "levels": [
+       0.06810728900005951,
+       0.9044825027486291,
+       0.02741020825131141
+      ],
+      "reach": 0.78,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.2510516118557832,
+     0.7248042613766466,
+     0.024144126767570245
+    ],
+    "questions": [
+     {
+      "answer": 0.22,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.08474469640505139
+   },
+   "name": "Medical emergency",
+   "product": 0.025219496545034022,
+   "severity": {
+    "entropy": 0.8283915540136516,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 9.39329321838957,
+      "entropy": 0.1714843548955223,
+      "levels": [
+       0.01694242448507592,
+       0.9661151510298481,
+       0.01694242448507592
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.011721638375015275,
+      "count": 10.652903225177822,
+      "entropy": 0.19919108210405043,
+      "levels": [
+       0.9560103597573664,
+       0.03729048744702934,
+       0.006699152795604374
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.363477169967751,
+      "entropy": 0.2521818694442584,
+      "levels": [
+       0.005662229842546086,
+       0.937715471731993,
+       0.05662229842546086
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.2858721653067306,
+      "count": 6.379509862441425,
+      "entropy": 0.816723719298779,
+      "levels": [
+       0.36354542082345886,
+       0.5919556367153104,
+       0.044498942461230644
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.4227919147168496,
+     0.5364891217884823,
+     0.04071896349466802
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.2975938036817459
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.8251891331606782,
+    "leaves": [
+     {
+      "contribution": 0.0023589189026877936,
+      "count": 7.089026171559418,
+      "entropy": 0.7928734115342719,
+      "levels": [
+       0.49362114979217975,
+       0.48130276491764373,
+       0.025076085290176534
+      ],
+      "reach": 0.036000000000000004,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.14014318905506637,
+      "count": 8.1224218403922,
+      "entropy": 0.7685236767752807,
+      "levels": [
+       0.03508786314542831,
+       0.6398631660462478,
+       0.3250489708083239
+      ],
+      "reach": 0.864,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0006381037746925407,
+      "count": 6.883552255047449,
+      "entropy": 1.003305391135211,
+      "levels": [
+       0.15164127718197223,
+       0.4900724935795629,
+       0.3582862292384649
+      ],
+      "reach": 0.003999999999999999,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.023980031605079607,
+      "count": 7.898330468050063,
+      "entropy": 0.5949451417418344,
+      "levels": [
+       0.007884528462540466,
+       0.2400016807212134,
+       0.7521137908162461
+      ],
+      "reach": 0.09599999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.04944975499130031,
+     0.595169126324548,
+     0.3553811186841517
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.04,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.16712024333752631
+   },
+   "name": "Traffic conflict",
+   "product": 0.018907561452034826,
+   "severity": {
+    "entropy": 0.1601988821533186,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 4.403614,
+      "entropy": 0.504227855477891,
+      "levels": [
+       0.01826583801395854,
+       0.1461267041116683,
+       0.8356074578743733
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.7386857486,
+      "entropy": 0.4300269174768139,
+      "levels": [
+       0.024245564220683077,
+       0.8787721788965847,
+       0.0969822568827323
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.339645940368685,
+      "entropy": 0.23827670406594795,
+      "levels": [
+       0.03482034925510738,
+       0.947769476117339,
+       0.01741017462755369
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.11313746961131424,
+      "count": 10.149103694794457,
+      "entropy": 0.1601988821533186,
+      "levels": [
+       0.9668245716886004,
+       0.02786735978157567,
+       0.005308068529823937
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9668245716886004,
+     0.02786735978157567,
+     0.005308068529823937
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.11313746961131424
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.2975938036817459,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21376493779963796,
+   "t_low": 0.18382375716334348
+  },
+  "weights_version": "first-guess+45"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "All required checks pass and the overall risk is low, but the organisers should strengthen their traffic, crowd and medical plans and consider booking an on-site ambulance.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.05559548507221723,
+ "t_high": 0.21376493779963796,
+ "t_low": 0.18382375716334348,
+ "title": "St. Anne's Sunset Run Half Marathon",
+ "unmapped_documents": []
+}

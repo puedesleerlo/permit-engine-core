@@ -1,0 +1,878 @@
+{
+ "case_id": "R0270-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9551285302238697,
+     0.03964832174215059,
+     0.005223148033979737
+    ],
+    "before": [
+     0.9510716473666903,
+     0.04323297358427116,
+     0.005695379049038544
+    ],
+    "count_after": 12.051220461568095,
+    "count_before": 11.866631144771695,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.03626252715186469,
+     0.9527080897059742,
+     0.011029383142161179
+    ],
+    "before": [
+     0.03618641785331157,
+     0.9527833279803758,
+     0.01103025416631254
+    ],
+    "count_after": 9.825496532644186,
+    "count_before": 9.838990733456969,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.00868495298958883,
+     0.9826300940208224,
+     0.00868495298958883
+    ],
+    "before": [
+     0.009440503282376516,
+     0.981118993435247,
+     0.009440503282376516
+    ],
+    "count_after": 11.268386152498834,
+    "count_before": 11.06622234739088,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.0035020869119649113,
+     0.9614770439683861,
+     0.03502086911964912
+    ],
+    "before": [
+     0.003537167090049347,
+     0.9610911620094571,
+     0.03537167090049347
+    ],
+    "count_after": 9.897468518450982,
+    "count_before": 9.870682402983286,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6372807389344426,
+     0.34638277188733896,
+     0.01633648917821846
+    ],
+    "before": [
+     0.5960619282217324,
+     0.38574513126860044,
+     0.018192940509667105
+    ],
+    "count_after": 9.53415822049435,
+    "count_before": 9.10335775196871,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.022207960073945387,
+     0.5039091917126118,
+     0.4738828482134427
+    ],
+    "before": [
+     0.021981930331956456,
+     0.5040256770795793,
+     0.4739923925884642
+    ],
+    "count_after": 9.909281222772458,
+    "count_before": 9.94589094906451,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.1389201197203104,
+     0.5613998731114237,
+     0.2996800071682659
+    ],
+    "before": [
+     0.1365705507510699,
+     0.5629317260224099,
+     0.30049772322652013
+    ],
+    "count_after": 9.101748922864036,
+    "count_before": 9.139112817128629,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004647392229449876,
+     0.12091053934328075,
+     0.8744420684272693
+    ],
+    "before": [
+     0.0046424495720001025,
+     0.12091113975299823,
+     0.8744464106750016
+    ],
+    "count_after": 10.822269011374834,
+    "count_before": 10.826928551144778,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9887732903470192,
+     0.00943043610850392,
+     0.0017962735444769372
+    ],
+    "before": [
+     0.9878016295077299,
+     0.010246631213506883,
+     0.001951739278763216
+    ],
+    "count_after": 12.554144408241298,
+    "count_before": 12.42381119165731,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "Sentinel Ambulance Service\nBookings Office\n\n2027-07-14\n\nDear Lucas Ferreira,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the PHU Athletics Founders Race 10K on 2027-11-21. One ambulance and two paramedics will be on site at the top of Linden Avenue, in place by 08:45, and will stay until the race has finished. Booking reference PH-58361.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nCarl Jensen\nBookings Manager\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "Harbourline Insurance Company\nCertificate of Insurance\n\nWe certify that a policy of event public liability insurance has been issued as follows.\n\nPolicy: PL-960832\nInsured: Port Halden University Athletics\nEvent covered: PHU Athletics Founders Race 10K\nLocation of event: Eastfield\nCover starts: 2027-01-01\nCover ends: 2027-12-31\nLimit of indemnity: $5,000,000 any one event\n\nSigned on behalf of the insurer, 2027-07-14\nCertificate reference AG-32245\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nPHU Athletics Founders Race 10K, Sunday 21 November 2027\nApplicant: Port Halden University Athletics\nIssue: 3.4\n\n1. Event summary\nA 10K race with 60 runners, starting at 10:00 in the Eastfield area of Port Halden. An ambulance from Sentinel Ambulance Service is on site for the race; the paperwork is attached.\n\nRunners get an email in race week telling them to dress for the weather and to keep a phone with them if they can. Most have run with us before. The list of entrants includes an emergency contact for each runner, which is kept at the start.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 6 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Northshore District Hospital, 11 km from the finish. The transfer route and the pick-up point at the top of Linden Avenue have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Joan Kowalczyk, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "police_email.txt",
+    "text": "---------- Forwarded message ---------\nFrom: Sgt. Karen Holt <karen.holt@phps.example>\nSent: 14 July 2027\nTo: Lucas Ferreira <lucas@phu-athletics.example>\nSubject: Police attendance, PHU Athletics Founders Race 10K\n\nLucas Ferreira,\n\nThis is to confirm that Traffic & Events will attend your race on 21 November 2027 with an escort of two motorcycles. One traffic car will sit at Linden Avenue from 08:45. It's in the roster now, so you can go ahead on that basis.\n\nRegards,\nSgt. Karen Holt\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "PHU Athletics Founders Race 10K: how the race will work\n\nPrepared by Lucas Ferreira (Volunteer Coordinator), Port Halden University Athletics. Last updated 14 July 2027.\n\nThis is our plan for race day, Sunday 21 November 2027. We expect 60 runners over 10K (10 km). Numbers can be collected from the top of Linden Avenue from an hour before we go at 10:00, and we aim to have the last finisher home by 12:00.\n\nThe route takes in Linden Avenue, Fenwick Street and Albion Road, and the City would need to close all of these for us. On the way round we cross Cross Avenue and Victoria Road. We finish in Ferry Park lawn.\n\nThese are all big, wide streets. We measured Linden Avenue at 16 metres and Albion Road at 10 metres, kerb to kerb, not counting the pavements. People watching have the pavement and the grass strip to spread out on.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: PHU Athletics Founders Race 10K\nDate: Sunday 21 November 2027\nApplicant: Port Halden University Athletics\nPrepared by: Corvus Temporary Works\nIssue: 3.4\n\n1. Scope\nThis plan describes how traffic will be managed for the PHU Athletics Founders Race 10K, a 10K race in the Eastfield area of Port Halden with a 10:00 start. It has been prepared to accompany the permit application and should be read with the race plan. Police attendance is covered in the attached correspondence.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Northline Barriers.\n- Linden Avenue, Bell Street to Rope Walk: closed 08:45 to 12:30\n- Fenwick Street, Bell Street to Glebe Road: closed 08:45 to 12:30\n- Albion Road, Ash Avenue to Glebe Road: closed 08:45 to 12:30\n\nWe have a good working relationship with local residents. Several members walk the route the week before, noting anything that has changed, such as new roadworks, a barrier left in place, or a lane marked for cycles.\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 08:45 until the last runner has passed.\n- Cross Avenue at Linden Avenue: 3 traffic marshals with stop/go boards, one supervisor\n- Victoria Road at Linden Avenue: 4 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Linden Avenue: traffic diverted via Station Road and Queen's Road, signed from Rope Walk\n- Fenwick Street: traffic diverted via Regent Road and Tram Street, signed from Ash Avenue\n- Albion Road: traffic diverted via Prince Street and High Street, signed from Bell Street\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\n6. Notification\nDetails of the event will be published on the organiser's website and shared through social media in the weeks leading up to race day.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 12:30.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the PHU Athletics Founders Race 10K, Sunday 21 November 2027. 60 runners, 10K, off at 10:00, around Eastfield. I've attached ambulance_agreement.txt, insurance.txt, medical_plan.txt, police_email.txt, race_plan.txt, traffic_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nLucas\n\nLucas Ferreira, Port Halden University Athletics\n555-0180\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_email.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Our annual 10K on the streets of Eastfield. Allow for about 20 supporters along the route in addition to the runners.",
+   "event_date": "2027-11-21",
+   "event_name": "PHU Athletics Founders Race 10K",
+   "event_type": "street_race",
+   "expected_runners": 60,
+   "fee_paid": true,
+   "hospital_distance_km": 11,
+   "organizer": "Port Halden University Athletics",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 2,
+    "road_closure": true
+   },
+   "venue": "Eastfield"
+  }
+ },
+ "events": [
+  897,
+  898,
+  899,
+  900,
+  901,
+  902,
+  903,
+  904,
+  905,
+  906,
+  907,
+  908
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Sentinel Ambulance Service",
+     "value": "Sentinel Ambulance Service",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the PHU Athletics Founders Race 10K on 2027-11-21",
+     "value": "2027-11-21",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "Insured: Port Halden University Athletics",
+     "value": "Port Halden University Athletics",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "Location of event: Eastfield",
+     "value": "Eastfield",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Cover starts: 2027-01-01",
+     "value": "2027-01-01",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Cover ends: 2027-12-31",
+     "value": "2027-12-31",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "Limit of indemnity: $5,000,000 any one event",
+     "value": "$5,000,000 any one event",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "police_email.txt",
+   "evidence_type": "police_escort_email",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "will attend your race on 21 November 2027 with an escort of two motorcycles",
+     "value": "21 November 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "sender",
+     "quote": "From: Sgt. Karen Holt <karen.holt@phps.example>",
+     "value": "Sgt. Karen Holt",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.2661621367048563,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.017304239573912,
+      "entropy": 0.1732625515308919,
+      "levels": [
+       0.005864542826775795,
+       0.9633499153830437,
+       0.030785541790180518
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.024552277140063035,
+      "count": 11.866631144771695,
+      "entropy": 0.21294696828213586,
+      "levels": [
+       0.9510716473666903,
+       0.04323297358427116,
+       0.005695379049038544
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.50726873559525,
+      "entropy": 0.1181095787423446,
+      "levels": [
+       0.0009522138181009282,
+       0.02328335687930315,
+       0.9757644293025959
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0019862227480999537,
+      "count": 9.838990733456969,
+      "entropy": 0.21590390636891557,
+      "levels": [
+       0.03618641785331157,
+       0.9527833279803758,
+       0.01103025416631254
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.9327739427764227,
+     0.06142398067219327,
+     0.005802076551384023
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.026538499888162988
+   },
+   "name": "Medical emergency",
+   "product": 0.010736551421798657,
+   "severity": {
+    "entropy": 0.11569097421865845,
+    "leaves": [
+     {
+      "contribution": 0.36254893588624176,
+      "count": 11.06622234739088,
+      "entropy": 0.10673896540529247,
+      "levels": [
+       0.009440503282376516,
+       0.981118993435247,
+       0.009440503282376516
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 12.763244885453933,
+      "entropy": 0.10018193881729966,
+      "levels": [
+       0.981350775109738,
+       0.016095685229972092,
+       0.0025535396602899504
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.042016185241328115,
+      "count": 9.870682402983286,
+      "entropy": 0.17631377266198262,
+      "levels": [
+       0.003537167090049347,
+       0.9610911620094571,
+       0.03537167090049347
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.02580272847923,
+      "entropy": 0.46953331508085155,
+      "levels": [
+       0.13499711371931622,
+       0.8504797312039722,
+       0.014523155076711456
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.0088501696631438,
+     0.9791162102926679,
+     0.01203362004418821
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.4045651211275698
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.8999111730605991,
+    "leaves": [
+     {
+      "contribution": 0.04733677423218882,
+      "count": 9.10335775196871,
+      "entropy": 0.748755358069306,
+      "levels": [
+       0.5960619282217324,
+       0.38574513126860044,
+       0.018192940509667105
+      ],
+      "reach": 0.846,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.010424155900921371,
+      "count": 9.94589094906451,
+      "entropy": 0.7831045746435921,
+      "levels": [
+       0.021981930331956456,
+       0.5040256770795793,
+       0.4739923925884642
+      ],
+      "reach": 0.05400000000000005,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.014022346655010528,
+      "count": 9.139112817128629,
+      "entropy": 0.9566520038054378,
+      "levels": [
+       0.1365705507510699,
+       0.5629317260224099,
+       0.30049772322652013
+      ],
+      "reach": 0.09399999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.001647107317015443,
+      "count": 10.826928551144778,
+      "entropy": 0.3977099730696621,
+      "levels": [
+       0.0046424495720001025,
+       0.12091113975299823,
+       0.8744464106750016
+      ],
+      "reach": 0.006000000000000004,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.5183209019815439,
+     0.4071988167001578,
+     0.07448028131829836
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.94,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.07343038410513616
+   },
+   "name": "Traffic conflict",
+   "product": 0.007697747898672461,
+   "severity": {
+    "entropy": 0.07123846713520421,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.336977746198,
+      "entropy": 0.3389373878667739,
+      "levels": [
+       0.010209759436778442,
+       0.08167807549422754,
+       0.9081121650689941
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.208817683600001,
+      "levels": [
+       0.009156691221102351,
+       0.9542165438944882,
+       0.036626764884409406
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.19798295964703655,
+      "levels": [
+       0.02747007366330705,
+       0.9587948895050394,
+       0.013735036831653525
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.10483055471493896,
+      "count": 12.42381119165731,
+      "entropy": 0.07123846713520421,
+      "levels": [
+       0.9878016295077299,
+       0.010246631213506883,
+       0.001951739278763216
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9878016295077299,
+     0.010246631213506883,
+     0.001951739278763216
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.10483055471493896
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.4045651211275698,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21646268154544307,
+   "t_low": 0.18447068450010728
+  },
+  "weights_version": "first-guess+75"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The fee is paid, the insurance covers this race, venue and date, and the police escort, ambulance, traffic plan and medical plan are all in place, so the overall risk is low and the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.018434299320471116,
+ "t_high": 0.21646268154544307,
+ "t_low": 0.18447068450010728,
+ "title": "PHU Athletics Founders Race 10K",
+ "unmapped_documents": []
+}

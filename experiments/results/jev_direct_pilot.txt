@@ -1,0 +1,22 @@
+requests 240; input tokens 236943; output tokens 41766; returned model ['jev-1.14.0']; 8 s
+120 validation and 120 test cases, one seed. All cases synthetic. Jev reads true facts in this pilot.
+
+                                  method   loss  right level   auto  risky|auto   band   high  t_low  t_high
+               First guess, noisy inputs  1.267        0.452  0.567       0.103  0.417  0.017  0.063   0.126
+             Trained trees, noisy inputs  0.460        0.868  0.833       0.130  0.033  0.133  0.262   0.301
+              Trained trees, true inputs  0.334        0.902  0.825       0.101  0.050  0.125  0.309   0.324
+  Trained trees + crossings, true inputs  0.302        0.931  0.825       0.091  0.000  0.175  0.297   0.297
+         Jev asked directly, true inputs  1.385        0.456  0.725       0.103  0.275  0.000  0.444   0.831
+
+Difference in per-case mean loss, Jev minus trees (negative favours Jev), with a 95% bootstrap interval:
+  against Trained trees, noisy inputs: +0.924 (+0.784 to +1.066)
+  against Trained trees, true inputs: +1.048 (+0.903 to +1.195)
+  against Trained trees + crossings, true inputs: +1.077 (+0.931 to +1.226)
+
+Jev loss per tree, and the same for trees + crossings on true inputs:
+  traffic.L  Jev 0.650, right 0.762; trees 0.310, right 0.937; n=63
+  traffic.S  Jev 2.761, right 0.270; trees 0.456, right 0.889; n=63
+  crowd.L    Jev 0.902, right 0.590; trees 0.367, right 0.897; n=78
+  crowd.S    Jev 1.337, right 0.372; trees 0.330, right 0.936; n=78
+  medical.L  Jev 1.658, right 0.367; trees 0.232, right 0.950; n=120
+  medical.S  Jev 1.121, right 0.450; trees 0.225, right 0.950; n=120

@@ -1,0 +1,840 @@
+{
+ "case_id": "R0367-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.013479889076147672,
+     0.9750997264590923,
+     0.011420384464760071
+    ],
+    "before": [
+     0.01469592550461311,
+     0.9728534439019103,
+     0.012450630593476574
+    ],
+    "count_after": 12.075885526592613,
+    "count_before": 11.893100109618091,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.003327143719666796,
+     0.03646375130283726,
+     0.9602091049774959
+    ],
+    "before": [
+     0.003327411427633313,
+     0.036386223443646816,
+     0.9602863651287198
+    ],
+    "count_after": 9.479977812728245,
+    "count_before": 9.492983351479833,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.0027198407454013585,
+     0.9673619110551837,
+     0.029918248199414948
+    ],
+    "before": [
+     0.0029727450428041883,
+     0.9643270594863498,
+     0.03270019547084608
+    ],
+    "count_after": 10.683686564394192,
+    "count_before": 10.442090842803513,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.018086277773516016,
+     0.977392152783105,
+     0.004521569443379004
+    ],
+    "before": [
+     0.01823505187402012,
+     0.9772061851574748,
+     0.00455876296850503
+    ],
+    "count_after": 11.165092475791136,
+    "count_before": 11.146564991595794,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.0025980041241940866,
+     0.9833843417083471,
+     0.014017654167458926
+    ],
+    "before": [
+     0.002804654773980237,
+     0.9820626977006955,
+     0.015132647525324174
+    ],
+    "count_after": 13.567576809723297,
+    "count_before": 13.494270888578741,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.000469952929672128,
+     0.015580875368922643,
+     0.9839491717014052
+    ],
+    "before": [
+     0.0004699660487468432,
+     0.015553394599612193,
+     0.9839766393516409
+    ],
+    "count_after": 11.574782186020903,
+    "count_before": 11.59127060423275,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9901817648958696,
+     0.008568410346574367,
+     0.001249824757556077
+    ],
+    "before": [
+     0.9900863619754712,
+     0.008651668830565182,
+     0.00126196919396369
+    ],
+    "count_after": 14.751824342763502,
+    "count_before": 14.662970296278559,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.36506012825575423,
+     0.6308061852203833,
+     0.004133686523862347
+    ],
+    "before": [
+     0.3149570147771339,
+     0.6805831094420255,
+     0.004459875780840594
+    ],
+    "count_after": 11.731654416190072,
+    "count_before": 11.649713275464029,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-9.3"
+  ],
+  "reason_code": "red_flag",
+  "route": "officer",
+  "row": 1,
+  "text": "A document disagrees with the application, so an officer decides."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "St. Luke Ambulance Brigade\nBookings Office\n\nMay 28, 2027\n\nDear Tomas Reyes,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Valley Harriers Sunset Run 5K on July 18, 2027. One ambulance and two paramedics will be on site at the rowing club, in place by 08:30, and will stay until the race has finished. Booking reference RQ-12174.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nPriya Raman\nBookings Manager\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "Looking after people on the day: Valley Harriers Sunset Run 5K, Sunday 18 July 2027\n\nTomas Reyes, Event Coordinator, Halden Valley Harriers\n\nWe expect about 2200 people altogether, including 2200 runners. We do not expect spectators in any number beyond the runners' own companions.\n\nWhere people will watch\nWe've set out three viewing spots with barriers: at the finish by the pavilion, at the turn by Ferry Park ring path, and at the start by the rowing club. We measured them, and at about two people to the square metre they take around 2900 between them, which is more than we expect to come.\n\nHow we start the race\nWe set off in 5 waves, four minutes apart, with runners sorted by the time they expect to run. That thins everyone out before the first corner. The pens close five minutes before each wave goes.\n\nWho's helping\nWe've got 44 stewards in tabards, about one for every 50 people, with 5 supervisors in charge of sections. Each has a set position on a rota, and all come to a briefing an hour before the start.\n\nSome background. Our committee has put on this race for a number of years, and attendance has grown slowly. Most of our helpers are members or their families, and many have been on the rota before, so they know the site and can find their way around it.\n\nGetting everyone away\nRunners walk through a one-way funnel after the line, out to the recovery area, and leave by the north gate. Spectators have two marked ways out, and a steward stands at each to keep it clear. We reckon the whole place empties in 25 minutes.\n\nWho's in charge\nTomas Reyes runs the event from the control point with a radio to every supervisor. They can hold a wave, stop the race, or make an announcement over the speakers to move people along. Supervisors call it in if a pen or viewing spot looks to be getting too full.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. AG-16739\nIssued: May 28, 2027\n\nINSURER: Northern Shield Assurance\nPOLICY NUMBER: GL-414335\n\nNAMED INSURED: Halden Valley Harriers\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Valley Harriers Sunset Run 5K\nVENUE: Cathedral Green, Port Halden\n\nPOLICY PERIOD\nEffective: July 17, 2027\nExpiry: July 19, 2027\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nValley Harriers Sunset Run 5K, Sunday 18 July 2027\nApplicant: Halden Valley Harriers\nIssue: 2.3\n\n1. Event summary\nA 5K race with 2200 runners, starting at 10:00 in the Cathedral Green area of Port Halden. An ambulance from St. Luke Ambulance Brigade is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 8 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Harbourside Medical Centre, 2 km from the finish. The transfer route and the pick-up point at the rowing club have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Ellis Grant, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Valley Harriers Sunset Run 5K - race notes\nHalden Valley Harriers / contact Tomas Reyes 555-0172\nSunday 18 July 2027, gun 10:00, course closes 11:15\n5K (5k), approx 2200 entered\n\nROUTE\nOld Mill Trail then Ferry Park ring path. no roads, no closures. finish the pavilion\n\nWIDTHS\nOld Mill Trail 3.5m, rail one side wall other. Ferry Park ring path 2m. 2-3 abreast max. start strung along path\n\nOTHER\nnumbers from the rowing club 1hr before. chip timing. water on course. results online same day\n"
+   }
+  ],
+  "cover_letter": "28 May 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Valley Harriers Sunset Run 5K on Sunday 18 July 2027. We expect 2200 runners over 5K, starting at 10:00 in the Cathedral Green area. The completed form and the attachments (ambulance_agreement.txt, crowd_plan.txt, insurance.txt, medical_plan.txt, race_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nTomas Reyes\nEvent Coordinator, Halden Valley Harriers\ntomas@valleyharriers.example / 555-0172\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Our annual 5K around Cathedral Green, all on paths.",
+   "event_date": "2027-07-18",
+   "event_name": "Valley Harriers Sunset Run 5K",
+   "event_type": "street_race",
+   "expected_runners": 2200,
+   "fee_paid": true,
+   "hospital_distance_km": 2,
+   "organizer": "Halden Valley Harriers",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Cathedral Green"
+  }
+ },
+ "events": [
+  1301,
+  1302,
+  1303,
+  1304,
+  1305,
+  1306,
+  1307,
+  1308,
+  1309,
+  1310,
+  1311,
+  1312,
+  1313
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "St. Luke Ambulance Brigade",
+     "value": "St. Luke Ambulance Brigade",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the Valley Harriers Sunset Run 5K on July 18, 2027",
+     "value": "July 18, 2027",
+     "verified": true
+    }
+   ],
+   "reason": "The ambulance is booked for the rowing club, not the race venue, Cathedral Green, and an 08:30 start sits oddly with a sunset run.",
+   "source": "stored",
+   "status": "found",
+   "verdict": "contradicted"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Halden Valley Harriers",
+     "value": "Halden Valley Harriers",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Cathedral Green, Port Halden",
+     "value": "Cathedral Green, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: July 17, 2027",
+     "value": "July 17, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: July 19, 2027",
+     "value": "July 19, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $1,000,000 each occurrence",
+     "value": "$1,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.2147845354583408,
+    "leaves": [
+     {
+      "contribution": 0.09928816303675975,
+      "count": 11.893100109618091,
+      "entropy": 0.14340249916875714,
+      "levels": [
+       0.01469592550461311,
+       0.9728534439019103,
+       0.012450630593476574
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.01394245118384,
+      "entropy": 0.12239139401609919,
+      "levels": [
+       0.9761768331856826,
+       0.020389334510103167,
+       0.0034338323042143334
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.00583582160223067,
+      "count": 9.492983351479833,
+      "entropy": 0.1784672629352394,
+      "levels": [
+       0.003327411427633313,
+       0.036386223443646816,
+       0.9602863651287198
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.67239593702105,
+      "entropy": 0.12609198305298175,
+      "levels": [
+       0.014132073214137416,
+       0.9767307512500245,
+       0.009137175535838102
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.014468555223073514,
+     0.954124099492745,
+     0.03140734528418145
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.10512398463899042
+   },
+   "name": "Crowd pressure",
+   "product": 0.04381531665643616,
+   "severity": {
+    "entropy": 0.16316456302497195,
+    "leaves": [
+     {
+      "contribution": 0.38104274733039645,
+      "count": 10.442090842803513,
+      "entropy": 0.16417209476772437,
+      "levels": [
+       0.0029727450428041883,
+       0.9643270594863498,
+       0.03270019547084608
+      ],
+      "reach": 0.91,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.017730947910058,
+      "entropy": 0.1630816952367366,
+      "levels": [
+       0.018602087780469293,
+       0.9680702858206234,
+       0.013327626398907305
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.03575382679970071,
+      "count": 11.146564991595794,
+      "entropy": 0.12012759785308058,
+      "levels": [
+       0.01823505187402012,
+       0.9772061851574748,
+       0.00455876296850503
+      ],
+      "reach": 0.08999999999999997,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.695062386995145,
+      "entropy": 0.061739588301206086,
+      "levels": [
+       0.989527331090209,
+       0.009345282816587926,
+       0.0011273860932031385
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.004346352657613621,
+     0.965486180796751,
+     0.030167466545635385
+    ],
+    "questions": [
+     {
+      "answer": 0.91,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.41679657413009713
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.16899466422791742,
+    "leaves": [
+     {
+      "contribution": 0.10074611398068349,
+      "count": 13.494270888578741,
+      "entropy": 0.09767636579697825,
+      "levels": [
+       0.002804654773980237,
+       0.9820626977006955,
+       0.015132647525324174
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 13.566705557243205,
+      "entropy": 0.10624445543414086,
+      "levels": [
+       0.9797478991477176,
+       0.017923596907999554,
+       0.002328503944282753
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.005935154611728573,
+      "count": 11.59127060423275,
+      "entropy": 0.08425176554574579,
+      "levels": [
+       0.0004699660487468432,
+       0.015553394599612193,
+       0.9839766393516409
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.126159883631592,
+      "entropy": 0.14423133038503794,
+      "levels": [
+       0.022415864843385765,
+       0.9715069901455585,
+       0.006077145011055697
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.002757960999475569,
+     0.9627325116386738,
+     0.03450952736185053
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.10668126859241205
+   },
+   "name": "Medical emergency",
+   "product": 0.03178738486376037,
+   "severity": {
+    "entropy": 0.6725197089538857,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 12.41775864017264,
+      "entropy": 0.06130392944548836,
+      "levels": [
+       0.004846427655393492,
+       0.990307144689213,
+       0.004846427655393492
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.005186563646186845,
+      "count": 14.662970296278559,
+      "entropy": 0.059383535794652456,
+      "levels": [
+       0.9900863619754712,
+       0.008651668830565182,
+       0.00126196919396369
+      ],
+      "reach": 0.05,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.026045333093053,
+      "entropy": 0.12575288754755998,
+      "levels": [
+       0.0023009540925746025,
+       0.9746895049816794,
+       0.023009540925746027
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.29277937998359593,
+      "count": 11.649713275464029,
+      "entropy": 0.6499075460749768,
+      "levels": [
+       0.3149570147771339,
+       0.6805831094420255,
+       0.004459875780840594
+      ],
+      "reach": 0.95,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.3487134821370508,
+     0.6469865374114525,
+     0.004299980451496748
+    ],
+    "questions": [
+     {
+      "answer": 0.05,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.29796594362978285
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.41679657413009713,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21957302654607286,
+   "t_low": 0.1793003753250711
+  },
+  "weights_version": "first-guess+109"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee paid, date in season, valid insurance for this venue and date; crowd and medical plans are complete and an ambulance is booked, so overall risk is low despite the large field and narrow paths.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.07560270152019653,
+ "t_high": 0.21957302654607286,
+ "t_low": 0.1793003753250711,
+ "title": "Valley Harriers Sunset Run 5K",
+ "unmapped_documents": []
+}

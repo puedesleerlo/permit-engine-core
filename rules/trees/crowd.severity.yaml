@@ -1,0 +1,25 @@
+id: crowd.severity
+version: 1
+owner: policy_owner
+hazard: crowd_pressure
+scale: severity
+questions:
+  - id: narrow_venue
+    kind: jev
+    text: Is the venue too confined for people to spread out?
+    instructions: Does the race plan show that the course, or its start or finish area, is mostly under about 6 metres wide or hemmed in on both sides, so that people cannot spread out?
+    needs: [race_plan]
+    clause: ORD-14.2
+  - id: crowd_over_800
+    kind: rule
+    text: Is the crowd over 800?
+    clause: ORD-1.2
+leaves:  # first guess, written blind; see rules/first_guess.json
+  - when: {narrow_venue: true, crowd_over_800: true}
+    levels: [0.05, 0.4, 0.55]
+  - when: {narrow_venue: true, crowd_over_800: false}
+    levels: [0.25, 0.55, 0.2]
+  - when: {narrow_venue: false, crowd_over_800: true}
+    levels: [0.4, 0.5, 0.1]
+  - when: {narrow_venue: false, crowd_over_800: false}
+    levels: [0.75, 0.22, 0.03]

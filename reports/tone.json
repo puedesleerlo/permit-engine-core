@@ -1,0 +1,63 @@
+{
+ "noise_floor": {
+  "compared": 20,
+  "decision_changes": [],
+  "decision_flips": 0,
+  "decision_interval": [
+   0.0,
+   0.16112515805281938
+  ],
+  "evidence_flips": 3,
+  "evidence_interval": [
+   0.052368745896216595,
+   0.36041886474075696
+  ],
+  "note": "The same plain letters read a second time, past the stored answers."
+ },
+ "requests": 20,
+ "tones": {
+  "insistent": {
+   "compared": 20,
+   "decision_changes": [],
+   "decision_flips": 0,
+   "decision_interval": [
+    0.0,
+    0.16112515805281938
+   ],
+   "evidence_flips": 6,
+   "evidence_interval": [
+    0.1454772448676043,
+    0.5189728183535235
+   ]
+  },
+  "mayor": {
+   "compared": 20,
+   "decision_changes": [],
+   "decision_flips": 0,
+   "decision_interval": [
+    0.0,
+    0.16112515805281938
+   ],
+   "evidence_flips": 2,
+   "evidence_interval": [
+    0.027866481213768224,
+    0.3010336452284873
+   ]
+  },
+  "persuasive": {
+   "compared": 20,
+   "decision_changes": [],
+   "decision_flips": 0,
+   "decision_interval": [
+    0.0,
+    0.16112515805281938
+   ],
+   "evidence_flips": 3,
+   "evidence_interval": [
+    0.052368745896216595,
+    0.36041886474075696
+   ]
+  }
+ },
+ "version": "v1"
+}

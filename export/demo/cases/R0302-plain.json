@@ -1,0 +1,878 @@
+{
+ "case_id": "R0302-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9726563682327551,
+     0.02416808022103293,
+     0.0031755515462119207
+    ],
+    "before": [
+     0.9703581846592898,
+     0.02619936434009078,
+     0.0034424510006193995
+    ],
+    "count_after": 12.889856556072894,
+    "count_before": 12.766921680578834,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.029846693047972172,
+     0.9611690341251267,
+     0.00898427282690118
+    ],
+    "before": [
+     0.029788169892367277,
+     0.961227015316907,
+     0.00898481479072574
+    ],
+    "count_after": 10.379645045604818,
+    "count_before": 10.394094135090498,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9863698682938004,
+     0.011828154041382941,
+     0.001801977664816793
+    ],
+    "before": [
+     0.9852905662947458,
+     0.012764766436418112,
+     0.0019446672688360697
+    ],
+    "count_after": 13.431805517237144,
+    "count_before": 13.28629345023951,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.13110650053771908,
+     0.8595729066220495,
+     0.009320592840231293
+    ],
+    "before": [
+     0.1299585679111205,
+     0.8607085254119959,
+     0.009332906676883499
+    ],
+    "count_after": 10.947199708769105,
+    "count_before": 11.012384326291171,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6248299706790198,
+     0.3645682415544954,
+     0.010601787766484773
+    ],
+    "before": [
+     0.6709268090865934,
+     0.31768925613023513,
+     0.01138393478317148
+    ],
+    "count_after": 10.955743291490382,
+    "count_before": 10.849056726530172,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.02020298036415596,
+     0.5077796217132698,
+     0.47201739792257413
+    ],
+    "before": [
+     0.020354463015121005,
+     0.5040889361600542,
+     0.4755566008248248
+    ],
+    "count_after": 10.243836282643382,
+    "count_before": 10.207522408643186,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.11336807141700235,
+     0.6485306529629263,
+     0.23810127562007138
+    ],
+    "before": [
+     0.11533023319736661,
+     0.6424474611867425,
+     0.24222230561589095
+    ],
+    "count_after": 9.941199279805765,
+    "count_before": 9.83895492536528,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004224853247079013,
+     0.11331316652378204,
+     0.882461980229139
+    ],
+    "before": [
+     0.004225576742274085,
+     0.11316132369610557,
+     0.8826130995616203
+    ],
+    "count_after": 11.106176280769121,
+    "count_before": 11.109110824694103,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.005999459866316521,
+     0.9700027006684174,
+     0.023997839465266083
+    ],
+    "before": [
+     0.0066350856622799225,
+     0.9668245716886004,
+     0.02654034264911969
+    ],
+    "count_after": 10.438666436158845,
+    "count_before": 10.149103694794457,
+    "leaf": {
+     "arterial_road": true,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. RQ-60060\n\nBetween: Sentinel Ambulance Service (\"the Provider\")\nAnd: Lakeshore Striders (\"the Client\")\n\nEvent: Lakeshore Community Run 10K\nEvent date: 4 April 2027\nLocation: Tanners Row, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the top of Hatter Street from 08:00 until the last runner has finished or 11:30, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $780, paid in full on signature.\n\nSigned for the Provider: Samuel Adeyemi, Operations Manager, 28 December 2026\nSigned for the Client: Ellis Grant, 28 December 2026\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "Atlas Casualty Group\nCertificate of Insurance\n\nWe certify that a policy of event public liability insurance has been issued as follows.\n\nPolicy: PL-566696\nInsured: Lakeshore Striders\nEvent covered: Lakeshore Community Run 10K\nLocation of event: Tanners Row\nCover starts: 2027-04-03\nCover ends: 2027-04-05\nLimit of indemnity: $2,000,000 any one event\n\nSigned on behalf of the insurer, 2026-12-28\nCertificate reference AG-38958\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nLakeshore Community Run 10K, Sunday 4 April 2027\nApplicant: Lakeshore Striders\nIssue: 2.0\n\n1. Event summary\nA 10K race with 150 runners, starting at 09:00 in the Tanners Row area of Port Halden. An ambulance from Sentinel Ambulance Service is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 12 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Port Halden General Hospital, 10 km from the finish. The transfer route and the pick-up point at the top of Hatter Street have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Ines Moreau, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PORT HALDEN POLICE SERVICE\nTraffic and Events Division\n200 Prince Street, Port Halden\n\n2026-12-28\n\nEllis Grant\nLakeshore Striders\n\nRe: Lakeshore Community Run 10K, 2027-04-04\n\nDear Ellis Grant,\n\nI confirm that this Division will provide a police escort for the above event on 2027-04-04. Two motorcycle officers will accompany the lead runner along the route through Tanners Row, and one traffic unit will be stationed at Hatter Street from 08:00 until the last runner has cleared the course.\n\nPlease send your final course map to this office no later than seven days before the event.\n\nYours sincerely,\n\nCpl. Denise Okafor\nTraffic and Events Division\nReference PH-93096\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nLakeshore Community Run 10K | Sunday 4 April 2027\nOrganiser: Lakeshore Striders\nRace director: Ellis Grant\nReference: PH-57295\n\nOverview\nThe Lakeshore Community Run 10K is a 10K race of 10 km for 150 entrants, based in the Tanners Row area of Port Halden. The start is at 09:00 and the course closes at 11:00.\n\nCourse\nThe course runs in order along Hatter Street, Halden Way, Mill Road, Castle Way, Brook Street and Tanner Street, all of which are closed to traffic for the race. Major roads crossed: Canal Road, High Street, Church Road, Regent Road and Queen's Road. The finish is in Exchange Square.\n\nCourse dimensions\nSurvey widths: Hatter Street 9 m, Castle Way 14 m, Tanner Street 9 m, kerb to kerb, excluding footways. Start pens sit side by side across the full carriageway, and spectators have the pavement and a grassed verge along most of the route.\n\nSupport\nEntrants collect numbers from the top of Hatter Street from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Lakeshore website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Lakeshore Community Run 10K\nDate: Sunday 4 April 2027\nApplicant: Lakeshore Striders\nPrepared by: Brightway Traffic Consulting\nIssue: 2.0\n\n1. Scope\nThis plan describes how traffic will be managed for the Lakeshore Community Run 10K, a 10K race in the Tanners Row area of Port Halden with a 09:00 start. It has been prepared to accompany the permit application and should be read with the race plan. See the attached correspondence from the police for the escort.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Northline Barriers.\n- Hatter Street, Copper Row to Bell Street: closed 08:00 to 11:30\n- Halden Way, Ash Avenue to Dyer Street: closed 08:00 to 11:30\n- Mill Road, Fenwick Street to Ash Avenue: closed 08:00 to 11:30\n- Castle Way, Copper Row to Dyer Street: closed 08:00 to 11:30\n- Brook Street, Ash Avenue to Bridge Row: closed 08:00 to 11:30\n- Tanner Street, Dyer Street to Copper Row: closed 08:00 to 11:30\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 08:00 until the last runner has passed.\n- Canal Road at Halden Way: 2 traffic marshals with stop/go boards, one supervisor\n- High Street at Halden Way: 3 traffic marshals with stop/go boards, one supervisor\n- Church Road at Hatter Street: 3 traffic marshals with stop/go boards, one supervisor\n- Regent Road at Halden Way: 2 traffic marshals with stop/go boards, one supervisor\n- Queen's Road at Brook Street: 4 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Hatter Street: traffic diverted via Victoria Road and Tram Street, signed from Bridge Row\n- Halden Way: traffic diverted via Station Road and Tram Street, signed from Bell Street\n- Mill Road: traffic diverted via Prince Street and Victoria Road, signed from Fenwick Street\n- Castle Way: traffic diverted via Victoria Road and Cross Avenue, signed from Dyer Street\n- Brook Street: traffic diverted via Prince Street and Victoria Road, signed from Dyer Street\n- Tanner Street: traffic diverted via Prince Street and Station Road, signed from Copper Row\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\nThe route has changed little from last time. Where it has changed, we have tried to keep a clear run for the field, and we welcome any comments from the Events Office on how signed diversions are usually handled in the city.\n\n6. Notification\nDetails of the event will be published on the organiser's website and shared through social media in the weeks leading up to race day.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 11:30.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the Lakeshore Community Run 10K, Sunday 4 April 2027. 150 runners, 10K, off at 09:00, around Tanners Row. I've attached ambulance_agreement.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nEllis\n\nEllis Grant, Lakeshore Striders\n555-0147\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Lakeshore Community Run 10K: a 10K road race through the Tanners Row area, organised by Lakeshore.",
+   "event_date": "2027-04-04",
+   "event_name": "Lakeshore Community Run 10K",
+   "event_type": "street_race",
+   "expected_runners": 150,
+   "fee_paid": true,
+   "hospital_distance_km": 10,
+   "organizer": "Lakeshore Striders",
+   "route": {
+    "arterial_road": true,
+    "major_crossings": 5,
+    "road_closure": true
+   },
+   "venue": "Tanners Row"
+  }
+ },
+ "events": [
+  1036,
+  1037,
+  1038,
+  1039,
+  1040,
+  1041,
+  1042,
+  1043,
+  1044,
+  1045,
+  1046,
+  1047
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: Sentinel Ambulance Service (\"the Provider\")",
+     "value": "Sentinel Ambulance Service",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: 4 April 2027",
+     "value": "4 April 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "Insured: Lakeshore Striders",
+     "value": "Lakeshore Striders",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "Location of event: Tanners Row",
+     "value": "Tanners Row",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Cover starts: 2027-04-03",
+     "value": "2027-04-03",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Cover ends: 2027-04-05",
+     "value": "2027-04-05",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "Limit of indemnity: $2,000,000 any one event",
+     "value": "$2,000,000 any one event",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "I confirm that this Division will provide a police escort for the above event on 2027-04-04.",
+     "value": "2027-04-04",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "Cpl. Denise Okafor",
+     "value": "Cpl. Denise Okafor",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.20663888002616157,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.448486640564344,
+      "entropy": 0.16222177504290625,
+      "levels": [
+       0.005356352448738848,
+       0.966275398312399,
+       0.02836824923886221
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.02259863871883308,
+      "count": 12.766921680578834,
+      "entropy": 0.1441408100221314,
+      "levels": [
+       0.9703581846592898,
+       0.02619936434009078,
+       0.0034424510006193995
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.804259583978752,
+      "entropy": 0.099350245024311,
+      "levels": [
+       0.0007316309261483705,
+       0.018804747962794188,
+       0.9804636211110574
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.001988278187335117,
+      "count": 10.394094135090498,
+      "entropy": 0.18501484598885598,
+      "levels": [
+       0.029788169892367277,
+       0.961227015316907,
+       0.00898481479072574
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.9515467843639513,
+     0.044899917359627124,
+     0.003553298276421526
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.024586916906168196
+   },
+   "name": "Medical emergency",
+   "product": 0.0032376761462684545,
+   "severity": {
+    "entropy": 0.3379785275041167,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.801897040827118,
+      "entropy": 0.08154973387978336,
+      "levels": [
+       0.006816812251195318,
+       0.9863663754976094,
+       0.006816812251195318
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.09502166742559011,
+      "count": 13.28629345023951,
+      "entropy": 0.08240861632522287,
+      "levels": [
+       0.9852905662947458,
+       0.012764766436418112,
+       0.0019446672688360697
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.976118489982667,
+      "entropy": 0.17097104843344546,
+      "levels": [
+       0.003399650991986503,
+       0.9626038390881485,
+       0.03399650991986504
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.03666121736327939,
+      "count": 11.012384326291171,
+      "entropy": 0.43791528666288687,
+      "levels": [
+       0.1299585679111205,
+       0.8607085254119959,
+       0.009332906676883499
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.8997573664563833,
+     0.09755914233397588,
+     0.002683491209640812
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.1316828847888695
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.8586886379254587,
+    "leaves": [
+     {
+      "contribution": 0.04111783532633198,
+      "count": 10.849056726530172,
+      "entropy": 0.6830014903343405,
+      "levels": [
+       0.6709268090865934,
+       0.31768925613023513,
+       0.01138393478317148
+      ],
+      "reach": 0.846,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.010448080008682794,
+      "count": 10.207522408643186,
+      "entropy": 0.7780384115141613,
+      "levels": [
+       0.020354463015121005,
+       0.5040889361600542,
+       0.4755566008248248
+      ],
+      "reach": 0.05400000000000005,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.01308649599193455,
+      "count": 9.83895492536528,
+      "entropy": 0.8768189237077235,
+      "levels": [
+       0.11533023319736661,
+       0.6424474611867425,
+       0.24222230561589095
+      ],
+      "reach": 0.09399999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0016571074426376539,
+      "count": 11.109110824694103,
+      "entropy": 0.37988179776203673,
+      "levels": [
+       0.004225576742274085,
+       0.11316132369610557,
+       0.8826130995616203
+      ],
+      "reach": 0.006000000000000004,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.5795696168710806,
+     0.35705494253255227,
+     0.0633754405963671
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.94,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.06630951876958696
+   },
+   "name": "Traffic conflict",
+   "product": 0.027447743116082397,
+   "severity": {
+    "entropy": 0.16221371031749943,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.893389303964141,
+      "entropy": 0.30263681672526127,
+      "levels": [
+       0.008728665161295238,
+       0.0698293212903619,
+       0.9214420135483429
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.41393367989078783,
+      "count": 10.149103694794457,
+      "entropy": 0.16221371031749943,
+      "levels": [
+       0.0066350856622799225,
+       0.9668245716886004,
+       0.02654034264911969
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.502952589657136,
+      "entropy": 0.18133063813197886,
+      "levels": [
+       0.02457938538467615,
+       0.9631309219229858,
+       0.012289692692338075
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 12.990409958415167,
+      "entropy": 0.05072173201096268,
+      "levels": [
+       0.991883878344997,
+       0.0068175421902024755,
+       0.0012985794648004716
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.0066350856622799225,
+     0.9668245716886004,
+     0.02654034264911969
+    ],
+    "questions": [
+     {
+      "answer": 1.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.41393367989078783
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.41393367989078783,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.23164046323858928,
+   "t_low": 0.1838103154407427
+  },
+  "weights_version": "first-guess+87"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The paperwork is complete, the fee is paid, insurance covers the race date and venue, and the police escort, ambulance and plans are all in place, so the overall risk is low.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.03068541926235085,
+ "t_high": 0.23164046323858928,
+ "t_low": 0.1838103154407427,
+ "title": "Lakeshore Community Run 10K",
+ "unmapped_documents": []
+}

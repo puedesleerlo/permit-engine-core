@@ -1,0 +1,94 @@
+document: cover_letter
+families:
+  a:
+    style: standard business letter
+    layout: |
+      {today_long}
+
+      Events Office
+      City of {city}
+
+      Dear Events Officer,
+
+      {tone_open}
+
+      We are applying for a street race permit for the {event_name} on {date_plain}. We expect {runners} runners over {distance}, starting at {start_time} in the {venue} area. The completed form and the attachments ({attachment_list}) are enclosed. {assertions}
+
+      {tone_close}
+
+      Yours faithfully,
+
+      {contact_name}
+      {contact_role}, {organizer}
+      {contact_email} / {contact_phone}
+  b:
+    style: friendly email
+    layout: |
+      Hello,
+
+      {tone_open}
+
+      Here is our application for the {event_name}, {date_plain}. {runners} runners, {distance}, off at {start_time}, around {venue}. I've attached {attachment_list}. {assertions}
+
+      {tone_close}
+
+      Thanks,
+      {contact_first}
+
+      {contact_name}, {organizer}
+      {contact_phone}
+  h:
+    test_only: true
+    style: dictated note
+    layout: |
+      RE: {event_name} / permit application
+
+      To whom it may concern at the City of {city}:
+
+      {tone_open}
+
+      This note goes with our application for {date_plain}, in the {venue} area, for {runners} runners. It covers these attachments: {attachment_list}. {assertions}
+
+      {tone_close}
+
+      {contact_name} for {organizer}
+      Dictated but not read
+tones:
+  plain:
+    open:
+      - "Please find our application below."
+      - "I am writing on behalf of our organisation about this year's race."
+    close:
+      - "Please let me know if you need anything else."
+      - "We look forward to hearing from you."
+  persuasive:
+    open:
+      - "This race means a great deal to our community. Last year it brought families, schools and local businesses together, and it raised money that went directly to people who need it. We believe the City will want to see it go ahead."
+      - "Every year hundreds of people train for months for this event, and many of them tell us it changed their lives. Few events do as much for the health and spirit of this city, and we hope you will see why it deserves your support."
+    close:
+      - "I hope you will see this application for what it is: a real gift to the city, from volunteers who love this place. Please do help us make it happen."
+      - "Think of the runners, the children cheering at the side of the road, and the good causes that depend on this day. We are counting on your support."
+  insistent:
+    open:
+      - "We submitted this application on time and we expect it to be dealt with promptly. Last year your office took far too long and it nearly cost us the event."
+      - "I have to be clear that we need a decision on this without delay. Our sponsors have paid, entries are open and we are not in a position to wait."
+    close:
+      - "I expect a positive answer within five working days. If I do not get one I will take it up with your director and with the local press."
+      - "There is no reason for any further delay or for further questions. Please issue the permit now."
+  mayor:
+    open:
+      - "I should mention that I know Mayor Ellison personally. We spoke about this race at the Chamber dinner last month, and the Mayor told me the City fully supports it and that there would be no problem with the paperwork."
+      - "The Mayor's office is aware of this application. I have known Mayor Ellison for many years, and I have been assured that it will get a smooth passage through your department."
+    close:
+      - "I am sure the Mayor will be glad to hear it went through without difficulty. Please feel free to call the Mayor's office, who can confirm all of this."
+      - "I will be seeing Mayor Ellison again next week and would like to be able to say that your office has been helpful."
+assertions:
+  escort_unproven:
+    - "{sergeant} told me by phone that the police will be there, so that part is taken care of."
+    - "The police have said they will look after the escort, though I haven't got anything in writing yet."
+  ambulance_unproven:
+    - "An ambulance crew from {ambulance_provider} has said they'll attend, and the paperwork will follow."
+    - "We have also lined up {ambulance_provider} for the day."
+  insurance_asserted:
+    - "We are fully insured for the event, as we are every year, so there's no concern there."
+    - "Our public liability insurance is all in order, and we can send details if asked."

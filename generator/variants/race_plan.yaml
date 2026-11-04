@@ -1,0 +1,147 @@
+document: race_plan
+families:
+  a:
+    style: formal event plan
+    layout: |
+      RACE PLAN
+      {event_name} | {date_plain}
+      Organiser: {organizer}
+      Race director: {contact_name}
+      Reference: {ref_no}
+
+      Overview
+      The {event_name} is a {distance} race of {distance_km} km for {runners} entrants, based in the {venue} area of {city}. The start is at {start_time} and the course closes at {end_time}.
+
+      Course
+      {course}
+
+      Course dimensions
+      {width}
+
+      Support
+      Entrants collect numbers from {start_area} from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the {org_short} website the same day.
+    passages:
+      course:
+        closure:
+          - "The course runs in order along {streets}, all of which are closed to traffic for the race. Major roads crossed: {crossing_phrase}. The finish is in {finish_area}."
+        path:
+          - "The course stays entirely on the {path1} and the {path2}, away from the highway, and no road is closed for the race. The finish is at {finish_area}."
+      width:
+        closure_narrow:
+          - "Most of the course follows the older street grid. Measured building line to building line, {first_street} is about {w1} m, {last_street} about {w2} m, and parked vehicles on {mid_street} leave around {w3} m. The field assembles on {first_street} over that width, and the finish chute is laid out in the same street, ahead of {finish_area}."
+          - "Survey widths: {first_street} {w1} m, {mid_street} {w3} m, {last_street} {w2} m, including footways, with continuous walls or shopfronts on both sides. There is no verge, and the start pens have to be set end to end along {first_street} because they cannot sit side by side."
+        closure_open:
+          - "The course uses wide carriageways throughout. {first_street} offers {w1} m kerb to kerb, {mid_street} about {w3} m and {last_street} about {w2} m, with footways of a further 3 m on each side. The field assembles on {first_street}, and the finish is in {finish_area}, an open paved area of around one and a half hectares."
+          - "Survey widths: {first_street} {w1} m, {mid_street} {w3} m, {last_street} {w2} m, kerb to kerb, excluding footways. Start pens sit side by side across the full carriageway, and spectators have the pavement and a grassed verge along most of the route."
+        path_narrow:
+          - "The {path1} is a surfaced path about {w1} m wide, with a railing on one side and a retaining wall on the other. The {path2} section is about {w2} m wide and passes under two low bridges. Runners can go two or three abreast at most, and the start pens have to be strung along the path."
+          - "Usable width on the {path1} is {w1} m and on the {path2} {w2} m, with water or fencing on both sides for almost the whole distance. There are no run-offs apart from the finish area, which measures roughly 15 m by 10 m."
+        path_open:
+          - "The {path1} is a promenade {w1} m wide with open ground alongside. The {path2} section runs across parkland, with a marked lane of {w2} m and open grass on both sides. The start pens sit on the grass, side by side."
+          - "Usable width on the {path1} is {w1} m and on the {path2} {w2} m, with lawn or open paving beside the course for almost the whole distance. The finish area measures roughly 120 m by 60 m."
+  b:
+    style: club secretary letter style
+    layout: |
+      {event_name}: how the race will work
+
+      Prepared by {contact_name} ({contact_role}), {organizer}. Last updated {today_long}.
+
+      This is our plan for race day, {date_plain}. We expect {runners} runners over {distance} ({distance_km} km). Numbers can be collected from {start_area} from an hour before we go at {start_time}, and we aim to have the last finisher home by {end_time}.
+
+      {course}
+
+      {width}
+
+      Our club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.
+    passages:
+      course:
+        closure:
+          - "The route takes in {streets}, and the City would need to close all of these for us. On the way round we cross {crossing_phrase}. We finish in {finish_area}."
+        path:
+          - "Happily we are off-road the whole way. We use the {path1} and then the {path2}, so no streets need closing at all. We finish at {finish_area}."
+      width:
+        closure_narrow:
+          - "Anyone who knows the area will know these are old streets. {first_street} is only about {w1} metres wall to wall, {mid_street} is around {w3} metres once you allow for parked vans we can't move, and {last_street} is about {w2} metres. We line everyone up along {first_street} because there's nowhere else to put them. The last stretch has shopfronts tight on both sides."
+          - "It's a lovely route through the old part of town, though there isn't much room. We measured {first_street} at {w1} metres and {last_street} at {w2} metres, doorstep to doorstep. Two cars can't pass on {mid_street}. People watching tend to stand in doorways."
+        closure_open:
+          - "There's plenty of room. {first_street} is about {w1} metres across, {mid_street} about {w3} metres and {last_street} about {w2} metres, and all have broad pavements too. We line up across the full width of {first_street}, and the finish opens out into {finish_area}, where there's space for everyone."
+          - "These are all big, wide streets. We measured {first_street} at {w1} metres and {last_street} at {w2} metres, kerb to kerb, not counting the pavements. People watching have the pavement and the grass strip to spread out on."
+        path_narrow:
+          - "A word on the path. The {path1} is about {w1} metres across with the water on one side and a fence on the other, and the {path2} is {w2} metres at best, so faster runners have to wait for a gap to get past. We send everyone off from a line strung out along the path."
+          - "The {path1} is lovely but tight, about {w1} metres, and it stays like that until the {path2}, which is {w2} metres. There's no way off either of them for long stretches, except the small clearing where we finish."
+        path_open:
+          - "A word on the path. The {path1} is about {w1} metres across with open ground beside it, and the {path2} is {w2} metres and runs through the middle of the park, so there's lots of room to overtake. We start on the grass in a wide line."
+          - "The {path1} is a big, wide promenade, about {w1} metres, and the {path2} is {w2} metres with lawns on both sides. People can wander alongside and watch from wherever they like."
+  c:
+    style: terse notes
+    layout: |
+      {event_name} - race notes
+      {organizer} / contact {contact_name} {contact_phone}
+      {date_plain}, gun {start_time}, course closes {end_time}
+      {distance} ({distance_km}k), approx {runners} entered
+
+      ROUTE
+      {course}
+
+      WIDTHS
+      {width}
+
+      OTHER
+      numbers from {start_area} 1hr before. chip timing. water on course. results online same day
+    passages:
+      course:
+        closure:
+          - "{streets}. all closed. major x-ings: {crossing_phrase}. finish {finish_area}"
+        path:
+          - "{path1} then {path2}. no roads, no closures. finish {finish_area}"
+      width:
+        closure_narrow:
+          - "{first_street} {w1}m wall to wall. {mid_street} {w3}m w/ parked vans. {last_street} {w2}m. start pens end to end along {first_street}, no room side by side"
+          - "start {first_street} ({w1}m). {mid_street} {w3}m. {last_street} {w2}m incl pavement. shopfronts both sides all the way"
+        closure_open:
+          - "{first_street} {w1}m kerb to kerb. {mid_street} {w3}m. {last_street} {w2}m. pavements extra. start pens side by side across full road"
+          - "start {first_street} ({w1}m). {mid_street} {w3}m. {last_street} {w2}m + wide pavements + verge most of way"
+        path_narrow:
+          - "{path1} {w1}m, rail one side wall other. {path2} {w2}m. 2-3 abreast max. start strung along path"
+          - "{path1} {w1}m, {path2} {w2}m. water/fence both sides nearly whole way. finish area approx 15x10m"
+        path_open:
+          - "{path1} {w1}m, open ground beside. {path2} {w2}m thru parkland, grass both sides. start wide on grass"
+          - "{path1} {w1}m, {path2} {w2}m. lawn or paving beside most of way. finish area approx 120x60m"
+  h:
+    test_only: true
+    style: city question-and-answer template
+    layout: |
+      CITY OF {city_upper} - EVENT INFORMATION TEMPLATE (RACE)
+
+      Q1. Name of event and organising body.
+      A: {event_name}, run by {organizer}.
+
+      Q2. Date, start time and finish time.
+      A: {date_plain}, {start_time} to {end_time}.
+
+      Q3. Distance and number of entrants.
+      A: {distance} ({distance_km} km), {runners} entrants.
+
+      Q4. Describe the course.
+      A: {course}
+
+      Q5. Describe the physical space available, including the width of the course and of the start and finish areas.
+      A: {width}
+
+      Q6. Who is the responsible person on the day?
+      A: {contact_name}, {contact_role}, {contact_phone}.
+    passages:
+      course:
+        closure:
+          - "Along {streets}, which all require closure. Major roads crossed: {crossing_phrase}. Ending in {finish_area}."
+        path:
+          - "Along the {path1} and the {path2} only. No closure of any road is requested. Ending at {finish_area}."
+      width:
+        closure_narrow:
+          - "{first_street} measures {w1} m between frontages, {mid_street} {w3} m after allowing for vehicles that cannot be moved, and {last_street} {w2} m. Assembly is along {first_street} in single-file pens. The finish chute takes up most of {last_street}."
+        closure_open:
+          - "{first_street} measures {w1} m between kerbs, {mid_street} {w3} m and {last_street} {w2} m, each with additional footway. Assembly is across the whole of {first_street}. The finish opens into {finish_area}, which has room to spare."
+        path_narrow:
+          - "The {path1} is {w1} m wide and bounded on both sides. The {path2} is {w2} m wide and bounded on both sides. Assembly is in a long line on the path. The finish area is about 15 m by 10 m."
+        path_open:
+          - "The {path1} is {w1} m wide with open ground beside it. The {path2} is {w2} m wide with lawns on both sides. Assembly is on open grass. The finish area is about 120 m by 60 m."

@@ -1,0 +1,203 @@
+document: medical_plan
+essential: [posts, weather, evacuation, comms, lead]
+families:
+  a:
+    style: consultant report
+    layout: |
+      EVENT MEDICAL PLAN
+      {event_name}, {date_plain}
+      Applicant: {organizer}
+      Issue: {version}
+
+      1. Event summary
+      A {distance} race with {runners} runners, starting at {start_time} in the {venue} area of {city}. {ambulance_line}
+
+      2. First aid cover
+      {posts}
+
+      3. Weather and hydration
+      {weather}
+
+      4. Transfer to hospital
+      {evacuation}
+
+      5. Communications
+      {comms}
+
+      6. Clinical lead
+      {lead}
+    passages:
+      posts:
+        full:
+          - "{post_count} first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by {medic_count} qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators."
+        thin:
+          - "First aid will be available on the day from members of the organising committee, several of whom hold workplace certificates. A well-stocked first aid kit will be held at the event headquarters, and a further kit will be carried by the lead vehicle."
+      weather:
+        full:
+          - "Water is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish."
+        thin:
+          - "Participants are reminded in their pre-race information to dress appropriately for the conditions and to drink plenty of fluids before, during and after the race. Our experienced committee will keep a close eye on the weather in the days leading up to the event."
+      evacuation:
+        full:
+          - "The receiving hospital is {hospital}, {hospital_km} km from the finish. The transfer route and the pick-up point at {start_area} have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers."
+        thin:
+          - "Should anyone require hospital treatment, the emergency services would be called in the normal way and would make the necessary arrangements for transfer, in line with their usual procedures."
+      comms:
+        full:
+          - "Every first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open."
+        thin:
+          - "Members of the team will have their mobile phones with them, and a list of contact numbers will be circulated in the week before the event. Coverage in the area is generally reported to be good."
+      lead:
+        full:
+          - "The medical lead is {medic_name}, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds."
+        thin:
+          - "Responsibility for welfare on the day rests with the race director, supported by the wider committee, all of whom take the wellbeing of participants extremely seriously."
+  b:
+    style: club secretary letter style
+    layout: |
+      Medical cover for the {event_name}, {date_plain}
+
+      From {contact_name}, {contact_role}, {organizer}
+
+      The race is a {distance} with {runners} runners and starts at {start_time}. {ambulance_line}
+
+      First aid
+      {posts}
+
+      Heat, cold and water
+      {weather}
+
+      If someone needs hospital
+      {evacuation}
+
+      Staying in touch
+      {comms}
+
+      Who's responsible
+      {lead}
+    passages:
+      posts:
+        full:
+          - "We'll have {post_count} first aid posts, at the start, the finish and halfway, with {medic_count} trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators."
+        thin:
+          - "Several of our members have done the first aid course through work, and they're happy to help out. We keep a good first aid box at the HQ tent, and another one goes in the lead car. In all our years we've only ever had blisters and scraped knees."
+      weather:
+        full:
+          - "There's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish."
+        thin:
+          - "We always tell runners to dress sensibly for the weather and to keep drinking, and it's all in the email we send them the week before. We'll be watching the forecast, and people here are used to all sorts of weather."
+      evacuation:
+        full:
+          - "The nearest emergency department is at {hospital}, {hospital_km} km from the finish. We've walked the route out from the pick-up point at {start_area} with the first aiders, and we've told the hospital the date and how many are coming."
+        thin:
+          - "If someone needed the hospital we'd dial 911 and the paramedics would take it from there. They know what they're doing far better than we do, and the city's service is very good."
+      comms:
+        full:
+          - "Everyone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to."
+        thin:
+          - "We'll all have our phones, and I'll send a list of numbers round the team the week before. The signal is usually fine around there."
+      lead:
+        full:
+          - "Our medical lead is {medic_name}, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out."
+        thin:
+          - "I take overall responsibility as organiser, along with the rest of the committee. We all care a great deal about our runners and would never let anyone come to harm."
+  c:
+    style: terse notes
+    layout: |
+      {event_name} - medical notes
+      {date_plain} / gun {start_time} / {runners} runners / {distance}
+      contact {contact_name} {contact_phone}
+      {ambulance_line}
+
+      FIRST AID
+      {posts}
+
+      WEATHER / WATER
+      {weather}
+
+      HOSPITAL
+      {evacuation}
+
+      COMMS
+      {comms}
+
+      LEAD
+      {lead}
+    passages:
+      posts:
+        full:
+          - "{post_count} posts (start, finish, midpoint). {medic_count} qualified first aiders. nowhere more than 1.5km from a post. 2 bike responders w/ defibs"
+        thin:
+          - "committee members w/ work first aid certs. kit at HQ tent + kit in lead car"
+      weather:
+        full:
+          - "water every 2.5k. forecast check -48h and -2h. >28C earlier start or shorter course. >32C cancel. foil + warm tent at finish if cold/wet"
+        thin:
+          - "pre-race email tells runners dress for weather + drink plenty. will watch forecast"
+      evacuation:
+        full:
+          - "{hospital}, {hospital_km}km from finish. pickup point {start_area}, route walked w/ first aiders. ED told date + numbers"
+        thin:
+          - "call 911 if needed, paramedics handle it from there"
+      comms:
+        full:
+          - "radios on medical channel at all posts + bikes, phones backup. amb calls go via medical lead, who gives crew the barrier to come to"
+        thin:
+          - "team phones. number list circulated week before. signal ok usually"
+      lead:
+        full:
+          - "{medic_name}, registered paramedic, on site from -1hr til last runner in. can withdraw any runner"
+        thin:
+          - "race director + committee"
+  h:
+    test_only: true
+    style: city question-and-answer template
+    layout: |
+      CITY OF {city_upper} - EVENT MEDICAL TEMPLATE
+
+      Event: {event_name}, {date_plain}, start {start_time}
+      Applicant: {organizer}
+      Person completing this form: {contact_name}
+
+      {ambulance_line}
+
+      Q1. What first aid cover will you have, and where?
+      A: {posts}
+
+      Q2. How will you manage heat, cold and water?
+      A: {weather}
+
+      Q3. Which hospital would receive a casualty, and how will they get there?
+      A: {evacuation}
+
+      Q4. How will medical staff communicate?
+      A: {comms}
+
+      Q5. Who is the medical lead, and what are their qualifications?
+      A: {lead}
+    passages:
+      posts:
+        full:
+          - "{post_count} posts at start, finish and midpoint, with {medic_count} qualified first aiders. No point on the course is more than 1.5 km from a post. Two cycle responders carry defibrillators."
+        thin:
+          - "Committee members with workplace first aid certificates. A kit will be kept at the HQ tent and another in the lead vehicle."
+      weather:
+        full:
+          - "Water every 2.5 km. Forecast reviewed at 48 hours and 2 hours. Above 28 degrees C the start moves earlier or the course is shortened. Above 32 degrees C the race is cancelled. Foil blankets and a warm shelter are at the finish."
+        thin:
+          - "Runners are advised in the pre-race email to dress for the conditions and drink plenty. The committee will monitor the forecast."
+      evacuation:
+        full:
+          - "{hospital}, {hospital_km} km from the finish. Pick-up point at {start_area}, route walked in advance. Emergency department notified of date and numbers."
+        thin:
+          - "Emergency services would be called and would decide on the appropriate hospital and transfer."
+      comms:
+        full:
+          - "Radios on a medical channel at every post and with each cycle responder, phones as backup. Ambulance calls go through the medical lead, who directs the crew to the right barrier."
+        thin:
+          - "Mobile phones, with a contact list circulated in advance. Coverage is believed to be good."
+      lead:
+        full:
+          - "{medic_name}, registered paramedic, on site from one hour before the start until the last runner is in, with authority to withdraw any runner."
+        thin:
+          - "The race director has overall responsibility, supported by the committee."

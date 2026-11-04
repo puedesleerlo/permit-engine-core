@@ -1,0 +1,1140 @@
+{
+ "case_id": "R0330-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9762396785825755,
+     0.02032626804613843,
+     0.003434053371286083
+    ],
+    "before": [
+     0.9736161380349021,
+     0.0225706311363959,
+     0.0038132308287019776
+    ],
+    "count_after": 10.035121710767298,
+    "count_before": 9.633222570673915,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.015455310289932989,
+     0.9745519674151746,
+     0.009992722294892394
+    ],
+    "before": [
+     0.015271771036760435,
+     0.9747336438206712,
+     0.009994585142568417
+    ],
+    "count_after": 11.451429421208504,
+    "count_before": 11.549436438385275,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.01854527660913237,
+     0.9681263254822012,
+     0.013328397908666433
+    ],
+    "before": [
+     0.018507893612348312,
+     0.968163200808642,
+     0.013328905579009525
+    ],
+    "count_after": 10.038983379948066,
+    "count_before": 10.053181759314954,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.9885487459956266,
+     0.010218522918776207,
+     0.0012327310855972586
+    ],
+    "before": [
+     0.9874560762820714,
+     0.011193566394918742,
+     0.0013503573230098243
+    ],
+    "count_after": 11.47567944555484,
+    "count_before": 11.24824487895469,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.003838077667514656,
+     0.975688759301805,
+     0.020473163030680332
+    ],
+    "before": [
+     0.004161989052139851,
+     0.9736370322867005,
+     0.022200978661159547
+    ],
+    "count_after": 12.842132422609636,
+    "count_before": 12.706370340898477,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.0005610962813854701,
+     0.017272728993192262,
+     0.9821661747254222
+    ],
+    "before": [
+     0.0005611229143197708,
+     0.017226082968770966,
+     0.9822127941169093
+    ],
+    "count_after": 11.522331890167719,
+    "count_before": 11.546896641612062,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.987786186922819,
+     0.010628627421653977,
+     0.0015851856555270099
+    ],
+    "before": [
+     0.987538527598867,
+     0.010844143957329695,
+     0.001617328443803321
+    ],
+    "count_after": 14.51248316190473,
+    "count_before": 14.32766251353355,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.31665653494153345,
+     0.6776247202300115,
+     0.005718744828455049
+    ],
+    "before": [
+     0.2707120197382226,
+     0.7231847363166266,
+     0.00610324394515082
+    ],
+    "count_after": 11.295057207427435,
+    "count_before": 11.297797101201507,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.6207115925774717,
+     0.36926289695414016,
+     0.010025510468388113
+    ],
+    "before": [
+     0.5846161779537993,
+     0.40440422242009344,
+     0.010979599626107369
+    ],
+    "count_after": 11.238122922129838,
+    "count_before": 10.92558000486532,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.017092589095824166,
+     0.5076594161628812,
+     0.4752479947412946
+    ],
+    "before": [
+     0.01698616142926761,
+     0.5077143847249943,
+     0.4752994538457381
+    ],
+    "count_after": 10.919795430032265,
+    "count_before": 10.94717584180219,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.12164762033476896,
+     0.5706627864734852,
+     0.3076895931917457
+    ],
+    "before": [
+     0.11980575940253087,
+     0.5718594377449127,
+     0.3083348028525565
+    ],
+    "count_after": 10.626305043263942,
+    "count_before": 10.678203064781448,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.0035728085087052973,
+     0.09432998187114655,
+     0.9020972096201482
+    ],
+    "before": [
+     0.0035705362102526374,
+     0.09433019698558107,
+     0.9020992668041663
+    ],
+    "count_after": 12.108386754639943,
+    "count_before": 12.111874500427616,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9949274981799439,
+     0.004260901528847171,
+     0.000811600291208985
+    ],
+    "before": [
+     0.9945199918903107,
+     0.004603206812138996,
+     0.000876801297550285
+    ],
+    "count_after": 13.44766510137275,
+    "count_before": 13.384586130508334,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "CROWD MANAGEMENT PLAN\nNorthgate Rotary Founders Race Half Marathon, Saturday 10 July 2027\nApplicant: Northgate Rotary Club\nPrepared by Ines Moreau, Event Secretary\nIssue: 2.1\n\n1. Attendance\nWe expect 450 people in total at the event, including 260 runners. About 190 of those are spectators.\n\n2. Spectator areas\nSpectators will be directed to three marked viewing areas behind pedestrian barriers: the finish area by Ferry Park lawn, the turn at Orchard Road and the start at the top of Rope Walk. Together these hold approximately 600 people at a planning density of two persons per square metre, which exceeds the expected attendance.\n\n3. Start procedure\nRunners will self-seed into 3 pens by expected finish time and be released at intervals of four minutes, so that the field is spread out before the first turn. Pens are closed five minutes before each release.\n\nWe hired a radio or two last time for the start team, which proved useful, and we had a short briefing for anyone who turned up early. Feedback from runners has been good, and we have no reports of people being unable to find a way through.\n\n4. Stewarding\n9 stewards in high-visibility tabards, led by 2 supervisors, are allocated by position on the attached rota. That is around one steward for every 50 people expected. All attend a briefing at the site one hour before the start.\n\n5. Exit and dispersal\nFinishers walk through a one-way funnel to the recovery area and leave by the north gate. Spectators leave by two marked exits. Stewards hold the exits open and keep them clear, and we estimate that the whole area will empty within 25 minutes of the last finisher.\n\n6. Event control\nThe event controller, Ines Moreau, sits at the control point with radio contact to all supervisors and can hold a start, stop the race or use the public address to move people. A supervisor reports to the controller if any pen or viewing area appears to be filling beyond its marked capacity.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. AG-76009\nIssued: 2027-04-18\n\nINSURER: Harbourline Insurance Company\nPOLICY NUMBER: GL-922555\n\nNAMED INSURED: Northgate Rotary Club\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Northgate Rotary Founders Race Half Marathon\nVENUE: Harbourside, Port Halden\n\nPOLICY PERIOD\nEffective: 2027-01-01\nExpiry: 2027-12-31\n\nLIMIT OF LIABILITY: $5,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Northgate Rotary Founders Race Half Marathon - medical notes\nSaturday 10 July 2027 / gun 10:00 / 260 runners / half marathon\ncontact Ines Moreau 555-0139\nWe expect a crew from Sentinel Ambulance Service on the day, though we have nothing in writing yet.\n\nFIRST AID\n3 posts (start, finish, midpoint). 10 qualified first aiders. nowhere more than 1.5km from a post. 2 bike responders w/ defibs\n\nWEATHER / WATER\nwater every 2.5k. forecast check -48h and -2h. >28C earlier start or shorter course. >32C cancel. foil + warm tent at finish if cold/wet\n\nHOSPITAL\nHarbourside Medical Centre, 7km from finish. pickup point the top of Rope Walk, route walked w/ first aiders. ED told date + numbers\n\nCOMMS\nradios on medical channel at all posts + bikes, phones backup. amb calls go via medical lead, who gives crew the barrier to come to\n\nLEAD\nJoan Kowalczyk, registered paramedic, on site from -1hr til last runner in. can withdraw any runner\n"
+   },
+   {
+    "name": "police_email.txt",
+    "text": "From: karen.holt@phps.example\nTo: ines@northgaterotary.example\nDate: April 18, 2027\nSubject: RE: Escort request - Northgate Rotary Founders Race Half Marathon\n\nHi Ines,\n\nConfirmed for July 10, 2027. I've got two bikes and a car down for your race, on station at Rope Walk from 09:00. Send me the final map when you have it.\n\nSgt. Karen Holt\nTraffic & Events, PHPS\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Northgate Rotary Founders Race Half Marathon: how the race will work\n\nPrepared by Ines Moreau (Event Secretary), Northgate Rotary Club. Last updated 18 April 2027.\n\nThis is our plan for race day, Saturday 10 July 2027. We expect 260 runners over half marathon (21 km). Numbers can be collected from the top of Rope Walk from an hour before we go at 10:00, and we aim to have the last finisher home by 13:30.\n\nThe route takes in Rope Walk, Castle Way, Orchard Road and Bell Street, and the City would need to close all of these for us. On the way round we cross Ferry Road. We finish in Ferry Park lawn.\n\nThere's plenty of room. Rope Walk is about 16 metres across, Orchard Road about 16 metres and Bell Street about 12 metres, and all have broad pavements too. We line up across the full width of Rope Walk, and the finish opens out into Ferry Park lawn, where there's space for everyone.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Northgate Rotary Founders Race Half Marathon\nDate: Saturday 10 July 2027\nApplicant: Northgate Rotary Club\nPrepared by: Tessera Event Transport\nIssue: 2.1\n\n1. Scope\nThis plan describes how traffic will be managed for the Northgate Rotary Founders Race Half Marathon, a half marathon race in the Harbourside area of Port Halden with a 10:00 start. It has been prepared to accompany the permit application and should be read with the race plan. Police attendance is covered in the attached correspondence.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Northline Barriers.\n- Rope Walk, Quay Street to Glebe Road: closed 09:00 to 14:00\n- Castle Way, Glebe Road to Foundry Street: closed 09:00 to 14:00\n- Orchard Road, Tanner Street to Quay Street: closed 09:00 to 14:00\n- Bell Street, Weir Street to Tanner Street: closed 09:00 to 14:00\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 09:00 until the last runner has passed.\n- Ferry Road at Orchard Road: 2 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Rope Walk: traffic diverted via Church Road and Canal Road, signed from Quay Street\n- Castle Way: traffic diverted via Canal Road and Victoria Road, signed from Copper Row\n- Orchard Road: traffic diverted via Regent Road and Station Road, signed from Weir Street\n- Bell Street: traffic diverted via Tram Street and Church Road, signed from Weir Street\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\nWe have a good working relationship with local residents. Several members walk the route the week before, noting anything that has changed, such as new roadworks, a barrier left in place, or a lane marked for cycles.\n\n6. Notification\nDetails of the event will be published on the organiser's website and shared through social media in the weeks leading up to race day.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 14:00.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Northgate Rotary Founders Race Half Marathon, Saturday 10 July 2027. 260 runners, half marathon, off at 10:00, around Harbourside. I've attached crowd_plan.txt, insurance.txt, medical_plan.txt, police_email.txt, race_plan.txt, traffic_plan.txt. An ambulance crew from Sentinel Ambulance Service has said they'll attend, and the paperwork will follow.\n\nWe look forward to hearing from you.\n\nThanks,\nInes\n\nInes Moreau, Northgate Rotary Club\n555-0139\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_email.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Our annual half marathon on the streets of Harbourside. We expect around 190 spectators at the finish.",
+   "event_date": "2027-07-10",
+   "event_name": "Northgate Rotary Founders Race Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 260,
+   "fee_paid": true,
+   "hospital_distance_km": 7,
+   "organizer": "Northgate Rotary Club",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 1,
+    "road_closure": true
+   },
+   "venue": "Harbourside"
+  }
+ },
+ "events": [
+  1179,
+  1180,
+  1181,
+  1182,
+  1183,
+  1184,
+  1185,
+  1186,
+  1187,
+  1188,
+  1189,
+  1190,
+  1191
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Northgate Rotary Club",
+     "value": "Northgate Rotary Club",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Harbourside, Port Halden",
+     "value": "Harbourside, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 2027-01-01",
+     "value": "2027-01-01",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 2027-12-31",
+     "value": "2027-12-31",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $5,000,000 each occurrence",
+     "value": "$5,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "police_email.txt",
+   "evidence_type": "police_escort_email",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Confirmed for July 10, 2027.",
+     "value": "July 10, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "sender",
+     "quote": "From: karen.holt@phps.example",
+     "value": "karen.holt@phps.example",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.42759847582436455,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 10.465416852993473,
+      "entropy": 0.2069534884153497,
+      "levels": [
+       0.023268501200012445,
+       0.9570180406163379,
+       0.019713458183649675
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.02012855250819444,
+      "count": 9.633222570673915,
+      "entropy": 0.1328372990903232,
+      "levels": [
+       0.9736161380349021,
+       0.0225706311363959,
+       0.0038132308287019776
+      ],
+      "reach": 0.88,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.775717168241071,
+      "entropy": 0.17259394165425568,
+      "levels": [
+       0.0033335956989541337,
+       0.034595266968227276,
+       0.9620711373328187
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.012093261041468743,
+      "count": 11.549436438385275,
+      "entropy": 0.13483933402160825,
+      "levels": [
+       0.015271771036760435,
+       0.9747336438206712,
+       0.009994585142568417
+      ],
+      "reach": 0.12,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.8586148139951251,
+     0.13683019265850893,
+     0.00455499334636595
+    ],
+    "questions": [
+     {
+      "answer": 0.88,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.03222181354966318
+   },
+   "name": "Crowd pressure",
+   "product": 0.0035615035761344905,
+   "severity": {
+    "entropy": 0.14768292246609846,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 9.830734956144164,
+      "entropy": 0.19307953107434878,
+      "levels": [
+       0.00366677506442651,
+       0.9559986992268819,
+       0.04033452570869162
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.008048899505274024,
+      "count": 10.053181759314954,
+      "entropy": 0.16271467545244378,
+      "levels": [
+       0.018507893612348312,
+       0.968163200808642,
+       0.013328905579009525
+      ],
+      "reach": 0.02,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.403948223363226,
+      "entropy": 0.15066292136598697,
+      "levels": [
+       0.024182990470587775,
+       0.9697712619117652,
+       0.006045747617646944
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.10248192367900079,
+      "count": 11.24824487895469,
+      "entropy": 0.07167340761583216,
+      "levels": [
+       0.9874560762820714,
+       0.011193566394918742,
+       0.0013503573230098243
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9680771126286769,
+     0.03033295908319321,
+     0.0015899282881298184
+    ],
+    "questions": [
+     {
+      "answer": 0.02,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.11053082318427479
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.2276156679078501,
+    "leaves": [
+     {
+      "contribution": 0.10098401950981889,
+      "count": 12.706370340898477,
+      "entropy": 0.13336027033705772,
+      "levels": [
+       0.004161989052139851,
+       0.9736370322867005,
+       0.022200978661159547
+      ],
+      "reach": 0.97,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 13.565477730656658,
+      "entropy": 0.11255673601460367,
+      "levels": [
+       0.9782506505484755,
+       0.01923625281653841,
+       0.0025130966349860237
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.008891930069707097,
+      "count": 11.546896641612062,
+      "entropy": 0.09178921009336811,
+      "levels": [
+       0.0005611229143197708,
+       0.017226082968770966,
+       0.9822127941169093
+      ],
+      "reach": 0.030000000000000027,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.59201961607645,
+      "entropy": 0.16766860690124696,
+      "levels": [
+       0.02707358782315203,
+       0.9655723995724435,
+       0.007354012604404454
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.004053963068005249,
+     0.9449447038071627,
+     0.05100133312483207
+    ],
+    "questions": [
+     {
+      "answer": 0.97,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.109875949579526
+   },
+   "name": "Medical emergency",
+   "product": 0.03303688414622963,
+   "severity": {
+    "entropy": 0.6751355978376772,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 12.267391451359652,
+      "entropy": 0.06622939481935232,
+      "levels": [
+       0.00531350974463071,
+       0.9893729805107385,
+       0.00531350974463071
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.01047088387866219,
+      "count": 14.32766251353355,
+      "entropy": 0.0718383584075012,
+      "levels": [
+       0.987538527598867,
+       0.010844143957329695,
+       0.001617328443803321
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.56034353793541,
+      "entropy": 0.1451408117508352,
+      "levels": [
+       0.002757605134173266,
+       0.9696663435240941,
+       0.027576051341732664
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.29020350640106135,
+      "count": 11.297797101201507,
+      "entropy": 0.6192367107549903,
+      "levels": [
+       0.2707120197382226,
+       0.7231847363166266,
+       0.00610324394515082
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.34239467052428707,
+     0.6519506770806969,
+     0.005654652395016071
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.30067439027972354
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.873390888096528,
+    "leaves": [
+     {
+      "contribution": 0.04788860459522475,
+      "count": 10.92558000486532,
+      "entropy": 0.7294821192400173,
+      "levels": [
+       0.5846161779537993,
+       0.40440422242009344,
+       0.010979599626107369
+      ],
+      "reach": 0.864,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.00697323592277303,
+      "count": 10.94717584180219,
+      "entropy": 0.7669044645087043,
+      "levels": [
+       0.01698616142926761,
+       0.5077143847249943,
+       0.4752994538457381
+      ],
+      "reach": 0.03600000000000003,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.014599919982557642,
+      "count": 10.678203064781448,
+      "entropy": 0.9365815979552882,
+      "levels": [
+       0.11980575940253087,
+       0.5718594377449127,
+       0.3083348028525565
+      ],
+      "reach": 0.09599999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0011205368418560529,
+      "count": 12.111874500427616,
+      "entropy": 0.3357732914623621,
+      "levels": [
+       0.0035705362102526374,
+       0.09433019698558107,
+       0.9020992668041663
+      ],
+      "reach": 0.004000000000000003,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.5172355146110202,
+     0.4229587928325145,
+     0.05980569255646544
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.96,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.07058229734241149
+   },
+   "name": "Traffic conflict",
+   "product": 0.007211399192728568,
+   "severity": {
+    "entropy": 0.036406836956847585,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 7.892092408998586,
+      "entropy": 0.24586831335061504,
+      "levels": [
+       0.006594082481790423,
+       0.05275265985432338,
+       0.9406532576638863
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.707959785627725,
+      "entropy": 0.13846433937025637,
+      "levels": [
+       0.005439179478042275,
+       0.9728041026097887,
+       0.0217567179121691
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.149103694794459,
+      "entropy": 0.1532527836755921,
+      "levels": [
+       0.019905256986839762,
+       0.9701421145197403,
+       0.009952628493419881
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.10217008321143696,
+      "count": 13.384586130508334,
+      "entropy": 0.036406836956847585,
+      "levels": [
+       0.9945199918903107,
+       0.004603206812138996,
+       0.000876801297550285
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9945199918903107,
+     0.004603206812138996,
+     0.000876801297550285
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.10217008321143696
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.30067439027972354,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.2321834711919719,
+   "t_low": 0.1859683449237186
+  },
+  "weights_version": "first-guess+99"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order, and the traffic, crowd and medical arrangements are complete, so the overall risk is low and the race can go ahead.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.043809786915092686,
+ "t_high": 0.2321834711919719,
+ "t_low": 0.1859683449237186,
+ "title": "Northgate Rotary Founders Race Half Marathon",
+ "unmapped_documents": []
+}

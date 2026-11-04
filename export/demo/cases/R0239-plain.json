@@ -1,0 +1,1158 @@
+{
+ "case_id": "R0239-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.04021326118259452,
+     0.9271007994343047,
+     0.0326859393831008
+    ],
+    "before": [
+     0.04555296387288153,
+     0.9174209066344414,
+     0.037026129492677
+    ],
+    "count_after": 8.394259259000854,
+    "count_before": 7.813443593007856,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.004633536100810044,
+     0.04209986646266228,
+     0.9532665974365278
+    ],
+    "before": [
+     0.004641741448106899,
+     0.04040355869676319,
+     0.9549546998551299
+    ],
+    "count_after": 9.066897041827016,
+    "count_before": 9.229961577844414,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.004618684613432492,
+     0.9445757846388101,
+     0.05080553074775742
+    ],
+    "before": [
+     0.0051567620797715675,
+     0.9381188550427412,
+     0.05672438287748725
+    ],
+    "count_after": 9.102655322976508,
+    "count_before": 8.734750615265602,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.04619074840080466,
+     0.9422615644989941,
+     0.011547687100201164
+    ],
+    "before": [
+     0.04647021894797954,
+     0.9419122263150256,
+     0.011617554736994886
+    ],
+    "count_after": 8.345905261838315,
+    "count_before": 8.325869190693842,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.005865396023093958,
+     0.9634900672457184,
+     0.030644536731187715
+    ],
+    "before": [
+     0.006448455644991215,
+     0.9598607355683022,
+     0.033690808786706626
+    ],
+    "count_after": 11.055745093381871,
+    "count_before": 10.80516793742914,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.0013862085146500972,
+     0.033895315256080374,
+     0.9647184762292695
+    ],
+    "before": [
+     0.001386255417067059,
+     0.03386262706792287,
+     0.9647511175150101
+    ],
+    "count_after": 10.528597568275766,
+    "count_before": 10.535884535545978,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.011319045881952832,
+     0.9773619082360943,
+     0.011319045881952832
+    ],
+    "before": [
+     0.012372187602578683,
+     0.9752556247948427,
+     0.012372187602578683
+    ],
+    "count_after": 10.594174376039105,
+    "count_before": 10.346555386443626,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.003972051469231092,
+     0.9563074338384581,
+     0.03972051469231093
+    ],
+    "before": [
+     0.004013451292564672,
+     0.9558520357817887,
+     0.04013451292564672
+    ],
+    "count_after": 9.520431733080207,
+    "count_before": 9.490852392567188,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.5403341853097832,
+     0.43970649709544907,
+     0.019959317594767715
+    ],
+    "before": [
+     0.5403495502724608,
+     0.4397190006055001,
+     0.019931449122039067
+    ],
+    "count_after": 8.424688580922101,
+    "count_before": 8.429953133173612,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.027677882236857795,
+     0.5586724193853569,
+     0.41364969837778526
+    ],
+    "before": [
+     0.027831038414304635,
+     0.5617638456536608,
+     0.4104051159320346
+    ],
+    "count_after": 9.063130576914896,
+    "count_before": 9.072975438981382,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.09176996941702752,
+     0.5581178385224446,
+     0.350112192060528
+    ],
+    "before": [
+     0.09217122355067552,
+     0.5605581476038625,
+     0.34727062884546206
+    ],
+    "count_after": 8.628952776182073,
+    "count_before": 8.642038717598515,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004548916415803297,
+     0.14648121636683756,
+     0.8489698672173591
+    ],
+    "before": [
+     0.0049958476187168905,
+     0.1608730011900626,
+     0.8341311511912206
+    ],
+    "count_after": 10.198021794260901,
+    "count_before": 9.854331653170332,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.02747007366330705,
+     0.9587948895050394,
+     0.013735036831653525
+    ],
+    "before": [
+     0.030843548962989627,
+     0.9537346765555155,
+     0.015421774481494814
+    ],
+    "count_after": 9.142959773824877,
+    "count_before": 8.755870724542879,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": true
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": true
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.2"
+  ],
+  "reason_code": "review_band",
+  "route": "officer",
+  "row": 6,
+  "text": "The risk is inside the review band, so an officer decides."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. EV-41392\n\nBetween: St. Luke Ambulance Brigade (\"the Provider\")\nAnd: Halden Valley Harriers (\"the Client\")\n\nEvent: Valley Harriers Founders Race 5K\nEvent date: 2027-07-11\nLocation: Harbourside, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the top of Spring Way from 06:45 until the last runner has finished or 09:45, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $920, paid in full on signature.\n\nSigned for the Provider: Yuki Tanaka, Operations Manager, 2027-03-29\nSigned for the Client: Patrick Doyle, 2027-03-29\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "Valley Harriers Founders Race 5K - crowd notes\nSunday 11 July 2027 / contact Patrick Doyle 555-0166\ntotal 1400 incl 1400 runners. Few people come just to watch.\n\nVIEWING\n3 barriered areas: finish Clocktower Square, turn at Lamb Street, start the top of Spring Way. approx 1850 total @ 2 per sqm. over expected numbers\n\nfamilies welcome. local shops supportive, some open. prizes at end + tea queue\n\nSTART\n4 waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave\n\nSTEWARDS\n28 stewards (approx 1:50), 3 supervisors, rota by position, briefing 1hr before\n\nEXIT\nrunners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins\n\nCONTROL\nPatrick Doyle at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "Atlas Casualty Group\nCertificate of Insurance\n\nWe certify that a policy of event public liability insurance has been issued as follows.\n\nPolicy: GL-451861\nInsured: Halden Valley Harriers\nEvent covered: Valley Harriers Founders Race 5K\nLocation of event: Harbourside\nCover starts: 2027-01-01\nCover ends: 2027-12-31\nLimit of indemnity: $2,000,000 any one event\n\nSigned on behalf of the insurer, 2027-03-29\nCertificate reference PH-53013\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nValley Harriers Founders Race 5K, Sunday 11 July 2027\nApplicant: Halden Valley Harriers\nIssue: 3.1\n\n1. Event summary\nA 5K race with 1400 runners, starting at 08:00 in the Harbourside area of Port Halden. An ambulance from St. Luke Ambulance Brigade is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 6 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Thornton County Hospital, 18 km from the finish. The transfer route and the pick-up point at the top of Spring Way have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Lucas Ferreira, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "police_email.txt",
+    "text": "From: hannah.weiss@phps.example\nTo: patrick@valleyharriers.example\nDate: 2027-03-29\nSubject: RE: Escort request - Valley Harriers Founders Race 5K\n\nHi Patrick,\n\nGot your note about 2027-07-11. Should be OK in principle, but I can't promise anything until the roster comes out, and that's a good way off yet. Check back with me nearer the time.\n\nInsp. Hannah Weiss\nTraffic & Events, PHPS\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Valley Harriers Founders Race 5K: how the race will work\n\nPrepared by Patrick Doyle (Race Director), Halden Valley Harriers. Last updated 29 March 2027.\n\nThis is our plan for race day, Sunday 11 July 2027. We expect 1400 runners over 5K (5 km). Numbers can be collected from the top of Spring Way from an hour before we go at 08:00, and we aim to have the last finisher home by 09:15.\n\nThe route takes in Spring Way, Lamb Street and Fenwick Street, and the City would need to close all of these for us. On the way round we cross Station Road. We finish in Clocktower Square.\n\nIt's a lovely route through the old part of town, though there isn't much room. We measured Spring Way at 5.5 metres and Fenwick Street at 5.5 metres, doorstep to doorstep. Two cars can't pass on Lamb Street. People watching tend to stand in doorways.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Valley Harriers Founders Race 5K\nDate: Sunday 11 July 2027\nApplicant: Halden Valley Harriers\nPrepared by: Tessera Event Transport\nIssue: 3.1\n\n1. Scope\nThis plan describes how traffic will be managed for the Valley Harriers Founders Race 5K, a 5K race in the Harbourside area of Port Halden with a 08:00 start. It has been prepared to accompany the permit application and should be read with the race plan. Police attendance has been requested; see the attached correspondence.\n\n2. Road closures\nThe principal closure will be on Spring Way. Elsewhere on the course, traffic will be held dynamically by the appointed contractor as the field passes, in line with accepted industry practice. Pathfinder Road Crews will confirm the detailed arrangements following a pre-event site visit.\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 06:45 until the last runner has passed.\n- Station Road at Spring Way: 4 traffic marshals with stop/go boards, one supervisor\n\nThe route has changed little from last time. Where it has changed, we have tried to keep a clear run for the field, and we welcome any comments from the Events Office on how signed diversions are usually handled in the city.\n\n4. Diversions\nDrivers will be advised to expect delays in the area and to allow additional time for their journeys. Advance information boards will be used where practical, and through traffic is expected to find alternative routes across the wider network.\n\n5. Emergency vehicle access\nThe emergency services will be made aware of the event date and general location through the usual channels ahead of the day. Any vehicle attending an incident will be accommodated by staff on the ground as circumstances allow.\n\n6. Notification\nDetails of the event will be published on the organiser's website and shared through social media in the weeks leading up to race day.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 09:45.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Valley Harriers Founders Race 5K, Sunday 11 July 2027. 1400 runners, 5K, off at 08:00, around Harbourside. I've attached ambulance_agreement.txt, crowd_plan.txt, insurance.txt, medical_plan.txt, police_email.txt, race_plan.txt, traffic_plan.txt.\n\nWe look forward to hearing from you.\n\nThanks,\nPatrick\n\nPatrick Doyle, Halden Valley Harriers\n555-0166\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_email.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Our annual 5K on the streets of Harbourside.",
+   "event_date": "2027-07-11",
+   "event_name": "Valley Harriers Founders Race 5K",
+   "event_type": "street_race",
+   "expected_runners": 1400,
+   "fee_paid": true,
+   "hospital_distance_km": 18,
+   "organizer": "Halden Valley Harriers",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 1,
+    "road_closure": true
+   },
+   "venue": "Harbourside"
+  }
+ },
+ "events": [
+  742,
+  743,
+  744,
+  745,
+  746,
+  747,
+  748,
+  749,
+  750,
+  751,
+  752
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: St. Luke Ambulance Brigade (\"the Provider\")",
+     "value": "St. Luke Ambulance Brigade",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: 2027-07-11",
+     "value": "2027-07-11",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "Insured: Halden Valley Harriers",
+     "value": "Halden Valley Harriers",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "Location of event: Harbourside",
+     "value": "Harbourside",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Cover starts: 2027-01-01",
+     "value": "2027-01-01",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Cover ends: 2027-12-31",
+     "value": "2027-12-31",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "Limit of indemnity: $2,000,000 any one event",
+     "value": "$2,000,000 any one event",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "police_email.txt",
+   "evidence_type": "police_escort_email",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Got your note about 2027-07-11.",
+     "value": "2027-07-11",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "sender",
+     "quote": "From: hannah.weiss@phps.example",
+     "value": "hannah.weiss@phps.example",
+     "verified": true
+    }
+   ],
+   "reason": "The police email is non-committal: escort is OK in principle but not promised until the roster is out.",
+   "source": "stored",
+   "status": "found",
+   "verdict": "unsupported"
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.7357531739579584,
+    "leaves": [
+     {
+      "contribution": 0.07574552181575456,
+      "count": 7.813443593007856,
+      "entropy": 0.3418221150288605,
+      "levels": [
+       0.04555296387288153,
+       0.9174209066344414,
+       0.037026129492677
+      ],
+      "reach": 0.73,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.669483734031596,
+      "entropy": 0.16899945629247656,
+      "levels": [
+       0.9643296203289711,
+       0.030325646622043678,
+       0.005344733048985242
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.07846729217689791,
+      "count": 9.229961577844414,
+      "entropy": 0.198602150171892,
+      "levels": [
+       0.004641741448106899,
+       0.04040355869676319,
+       0.9549546998551299
+      ],
+      "reach": 0.27,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.967036147583448,
+      "entropy": 0.3303339742591974,
+      "levels": [
+       0.04754224827679015,
+       0.9207319260813138,
+       0.031725825641896084
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.034506933818192385,
+     0.6806262226912683,
+     0.2848668434905393
+    ],
+    "questions": [
+     {
+      "answer": 0.73,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.1542128139926525
+   },
+   "name": "Crowd pressure",
+   "product": 0.0663908824894317,
+   "severity": {
+    "entropy": 0.2538704423838355,
+    "leaves": [
+     {
+      "contribution": 0.41086322104743284,
+      "count": 8.734750615265602,
+      "entropy": 0.24986222900275668,
+      "levels": [
+       0.0051567620797715675,
+       0.9381188550427412,
+       0.05672438287748725
+      ],
+      "reach": 0.95,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.778425434350137,
+      "entropy": 0.22646002946772287,
+      "levels": [
+       0.027611026924354458,
+       0.9517000517984999,
+       0.02068892127714557
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.01965147335789017,
+      "count": 8.325869190693842,
+      "entropy": 0.25074048258979376,
+      "levels": [
+       0.04647021894797954,
+       0.9419122263150256,
+       0.011617554736994886
+      ],
+      "reach": 0.050000000000000044,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.850253908951079,
+      "entropy": 0.16770608146239854,
+      "levels": [
+       0.9639263977480339,
+       0.03213055449282918,
+       0.003943047759136936
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.007222434923181968,
+     0.9383085236063554,
+     0.05446904147046263
+    ],
+    "questions": [
+     {
+      "answer": 0.95,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.430514694405323
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.2157839519910324,
+    "leaves": [
+     {
+      "contribution": 0.10516006245268462,
+      "count": 10.80516793742914,
+      "entropy": 0.1860778488315451,
+      "levels": [
+       0.006448455644991215,
+       0.9598607355683022,
+       0.033690808786706626
+      ],
+      "reach": 0.99,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.618708247374803,
+      "entropy": 0.32083549313091503,
+      "levels": [
+       0.9153220170330416,
+       0.07465835246637277,
+       0.01001963050058565
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.002928393230696369,
+      "count": 10.535884535545978,
+      "entropy": 0.15838336801392142,
+      "levels": [
+       0.001386255417067059,
+       0.03386262706792287,
+       0.9647511175150101
+      ],
+      "reach": 0.010000000000000009,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.974917885329182,
+      "entropy": 0.22707029477791563,
+      "levels": [
+       0.03613847259797396,
+       0.9502268529750392,
+       0.01363467442698684
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0063978336427119725,
+     0.9506007544832984,
+     0.04300141187398967
+    ],
+    "questions": [
+     {
+      "answer": 0.99,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.10808845568338098
+   },
+   "name": "Medical emergency",
+   "product": 0.04384372116796616,
+   "severity": {
+    "entropy": 0.14127321194021836,
+    "leaves": [
+     {
+      "contribution": 0.3633404906526963,
+      "count": 10.346555386443626,
+      "entropy": 0.1331205009867747,
+      "levels": [
+       0.012372187602578683,
+       0.9752556247948427,
+       0.012372187602578683
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.379339148646626,
+      "entropy": 0.1579980200948978,
+      "levels": [
+       0.9670942026191763,
+       0.028315429388914553,
+       0.004590367991909131
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.042287667236761854,
+      "count": 9.490852392567188,
+      "entropy": 0.19435869172511797,
+      "levels": [
+       0.004013451292564672,
+       0.9558520357817887,
+       0.04013451292564672
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.61964569528695,
+      "entropy": 0.5199376749229493,
+      "levels": [
+       0.15559873512790026,
+       0.8262538953856811,
+       0.01814736948641859
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.011536313971577282,
+     0.9733152658935373,
+     0.015148420134885486
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.40562815788945816
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.6308394964287285,
+    "leaves": [
+     {
+      "contribution": 0.0005468249322234985,
+      "count": 8.429953133173612,
+      "entropy": 0.7719286182190433,
+      "levels": [
+       0.5403495502724608,
+       0.4397190006055001,
+       0.019931449122039067
+      ],
+      "reach": 0.009,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.016366763150306895,
+      "count": 9.072975438981382,
+      "entropy": 0.7891453021871804,
+      "levels": [
+       0.027831038414304635,
+       0.5617638456536608,
+       0.4104051159320346
+      ],
+      "reach": 0.09100000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.013128514658688108,
+      "count": 8.642038717598515,
+      "entropy": 0.9115007341035017,
+      "levels": [
+       0.09217122355067552,
+       0.5605581476038625,
+       0.34727062884546206
+      ],
+      "reach": 0.081,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.21820335462914364,
+      "count": 9.854331653170332,
+      "entropy": 0.4716931287355601,
+      "levels": [
+       0.0049958476187168905,
+       0.1608730011900626,
+       0.8341311511912206
+      ],
+      "reach": 0.8190000000000001,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.018953238755487718,
+     0.2322381788905068,
+     0.7488085823540056
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.09,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.2482454573703621
+   },
+   "name": "Traffic conflict",
+   "product": 0.09929818294814484,
+   "severity": {
+    "entropy": 0.21681683203725477,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 5.7386857486,
+      "entropy": 0.3826994441368005,
+      "levels": [
+       0.012122782110341538,
+       0.0969822568827323,
+       0.8908949610069262
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.892092408998586,
+      "entropy": 0.2760071891597342,
+      "levels": [
+       0.013188164963580846,
+       0.9340591751820958,
+       0.05275265985432338
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.39999999999999997,
+      "count": 8.755870724542879,
+      "entropy": 0.21681683203725477,
+      "levels": [
+       0.030843548962989627,
+       0.9537346765555155,
+       0.015421774481494814
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.796712091793333,
+      "entropy": 0.09437651834631425,
+      "levels": [
+       0.9828262993744066,
+       0.014425908525498413,
+       0.002747792100094936
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.030843548962989627,
+     0.9537346765555155,
+     0.015421774481494814
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.39999999999999997
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.430514694405323,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.2163286760605767,
+   "t_low": 0.18481364075531698
+  },
+  "weights_version": "first-guess+62"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": true,
+  "reason": "The risk is too high to approve as filed: a police escort is not confirmed, the traffic plan lacks signed diversions and a clear emergency route, and a large July race on narrow streets is 18 km from the hospital.",
+  "ruling": "deny"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.2095327866055427,
+ "t_high": 0.2163286760605767,
+ "t_low": 0.18481364075531698,
+ "title": "Valley Harriers Founders Race 5K",
+ "unmapped_documents": []
+}

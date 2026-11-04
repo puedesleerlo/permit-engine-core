@@ -1,0 +1,4 @@
+id: street_race
+name: Street race
+clause: ORD-1.1
+hazards: [traffic_conflict, crowd_pressure, medical_emergency]

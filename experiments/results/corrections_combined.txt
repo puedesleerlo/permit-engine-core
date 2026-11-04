@@ -1,0 +1,79 @@
+PART 1. Simulated namers, fixed settings (discount 0.93). Mean of 20 seeds, test 800 per seed.
+
+=== Stable world (what the demo plans) ===
+  K                                         method  all-tree loss  shifted tree   auto  risky|auto
+ 20                                  No correction          0.468         0.424  0.809       0.063
+ 20           Backprop, perfect officer, step 0.25          0.472         0.426  0.810       0.063
+ 20            Backprop, perfect officer, step 1.5          0.532         0.451  0.795       0.064
+ 20           Bayesian, perfect officer names only          0.471         0.426  0.808       0.063
+ 20                         Bayesian, outcome only          0.469         0.424  0.805       0.060
+ 20            Bayesian, outcome + perfect officer          0.470         0.425  0.805       0.060
+ 20        Bayesian, outcome + names half the time          0.469         0.424  0.805       0.060
+ 20       Bayesian, outcome + 90% accurate officer          0.471         0.425  0.806       0.061
+ 20       Bayesian, outcome + 70% accurate officer          0.473         0.429  0.808       0.062
+ 20         Backprop 1.5, Jev at measured accuracy          0.559         0.531  0.845       0.087
+ 20   Bayesian, outcome + Jev at measured accuracy          0.474         0.431  0.809       0.063
+ 60                                  No correction          0.468         0.424  0.809       0.063
+ 60           Backprop, perfect officer, step 0.25          0.486         0.435  0.808       0.064
+ 60            Backprop, perfect officer, step 1.5          0.572         0.483  0.791       0.072
+ 60           Bayesian, perfect officer names only          0.480         0.435  0.803       0.063
+ 60                         Bayesian, outcome only          0.474         0.426  0.792       0.054
+ 60            Bayesian, outcome + perfect officer          0.478         0.433  0.792       0.055
+ 60        Bayesian, outcome + names half the time          0.476         0.429  0.793       0.054
+ 60       Bayesian, outcome + 90% accurate officer          0.479         0.433  0.793       0.056
+ 60       Bayesian, outcome + 70% accurate officer          0.491         0.445  0.801       0.060
+ 60         Backprop 1.5, Jev at measured accuracy          0.736         0.695  0.891       0.120
+ 60   Bayesian, outcome + Jev at measured accuracy          0.492         0.446  0.802       0.060
+
+=== After a shift in one tree ===
+  K                                         method  all-tree loss  shifted tree   auto  risky|auto
+ 20                                  No correction          0.695         1.784  0.809       0.124
+ 20           Backprop, perfect officer, step 0.25          0.666         1.600  0.804       0.120
+ 20            Backprop, perfect officer, step 1.5          0.643         1.125  0.749       0.091
+ 20           Bayesian, perfect officer names only          0.643         1.465  0.796       0.114
+ 20                         Bayesian, outcome only          0.677         1.680  0.797       0.115
+ 20            Bayesian, outcome + perfect officer          0.642         1.466  0.791       0.111
+ 20        Bayesian, outcome + names half the time          0.658         1.565  0.794       0.114
+ 20       Bayesian, outcome + 90% accurate officer          0.648         1.500  0.794       0.113
+ 20       Bayesian, outcome + 70% accurate officer          0.664         1.586  0.800       0.117
+ 20         Backprop 1.5, Jev at measured accuracy          0.759         1.757  0.839       0.146
+ 20   Bayesian, outcome + Jev at measured accuracy          0.678         1.669  0.800       0.118
+ 60                                  No correction          0.695         1.784  0.809       0.124
+ 60           Backprop, perfect officer, step 0.25          0.616         1.244  0.783       0.105
+ 60            Backprop, perfect officer, step 1.5          0.612         0.709  0.727       0.092
+ 60           Bayesian, perfect officer names only          0.591         1.103  0.762       0.093
+ 60                         Bayesian, outcome only          0.636         1.412  0.755       0.086
+ 60            Bayesian, outcome + perfect officer          0.587         1.090  0.745       0.079
+ 60        Bayesian, outcome + names half the time          0.603         1.203  0.752       0.083
+ 60       Bayesian, outcome + 90% accurate officer          0.596         1.143  0.752       0.084
+ 60       Bayesian, outcome + 70% accurate officer          0.620         1.248  0.767       0.094
+ 60         Backprop 1.5, Jev at measured accuracy          0.918         1.850  0.889       0.186
+ 60   Bayesian, outcome + Jev at measured accuracy          0.655         1.435  0.770       0.098
+
+
+PART 2. Real Jev answers from the probe, replayed with no new calls. One seed. Same fixed list of corrections.
+Checked: every case matches the saved probe.
+
+=== 20 corrections, stable world ===
+                                    method  all-tree loss  shifted tree   auto  risky|auto
+                                      none          0.461         0.409  0.871       0.077
+                     backprop officer 0.25          0.465         0.417  0.874       0.079
+                      backprop officer 1.5          0.562         0.587  0.911       0.111
+                          backprop Jev 1.5          0.463         0.409  0.876       0.081
+                     Bayesian outcome only          0.463         0.410  0.871       0.077
+                Bayesian outcome + officer          0.464         0.414  0.874       0.077
+                   Bayesian Jev named only          0.461         0.409  0.871       0.077
+              Bayesian outcome + Jev named          0.462         0.410  0.870       0.076
+    Bayesian outcome + Jev soft, all trees          0.460         0.408  0.869       0.076
+
+=== 40 corrections, after the shift ===
+                                    method  all-tree loss  shifted tree   auto  risky|auto
+                                      none          0.679         1.699  0.833       0.146
+                     backprop officer 0.25          0.586         1.102  0.796       0.121
+                      backprop officer 1.5          0.658         1.097  0.705       0.071
+                          backprop Jev 1.5          0.713         1.740  0.845       0.157
+                     Bayesian outcome only          0.637         1.441  0.790       0.116
+                Bayesian outcome + officer          0.589         1.141  0.776       0.106
+                   Bayesian Jev named only          0.680         1.708  0.834       0.147
+              Bayesian outcome + Jev named          0.640         1.455  0.795       0.118
+    Bayesian outcome + Jev soft, all trees          0.642         1.494  0.794       0.117

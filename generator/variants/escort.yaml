@@ -1,0 +1,194 @@
+document: escort
+letter:
+  families:
+    a:
+      style: formal police letterhead
+      firm: |
+        PORT HALDEN POLICE SERVICE
+        Traffic and Events Division
+        200 Prince Street, {city}
+
+        {today_doc}
+
+        {contact_name}
+        {organizer}
+
+        Re: {event_name}, {letter_date}
+
+        Dear {contact_name},
+
+        I confirm that this Division will provide a police escort for the above event on {letter_date}. Two motorcycle officers will accompany the lead runner along the route through {venue}, and one traffic unit will be stationed at {first_street} from {closure_start} until the last runner has cleared the course.
+
+        Please send your final course map to this office no later than seven days before the event.
+
+        Yours sincerely,
+
+        {sergeant}
+        Traffic and Events Division
+        Reference {ref_no}
+      soft: |
+        PORT HALDEN POLICE SERVICE
+        Traffic and Events Division
+        200 Prince Street, {city}
+
+        {today_doc}
+
+        {contact_name}
+        {organizer}
+
+        Re: {event_name}, {letter_date}
+
+        Dear {contact_name},
+
+        Thank you for your request for police attendance at the above event on {letter_date}. Your request has been logged and will be considered once the duty roster for that period is prepared. We cannot give any commitment at this stage, and this letter should not be read as confirmation that officers will attend.
+
+        You will be told in writing if officers can be assigned.
+
+        Yours sincerely,
+
+        {sergeant}
+        Traffic and Events Division
+        Reference {ref_no}
+    b:
+      style: short memo
+      firm: |
+        PHPS TRAFFIC DIVISION - EVENT ATTENDANCE NOTICE
+
+        To: {organizer} (attn {contact_name})
+        From: {sergeant}
+        Issued: {today_doc}
+        Our ref: {ref_no}
+
+        Event: {event_name}
+        Date of attendance: {letter_date}
+        Location: {venue}, starting at {first_street}
+
+        Attendance is confirmed. Escort: 2 motorcycles, 1 traffic car. On station from {closure_start}. Stand-down when the last runner clears the course.
+
+        Changes to date or route must be notified to this office, because this notice applies only to the date and route shown.
+      soft: |
+        PHPS TRAFFIC DIVISION - REQUEST RECEIVED
+
+        To: {organizer} (attn {contact_name})
+        From: {sergeant}
+        Issued: {today_doc}
+        Our ref: {ref_no}
+
+        Event: {event_name}
+        Date requested: {letter_date}
+        Location: {venue}, starting at {first_street}
+
+        Your request for attendance has been received and is waiting for roster review. No resources have been allocated. A further notice will follow if attendance can be arranged.
+    h:
+      test_only: true
+      style: chief's office letter
+      firm: |
+        Office of the Deputy Chief
+        Port Halden Police Service
+
+        {today_doc}
+
+        To the organisers of the {event_name}:
+
+        Further to your application and our conversation with {contact_name}, the Service has assigned an escort for your race on {letter_date}. {sergeant} will command the detail, which will consist of two motorcycle officers and a marked traffic vehicle. The detail will report to {first_street} at {closure_start}.
+
+        This assignment is specific to the date given above. The Traffic Division will contact you about the briefing.
+
+        File: {ref_no}
+      soft: |
+        Office of the Deputy Chief
+        Port Halden Police Service
+
+        {today_doc}
+
+        To the organisers of the {event_name}:
+
+        Further to your application and our conversation with {contact_name}, the Service notes your request for assistance with your race on {letter_date}. {sergeant} has been asked to look at whether a detail can be made available. Competing commitments that month mean that none has been assigned so far, and the Service is unable to say whether one will be.
+
+        File: {ref_no}
+email:
+  families:
+    a:
+      style: plain email
+      firm: |
+        From: {sergeant_email}
+        To: {contact_email}
+        Date: {today_doc}
+        Subject: RE: Escort request - {event_name}
+
+        Hi {contact_first},
+
+        Confirmed for {letter_date}. I've got two bikes and a car down for your race, on station at {first_street} from {closure_start}. Send me the final map when you have it.
+
+        {sergeant}
+        Traffic & Events, PHPS
+      soft: |
+        From: {sergeant_email}
+        To: {contact_email}
+        Date: {today_doc}
+        Subject: RE: Escort request - {event_name}
+
+        Hi {contact_first},
+
+        Got your note about {letter_date}. Should be OK in principle, but I can't promise anything until the roster comes out, and that's a good way off yet. Check back with me nearer the time.
+
+        {sergeant}
+        Traffic & Events, PHPS
+    b:
+      style: forwarded email
+      firm: |
+        ---------- Forwarded message ---------
+        From: {sergeant} <{sergeant_email}>
+        Sent: {today_doc}
+        To: {contact_name} <{contact_email}>
+        Subject: Police attendance, {event_name}
+
+        {contact_name},
+
+        This is to confirm that Traffic & Events will attend your race on {letter_date} with an escort of two motorcycles. One traffic car will sit at {first_street} from {closure_start}. It's in the roster now, so you can go ahead on that basis.
+
+        Regards,
+        {sergeant}
+      soft: |
+        ---------- Forwarded message ---------
+        From: {sergeant} <{sergeant_email}>
+        Sent: {today_doc}
+        To: {contact_name} <{contact_email}>
+        Subject: Police attendance, {event_name}
+
+        {contact_name},
+
+        Thanks for this. I've pencilled in {letter_date}, but pencil is all it is. We've got a lot on that month, and I'd make a backup plan in case we can't get anyone to you.
+
+        Regards,
+        {sergeant}
+    h:
+      test_only: true
+      style: reply from shared inbox
+      firm: |
+        From: PHPS Events Desk <events.desk@phps.example>
+        To: {contact_email}
+        Date: {today_doc}
+        Subject: Automatic ticket {ref_no} updated: {event_name}
+
+        Status of your request: ASSIGNED
+
+        Date: {letter_date}
+        Officer in charge: {sergeant}
+        Detail: 2 motorcycles, 1 traffic car
+        Report to: {first_street}, {closure_start}
+
+        Reply to this message if the date or route changes.
+      soft: |
+        From: PHPS Events Desk <events.desk@phps.example>
+        To: {contact_email}
+        Date: {today_doc}
+        Subject: Automatic ticket {ref_no} updated: {event_name}
+
+        Status of your request: AWAITING ROSTER
+
+        Date: {letter_date}
+        Officer in charge: not yet allocated
+        Detail: none allocated
+
+        You will get another message if the status changes.

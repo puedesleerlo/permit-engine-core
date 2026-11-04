@@ -1,0 +1,858 @@
+{
+ "case_id": "R0279-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9620785512704889,
+     0.033514226207007544,
+     0.004407222522503562
+    ],
+    "before": [
+     0.958743433321256,
+     0.036461737473650106,
+     0.004794829205093892
+    ],
+    "count_after": 12.361735729954798,
+    "count_before": 12.199948636416233,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.03279238370596829,
+     0.9572649575036968,
+     0.009942658790334853
+    ],
+    "before": [
+     0.03272590701979217,
+     0.9573307508257255,
+     0.00994334215448235
+    ],
+    "count_after": 10.129102658808614,
+    "count_before": 10.143117711127843,
+    "leaf": {
+     "hot_date": false,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9817505754485824,
+     0.015794245204209946,
+     0.00245517934720771
+    ],
+    "before": [
+     0.9810257466315849,
+     0.016421559453734896,
+     0.0025526939146801866
+    ],
+    "count_after": 12.988690605327529,
+    "count_before": 12.583502975684064,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.15312805807009175,
+     0.8355328621801507,
+     0.011339079749757616
+    ],
+    "before": [
+     0.11068282917817293,
+     0.8774097762991117,
+     0.011907394522715364
+    ],
+    "count_after": 10.556167701793141,
+    "count_before": 10.73081466202693,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.7001533400036397,
+     0.28658581736853034,
+     0.013260842627829979
+    ],
+    "before": [
+     0.6691290244472751,
+     0.31623806973021384,
+     0.014632905822511165
+    ],
+    "count_after": 10.377718195023231,
+    "count_before": 9.935032859978149,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.022994833152958603,
+     0.5037400320917678,
+     0.47326513475527365
+    ],
+    "before": [
+     0.022375496651924034,
+     0.5040593595625872,
+     0.4735651437854888
+    ],
+    "count_after": 9.783501692584299,
+    "count_before": 9.880014047952557,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.12931502371829956,
+     0.6013577367254648,
+     0.26932723955623566
+    ],
+    "before": [
+     0.12740308946996462,
+     0.6026782561827507,
+     0.2699186543472846
+    ],
+    "count_after": 9.395366163678638,
+    "count_before": 9.432102735419532,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004659962599699539,
+     0.12175893369483809,
+     0.8735811037054624
+    ],
+    "before": [
+     0.004646758916553067,
+     0.12176054888795837,
+     0.8735926921954885
+    ],
+    "count_after": 10.781172906709497,
+    "count_before": 10.793555350340196,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9912069939279378,
+     0.007386125100532223,
+     0.001406880971529947
+    ],
+    "before": [
+     0.9904676455965683,
+     0.008007177698882676,
+     0.0015251767045490815
+    ],
+    "count_after": 12.892913933779749,
+    "count_before": 12.7880794986879,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-9.3"
+  ],
+  "reason_code": "red_flag",
+  "route": "officer",
+  "row": 1,
+  "text": "A document disagrees with the application, so an officer decides."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. PH-95358\nIssued: 7 February 2027\n\nINSURER: Meridian Mutual Insurance\nPOLICY NUMBER: PL-277207\n\nNAMED INSURED: Old Quay Pacers\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Old Quay Charity Run 7K\nVENUE: Larkspur Racecourse, Port Halden\n\nPOLICY PERIOD\nEffective: 10 April 2027\nExpiry: 12 April 2027\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nOld Quay Charity Run 7K, Sunday 11 April 2027\nApplicant: Old Quay Pacers\nIssue: 3.1\n\n1. Event summary\nA 7K race with 70 runners, starting at 10:00 in the Westbrook area of Port Halden. We expect a crew from St. Luke Ambulance Brigade on the day, though we have nothing in writing yet.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 12 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Harbourside Medical Centre, 6 km from the finish. The transfer route and the pick-up point at the top of Tanner Street have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Daniel Mwangi, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PORT HALDEN POLICE SERVICE\nTraffic and Events Division\n200 Prince Street, Port Halden\n\nFebruary 7, 2027\n\nLucas Ferreira\nOld Quay Pacers\n\nRe: Old Quay Charity Run 7K, April 11, 2027\n\nDear Lucas Ferreira,\n\nI confirm that this Division will provide a police escort for the above event on April 11, 2027. Two motorcycle officers will accompany the lead runner along the route through Westbrook, and one traffic unit will be stationed at Tanner Street from 09:00 until the last runner has cleared the course.\n\nPlease send your final course map to this office no later than seven days before the event.\n\nYours sincerely,\n\nSgt. Miguel Santos\nTraffic and Events Division\nReference PH-71541\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Old Quay Charity Run 7K - race notes\nOld Quay Pacers / contact Lucas Ferreira 555-0142\nSunday 11 April 2027, gun 10:00, course closes 11:30\n7K (7k), approx 70 entered\n\nROUTE\nTanner Street, Ash Avenue, Vine Street and Quay Street. all closed. major x-ings: none. finish Clocktower Square\n\nWIDTHS\nstart Tanner Street (14m). Vine Street 14m. Quay Street 16m + wide pavements + verge most of way\n\nOTHER\nnumbers from the top of Tanner Street 1hr before. chip timing. water on course. results online same day\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Old Quay Charity Run 7K - traffic notes\nSunday 11 April 2027 / gun 10:00 / Westbrook\ncontact Lucas Ferreira 555-0142\nSee the attached correspondence from the police for the escort.\n\nCLOSURES\nSignal Hill Traffic Services doing barriers\nTanner Street (Bridge Row-Brook Street) 09:00-12:00\nAsh Avenue (Market Row-Fenwick Street) 09:00-12:00\nVine Street (Bridge Row-Fenwick Street) 09:00-12:00\nQuay Street (Abbey Road-Market Row) 09:00-12:00\n\nMAJOR X-INGS\nnone on this route\n\nDIVERSIONS\nsigned by Signal Hill Traffic Services\nTanner Street: via Ferry Road + Canal Road, signs from Castle Way\nAsh Avenue: via Station Road + Ferry Road, signs from Brook Street\nVine Street: via Dock Road + Ferry Road, signs from Fenwick Street\nQuay Street: via Dock Road + Ferry Road, signs from Bridge Row\n\nEMERGENCY\n3.5m lane kept clear whole way. radio at every barrier, open in 2 mins. controller has police + ambulance control direct\n\nNOTICE\nletter drop all frontages -21 days, reminder -7. boards up -10. bus co told\n\nREOPEN\nreopen when done and barriers picked up\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Old Quay Charity Run 7K, Sunday 11 April 2027. 70 runners, 7K, off at 10:00, around Westbrook. I've attached insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt. An ambulance crew from St. Luke Ambulance Brigade has said they'll attend, and the paperwork will follow.\n\nWe look forward to hearing from you.\n\nThanks,\nLucas\n\nLucas Ferreira, Old Quay Pacers\n555-0142\n",
+  "form": {
+   "attachments": [
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Our annual 7K on the streets of Westbrook. Last year's crowd was 30 or so, and we expect the same again.",
+   "event_date": "2027-04-11",
+   "event_name": "Old Quay Charity Run 7K",
+   "event_type": "street_race",
+   "expected_runners": 70,
+   "fee_paid": true,
+   "hospital_distance_km": 6,
+   "organizer": "Old Quay Pacers",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": true
+   },
+   "venue": "Westbrook"
+  }
+ },
+ "events": [
+  944,
+  945,
+  946,
+  947,
+  948,
+  949,
+  950,
+  951,
+  952,
+  953,
+  954,
+  955
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Old Quay Pacers",
+     "value": "Old Quay Pacers",
+     "verified": true
+    },
+    {
+     "matches_form": false,
+     "name": "venue",
+     "quote": "VENUE: Larkspur Racecourse, Port Halden",
+     "value": "Larkspur Racecourse, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 10 April 2027",
+     "value": "10 April 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 12 April 2027",
+     "value": "12 April 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $1,000,000 each occurrence",
+     "value": "$1,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": "Certificate covers Larkspur Racecourse, but the race venue is Westbrook.",
+   "source": "stored",
+   "status": "found",
+   "verdict": "contradicted"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "I confirm that this Division will provide a police escort for the above event on April 11, 2027.",
+     "value": "April 11, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "Sgt. Miguel Santos",
+     "value": "Sgt. Miguel Santos",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.2432981732792318,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.00963039312879,
+      "entropy": 0.1733582464042114,
+      "levels": [
+       0.005864373123719334,
+       0.9633220387983021,
+       0.030813588077978623
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.02377430135181193,
+      "count": 12.199948636416233,
+      "entropy": 0.18674173919587725,
+      "levels": [
+       0.958743433321256,
+       0.036461737473650106,
+       0.004794829205093892
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.709210497011416,
+      "entropy": 0.11002736491448976,
+      "levels": [
+       0.0008709179480449029,
+       0.02129552523965847,
+       0.9778335568122966
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.001987411917386264,
+      "count": 10.143117711127843,
+      "entropy": 0.19950209254165008,
+      "levels": [
+       0.03272590701979217,
+       0.9573307508257255,
+       0.00994334215448235
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.9402230827952267,
+     0.05487911774069164,
+     0.0048977994640816615
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.025761713269198197
+   },
+   "name": "Medical emergency",
+   "product": 0.008946219117585837,
+   "severity": {
+    "entropy": 0.5552107367555772,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.457868528926053,
+      "entropy": 0.09313674700433057,
+      "levels": [
+       0.008001290017065071,
+       0.9839974199658698,
+       0.008001290017065071
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.010722389235933265,
+      "count": 12.583502975684064,
+      "entropy": 0.10151304111582232,
+      "levels": [
+       0.9810257466315849,
+       0.016421559453734896,
+       0.0025526939146801866
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.923960292595492,
+      "entropy": 0.1736142217560273,
+      "levels": [
+       0.003467482882509344,
+       0.9618576882923972,
+       0.03467482882509344
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.33654562916415964,
+      "count": 10.73081466202693,
+      "entropy": 0.41112799656441024,
+      "levels": [
+       0.11068282917817293,
+       0.8774097762991117,
+       0.011907394522715364
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.19771712092351412,
+     0.791310954614574,
+     0.010971924461911847
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.3472680184000929
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9577267789351669,
+    "leaves": [
+     {
+      "contribution": 0.0373435719617925,
+      "count": 9.935032859978149,
+      "entropy": 0.6947302553848089,
+      "levels": [
+       0.6691290244472751,
+       0.31623806973021384,
+       0.014632905822511165
+      ],
+      "reach": 0.756,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.027780910419591923,
+      "count": 9.880014047952557,
+      "entropy": 0.7843074397664022,
+      "levels": [
+       0.022375496651924034,
+       0.5040593595625872,
+       0.4735651437854888
+      ],
+      "reach": 0.14400000000000004,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.012078484631796215,
+      "count": 9.432102735419532,
+      "entropy": 0.9211753270848861,
+      "levels": [
+       0.12740308946996462,
+       0.6026782561827507,
+       0.2699186543472846
+      ],
+      "reach": 0.08399999999999998,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.004389548763612375,
+      "count": 10.793555350340196,
+      "entropy": 0.3994097372308102,
+      "levels": [
+       0.004646758916553067,
+       0.12176054888795837,
+       0.8735926921954885
+      ],
+      "reach": 0.016,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.5198598216581589,
+     0.3642336707946126,
+     0.11590650754722857
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.84,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.08159251577679301
+   },
+   "name": "Traffic conflict",
+   "product": 0.008467248013391888,
+   "severity": {
+    "entropy": 0.05803251629680847,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.336977746198,
+      "entropy": 0.3389373878667739,
+      "levels": [
+       0.010209759436778442,
+       0.08167807549422754,
+       0.9081121650689941
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.208817683600001,
+      "levels": [
+       0.009156691221102351,
+       0.9542165438944882,
+       0.036626764884409406
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.142959773824877,
+      "entropy": 0.19798295964703655,
+      "levels": [
+       0.02747007366330705,
+       0.9587948895050394,
+       0.013735036831653525
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.10377481234375899,
+      "count": 12.7880794986879,
+      "entropy": 0.05803251629680847,
+      "levels": [
+       0.9904676455965683,
+       0.008007177698882676,
+       0.0015251767045490815
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9904676455965683,
+     0.008007177698882676,
+     0.0015251767045490815
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.10377481234375899
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.3472680184000929,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21646268154544307,
+   "t_low": 0.18447068450010728
+  },
+  "weights_version": "first-guess+79"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "ruling",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The insurance certificate names a different venue (Larkspur Racecourse) rather than the race route in Westbrook, so the insurance requirement is not met.",
+  "ruling": "deny"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "failed"
+  }
+ ],
+ "risk": 0.017413467130977724,
+ "t_high": 0.21646268154544307,
+ "t_low": 0.18447068450010728,
+ "title": "Old Quay Charity Run 7K",
+ "unmapped_documents": []
+}

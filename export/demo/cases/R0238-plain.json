@@ -1,0 +1,558 @@
+{
+ "case_id": "R0238-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.006448455644991215,
+     0.9598607355683022,
+     0.033690808786706626
+    ],
+    "before": [
+     0.006449549574386685,
+     0.9600235683350921,
+     0.03352688209052133
+    ],
+    "count_after": 10.80516793742914,
+    "count_before": 10.842606719256631,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.001386255417067059,
+     0.03386262706792287,
+     0.9647511175150101
+    ],
+    "before": [
+     0.0015313336147402623,
+     0.037406511436568354,
+     0.9610621549486914
+    ],
+    "count_after": 10.535884535545978,
+    "count_before": 10.218464527456069,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9670942026191763,
+     0.028315429388914553,
+     0.004590367991909131
+    ],
+    "before": [
+     0.9639844286961738,
+     0.03099138897479531,
+     0.005024182329030872
+    ],
+    "count_after": 11.379339148646626,
+    "count_before": 11.098505421502256,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.15559873512790026,
+     0.8262538953856811,
+     0.01814736948641859
+    ],
+    "before": [
+     0.15406438837788222,
+     0.8277552668684285,
+     0.01818034475368928
+    ],
+    "count_after": 9.61964569528695,
+    "count_before": 9.67213498694578,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "St. Luke Ambulance Brigade\nBookings Office\n\n12 May 2027\n\nDear Fatima Haddad,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Clocktower Charity Run Half Marathon on 4 July 2027. One ambulance and two paramedics will be on site at the old mill car park, in place by 07:45, and will stay until the race has finished. Booking reference EV-42316.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nDaniel Mwangi\nBookings Manager\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF AG-54992\nHarbourline Insurance Company   POL NO PL-316111\nINSURED ....... Clocktower Merchants' Guild\nRISK LOCATION .. Stonebridge\nFROM .......... January 1, 2027\nTO ............ December 31, 2027\nINDEMNITY ..... $5,000,000\nACTIVITY ...... Foot race (Clocktower Charity Run Half Marathon)\nISSUED ........ May 12, 2027\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Clocktower Charity Run Half Marathon, Sunday 4 July 2027\n\nFrom Fatima Haddad, Race Director, Clocktower Merchants' Guild\n\nThe race is a half marathon with 250 runners and starts at 09:00. An ambulance from St. Luke Ambulance Brigade is on site for the race; the paperwork is attached.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 8 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nWe always tell runners to dress sensibly for the weather and to keep drinking, and it's all in the email we send them the week before. We'll be watching the forecast, and people here are used to all sorts of weather.\n\nIf someone needs hospital\nThe nearest emergency department is at St. Brigid's Hospital, 4 km from the finish. We've walked the route out from the pick-up point at the old mill car park with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nWho's responsible\nI take overall responsibility as organiser, along with the rest of the committee. We all care a great deal about our runners and would never let anyone come to harm.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Clocktower Charity Run Half Marathon: how the race will work\n\nPrepared by Fatima Haddad (Race Director), Clocktower Merchants' Guild. Last updated 12 May 2027.\n\nThis is our plan for race day, Sunday 4 July 2027. We expect 250 runners over half marathon (21 km). Numbers can be collected from the old mill car park from an hour before we go at 09:00, and we aim to have the last finisher home by 12:30.\n\nHappily we are off-road the whole way. We use the Old Mill Trail and then the Reservoir Walk, so no streets need closing at all. We finish at the rowing club.\n\nA word on the path. The Old Mill Trail is about 10 metres across with open ground beside it, and the Reservoir Walk is 9 metres and runs through the middle of the park, so there's lots of room to overtake. We start on the grass in a wide line.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   }
+  ],
+  "cover_letter": "12 May 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Clocktower Charity Run Half Marathon on Sunday 4 July 2027. We expect 250 runners over half marathon, starting at 09:00 in the Stonebridge area. The completed form and the attachments (ambulance_agreement.txt, insurance.txt, medical_plan.txt, race_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nFatima Haddad\nRace Director, Clocktower Merchants' Guild\nfatima@clocktowerguild.example / 555-0176\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Clocktower Charity Run Half Marathon: a half marathon race on the paths around Stonebridge, organised by Clocktower. No road closures.",
+   "event_date": "2027-07-04",
+   "event_name": "Clocktower Charity Run Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 250,
+   "fee_paid": true,
+   "hospital_distance_km": 4,
+   "organizer": "Clocktower Merchants' Guild",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Stonebridge"
+  }
+ },
+ "events": [
+  730,
+  731,
+  732,
+  733,
+  734,
+  735,
+  736,
+  737,
+  738,
+  739,
+  740,
+  741
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "St. Luke Ambulance Brigade",
+     "value": "St. Luke Ambulance Brigade",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the Clocktower Charity Run Half Marathon on 4 July 2027",
+     "value": "4 July 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "INSURED ....... Clocktower Merchants' Guild",
+     "value": "Clocktower Merchants' Guild",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "RISK LOCATION .. Stonebridge",
+     "value": "Stonebridge",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "FROM .......... January 1, 2027",
+     "value": "January 1, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "TO ............ December 31, 2027",
+     "value": "December 31, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "INDEMNITY ..... $5,000,000",
+     "value": "$5,000,000",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.30020017961050594,
+    "leaves": [
+     {
+      "contribution": 0.005309470622607668,
+      "count": 10.842606719256631,
+      "entropy": 0.1855338255286389,
+      "levels": [
+       0.006449549574386685,
+       0.9600235683350921,
+       0.03352688209052133
+      ],
+      "reach": 0.05,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.618708247374803,
+      "entropy": 0.32083549313091503,
+      "levels": [
+       0.9153220170330416,
+       0.07465835246637277,
+       0.01001963050058565
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.2774854280855311,
+      "count": 10.218464527456069,
+      "entropy": 0.17100969680399253,
+      "levels": [
+       0.0015313336147402623,
+       0.037406511436568354,
+       0.9610621549486914
+      ],
+      "reach": 0.95,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.974917885329182,
+      "entropy": 0.22707029477791563,
+      "levels": [
+       0.03613847259797396,
+       0.9502268529750392,
+       0.01363467442698684
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0017772444127225834,
+     0.08353736428149455,
+     0.9146853913057829
+    ],
+    "questions": [
+     {
+      "answer": 0.05,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.2827948987081388
+   },
+   "name": "Medical emergency",
+   "product": 0.0392819511122672,
+   "severity": {
+    "entropy": 0.38556793874838,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 10.346555386443626,
+      "entropy": 0.1331205009867747,
+      "levels": [
+       0.012372187602578683,
+       0.9752556247948427,
+       0.012372187602578683
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.10243726270970975,
+      "count": 11.098505421502256,
+      "entropy": 0.16962006041345404,
+      "levels": [
+       0.9639844286961738,
+       0.03099138897479531,
+       0.005024182329030872
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.490852392567188,
+      "entropy": 0.19435869172511797,
+      "levels": [
+       0.004013451292564672,
+       0.9558520357817887,
+       0.04013451292564672
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.03646888903388488,
+      "count": 9.67213498694578,
+      "entropy": 0.5174928251984329,
+      "levels": [
+       0.15406438837788222,
+       0.8277552668684285,
+       0.01818034475368928
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.8829924246643447,
+     0.11066777676415862,
+     0.0063397985714967135
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.13890615174359464
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.13890615174359464,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.2163286760605767,
+   "t_low": 0.18481364075531698
+  },
+  "weights_version": "first-guess+61"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order. The off-road race closes no roads and draws under 300 people. A paid ambulance and a nearby hospital keep the overall risk low, despite a summer date and gaps in the heat rules and medical lead.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.0392819511122672,
+ "t_high": 0.2163286760605767,
+ "t_low": 0.18481364075531698,
+ "title": "Clocktower Charity Run Half Marathon",
+ "unmapped_documents": []
+}

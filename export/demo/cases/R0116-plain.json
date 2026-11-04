@@ -1,0 +1,538 @@
+{
+ "case_id": "R0116-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.012423582824395743,
+     0.9278755797845996,
+     0.05970083739100462
+    ],
+    "before": [
+     0.014145213607734304,
+     0.9178807478727097,
+     0.06797403851955608
+    ],
+    "count_after": 8.20332141634945,
+    "count_before": 7.735952385151287,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.003717414518573522,
+     0.07063454790246791,
+     0.9256480375789585
+    ],
+    "before": [
+     0.0037181434381577307,
+     0.07045231568824045,
+     0.9258295408736018
+    ],
+    "count_after": 7.977736543314716,
+    "count_before": 7.987757688955229,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9356095940472475,
+     0.05417699305906668,
+     0.010213412893685839
+    ],
+    "before": [
+     0.9337226964302122,
+     0.055764596640511685,
+     0.010512706929276075
+    ],
+    "count_after": 9.273282204917178,
+    "count_before": 9.074893008738698,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.40257130958225945,
+     0.5204002444355716,
+     0.07702844598216897
+    ],
+    "before": [
+     0.2892221542324489,
+     0.6191349203838619,
+     0.09164292538368936
+    ],
+    "count_after": 4.615180875418008,
+    "count_before": 4.141009861585556,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. RQ-30069\nIssued: 2027-07-11\n\nINSURER: Northern Shield Assurance\nPOLICY NUMBER: EL-976675\n\nNAMED INSURED: Eastfield Athletics\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Eastfield Sunset Run 7K\nVENUE: Clocktower Square, Port Halden\n\nPOLICY PERIOD\nEffective: 2027-08-20\nExpiry: 2027-08-22\n\nLIMIT OF LIABILITY: $5,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Eastfield Sunset Run 7K - medical notes\nSaturday 21 August 2027 / gun 08:30 / 200 runners / 7K\ncontact Ellis Grant 555-0141\nWe expect a crew from St. Luke Ambulance Brigade on the day, though we have nothing in writing yet.\n\nFIRST AID\n3 posts (start, finish, midpoint). 12 qualified first aiders. nowhere more than 1.5km from a post. 2 bike responders w/ defibs\n\nWEATHER / WATER\nwater every 2.5k. forecast check -48h and -2h. >28C earlier start or shorter course. >32C cancel. foil + warm tent at finish if cold/wet\n\nHOSPITAL\nPort Halden General Hospital, 4km from finish. pickup point the rowing club, route walked w/ first aiders. ED told date + numbers\n\nCOMMS\nradios on medical channel at all posts + bikes, phones backup. amb calls go via medical lead, who gives crew the barrier to come to\n\nLEAD\nEllis Grant, registered paramedic, on site from -1hr til last runner in. can withdraw any runner\n\nbg: committee done this race yrs. one long time member is retired paramedic but runs race herself, not on duty\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Eastfield Sunset Run 7K - race notes\nEastfield Athletics / contact Ellis Grant 555-0141\nSaturday 21 August 2027, gun 08:30, course closes 10:00\n7K (7k), approx 200 entered\n\nROUTE\nLakeshore Promenade then Saltmarsh Boardwalk. no roads, no closures. finish the pavilion\n\nWIDTHS\nLakeshore Promenade 8m, open ground beside. Saltmarsh Boardwalk 10m thru parkland, grass both sides. start wide on grass\n\nOTHER\nnumbers from the rowing club 1hr before. chip timing. water on course. results online same day\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the Eastfield Sunset Run 7K, Saturday 21 August 2027. 200 runners, 7K, off at 08:30, around Clocktower Square. I've attached insurance.txt, medical_plan.txt, race_plan.txt. An ambulance crew from St. Luke Ambulance Brigade has said they'll attend, and the paperwork will follow.\n\nPlease let me know if you need anything else.\n\nThanks,\nEllis\n\nEllis Grant, Eastfield Athletics\n555-0141\n",
+  "form": {
+   "attachments": [
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Our annual 7K around Clocktower Square, all on paths.",
+   "event_date": "2027-08-21",
+   "event_name": "Eastfield Sunset Run 7K",
+   "event_type": "street_race",
+   "expected_runners": 200,
+   "fee_paid": true,
+   "hospital_distance_km": 4,
+   "organizer": "Eastfield Athletics",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Clocktower Square"
+  }
+ },
+ "events": [
+  378,
+  379,
+  380,
+  381,
+  382,
+  383,
+  384,
+  385,
+  386,
+  387,
+  388,
+  389
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Eastfield Athletics",
+     "value": "Eastfield Athletics",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Clocktower Square, Port Halden",
+     "value": "Clocktower Square, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 2027-08-20",
+     "value": "2027-08-20",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 2027-08-22",
+     "value": "2027-08-22",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $5,000,000 each occurrence",
+     "value": "$5,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.3632705326494885,
+    "leaves": [
+     {
+      "contribution": 0.11021392680298663,
+      "count": 7.735952385151287,
+      "entropy": 0.32164386378953486,
+      "levels": [
+       0.014145213607734304,
+       0.9178807478727097,
+       0.06797403851955608
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 6.038037675273151,
+      "entropy": 0.554272472533248,
+      "levels": [
+       0.8122510574138966,
+       0.16397499767574444,
+       0.023773944910358988
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.005697369133993359,
+      "count": 7.987757688955229,
+      "entropy": 0.27904770715525085,
+      "levels": [
+       0.0037181434381577307,
+       0.07045231568824045,
+       0.9258295408736018
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.092528224499206,
+      "entropy": 0.36514770878501823,
+      "levels": [
+       0.05219897886753904,
+       0.909564340126229,
+       0.03823668100623194
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.013936672204342773,
+     0.9009321792290202,
+     0.085131148566637
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.11591129593697999
+   },
+   "name": "Medical emergency",
+   "product": 0.03987537279038021,
+   "severity": {
+    "entropy": 0.8984844729858555,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 7.460808958307738,
+      "entropy": 0.26706798060522324,
+      "levels": [
+       0.029784201066131298,
+       0.9404315978677373,
+       0.029784201066131298
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.012619081522850198,
+      "count": 9.074893008738698,
+      "entropy": 0.2728889202542205,
+      "levels": [
+       0.9337226964302122,
+       0.055764596640511685,
+       0.010512706929276075
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.765618095722797,
+      "entropy": 0.28712431320207465,
+      "levels": [
+       0.006750286619313517,
+       0.9257468471875513,
+       0.06750286619313514
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.3313971980644311,
+      "count": 4.141009861585556,
+      "entropy": 0.8746439721446281,
+      "levels": [
+       0.2892221542324489,
+       0.6191349203838619,
+       0.09164292538368936
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.35367220845222525,
+     0.5627978880095269,
+     0.08352990353824803
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.3440162795872813
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.3440162795872813,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.18941409706377926,
+   "t_low": 0.18941409706377926
+  },
+  "weights_version": "first-guess+31"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee is paid, insurance covers this race, venue and date, and the medical arrangements keep the risk low, so the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.03987537279038021,
+ "t_high": 0.18941409706377926,
+ "t_low": 0.18941409706377926,
+ "title": "Eastfield Sunset Run 7K",
+ "unmapped_documents": []
+}

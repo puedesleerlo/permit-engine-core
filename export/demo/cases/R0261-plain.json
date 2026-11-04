@@ -1,0 +1,819 @@
+{
+ "case_id": "R0261-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.035603495479965025,
+     0.9344309266884164,
+     0.029965577831618493
+    ],
+    "before": [
+     0.04016669054511555,
+     0.9260271318438827,
+     0.03380617761100173
+    ],
+    "count_after": 8.753672173118575,
+    "count_before": 8.270882884902104,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.004150994765081365,
+     0.038298433839451355,
+     0.9575505713954673
+    ],
+    "before": [
+     0.004153415757341062,
+     0.037737538878224564,
+     0.9581090453644343
+    ],
+    "count_after": 9.480990321580373,
+    "count_before": 9.558341191169001,
+    "leaf": {
+     "crowd_over_800": true,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.004583346816838013,
+     0.9449998381979439,
+     0.050416814985218154
+    ],
+    "before": [
+     0.004603443565642531,
+     0.9447586772122897,
+     0.05063787922206785
+    ],
+    "count_after": 9.12635779404118,
+    "count_before": 9.112930764988882,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.036745833527681154,
+     0.9540677080903985,
+     0.009186458381920289
+    ],
+    "before": [
+     0.041069695013468625,
+     0.9486628812331641,
+     0.010267423753367156
+    ],
+    "count_after": 9.119949572529853,
+    "count_before": 8.748536977131984,
+    "leaf": {
+     "crowd_over_800": true,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.005864712663166986,
+     0.9633778138702601,
+     0.030757473466572954
+    ],
+    "before": [
+     0.005865055747707677,
+     0.9634341712834478,
+     0.030700772968844506
+    ],
+    "count_after": 11.024983193361386,
+    "count_before": 11.040350766630421,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.0010428064482307289,
+     0.02549851118377816,
+     0.973458682367991
+    ],
+    "before": [
+     0.0011440736728434737,
+     0.027974678706254898,
+     0.9708812476209017
+    ],
+    "count_after": 11.290285078526052,
+    "count_before": 11.049467135438737,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9780729411132557,
+     0.018924702765764106,
+     0.0030023561209802153
+    ],
+    "before": [
+     0.9782690725203242,
+     0.018727969301010807,
+     0.0030029581786650524
+    ],
+    "count_after": 12.3700711560541,
+    "count_before": 12.457670027400916,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.13243134517958277,
+     0.8530024212118482,
+     0.014566233608568985
+    ],
+    "before": [
+     0.14687706934104927,
+     0.836967799856175,
+     0.016155130802775777
+    ],
+    "count_after": 10.14229572293674,
+    "count_before": 9.76199110587824,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "PHU Athletics Sunset Run 5K - crowd notes\nSaturday 10 July 2027 / contact Joan Kowalczyk 555-0189\ntotal 1200 incl 1200 runners. Few people come just to watch.\n\nVIEWING\n3 barriered areas: finish the old mill car park, turn at Gardens Loop, start the boathouse. approx 1600 total @ 2 per sqm. over expected numbers\n\nSTART\n3 waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave\n\nSTEWARDS\n24 stewards (approx 1:50), 3 supervisors, rota by position, briefing 1hr before\n\nEXIT\nrunners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins\n\nCONTROL\nJoan Kowalczyk at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "Meridian Mutual Insurance\nCertificate of Insurance\n\nWe certify that a policy of event public liability insurance has been issued as follows.\n\nPolicy: PL-893869\nInsured: Port Halden University Athletics\nEvent covered: PHU Athletics Sunset Run 5K\nLocation of event: Ferry Park\nCover starts: January 1, 2027\nCover ends: December 31, 2027\nLimit of indemnity: $1,000,000 any one event\n\nSigned on behalf of the insurer, April 27, 2027\nCertificate reference PH-47668\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "PHU Athletics Sunset Run 5K - medical notes\nSaturday 10 July 2027 / gun 09:00 / 1200 runners / 5K\ncontact Joan Kowalczyk 555-0189\nNo ambulance will be stationed at the race; any ambulance would come through the 911 system.\n\nFIRST AID\n3 posts (start, finish, midpoint). 12 qualified first aiders. nowhere more than 1.5km from a post. 2 bike responders w/ defibs\n\nrace week email: dress for weather, carry phone if poss. most have run w/ us before. entrant list w/ emergency contacts kept at start\n\nWEATHER / WATER\nwater every 2.5k. forecast check -48h and -2h. >28C earlier start or shorter course. >32C cancel. foil + warm tent at finish if cold/wet\n\nHOSPITAL\ncall 911 if needed, paramedics handle it from there\n\nCOMMS\nradios on medical channel at all posts + bikes, phones backup. amb calls go via medical lead, who gives crew the barrier to come to\n\nLEAD\nrace director + committee\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "PHU Athletics Sunset Run 5K - race notes\nPort Halden University Athletics / contact Joan Kowalczyk 555-0189\nSaturday 10 July 2027, gun 09:00, course closes 10:15\n5K (5k), approx 1200 entered\n\nROUTE\nPier Promenade then Gardens Loop. no roads, no closures. finish the old mill car park\n\nWIDTHS\nPier Promenade 8m, open ground beside. Gardens Loop 10m thru parkland, grass both sides. start wide on grass\n\nOTHER\nnumbers from the boathouse 1hr before. chip timing. water on course. results online same day\n"
+   }
+  ],
+  "cover_letter": "27 April 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the PHU Athletics Sunset Run 5K on Saturday 10 July 2027. We expect 1200 runners over 5K, starting at 09:00 in the Ferry Park area. The completed form and the attachments (crowd_plan.txt, insurance.txt, medical_plan.txt, race_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nJoan Kowalczyk\nClub Chair, Port Halden University Athletics\njoan@phu-athletics.example / 555-0189\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Our annual 5K around Ferry Park, all on paths.",
+   "event_date": "2027-07-10",
+   "event_name": "PHU Athletics Sunset Run 5K",
+   "event_type": "street_race",
+   "expected_runners": 1200,
+   "fee_paid": true,
+   "hospital_distance_km": 2,
+   "organizer": "Port Halden University Athletics",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Ferry Park"
+  }
+ },
+ "events": [
+  847,
+  848,
+  849,
+  850,
+  851,
+  852,
+  853,
+  854,
+  855,
+  856,
+  857,
+  858
+ ],
+ "evidence": [
+  {
+   "document": null,
+   "evidence_type": "ambulance_agreement",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "Insured: Port Halden University Athletics",
+     "value": "Port Halden University Athletics",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "Location of event: Ferry Park",
+     "value": "Ferry Park",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Cover starts: January 1, 2027",
+     "value": "January 1, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Cover ends: December 31, 2027",
+     "value": "December 31, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "Limit of indemnity: $1,000,000 any one event",
+     "value": "$1,000,000 any one event",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.5622362115402378,
+    "leaves": [
+     {
+      "contribution": 0.09112215224516018,
+      "count": 8.270882884902104,
+      "entropy": 0.3147966530310681,
+      "levels": [
+       0.04016669054511555,
+       0.9260271318438827,
+       0.03380617761100173
+      ],
+      "reach": 0.88,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.00846756552442,
+      "entropy": 0.1561000799989208,
+      "levels": [
+       0.9677130130013524,
+       0.027531117600363357,
+       0.004755869398284338
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.03495474429747594,
+      "count": 9.558341191169001,
+      "entropy": 0.1874473020550598,
+      "levels": [
+       0.004153415757341062,
+       0.037737538878224564,
+       0.9581090453644343
+      ],
+      "reach": 0.12,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.605512000527643,
+      "entropy": 0.2313454483844582,
+      "levels": [
+       0.029987504982668597,
+       0.950213535841583,
+       0.01979895917574841
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.035845097570582615,
+     0.8194323806880037,
+     0.14472252174141365
+    ],
+    "questions": [
+     {
+      "answer": 0.88,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.12607689654263612
+   },
+   "name": "Crowd pressure",
+   "product": 0.04983139304710002,
+   "severity": {
+    "entropy": 0.23070477551157512,
+    "leaves": [
+     {
+      "contribution": 0.01716006777854192,
+      "count": 9.112930764988882,
+      "entropy": 0.22951312320267853,
+      "levels": [
+       0.004603443565642531,
+       0.9447586772122897,
+       0.05063787922206785
+      ],
+      "reach": 0.04,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.46815811494906,
+      "entropy": 0.19105669522056723,
+      "levels": [
+       0.022448407747293453,
+       0.9610692726099711,
+       0.016482319642735475
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.3780859639180605,
+      "count": 8.748536977131984,
+      "entropy": 0.22812286358742553,
+      "levels": [
+       0.041069695013468625,
+       0.9486628812331641,
+       0.010267423753367156
+      ],
+      "reach": 0.96,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.154916336384325,
+      "entropy": 0.12644130645996807,
+      "levels": [
+       0.9747621045800282,
+       0.022500441976888552,
+       0.0027374534430832337
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.03961104495555558,
+     0.9485067130723291,
+     0.011882241972115183
+    ],
+    "questions": [
+     {
+      "answer": 0.04,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.3952460316966024
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.19810161148478056,
+    "leaves": [
+     {
+      "contribution": 0.002113419002679046,
+      "count": 11.040350766630421,
+      "entropy": 0.17297315712467992,
+      "levels": [
+       0.005865055747707677,
+       0.9634341712834478,
+       0.030700772968844506
+      ],
+      "reach": 0.02,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.178564733395502,
+      "entropy": 0.24334427699915745,
+      "levels": [
+       0.9416649904621746,
+       0.05154467278487673,
+       0.00679033675294864
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.2882030291577458,
+      "count": 11.049467135438737,
+      "entropy": 0.13648981337788377,
+      "levels": [
+       0.0011440736728434737,
+       0.027974678706254898,
+       0.9708812476209017
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.107100897541775,
+      "entropy": 0.20918367255303277,
+      "levels": [
+       0.03411857752729693,
+       0.9548275031445856,
+       0.011053919328117473
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0012384933143407579,
+     0.046683868557798755,
+     0.9520776381278605
+    ],
+    "questions": [
+     {
+      "answer": 0.02,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.29031644816042484
+   },
+   "name": "Medical emergency",
+   "product": 0.09867828993024644,
+   "severity": {
+    "entropy": 0.6125955257748336,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 11.043851167475616,
+      "entropy": 0.10755562602936412,
+      "levels": [
+       0.009528525476458917,
+       0.9809429490470822,
+       0.009528525476458917
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.01083210531511018,
+      "count": 12.457670027400916,
+      "entropy": 0.1134296754627391,
+      "levels": [
+       0.9782690725203242,
+       0.018727969301010807,
+       0.0030029581786650524
+      ],
+      "reach": 0.1,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.578524891246898,
+      "entropy": 0.1897874280692375,
+      "levels": [
+       0.003891073802285777,
+       0.9571981881748565,
+       0.038910738022857785
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.32906696191141566,
+      "count": 9.76199110587824,
+      "entropy": 0.49733678506019924,
+      "levels": [
+       0.14687706934104927,
+       0.836967799856175,
+       0.016155130802775777
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.23001626965897676,
+     0.7551438168006586,
+     0.014839913540364704
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.3398990672265258
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.3952460316966024,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21646268154544307,
+   "t_low": 0.18447068450010728
+  },
+  "weights_version": "first-guess+71"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order. The overall risk, while notable for a July race with no ambulance on site and gaps in the medical plan, stays below the risk threshold, so the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.14850968297734646,
+ "t_high": 0.21646268154544307,
+ "t_low": 0.18447068450010728,
+ "title": "PHU Athletics Sunset Run 5K",
+ "unmapped_documents": []
+}

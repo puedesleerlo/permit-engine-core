@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Permit Engine explainer stage</title>
+<link rel="stylesheet" href="/design/fonts/fonts.css">
+<link rel="stylesheet" href="/design/permit-engine.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--pe-surface); overflow: hidden; }
+  #stage {
+    position: relative; width: 1920px; height: 1080px; overflow: hidden;
+    background: var(--pe-surface); color: var(--pe-ink);
+    font-family: var(--pe-font-text);
+    -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision;
+  }
+  #stage * { box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script src="engine.js"></script>
+<script src="scenes1.js"></script>
+<script src="scenes2.js"></script>
+<script>window.ready = PE.boot(new URLSearchParams(location.search).get('video') || 'video1');</script>
+</body>
+</html>

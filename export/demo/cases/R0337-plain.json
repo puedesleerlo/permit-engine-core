@@ -1,0 +1,878 @@
+{
+ "case_id": "R0337-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.0032703338280327867,
+     0.9792709980089431,
+     0.017458668163023994
+    ],
+    "before": [
+     0.0035415360620223626,
+     0.9775519833933219,
+     0.01890648054465567
+    ],
+    "count_after": 13.054344043066067,
+    "count_before": 12.94321552453547,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.00051322323264598,
+     0.01584118127375778,
+     0.9836455954935963
+    ],
+    "before": [
+     0.0005132377117236013,
+     0.01581341613955941,
+     0.9836733461487169
+    ],
+    "count_after": 11.698335451813065,
+    "count_before": 11.714996401799814,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.004926881438113242,
+     0.9901462371237735,
+     0.004926881438113242
+    ],
+    "before": [
+     0.00531350974463071,
+     0.9893729805107385,
+     0.00531350974463071
+    ],
+    "count_after": 12.393564960648469,
+    "count_before": 12.267391451359652,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.0027320142787390033,
+     0.9699478429338709,
+     0.027320142787390034
+    ],
+    "before": [
+     0.002757605134173266,
+     0.9696663435240941,
+     0.027576051341732664
+    ],
+    "count_after": 10.582187576683113,
+    "count_before": 10.56034353793541,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.5497396359294472,
+     0.44182058063782204,
+     0.008439783432730828
+    ],
+    "before": [
+     0.590493063670775,
+     0.4004414928898316,
+     0.009065443439393316
+    ],
+    "count_after": 11.744685033053285,
+    "count_before": 11.626447904831098,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.01692869275676754,
+     0.5148469030685857,
+     0.4682244041746468
+    ],
+    "before": [
+     0.017031325849277863,
+     0.5119055795184182,
+     0.471063094632304
+    ],
+    "count_after": 10.97554128960446,
+    "count_before": 10.95223701020454,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.170087753229912,
+     0.5473327547292153,
+     0.2825794920408727
+    ],
+    "before": [
+     0.17203789892767418,
+     0.5421426862844317,
+     0.285819414787894
+    ],
+    "count_after": 10.756718652572507,
+    "count_before": 10.70757997565667,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.0037247696967357725,
+     0.09456589775891226,
+     0.901709332544352
+    ],
+    "before": [
+     0.0037251896176328223,
+     0.094463821461211,
+     0.9018109889211561
+    ],
+    "count_after": 12.030368748912979,
+    "count_before": 12.034251492321276,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.004942831636457435,
+     0.9752858418177129,
+     0.01977132654582974
+    ],
+    "before": [
+     0.005439179478042275,
+     0.9728041026097887,
+     0.0217567179121691
+    ],
+    "count_after": 10.958402600633784,
+    "count_before": 10.707959785627725,
+    "leaf": {
+     "arterial_road": true,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. AG-99515\n\nBetween: St. Luke Ambulance Brigade (\"the Provider\")\nAnd: Old Quay Pacers (\"the Client\")\n\nEvent: Old Quay Community Run 7K\nEvent date: 28 August 2027\nLocation: Foundry Yards, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the top of Castle Way from 06:45 until the last runner has finished or 10:00, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $1150, paid in full on signature.\n\nSigned for the Provider: Samuel Adeyemi, Operations Manager, 20 July 2027\nSigned for the Client: Nadia Petrov, 20 July 2027\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "Atlas Casualty Group\nCertificate of Insurance\n\nWe certify that a policy of event public liability insurance has been issued as follows.\n\nPolicy: GL-889943\nInsured: Old Quay Pacers\nEvent covered: Old Quay Community Run 7K\nLocation of event: Foundry Yards\nCover starts: 2027-08-27\nCover ends: 2027-08-29\nLimit of indemnity: $2,000,000 any one event\n\nSigned on behalf of the insurer, 2027-07-20\nCertificate reference EV-67715\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nOld Quay Community Run 7K, Saturday 28 August 2027\nApplicant: Old Quay Pacers\nIssue: 3.2\n\n1. Event summary\nA 7K race with 150 runners, starting at 08:00 in the Foundry Yards area of Port Halden. An ambulance from St. Luke Ambulance Brigade is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 8 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Thornton County Hospital, 22 km from the finish. The transfer route and the pick-up point at the top of Castle Way have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Priya Raman, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PORT HALDEN POLICE SERVICE\nTraffic and Events Division\n200 Prince Street, Port Halden\n\n2027-07-20\n\nNadia Petrov\nOld Quay Pacers\n\nRe: Old Quay Community Run 7K, 2027-08-28\n\nDear Nadia Petrov,\n\nI confirm that this Division will provide a police escort for the above event on 2027-08-28. Two motorcycle officers will accompany the lead runner along the route through Foundry Yards, and one traffic unit will be stationed at Castle Way from 06:45 until the last runner has cleared the course.\n\nPlease send your final course map to this office no later than seven days before the event.\n\nYours sincerely,\n\nInsp. Hannah Weiss\nTraffic and Events Division\nReference AG-55832\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Old Quay Community Run 7K: how the race will work\n\nPrepared by Nadia Petrov (Volunteer Coordinator), Old Quay Pacers. Last updated 20 July 2027.\n\nThis is our plan for race day, Saturday 28 August 2027. We expect 150 runners over 7K (7 km). Numbers can be collected from the top of Castle Way from an hour before we go at 08:00, and we aim to have the last finisher home by 09:30.\n\nThe route takes in Castle Way, Northern Avenue, Canon Road, Dyer Street and Market Row, and the City would need to close all of these for us. On the way round we cross Prince Street, Station Road, Regent Road and Victoria Road. We finish in the Civic Plaza.\n\nIt's a lovely route through the old part of town, though there isn't much room. We measured Castle Way at 4.5 metres and Market Row at 4.5 metres, doorstep to doorstep. Two cars can't pass on Dyer Street. People watching tend to stand in doorways.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Old Quay Community Run 7K\nDate: Saturday 28 August 2027\nApplicant: Old Quay Pacers\nPrepared by: Tessera Event Transport\nIssue: 3.2\n\n1. Scope\nThis plan describes how traffic will be managed for the Old Quay Community Run 7K, a 7K race in the Foundry Yards area of Port Halden with a 08:00 start. It has been prepared to accompany the permit application and should be read with the race plan. See the attached correspondence from the police for the escort.\n\n2. Road closures\nTemporary closures will be in force as follows, with barriers and advance signing supplied by Northline Barriers.\n- Castle Way, Bridge Row to Brook Street: closed 06:45 to 10:00\n- Northern Avenue, Bell Street to Hatter Street: closed 06:45 to 10:00\n- Canon Road, Bridge Row to Abbey Road: closed 06:45 to 10:00\n- Dyer Street, Quay Street to Bell Street: closed 06:45 to 10:00\n- Market Row, Brook Street to Bell Street: closed 06:45 to 10:00\n\n3. Major crossings\nEach major crossing has its own control point, staffed from 06:45 until the last runner has passed.\n- Prince Street at Dyer Street: 2 traffic marshals with stop/go boards, one supervisor\n- Station Road at Castle Way: 3 traffic marshals with stop/go boards, one supervisor\n- Regent Road at Northern Avenue: 3 traffic marshals with stop/go boards, one supervisor\n- Victoria Road at Market Row: 2 traffic marshals with stop/go boards, one supervisor\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Castle Way: traffic diverted via Queen's Road and Ferry Road, signed from Bell Street\n- Northern Avenue: traffic diverted via Canal Road and High Street, signed from Brook Street\n- Canon Road: traffic diverted via High Street and Queen's Road, signed from Quay Street\n- Dyer Street: traffic diverted via Ferry Road and Canal Road, signed from Brook Street\n- Market Row: traffic diverted via High Street and Dock Road, signed from Bridge Row\n\n5. Emergency vehicle access\nA clear lane of at least 3.5 m will be kept along the closed section for emergency vehicles. Barrier staff hold radios on the event channel and can open any closure within two minutes on request from the event controller, who is in direct contact with the police and ambulance control rooms.\n\n6. Notification\nAll frontages on the closed streets receive a letter drop 21 days before the event, with a further reminder at 7 days. Advance notice signs go up 10 days before, and bus operators have been given the closure times.\n\nWe have a good working relationship with local residents. Several members walk the route the week before, noting anything that has changed, such as new roadworks, a barrier left in place, or a lane marked for cycles.\n\n7. Reopening\nA sweep vehicle follows the last runner. Closures are lifted in the order listed, after a barrier and litter check, with all roads open by 10:00.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Old Quay Community Run 7K, Saturday 28 August 2027. 150 runners, 7K, off at 08:00, around Foundry Yards. I've attached ambulance_agreement.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt.\n\nWe look forward to hearing from you.\n\nThanks,\nNadia\n\nNadia Petrov, Old Quay Pacers\n555-0135\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "Our annual 7K on the streets of Foundry Yards. Allow for about 70 supporters along the route in addition to the runners.",
+   "event_date": "2027-08-28",
+   "event_name": "Old Quay Community Run 7K",
+   "event_type": "street_race",
+   "expected_runners": 150,
+   "fee_paid": true,
+   "hospital_distance_km": 22,
+   "organizer": "Old Quay Pacers",
+   "route": {
+    "arterial_road": true,
+    "major_crossings": 4,
+    "road_closure": true
+   },
+   "venue": "Foundry Yards"
+  }
+ },
+ "events": [
+  1215,
+  1216,
+  1217,
+  1218,
+  1219,
+  1220,
+  1221,
+  1222,
+  1223,
+  1224,
+  1225,
+  1226
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: St. Luke Ambulance Brigade (\"the Provider\")",
+     "value": "St. Luke Ambulance Brigade",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: 28 August 2027",
+     "value": "28 August 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "Insured: Old Quay Pacers",
+     "value": "Old Quay Pacers",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "Location of event: Foundry Yards",
+     "value": "Foundry Yards",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Cover starts: 2027-08-27",
+     "value": "2027-08-27",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Cover ends: 2027-08-29",
+     "value": "2027-08-29",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "Limit of indemnity: $2,000,000 any one event",
+     "value": "$2,000,000 any one event",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "I confirm that this Division will provide a police escort for the above event on 2027-08-28.",
+     "value": "2027-08-28",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "Insp. Hannah Weiss",
+     "value": "Insp. Hannah Weiss",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.18522962159969425,
+    "leaves": [
+     {
+      "contribution": 0.10142801375948995,
+      "count": 12.94321552453547,
+      "entropy": 0.11720538220060797,
+      "levels": [
+       0.0035415360620223626,
+       0.9775519833933219,
+       0.01890648054465567
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 13.565477730656658,
+      "entropy": 0.11255673601460367,
+      "levels": [
+       0.9782506505484755,
+       0.01923625281653841,
+       0.0025130966349860237
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.005933872204256114,
+      "count": 11.714996401799814,
+      "entropy": 0.08565690233546311,
+      "levels": [
+       0.0005132377117236013,
+       0.01581341613955941,
+       0.9836733461487169
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.59201961607645,
+      "entropy": 0.16766860690124696,
+      "levels": [
+       0.02707358782315203,
+       0.9655723995724435,
+       0.007354012604404454
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0034809700950163875,
+     0.9583172120482467,
+     0.03820181785673692
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.10736188596374609
+   },
+   "name": "Medical emergency",
+   "product": 0.04326753602299186,
+   "severity": {
+    "entropy": 0.07610928688657345,
+    "leaves": [
+     {
+      "contribution": 0.3614346476310503,
+      "count": 12.267391451359652,
+      "entropy": 0.06622939481935232,
+      "levels": [
+       0.00531350974463071,
+       0.9893729805107385,
+       0.00531350974463071
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 14.30678546483473,
+      "entropy": 0.07172324706307898,
+      "levels": [
+       0.9875502482518693,
+       0.01086494472373029,
+       0.001584807024400431
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.04157183492647876,
+      "count": 10.56034353793541,
+      "entropy": 0.1451408117508352,
+      "levels": [
+       0.002757605134173266,
+       0.9696663435240941,
+       0.027576051341732664
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 11.845372733229338,
+      "entropy": 0.6070525775774227,
+      "levels": [
+       0.26497046407898994,
+       0.7302442297487409,
+       0.004785306172269075
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.0050579192835849655,
+     0.987402316812074,
+     0.007539763904340904
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.403006482557529
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.8841353400227601,
+    "leaves": [
+     {
+      "contribution": 0.046169302480707296,
+      "count": 11.626447904831098,
+      "entropy": 0.7201866657172543,
+      "levels": [
+       0.590493063670775,
+       0.4004414928898316,
+       0.009065443439393316
+      ],
+      "reach": 0.846,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.010413906094360013,
+      "count": 10.95223701020454,
+      "entropy": 0.7667421743470884,
+      "levels": [
+       0.017031325849277863,
+       0.5119055795184182,
+       0.471063094632304
+      ],
+      "reach": 0.05400000000000005,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.013479679998076293,
+      "count": 10.70757997565667,
+      "entropy": 0.9926663741607429,
+      "levels": [
+       0.17203789892767418,
+       0.5421426862844317,
+       0.285819414787894
+      ],
+      "reach": 0.09399999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0016803850956889244,
+      "count": 12.034251492321276,
+      "entropy": 0.3369271066338559,
+      "levels": [
+       0.0037251896176328223,
+       0.094463821461211,
+       0.9018109889211561
+      ],
+      "reach": 0.006000000000000004,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.5166707370982438,
+     0.41794459971829595,
+     0.06538466318346015
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.94,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.07174327366883251
+   },
+   "name": "Traffic conflict",
+   "product": 0.029516781005369887,
+   "severity": {
+    "entropy": 0.13846433937025637,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 7.892092408998586,
+      "entropy": 0.24586831335061504,
+      "levels": [
+       0.006594082481790423,
+       0.05275265985432338,
+       0.9406532576638863
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.41142227690388883,
+      "count": 10.707959785627725,
+      "entropy": 0.13846433937025637,
+      "levels": [
+       0.005439179478042275,
+       0.9728041026097887,
+       0.0217567179121691
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.707959785627729,
+      "entropy": 0.13056212214418345,
+      "levels": [
+       0.016317538434126817,
+       0.9755236923488098,
+       0.008158769217063409
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 13.44766510137275,
+      "entropy": 0.034092540674089164,
+      "levels": [
+       0.9949274981799439,
+       0.004260901528847171,
+       0.000811600291208985
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.005439179478042275,
+     0.9728041026097887,
+     0.0217567179121691
+    ],
+    "questions": [
+     {
+      "answer": 1.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.41142227690388883
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.41142227690388883,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21957302654607286,
+   "t_low": 0.1793003753250711
+  },
+  "weights_version": "first-guess+102"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The paperwork is complete, the fee is paid and insurance is valid, and the arranged traffic, police and medical cover keep the overall risk below the threshold, so the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.07278431702836174,
+ "t_high": 0.21957302654607286,
+ "t_low": 0.1793003753250711,
+ "title": "Old Quay Community Run 7K",
+ "unmapped_documents": []
+}

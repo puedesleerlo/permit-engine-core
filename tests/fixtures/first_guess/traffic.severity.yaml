@@ -1,0 +1,31 @@
+# TEMPORARY, for offline checks only. Not the first guess: a stand-in copied from experiments/sim_data_plan.py (looks only at the first question).
+id: traffic.severity
+leaves:
+- when:
+    arterial_road: true
+    crowd_over_800: true
+  levels:
+  - 0.1
+  - 0.8
+  - 0.1
+- when:
+    arterial_road: true
+    crowd_over_800: false
+  levels:
+  - 0.1
+  - 0.8
+  - 0.1
+- when:
+    arterial_road: false
+    crowd_over_800: true
+  levels:
+  - 0.8
+  - 0.1
+  - 0.1
+- when:
+    arterial_road: false
+    crowd_over_800: false
+  levels:
+  - 0.8
+  - 0.1
+  - 0.1

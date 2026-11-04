@@ -1,0 +1,200 @@
+{
+ "answers": "real",
+ "approved": 57,
+ "arms": [
+  {
+   "approved": 0.47,
+   "approved_count": 47,
+   "decided_without_officer": 0.49,
+   "forbidden_interval": [
+    0.0,
+    0.07555760416399632
+   ],
+   "forbidden_permits": 0,
+   "interval": [
+    0.0,
+    0.07555760416399632
+   ],
+   "loss": 0.7657926044792265,
+   "name": "First guess",
+   "right_level": 0.6822033898305084,
+   "risky_among_approved": 0.0,
+   "risky_approvals": 0,
+   "sent_to_officer": 0.49,
+   "t_high": 0.27967159999999996,
+   "t_low": 0.168815136,
+   "wrong_denials": 0
+  },
+  {
+   "approved": 0.57,
+   "approved_count": 57,
+   "decided_without_officer": 0.59,
+   "forbidden_interval": [
+    0.0,
+    0.06313883485297894
+   ],
+   "forbidden_permits": 0,
+   "interval": [
+    0.003103664651408093,
+    0.09290749178567684
+   ],
+   "loss": 0.37227110311697015,
+   "name": "Trained on labelled cases",
+   "right_level": 0.8940677966101694,
+   "risky_among_approved": 0.017543859649122806,
+   "risky_approvals": 1,
+   "sent_to_officer": 0.39,
+   "t_high": 0.20438546033367044,
+   "t_low": 0.20438546033367044,
+   "wrong_denials": 0
+  },
+  {
+   "approved": 0.25,
+   "approved_count": 25,
+   "decided_without_officer": 0.27,
+   "forbidden_interval": [
+    1.3877787807814457e-17,
+    0.13319225093904846
+   ],
+   "forbidden_permits": 0,
+   "interval": [
+    1.3877787807814457e-17,
+    0.13319225093904846
+   ],
+   "loss": 0.9090027781508745,
+   "name": "Shuffled labels (control)",
+   "right_level": 0.548728813559322,
+   "risky_among_approved": 0.0,
+   "risky_approvals": 0,
+   "sent_to_officer": 0.71,
+   "t_high": 0.19038259847161693,
+   "t_low": 0.09834994717353135,
+   "wrong_denials": 0
+  },
+  {
+   "approved": 0.11,
+   "interval": [
+    0.0,
+    0.2588329669680317
+   ],
+   "loss": null,
+   "name": "One LLM reads and decides (baseline)",
+   "on_all_cases": {
+    "agrees_with_right_route": 0.52,
+    "approved": 0.11,
+    "cases": 100,
+    "forbidden_permits": 0,
+    "interval": [
+     0.0,
+     0.2588329669680317
+    ],
+    "risky_among_approved": 0.0
+   },
+   "on_cases_engine_decided": {
+    "agrees_with_right_route": 0.22033898305084745,
+    "approved": 0.1694915254237288,
+    "cases": 59,
+    "forbidden_permits": 0,
+    "interval": [
+     0.0,
+     0.2775327998628892
+    ],
+    "risky_among_approved": 0.0
+   },
+   "risky_among_approved": 0.0,
+   "status": "run"
+  },
+  {
+   "approved": 0.4270833333333333,
+   "interval": [
+    0.0,
+    0.08566757018443186
+   ],
+   "loss": 1.4675438921408155,
+   "name": "Jev asked directly",
+   "note": "Jev's risk uses its own threshold, chosen on validation by the same rule as the trees. Approvals apply the same requirement checks and red flags as the engine.",
+   "on_all_cases": {
+    "approved": 0.4270833333333333,
+    "cases": 96,
+    "interval": [
+     0.0,
+     0.08566757018443186
+    ],
+    "loss": 1.4675438921408155,
+    "right_level": 0.3093220338983051,
+    "risky_among_approved": 0.0
+   },
+   "on_cases_engine_decided": {
+    "approved": 0.7192982456140351,
+    "cases": 57,
+    "interval": [
+     0.0,
+     0.08566757018443186
+    ],
+    "loss": 1.571594959031714,
+    "right_level": 0.27611940298507465,
+    "risky_among_approved": 0.0
+   },
+   "right_level": 0.3093220338983051,
+   "risky_among_approved": 0.0,
+   "status": "run",
+   "t_low": 0.369334
+  }
+ ],
+ "conditions": [
+  {
+   "detail": "Difference in mean loss -0.390, 95% interval -0.436 to -0.345.",
+   "name": "Lower loss than the first guess",
+   "passed": true
+  },
+  {
+   "detail": "Difference in mean loss -0.510, 95% interval -0.578 to -0.440.",
+   "name": "Lower loss than the shuffled control",
+   "passed": true
+  },
+  {
+   "detail": "Difference in share approved +0.100, 95% interval +0.040 to +0.170.",
+   "name": "More approvals than the first guess",
+   "passed": true
+  },
+  {
+   "detail": "1 of 57 approvals labelled risky, Wilson interval 0.003 to 0.093. This fails only if the lower end is above 5%.",
+   "name": "Risky approvals not clearly above 5%",
+   "passed": true
+  }
+ ],
+ "dataset_hash": "e386801ed659b18e19996844abc9a5489cb67f8e9b8884c951ec1f3de96bfa85",
+ "differences": {
+  "Lower loss than the first guess": {
+   "high": -0.34455288359319103,
+   "low": -0.4357618403284087,
+   "mean": -0.39008511664525863
+  },
+  "Lower loss than the shuffled control": {
+   "high": -0.44021721403525865,
+   "low": -0.5775849328195198,
+   "mean": -0.5098148076997341
+  },
+  "More approvals than the first guess": {
+   "high": 0.17,
+   "low": 0.04,
+   "mean": 0.1
+  },
+  "Risky approvals not clearly above 5%": null
+ },
+ "forbidden_interval": [
+  0.0,
+  0.06313883485297894
+ ],
+ "forbidden_permits": 0,
+ "limits": "About 3 risky approvals in 52 gives a Wilson interval of roughly 2% to 16%, so this test cannot confirm a 5% target. It can only show when risky approvals are clearly above it.",
+ "risky_approvals": 1,
+ "risky_interval": [
+  0.003103664651408093,
+  0.09290749178567684
+ ],
+ "status": "run",
+ "synthetic": true,
+ "verdict": "pass",
+ "version": "v1"
+}

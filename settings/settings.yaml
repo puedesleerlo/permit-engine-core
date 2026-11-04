@@ -1,0 +1,276 @@
+# One format for every setting. A value outside its limits stops the run. API keys are not settings.
+# public: false means the export must leave this setting out of rules.json, because it names the LLM vendor or model.
+- key: decision.risky_approval_target
+  value: 0.05
+  limits: {min: 0.01, max: 0.15}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 90
+  public: true
+  affects: [t_low, officer_load]
+  why: The share of automatic approvals the city accepts being labelled risky.
+  if_raised: More events are approved automatically, and risky approvals may rise.
+- key: decision.high_risk_precision_target
+  value: 0.85
+  limits: {min: 0.5, max: 1.0}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 90
+  public: true
+  affects: [t_high]
+  why: The share of high-risk cases that must really be labelled risky before the system calls them high risk.
+  if_raised: Fewer cases are marked high risk, and more fall into the review band.
+- key: decision.severity_ceiling
+  value: 0.85
+  limits: {min: 0.5, max: 1.0}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 90
+  public: true
+  affects: [officer_load, approvals]
+  why: A case whose highest severity reaches this value always goes to an officer, because the product of likelihood and severity can hide a rare catastrophe.
+  if_raised: Fewer cases go to an officer on severity alone, and a rare catastrophe is more likely to be approved automatically.
+- key: decision.stop_switch
+  value: false
+  limits: {allowed: [true, false]}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [approvals, officer_load]
+  why: Lets the policy owner send every case that passes basic checks to an officer.
+  if_raised: Turning it on stops all automatic approvals until it is turned off.
+- key: risk.anchors.likelihood
+  value: [0.02, 0.10, 0.30]
+  limits: {min: 0.0, max: 1.0}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [risk]
+  why: The numbers that stand for rare, possible and likely. They are policy values, not measurements.
+  if_raised: Every case's risk rises, and thresholds must be chosen again.
+- key: risk.anchors.severity
+  value: [0.1, 0.4, 1.0]
+  limits: {min: 0.0, max: 1.0}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [risk, highest_severity]
+  why: The numbers that stand for minor, serious and critical. They are policy values, not measurements.
+  if_raised: Every case's risk rises, more cases reach the ceiling, and thresholds must be chosen again.
+- key: corrections.discount
+  value: 0.93
+  limits: {min: 0.5, max: 1.0}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [leaf_weights]
+  why: How much old counts on a leaf keep their weight when a correction reaches that leaf.
+  if_raised: Old counts fade more slowly, so each correction changes less.
+- key: curve.rechoose_every
+  value: 10
+  limits: {min: 1, max: 50}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [t_low, t_high, learning_curve]
+  why: How many officer reviews pass before thresholds are chosen again during the replay.
+  if_raised: Thresholds follow the weights less often, so the curve moves in larger steps.
+- key: trees.entropy_flag
+  value: 0.6
+  limits: {min: 0.0, max: 1.1}
+  owner: policy_owner
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [tree_flags]
+  why: A tree is flagged when its mean leaf entropy is the highest of all trees and above this value, which points to a missing question.
+  if_raised: Fewer trees are flagged, and a missing question is more likely to go unnoticed.
+- key: evidence.p_supported
+  value: 0.9
+  limits: {min: 0.5, max: 1.0}
+  owner: steward
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [tree_answers]
+  why: The answer an evidence question takes when a record is supported.
+  if_raised: A supported document counts for more, and risk falls on cases that have one.
+- key: evidence.p_unsupported
+  value: 0.1
+  limits: {min: 0.0, max: 0.5}
+  owner: steward
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [tree_answers]
+  why: The answer an evidence question takes when a record is unsupported or absent.
+  if_raised: A missing document counts against a case less, and risk falls on cases without one.
+- key: evidence.p_contradicted
+  value: 0.05
+  limits: {min: 0.0, max: 0.5}
+  owner: steward
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [tree_answers]
+  why: The answer an evidence question takes when a record is contradicted.
+  if_raised: A contradicted document counts against a case less.
+- key: training.first_guess_strength
+  value: 2
+  limits: {min: 0.5, max: 20}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [leaf_weights]
+  why: How many pseudo-cases the first guess is worth on each leaf.
+  if_raised: Training and corrections move the first guess more slowly.
+- key: training.em_iterations
+  value: 6
+  limits: {min: 1, max: 50}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 180
+  public: true
+  affects: [leaf_weights]
+  why: How many passes training makes over the labelled cases.
+  if_raised: Training takes longer and settles closer to the labels.
+- key: officer.accuracy_simulated
+  value: 0.9
+  limits: {min: 0.5, max: 1.0}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [simulated_officer]
+  why: How often the officer agrees with the label when the run uses simulated answers instead of the LLM officer.
+  if_raised: The simulated officer makes fewer wrong corrections, and the curve looks better than a real officer may manage.
+- key: models.claude.id
+  value: claude-opus-5-5
+  limits: {allowed: [claude-opus-5-5]}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: false
+  affects: [evidence_records, officer_rulings, stored_answers]
+  why: The LLM used for reading evidence and for the simulated officer.
+  if_raised: Changing the model changes the stored-answer key, so every case is read again.
+- key: models.claude.effort
+  value: low
+  limits: {allowed: [low, medium, high]}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: false
+  affects: [evidence_records, cost]
+  why: The effort level used for reading, reviewed after the first 5 cases.
+  if_raised: Each read costs more and may be more accurate.
+- key: models.jev.id
+  value: jev-1.14.0
+  limits: {allowed: [jev-1.14.0]}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [tree_answers, stored_answers]
+  why: The Jev version whose answers are pinned for this run. A returned model that differs counts as a failure.
+  if_raised: Changing the version changes the stored-answer key, so every case is read again.
+- key: models.max_concurrency
+  value: 4
+  limits: {min: 1, max: 8}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [read_time, rate_limits]
+  why: How many model requests run at once. TypeSafe's cookbook reports rate limits on a shared key at 8.
+  if_raised: Reads finish sooner, and rate limits become more likely.
+- key: budget.max_usd_total
+  value: 30
+  limits: {min: 1, max: 100}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [spend]
+  why: The total spend at which a run stops.
+  if_raised: A run may spend more before it stops.
+- key: budget.max_jev_input_tokens
+  value: 2000000
+  limits: {min: 10000, max: 10000000}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [spend]
+  why: The total Jev input at which a run stops. Reset after the first 5 cases are measured.
+  if_raised: A run may send Jev more before it stops.
+- key: budget.stop_after_first_cases
+  value: 5
+  limits: {min: 1, max: 20}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [spend]
+  why: How many real cases run before the project owner looks at the cost and the output.
+  if_raised: More money is spent before the project owner's first look.
+- key: budget.switch_above_usd
+  value: 20
+  limits: {min: 1, max: 100}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: true
+  affects: [spend, models]
+  why: If the total projected at the first stop is above this, the project owner reconsiders the model or effort.
+  if_raised: A costlier projection passes without a second look.
+- key: prices.claude.input_usd_per_million
+  value: 4
+  limits: {min: 0, max: 100}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: false
+  as_of: "2026-11-03"
+  affects: [spend_estimate]
+  why: The LLM's input rate, used to meter spend.
+  if_raised: Metered spend rises, and budgets stop a run sooner.
+- key: prices.claude.output_usd_per_million
+  value: 20
+  limits: {min: 0, max: 100}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: false
+  as_of: "2026-11-03"
+  affects: [spend_estimate]
+  why: The LLM's output rate, used to meter spend.
+  if_raised: Metered spend rises, and budgets stop a run sooner.
+- key: prices.kimi-k3.input_usd_per_million
+  value: null
+  limits: {allowed: [null]}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: false
+  as_of: "2026-11-03"
+  affects: [spend_estimate]
+  why: The backup LLM's input rate. Null because no file available when this was written confirms it, so the meter records tokens and reports the price as unknown.
+  if_raised: Metered spend rises, and budgets stop a run sooner.
+- key: prices.kimi-k3.output_usd_per_million
+  value: null
+  limits: {allowed: [null]}
+  owner: project_owner
+  moves_by: person_only
+  recheck_after_days: 30
+  public: false
+  as_of: "2026-11-03"
+  affects: [spend_estimate]
+  why: The backup LLM's output rate. Null because no file available when this was written confirms it, so the meter records tokens and reports the price as unknown.
+  if_raised: Metered spend rises, and budgets stop a run sooner.

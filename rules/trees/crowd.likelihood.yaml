@@ -1,0 +1,25 @@
+id: crowd.likelihood
+version: 1
+owner: policy_owner
+hazard: crowd_pressure
+scale: likelihood
+questions:
+  - id: crowd_plan_adequate
+    kind: jev
+    text: Is the crowd plan adequate?
+    instructions: Does the crowd plan set out marked spectator areas with their capacities, a staged start, stewards in stated numbers and positions, exit routes, and who can stop the race?
+    needs: [crowd_plan]
+    clause: ORD-14.1
+  - id: crowd_over_800
+    kind: rule
+    text: Is the crowd over 800?
+    clause: ORD-1.2
+leaves:  # first guess, written blind; see rules/first_guess.json
+  - when: {crowd_plan_adequate: true, crowd_over_800: true}
+    levels: [0.35, 0.5, 0.15]
+  - when: {crowd_plan_adequate: true, crowd_over_800: false}
+    levels: [0.7, 0.25, 0.05]
+  - when: {crowd_plan_adequate: false, crowd_over_800: true}
+    levels: [0.05, 0.35, 0.6]
+  - when: {crowd_plan_adequate: false, crowd_over_800: false}
+    levels: [0.25, 0.5, 0.25]

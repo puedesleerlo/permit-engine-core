@@ -1,0 +1,18 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+cache/
+runs/
+node_modules/
+web/dist/
+site/out/
+.DS_Store
+
+# Local tunnel settings: they hold a local path and the tunnel id.
+deploy/cloudflared.yml
+
+# Local: reads keys from other folders on this machine.
+scripts/with_keys.sh

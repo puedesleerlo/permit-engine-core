@@ -1,0 +1,643 @@
+{
+ "ordinance": [
+  {
+   "id": "ORD-1.1",
+   "text": "This ordinance applies to any organised foot race held wholly or partly on a public street or public path in the City."
+  },
+  {
+   "id": "ORD-1.2",
+   "text": "A race's crowd means its expected runners plus its expected spectators. A crowd over 800 is a large crowd."
+  },
+  {
+   "id": "ORD-1.3",
+   "text": "A hot date is a race date in June, July or August."
+  },
+  {
+   "id": "ORD-3.1",
+   "text": "The permit fee must be paid when the application is filed."
+  },
+  {
+   "id": "ORD-3.2",
+   "text": "The application form must state the organiser, event type, event date, expected runners, venue, a description, the route details (road closure, arterial road, count of major crossings) and the distance to the nearest hospital. An incomplete form is returned to the applicant."
+  },
+  {
+   "id": "ORD-3.3",
+   "text": "A street race may be held only from 1 March to 30 November."
+  },
+  {
+   "id": "ORD-5.1",
+   "text": "The Events Office considers traffic conflict for any race that closes a road."
+  },
+  {
+   "id": "ORD-5.2",
+   "text": "The Events Office considers crowd pressure for any race with a crowd of 300 or more."
+  },
+  {
+   "id": "ORD-5.3",
+   "text": "The Events Office considers medical emergency for every race."
+  },
+  {
+   "id": "ORD-7.1",
+   "text": "Every race must hold event liability insurance, shown by a certificate of insurance that names the organiser and the venue, covers the race date, and has a limit of at least $1,000,000."
+  },
+  {
+   "id": "ORD-7.2",
+   "text": "A certificate that has expired by the race date, or that names another venue, does not meet ORD-7.1."
+  },
+  {
+   "id": "ORD-9.1",
+   "text": "Proof must be an attached document of a type the evidence steward has listed. A statement in the form or in a cover letter is not proof."
+  },
+  {
+   "id": "ORD-9.2",
+   "text": "An attached document of a type the steward has not listed goes to an officer, who decides the case. The steward then decides whether to list it."
+  },
+  {
+   "id": "ORD-9.3",
+   "text": "A document that disagrees with the application, for example by naming another date, goes to an officer."
+  },
+  {
+   "id": "ORD-12.1",
+   "text": "An application must name every road that the race closes."
+  },
+  {
+   "id": "ORD-12.2",
+   "text": "A race that closes a road must file a traffic plan. The plan must cover every closure on the route, control at each major crossing, signed diversions, and a way through for emergency vehicles."
+  },
+  {
+   "id": "ORD-12.3",
+   "text": "In reviewing a race, the Events Office takes into account whether the route uses an arterial road."
+  },
+  {
+   "id": "ORD-12.4",
+   "text": "A race that closes a road should have a police escort, confirmed in writing by the police in a letter or an email."
+  },
+  {
+   "id": "ORD-12.5",
+   "text": "A route with three or more major road crossings is a route with many major crossings. The Events Office may take this into account."
+  },
+  {
+   "id": "ORD-14.1",
+   "text": "A race with a crowd of 300 or more must file a crowd plan. The plan must cover marked spectator areas with their capacities, a staged start, stewards in stated numbers and positions, exit routes, and who can stop the race."
+  },
+  {
+   "id": "ORD-14.2",
+   "text": "In reviewing a race, the Events Office takes into account whether its venue is too confined for people to spread out. The race plan must give enough detail to judge this."
+  },
+  {
+   "id": "ORD-16.1",
+   "text": "Every race must file a medical plan. The plan must cover staffed first aid positions, water and rules for extreme weather, a named receiving hospital with a transfer route, medical communications, and a named qualified lead."
+  },
+  {
+   "id": "ORD-16.2",
+   "text": "A race should have an ambulance on site under an agreement with an ambulance provider."
+  },
+  {
+   "id": "ORD-16.3",
+   "text": "A hospital more than 10 km from the race is a far hospital."
+  },
+  {
+   "id": "ORD-16.4",
+   "text": "In reviewing a race, the Events Office takes into account whether it falls on a hot date."
+  },
+  {
+   "id": "ORD-20.1",
+   "text": "A race that passes every check and whose assessed risk is below the lower threshold may be approved without an officer."
+  },
+  {
+   "id": "ORD-20.2",
+   "text": "A race whose assessed risk is at or above the lower threshold is decided by an officer."
+  },
+  {
+   "id": "ORD-20.3",
+   "text": "The policy owner may set a stop switch. While it is on, every case that passes the basic checks goes to an officer."
+  },
+  {
+   "id": "ORD-20.4",
+   "text": "A race whose highest assessed severity reaches the ceiling is decided by an officer, however small its likelihood."
+  },
+  {
+   "id": "ORD-20.5",
+   "text": "If any automated step fails, the case goes to an officer."
+  },
+  {
+   "id": "ORD-20.6",
+   "text": "A denial is proposed with the clause it relies on, and an officer signs it."
+  }
+ ],
+ "evidence_types": [
+  {
+   "id": "certificate_of_insurance",
+   "name": "Certificate of insurance",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": false,
+   "terms": [
+    "certificate of insurance",
+    "certificate of liability insurance",
+    "COI",
+    "cert of ins",
+    "proof of cover certificate",
+    "póliza"
+   ],
+   "claim": "The organiser holds event liability insurance in force on the race date at the race venue.",
+   "fields": [
+    {
+     "name": "named_insured",
+     "type": "string",
+     "compare": {
+      "form_field": "organizer",
+      "kind": "same_text",
+      "on_differ": "field_mismatch"
+     }
+    },
+    {
+     "name": "venue",
+     "type": "string",
+     "compare": {
+      "form_field": "venue",
+      "kind": "contains_form_value",
+      "on_differ": "field_failed"
+     }
+    },
+    {
+     "name": "start_date",
+     "type": "date",
+     "compare": {
+      "form_field": "event_date",
+      "kind": "on_or_before_form_date",
+      "on_differ": "field_failed"
+     }
+    },
+    {
+     "name": "end_date",
+     "type": "date",
+     "compare": {
+      "form_field": "event_date",
+      "kind": "on_or_after_form_date",
+      "on_differ": "field_failed"
+     }
+    },
+    {
+     "name": "coverage",
+     "type": "string"
+    }
+   ]
+  },
+  {
+   "id": "police_escort_letter",
+   "name": "Police escort letter",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": false,
+   "terms": [
+    "police letter",
+    "escort letter",
+    "event attendance notice",
+    "police service letter"
+   ],
+   "claim": "The police have committed to escort this race on the race date.",
+   "fields": [
+    {
+     "name": "event_date",
+     "type": "date",
+     "compare": {
+      "form_field": "event_date",
+      "kind": "same_date",
+      "on_differ": "field_mismatch"
+     }
+    },
+    {
+     "name": "signed_by",
+     "type": "string"
+    }
+   ]
+  },
+  {
+   "id": "police_escort_email",
+   "name": "Police escort email",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": false,
+   "terms": [
+    "police email",
+    "escort email",
+    "events desk ticket"
+   ],
+   "claim": "The police have committed to escort this race on the race date.",
+   "fields": [
+    {
+     "name": "event_date",
+     "type": "date",
+     "compare": {
+      "form_field": "event_date",
+      "kind": "same_date",
+      "on_differ": "field_mismatch"
+     }
+    },
+    {
+     "name": "sender",
+     "type": "string"
+    }
+   ]
+  },
+  {
+   "id": "ambulance_agreement",
+   "name": "Ambulance agreement",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": false,
+   "terms": [
+    "ambulance agreement",
+    "medical services agreement",
+    "ambulance booking",
+    "ambulance work order"
+   ],
+   "claim": "An ambulance provider has committed to keep an ambulance on site for this race on the race date.",
+   "fields": [
+    {
+     "name": "provider",
+     "type": "string"
+    },
+    {
+     "name": "event_date",
+     "type": "date",
+     "compare": {
+      "form_field": "event_date",
+      "kind": "same_date",
+      "on_differ": "field_mismatch"
+     }
+    }
+   ]
+  },
+  {
+   "id": "race_plan",
+   "name": "Race plan",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": true,
+   "terms": [
+    "race plan",
+    "race notes",
+    "event information template"
+   ],
+   "claim": "The document describes the course and its dimensions.",
+   "fields": []
+  },
+  {
+   "id": "traffic_plan",
+   "name": "Traffic plan",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": true,
+   "terms": [
+    "traffic plan",
+    "traffic management plan",
+    "traffic notes",
+    "temporary traffic arrangements"
+   ],
+   "claim": "The document describes how traffic is managed for the race.",
+   "fields": []
+  },
+  {
+   "id": "crowd_plan",
+   "name": "Crowd plan",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": true,
+   "terms": [
+    "crowd plan",
+    "crowd management plan",
+    "crowd notes",
+    "public assembly template"
+   ],
+   "claim": "The document describes how the crowd is managed for the race.",
+   "fields": []
+  },
+  {
+   "id": "medical_plan",
+   "name": "Medical plan",
+   "allowed_sources": [
+    "attachment"
+   ],
+   "whole_document": true,
+   "terms": [
+    "medical plan",
+    "event medical plan",
+    "medical notes",
+    "medical cover"
+   ],
+   "claim": "The document describes medical cover for the race.",
+   "fields": []
+  }
+ ],
+ "requirements": [
+  {
+   "id": "event_insurance",
+   "name": "Event liability insurance",
+   "evidence_type": "certificate_of_insurance",
+   "clause": "ORD-7.1"
+  }
+ ],
+ "does_not_count": [
+  {
+   "what": "A statement in the form or in a cover letter that the event is insured",
+   "reason": "The form and cover letter are the applicant's own claims and are never sources of proof.",
+   "clause": "ORD-9.1"
+  },
+  {
+   "what": "A report by the applicant of a verbal promise from the police or an ambulance provider",
+   "reason": "A commitment must be in the provider's own document.",
+   "clause": "ORD-9.1"
+  }
+ ],
+ "settings": [
+  {
+   "key": "decision.risky_approval_target",
+   "value": 0.05,
+   "limits": {
+    "min": 0.01,
+    "max": 0.15
+   },
+   "owner": "policy_owner",
+   "why": "The share of automatic approvals the city accepts being labelled risky.",
+   "if_raised": "More events are approved automatically, and risky approvals may rise."
+  },
+  {
+   "key": "decision.high_risk_precision_target",
+   "value": 0.85,
+   "limits": {
+    "min": 0.5,
+    "max": 1.0
+   },
+   "owner": "policy_owner",
+   "why": "The share of high-risk cases that must really be labelled risky before the system calls them high risk.",
+   "if_raised": "Fewer cases are marked high risk, and more fall into the review band."
+  },
+  {
+   "key": "decision.severity_ceiling",
+   "value": 0.85,
+   "limits": {
+    "min": 0.5,
+    "max": 1.0
+   },
+   "owner": "policy_owner",
+   "why": "A case whose highest severity reaches this value always goes to an officer, because the product of likelihood and severity can hide a rare catastrophe.",
+   "if_raised": "Fewer cases go to an officer on severity alone, and a rare catastrophe is more likely to be approved automatically."
+  },
+  {
+   "key": "decision.stop_switch",
+   "value": false,
+   "limits": {
+    "allowed": [
+     true,
+     false
+    ]
+   },
+   "owner": "policy_owner",
+   "why": "Lets the policy owner send every case that passes basic checks to an officer.",
+   "if_raised": "Turning it on stops all automatic approvals until it is turned off."
+  },
+  {
+   "key": "risk.anchors.likelihood",
+   "value": [
+    0.02,
+    0.1,
+    0.3
+   ],
+   "limits": {
+    "min": 0.0,
+    "max": 1.0
+   },
+   "owner": "policy_owner",
+   "why": "The numbers that stand for rare, possible and likely. They are policy values, not measurements.",
+   "if_raised": "Every case's risk rises, and thresholds must be chosen again."
+  },
+  {
+   "key": "risk.anchors.severity",
+   "value": [
+    0.1,
+    0.4,
+    1.0
+   ],
+   "limits": {
+    "min": 0.0,
+    "max": 1.0
+   },
+   "owner": "policy_owner",
+   "why": "The numbers that stand for minor, serious and critical. They are policy values, not measurements.",
+   "if_raised": "Every case's risk rises, more cases reach the ceiling, and thresholds must be chosen again."
+  },
+  {
+   "key": "corrections.discount",
+   "value": 0.93,
+   "limits": {
+    "min": 0.5,
+    "max": 1.0
+   },
+   "owner": "policy_owner",
+   "why": "How much old counts on a leaf keep their weight when a correction reaches that leaf.",
+   "if_raised": "Old counts fade more slowly, so each correction changes less."
+  },
+  {
+   "key": "curve.rechoose_every",
+   "value": 10,
+   "limits": {
+    "min": 1,
+    "max": 50
+   },
+   "owner": "policy_owner",
+   "why": "How many officer reviews pass before thresholds are chosen again during the replay.",
+   "if_raised": "Thresholds follow the weights less often, so the curve moves in larger steps."
+  },
+  {
+   "key": "trees.entropy_flag",
+   "value": 0.6,
+   "limits": {
+    "min": 0.0,
+    "max": 1.1
+   },
+   "owner": "policy_owner",
+   "why": "A tree is flagged when its mean leaf entropy is the highest of all trees and above this value, which points to a missing question.",
+   "if_raised": "Fewer trees are flagged, and a missing question is more likely to go unnoticed."
+  },
+  {
+   "key": "evidence.p_supported",
+   "value": 0.9,
+   "limits": {
+    "min": 0.5,
+    "max": 1.0
+   },
+   "owner": "steward",
+   "why": "The answer an evidence question takes when a record is supported.",
+   "if_raised": "A supported document counts for more, and risk falls on cases that have one."
+  },
+  {
+   "key": "evidence.p_unsupported",
+   "value": 0.1,
+   "limits": {
+    "min": 0.0,
+    "max": 0.5
+   },
+   "owner": "steward",
+   "why": "The answer an evidence question takes when a record is unsupported or absent.",
+   "if_raised": "A missing document counts against a case less, and risk falls on cases without one."
+  },
+  {
+   "key": "evidence.p_contradicted",
+   "value": 0.05,
+   "limits": {
+    "min": 0.0,
+    "max": 0.5
+   },
+   "owner": "steward",
+   "why": "The answer an evidence question takes when a record is contradicted.",
+   "if_raised": "A contradicted document counts against a case less."
+  },
+  {
+   "key": "training.first_guess_strength",
+   "value": 2,
+   "limits": {
+    "min": 0.5,
+    "max": 20
+   },
+   "owner": "project_owner",
+   "why": "How many pseudo-cases the first guess is worth on each leaf.",
+   "if_raised": "Training and corrections move the first guess more slowly."
+  },
+  {
+   "key": "training.em_iterations",
+   "value": 6,
+   "limits": {
+    "min": 1,
+    "max": 50
+   },
+   "owner": "project_owner",
+   "why": "How many passes training makes over the labelled cases.",
+   "if_raised": "Training takes longer and settles closer to the labels."
+  },
+  {
+   "key": "officer.accuracy_simulated",
+   "value": 0.9,
+   "limits": {
+    "min": 0.5,
+    "max": 1.0
+   },
+   "owner": "project_owner",
+   "why": "How often the officer agrees with the label when the run uses simulated answers instead of the LLM officer.",
+   "if_raised": "The simulated officer makes fewer wrong corrections, and the curve looks better than a real officer may manage."
+  },
+  {
+   "key": "models.jev.id",
+   "value": "jev-1.14.0",
+   "limits": {
+    "allowed": [
+     "jev-1.14.0"
+    ]
+   },
+   "owner": "project_owner",
+   "why": "The Jev version whose answers are pinned for this run. A returned model that differs counts as a failure.",
+   "if_raised": "Changing the version changes the stored-answer key, so every case is read again."
+  },
+  {
+   "key": "models.max_concurrency",
+   "value": 4,
+   "limits": {
+    "min": 1,
+    "max": 8
+   },
+   "owner": "project_owner",
+   "why": "How many model requests run at once. TypeSafe's cookbook reports rate limits on a shared key at 8.",
+   "if_raised": "Reads finish sooner, and rate limits become more likely."
+  },
+  {
+   "key": "budget.max_usd_total",
+   "value": 30,
+   "limits": {
+    "min": 1,
+    "max": 100
+   },
+   "owner": "project_owner",
+   "why": "The total spend at which a run stops.",
+   "if_raised": "A run may spend more before it stops."
+  },
+  {
+   "key": "budget.max_jev_input_tokens",
+   "value": 2000000,
+   "limits": {
+    "min": 10000,
+    "max": 10000000
+   },
+   "owner": "project_owner",
+   "why": "The total Jev input at which a run stops. Reset after the first 5 cases are measured.",
+   "if_raised": "A run may send Jev more before it stops."
+  },
+  {
+   "key": "budget.stop_after_first_cases",
+   "value": 5,
+   "limits": {
+    "min": 1,
+    "max": 20
+   },
+   "owner": "project_owner",
+   "why": "How many real cases run before the project owner looks at the cost and the output.",
+   "if_raised": "More money is spent before the project owner's first look."
+  },
+  {
+   "key": "budget.switch_above_usd",
+   "value": 20,
+   "limits": {
+    "min": 1,
+    "max": 100
+   },
+   "owner": "project_owner",
+   "why": "If the total projected at the first stop is above this, the project owner reconsiders the model or effort.",
+   "if_raised": "A costlier projection passes without a second look."
+  }
+ ],
+ "hazards": [
+  {
+   "id": "crowd_pressure",
+   "name": "Crowd pressure",
+   "description": "People gather more densely than the space allows, at the start, along the course or at the finish.",
+   "applies_when": "The crowd is 300 or more.",
+   "applies_rule": "data.permit.screen.applies.crowd_pressure",
+   "clause": "ORD-5.2",
+   "trees": {
+    "likelihood": "crowd.likelihood",
+    "severity": "crowd.severity"
+   }
+  },
+  {
+   "id": "medical_emergency",
+   "name": "Medical emergency",
+   "description": "A runner or spectator needs urgent care during the race.",
+   "applies_when": "Always, for a race.",
+   "applies_rule": "data.permit.screen.applies.medical_emergency",
+   "clause": "ORD-5.3",
+   "trees": {
+    "likelihood": "medical.likelihood",
+    "severity": "medical.severity"
+   }
+  },
+  {
+   "id": "traffic_conflict",
+   "name": "Traffic conflict",
+   "description": "Runners and traffic meet, or a closed road blocks other traffic.",
+   "applies_when": "The race closes a road.",
+   "applies_rule": "data.permit.screen.applies.traffic_conflict",
+   "clause": "ORD-5.1",
+   "trees": {
+    "likelihood": "traffic.likelihood",
+    "severity": "traffic.severity"
+   }
+  }
+ ]
+}

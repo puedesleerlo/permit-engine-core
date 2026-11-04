@@ -1,0 +1,31 @@
+# TEMPORARY, for offline checks only. Not the first guess: a stand-in copied from experiments/sim_data_plan.py (looks only at the first question).
+id: medical.severity
+leaves:
+- when:
+    ambulance_on_site: true
+    hospital_far: true
+  levels:
+  - 0.8
+  - 0.1
+  - 0.1
+- when:
+    ambulance_on_site: true
+    hospital_far: false
+  levels:
+  - 0.8
+  - 0.1
+  - 0.1
+- when:
+    ambulance_on_site: false
+    hospital_far: true
+  levels:
+  - 0.1
+  - 0.8
+  - 0.1
+- when:
+    ambulance_on_site: false
+    hospital_far: false
+  levels:
+  - 0.1
+  - 0.8
+  - 0.1

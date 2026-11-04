@@ -1,0 +1,3 @@
+{"id": "chatcmpl-fixture", "object": "chat.completion", "model": "kimi-k3",
+ "choices": [{"index": 0, "message": {"role": "assistant", "content": "{\"ruling\": \"approve\"}"}, "finish_reason": "stop"}],
+ "usage": {"prompt_tokens": 1000, "completion_tokens": 40, "total_tokens": 1040, "cached_tokens": 100}}

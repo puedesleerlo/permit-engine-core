@@ -1,0 +1,44 @@
+460 records, split all, model claude-opus-5-5
+status: {'first_pass=ok': 444, 'first_pass=skipped': 16, 'jev=ok': 444, 'jev=skipped': 16, 'judge=ok': 436, 'judge=skipped': 24, 'stopped=None': 444, 'stopped=basic': 16}
+
+Verdicts against the cards:
+  ambulance_agreement          right  453  wrong   7  98.5%
+  certificate_of_insurance     right  448  wrong  12  97.4%
+  police_escort_email          right  458  wrong   2  99.6%
+  police_escort_letter         right  453  wrong   7  98.5%
+
+Jev against the cards (mean probability of yes when the fact is true and false; share on the right side of 0.5):
+  crowd_plan_adequate      true 0.87 (n=149)  false 0.04 (n=150)  right side 99.7%
+  medical_plan_adequate    true 0.84 (n=214)  false 0.08 (n=230)  right side 94.1%
+  narrow_venue             true 0.97 (n=119)  false 0.04 (n=180)  right side 100.0%
+  traffic_plan_adequate    true 0.92 (n=176)  false 0.17 (n=173)  right side 97.1%
+
+Wrong verdicts, up to 25:
+  R0048-plain ambulance_agreement want supported got unsupported | The same person, Priya Raman, signed for both the Provider and the Client, so the provider's commitment is not
+  R0055-plain certificate_of_insurance want supported got not found | 
+  R0055-plain police_escort_letter want contradicted got not found | 
+  R0099-plain certificate_of_insurance want unsupported or contradicted got not found | 
+  R0103-plain ambulance_agreement want supported got not found | 
+  R0103-plain certificate_of_insurance want unsupported or contradicted got not found | 
+  R0103-plain police_escort_letter want contradicted got not found | 
+  R0110-plain certificate_of_insurance want unsupported or contradicted got not found | 
+  R0153-plain police_escort_email want supported got not found | 
+  R0154-plain certificate_of_insurance want supported got not found | 
+  R0177-plain ambulance_agreement want supported got not found | 
+  R0177-plain certificate_of_insurance want unsupported or contradicted got not found | 
+  R0177-plain police_escort_letter want contradicted got not found | 
+  R0208-plain certificate_of_insurance want unsupported or contradicted got not found | 
+  R0208-plain police_escort_email want supported got not found | 
+  R0251-plain ambulance_agreement want supported got unsupported | The same person, Ellis Grant, signed for both the Provider and the Client, so it is unclear this is a genuinel
+  R0255-plain certificate_of_insurance want supported got not found | 
+  R0255-plain police_escort_letter want supported got not found | 
+  R0264-plain ambulance_agreement want supported got not found | 
+  R0264-plain police_escort_letter want supported got not found | 
+  R0296-plain certificate_of_insurance want unsupported or contradicted got not found | 
+  R0296-plain police_escort_letter want supported got not found | 
+  R0303-plain ambulance_agreement want supported got not found | 
+  R0303-plain certificate_of_insurance want unsupported or contradicted got not found | 
+  R0320-plain certificate_of_insurance want supported got not found | 
+
+Unmapped documents reported: [('insurance.txt', 23)]
+Planted patterns: [('wrong_venue_insurance', 30), ('broker_letter', 25), ('letter_other_date', 21), ('hidden_instruction', 20), ('asserted_insurance', 16)]

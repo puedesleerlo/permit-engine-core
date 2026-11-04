@@ -1,0 +1,397 @@
+{
+ "crowd.likelihood": {
+  "leaves": [
+   {
+    "when": {
+     "crowd_plan_adequate": true,
+     "crowd_over_800": true
+    },
+    "levels": [
+     0.35,
+     0.5,
+     0.15
+    ]
+   },
+   {
+    "when": {
+     "crowd_plan_adequate": true,
+     "crowd_over_800": false
+    },
+    "levels": [
+     0.7,
+     0.25,
+     0.05
+    ]
+   },
+   {
+    "when": {
+     "crowd_plan_adequate": false,
+     "crowd_over_800": true
+    },
+    "levels": [
+     0.05,
+     0.35,
+     0.6
+    ]
+   },
+   {
+    "when": {
+     "crowd_plan_adequate": false,
+     "crowd_over_800": false
+    },
+    "levels": [
+     0.25,
+     0.5,
+     0.25
+    ]
+   }
+  ],
+  "why": "Staged starts, stewards and marked areas do most to stop people bunching, and bunching gets more likely as numbers grow, so a large crowd with no real plan is the one case I expect it to happen more often than not."
+ },
+ "crowd.severity": {
+  "leaves": [
+   {
+    "when": {
+     "narrow_venue": true,
+     "crowd_over_800": true
+    },
+    "levels": [
+     0.05,
+     0.4,
+     0.55
+    ]
+   },
+   {
+    "when": {
+     "narrow_venue": true,
+     "crowd_over_800": false
+    },
+    "levels": [
+     0.25,
+     0.55,
+     0.2
+    ]
+   },
+   {
+    "when": {
+     "narrow_venue": false,
+     "crowd_over_800": true
+    },
+    "levels": [
+     0.4,
+     0.5,
+     0.1
+    ]
+   },
+   {
+    "when": {
+     "narrow_venue": false,
+     "crowd_over_800": false
+    },
+    "levels": [
+     0.75,
+     0.22,
+     0.03
+    ]
+   }
+  ],
+  "why": "Crush injuries need both density and nowhere to go, so a confined venue drives the outcome more than headcount does, and the two together are where I fear deaths or multiple serious injuries."
+ },
+ "medical.likelihood": {
+  "leaves": [
+   {
+    "when": {
+     "medical_plan_adequate": true,
+     "hot_date": true
+    },
+    "levels": [
+     0.1,
+     0.5,
+     0.4
+    ]
+   },
+   {
+    "when": {
+     "medical_plan_adequate": true,
+     "hot_date": false
+    },
+    "levels": [
+     0.4,
+     0.5,
+     0.1
+    ]
+   },
+   {
+    "when": {
+     "medical_plan_adequate": false,
+     "hot_date": true
+    },
+    "levels": [
+     0.03,
+     0.27,
+     0.7
+    ]
+   },
+   {
+    "when": {
+     "medical_plan_adequate": false,
+     "hot_date": false
+    },
+    "levels": [
+     0.2,
+     0.55,
+     0.25
+    ]
+   }
+  ],
+  "why": "Someone needing urgent care is fairly common at any race because runners collapse regardless of planning, so heat raises it sharply while a good plan lowers it only partly through water and extreme-weather rules."
+ },
+ "medical.severity": {
+  "leaves": [
+   {
+    "when": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "levels": [
+     0.2,
+     0.6,
+     0.2
+    ]
+   },
+   {
+    "when": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "levels": [
+     0.4,
+     0.5,
+     0.1
+    ]
+   },
+   {
+    "when": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "levels": [
+     0.05,
+     0.45,
+     0.5
+    ]
+   },
+   {
+    "when": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "levels": [
+     0.2,
+     0.55,
+     0.25
+    ]
+   }
+  ],
+  "why": "Outcomes in cardiac arrest and heatstroke depend on minutes to care, so an ambulance on site matters most and a far hospital matters more when no ambulance is there to start treatment and carry the patient."
+ },
+ "traffic.likelihood": {
+  "leaves": [
+   {
+    "when": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "levels": [
+     0.65,
+     0.3,
+     0.05
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "levels": [
+     0.2,
+     0.55,
+     0.25
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "levels": [
+     0.4,
+     0.48,
+     0.12
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "levels": [
+     0.05,
+     0.35,
+     0.6
+    ]
+   }
+  ],
+  "why": "The plan is what controls every closure and crossing while an escort only adds authority on top of it, so a weak plan hurts more than a missing escort and having neither makes conflict with traffic the expected case."
+ },
+ "traffic.severity": {
+  "leaves": [
+   {
+    "when": {
+     "arterial_road": true,
+     "crowd_over_800": true
+    },
+    "levels": [
+     0.05,
+     0.4,
+     0.55
+    ]
+   },
+   {
+    "when": {
+     "arterial_road": true,
+     "crowd_over_800": false
+    },
+    "levels": [
+     0.1,
+     0.5,
+     0.4
+    ]
+   },
+   {
+    "when": {
+     "arterial_road": false,
+     "crowd_over_800": true
+    },
+    "levels": [
+     0.3,
+     0.55,
+     0.15
+    ]
+   },
+   {
+    "when": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "levels": [
+     0.5,
+     0.42,
+     0.08
+    ]
+   }
+  ],
+  "why": "Vehicle speed decides whether a pedestrian collision is fatal, so an arterial road matters most, while a larger crowd adds exposure and more people in the path of a single vehicle."
+ },
+ "traffic.likelihood.crossings": {
+  "leaves": [
+   {
+    "when": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true,
+     "many_major_crossings": true
+    },
+    "levels": [
+     0.5,
+     0.4,
+     0.1
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true,
+     "many_major_crossings": false
+    },
+    "levels": [
+     0.7,
+     0.26,
+     0.04
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false,
+     "many_major_crossings": true
+    },
+    "levels": [
+     0.1,
+     0.5,
+     0.4
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false,
+     "many_major_crossings": false
+    },
+    "levels": [
+     0.25,
+     0.55,
+     0.2
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true,
+     "many_major_crossings": true
+    },
+    "levels": [
+     0.25,
+     0.55,
+     0.2
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true,
+     "many_major_crossings": false
+    },
+    "levels": [
+     0.45,
+     0.45,
+     0.1
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false,
+     "many_major_crossings": true
+    },
+    "levels": [
+     0.03,
+     0.27,
+     0.7
+    ]
+   },
+   {
+    "when": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false,
+     "many_major_crossings": false
+    },
+    "levels": [
+     0.08,
+     0.42,
+     0.5
+    ]
+   }
+  ],
+  "why": "Each major crossing is another place runners and traffic can meet, so three or more raises the risk in every situation, and it raises it most where nobody is reliably controlling those crossings."
+ }
+}

@@ -1,0 +1,32 @@
+300 seeds, train 180, validation 120, 400 bootstrap resamples. Share of seeds in which each condition holds. All synthetic.
+
+=== Test set of 100 cases ===
+                     condition   working     loose  shuffled
+                    loss lower     1.000     1.000     1.000
+                more approvals     0.997     1.000     0.093
+         risky share no higher     0.580     0.053     0.480
+                     A current     0.577     0.053     0.030
+    B interval, risky reported     0.967     0.997     0.040
+                            C3     0.823     0.193     0.020
+                            C5     0.917     0.327     0.020
+                            C8     0.957     0.600     0.027
+   D target not clearly missed     0.830     0.173     0.020
+  working: approvals 79.0 against first guess 44.5; risky among approved 0.056 against first guess 0.064
+  loose: approvals 92.9 against first guess 44.5; risky among approved 0.134 against first guess 0.064
+  shuffled: approvals 22.2 against first guess 44.5; risky among approved 0.073 against first guess 0.064
+
+=== Test set of 54 cases ===
+                     condition   working     loose  shuffled
+                    loss lower     1.000     1.000     0.977
+                more approvals     0.990     1.000     0.080
+         risky share no higher     0.613     0.090     0.530
+                     A current     0.607     0.090     0.030
+    B interval, risky reported     0.943     0.997     0.023
+                            C3     0.787     0.250     0.010
+                            C5     0.863     0.380     0.013
+                            C8     0.910     0.573     0.013
+   D target not clearly missed     0.850     0.350     0.013
+  working: approvals 42.6 against first guess 24.2; risky among approved 0.057 against first guess 0.066
+  loose: approvals 50.2 against first guess 24.2; risky among approved 0.137 against first guess 0.066
+  shuffled: approvals 12.1 against first guess 24.2; risky among approved 0.077 against first guess 0.066
+

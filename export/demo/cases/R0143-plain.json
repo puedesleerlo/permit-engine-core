@@ -1,0 +1,839 @@
+{
+ "case_id": "R0143-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9442331121439224,
+     0.046775666853796076,
+     0.008991221002281577
+    ],
+    "before": [
+     0.9348038902620974,
+     0.05468462785899046,
+     0.01051148187891211
+    ],
+    "count_after": 6.8842021923174315,
+    "count_before": 6.322590499485128,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.20120345648765356,
+     0.6434591666521899,
+     0.15533737686015658
+    ],
+    "before": [
+     0.200008260027307,
+     0.6444219401201102,
+     0.15556979985258268
+    ],
+    "count_after": 2.9099487198238783,
+    "count_before": 2.9098215162569994,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.06306205892107643,
+     0.8882399847097355,
+     0.048697956369188056
+    ],
+    "before": [
+     0.07627278366263202,
+     0.8648276378188814,
+     0.05889957851848665
+    ],
+    "count_after": 5.755932641701059,
+    "count_before": 5.106058569724644,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.9028282030819332,
+     0.08622536726036448,
+     0.010946429657702263
+    ],
+    "before": [
+     0.9034580529979046,
+     0.08558788066692063,
+     0.010954066335174848
+    ],
+    "count_after": 4.376993486104653,
+    "count_before": 4.383475018657171,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.009761133002534733,
+     0.9430155492329444,
+     0.047223317764520926
+    ],
+    "before": [
+     0.010977006810419658,
+     0.9359174079488967,
+     0.053105585240683574
+    ],
+    "count_after": 9.017204382138651,
+    "count_before": 8.609440333692325,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.002907184734617105,
+     0.05544368684657799,
+     0.9416491284188049
+    ],
+    "before": [
+     0.0029075811700248317,
+     0.0553148833472107,
+     0.9417775354827644
+    ],
+    "count_after": 8.835767701675366,
+    "count_before": 8.847394902213027,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.02106574209632873,
+     0.9578685158073424,
+     0.02106574209632873
+    ],
+    "before": [
+     0.023512557708507856,
+     0.9529748845829843,
+     0.023512557708507856
+    ],
+    "count_after": 8.671596727602658,
+    "count_before": 8.29356604620831,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.0065003931769626174,
+     0.9284956750534112,
+     0.06500393176962616
+    ],
+    "before": [
+     0.006581803353167127,
+     0.9276001631151616,
+     0.06581803353167126
+    ],
+    "count_after": 7.890481408945442,
+    "count_before": 7.849643427954733,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "EVENT MEDICAL SERVICES AGREEMENT\nAgreement no. RQ-82860\n\nBetween: Sentinel Ambulance Service (\"the Provider\")\nAnd: Friends of Ferry Park (\"the Client\")\n\nEvent: Ferry Park Charity Run 7K\nEvent date: July 11, 2027\nLocation: St. Anne's District, Port Halden\n\nThe Provider will station one fully equipped ambulance with a crew of two paramedics on site at the bandstand from 08:30 until the last runner has finished or 11:30, whichever is later. The vehicle stays on site throughout and is dedicated to the event, except when transporting a patient from it.\n\nFee: $1150, paid in full on signature.\n\nSigned for the Provider: Joan Kowalczyk, Operations Manager, March 24, 2027\nSigned for the Client: Tomas Reyes, March 24, 2027\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "Looking after people on the day: Ferry Park Charity Run 7K, Sunday 11 July 2027\n\nTomas Reyes, Race Director, Friends of Ferry Park\n\nWe expect about 320 people altogether, including 320 runners. We do not expect spectators in any number beyond the runners' own companions.\n\nWhere people will watch\nWe've set out three viewing spots with barriers: at the finish by the rowing club, at the turn by Saltmarsh Boardwalk, and at the start by the bandstand. We measured them, and at about two people to the square metre they take around 450 between them, which is more than we expect to come.\n\nHow we start the race\nWe set off in 4 waves, four minutes apart, with runners sorted by the time they expect to run. That thins everyone out before the first corner. The pens close five minutes before each wave goes.\n\nWho's helping\nWe've got 6 stewards in tabards, about one for every 50 people, with 2 supervisors in charge of sections. Each has a set position on a rota, and all come to a briefing an hour before the start.\n\nGetting everyone away\nRunners walk through a one-way funnel after the line, out to the recovery area, and leave by the north gate. Spectators have two marked ways out, and a steward stands at each to keep it clear. We reckon the whole place empties in 25 minutes.\n\nWho's in charge\nTomas Reyes runs the event from the control point with a radio to every supervisor. They can hold a wave, stop the race, or make an announcement over the speakers to move people along. Supervisors call it in if a pen or viewing spot looks to be getting too full.\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. AG-41596\nIssued: 24 March 2027\n\nINSURER: Northern Shield Assurance\nPOLICY NUMBER: PL-695906\n\nNAMED INSURED: Friends of Ferry Park\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Ferry Park Charity Run 7K\nVENUE: St. Anne's District, Port Halden\n\nPOLICY PERIOD\nEffective: 1 January 2027\nExpiry: 31 December 2027\n\nLIMIT OF LIABILITY: $2,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nFerry Park Charity Run 7K, Sunday 11 July 2027\nApplicant: Friends of Ferry Park\nIssue: 1.0\n\n1. Event summary\nA 7K race with 320 runners, starting at 09:30 in the St. Anne's District area of Port Halden. On-site ambulance cover is set out in the attached paperwork from Sentinel Ambulance Service.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 6 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Thornton County Hospital, 12 km from the finish. The transfer route and the pick-up point at the bandstand have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Tomas Reyes, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Ferry Park Charity Run 7K: how the race will work\n\nPrepared by Tomas Reyes (Race Director), Friends of Ferry Park. Last updated 24 March 2027.\n\nThis is our plan for race day, Sunday 11 July 2027. We expect 320 runners over 7K (7 km). Numbers can be collected from the bandstand from an hour before we go at 09:30, and we aim to have the last finisher home by 11:00.\n\nHappily we are off-road the whole way. We use the Old Mill Trail and then the Saltmarsh Boardwalk, so no streets need closing at all. We finish at the rowing club.\n\nThe Old Mill Trail is lovely but tight, about 3.5 metres, and it stays like that until the Saltmarsh Boardwalk, which is 3 metres. There's no way off either of them for long stretches, except the small clearing where we finish.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Ferry Park Charity Run 7K, Sunday 11 July 2027. 320 runners, 7K, off at 09:30, around St. Anne's District. I've attached ambulance_agreement.txt, crowd_plan.txt, insurance.txt, medical_plan.txt, race_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nTomas\n\nTomas Reyes, Friends of Ferry Park\n555-0184\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Ferry Park Charity Run 7K: a 7K race on the paths around St. Anne's District, organised by Ferry Park. No road closures.",
+   "event_date": "2027-07-11",
+   "event_name": "Ferry Park Charity Run 7K",
+   "event_type": "street_race",
+   "expected_runners": 320,
+   "fee_paid": true,
+   "hospital_distance_km": 12,
+   "organizer": "Friends of Ferry Park",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "St. Anne's District"
+  }
+ },
+ "events": [
+  446,
+  447,
+  448,
+  449,
+  450,
+  451,
+  452,
+  453,
+  454,
+  455,
+  456,
+  457
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Between: Sentinel Ambulance Service (\"the Provider\")",
+     "value": "Sentinel Ambulance Service",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "Event date: July 11, 2027",
+     "value": "July 11, 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Friends of Ferry Park",
+     "value": "Friends of Ferry Park",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: St. Anne's District, Port Halden",
+     "value": "St. Anne's District, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: 1 January 2027",
+     "value": "1 January 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: 31 December 2027",
+     "value": "31 December 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $2,000,000 each occurrence",
+     "value": "$2,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.3146580102146635,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.0598946278606745,
+      "entropy": 0.47164815364522306,
+      "levels": [
+       0.07103440103098142,
+       0.8715841307394487,
+       0.05738146822956986
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.026771625451718333,
+      "count": 6.322590499485128,
+      "entropy": 0.26982887678206663,
+      "levels": [
+       0.9348038902620974,
+       0.05468462785899046,
+       0.01051148187891211
+      ],
+      "reach": 0.98,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.691263437974174,
+      "entropy": 0.22771319275954513,
+      "levels": [
+       0.005858797771210045,
+       0.047820266505202554,
+       0.9463209357235874
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.002302265983366641,
+      "count": 2.9098215162569994,
+      "entropy": 0.8945152598145202,
+      "levels": [
+       0.200008260027307,
+       0.6444219401201102,
+       0.15556979985258268
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.9201079776574016,
+     0.06647937410421287,
+     0.013412648238385522
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.029073891435084976
+   },
+   "name": "Crowd pressure",
+   "product": 0.011750219775843005,
+   "severity": {
+    "entropy": 0.5410745982583987,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 7.846213917498543,
+      "entropy": 0.3017081289229671,
+      "levels": [
+       0.006666418685558406,
+       0.9200029757732991,
+       0.07333060554114247
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.40008417465193336,
+      "count": 5.106058569724644,
+      "entropy": 0.4886769786456897,
+      "levels": [
+       0.07627278366263202,
+       0.8648276378188814,
+       0.05889957851848665
+      ],
+      "reach": 0.97,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 6.915863877043282,
+      "entropy": 0.33782679049149567,
+      "levels": [
+       0.06924971600324502,
+       0.9134378549959438,
+       0.017312429000811255
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.004066050717052011,
+      "count": 4.383475018657171,
+      "entropy": 0.35156438167366644,
+      "levels": [
+       0.9034580529979046,
+       0.08558788066692063,
+       0.010954066335174848
+      ],
+      "reach": 0.030000000000000027,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.10108834174269021,
+     0.8414504451043225,
+     0.057461213152987294
+    ],
+    "questions": [
+     {
+      "answer": 0.97,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.4041502253689853
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.3148238472920855,
+    "leaves": [
+     {
+      "contribution": 0.10754809737323708,
+      "count": 8.609440333692325,
+      "entropy": 0.2674017348740991,
+      "levels": [
+       0.010977006810419658,
+       0.9359174079488967,
+       0.053105585240683574
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.447824808893465,
+      "entropy": 0.461333189768566,
+      "levels": [
+       0.8585471689564627,
+       0.12354118921843832,
+       0.01791164182509908
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.005762458012059023,
+      "count": 8.847394902213027,
+      "entropy": 0.23359591211988517,
+      "levels": [
+       0.0029075811700248317,
+       0.0553148833472107,
+       0.9417775354827644
+      ],
+      "reach": 0.020000000000000018,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 6.725679497783833,
+      "entropy": 0.4103340752743665,
+      "levels": [
+       0.06979173007634683,
+       0.8926813248229486,
+       0.03752694510070461
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.010815618297611762,
+     0.9183053574568629,
+     0.07087902424552521
+    ],
+    "questions": [
+     {
+      "answer": 0.98,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.1133105553852961
+   },
+   "name": "Medical emergency",
+   "product": 0.046468660858916974,
+   "severity": {
+    "entropy": 0.23122461985948733,
+    "leaves": [
+     {
+      "contribution": 0.36634839058129715,
+      "count": 8.29356604620831,
+      "entropy": 0.2222562416721792,
+      "levels": [
+       0.023512557708507856,
+       0.9529748845829843,
+       0.023512557708507856
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.300125764820775,
+      "entropy": 0.2695769007058537,
+      "levels": [
+       0.9345678854232545,
+       0.05546750175264968,
+       0.009964612824095841
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.043751627911305255,
+      "count": 7.849643427954733,
+      "entropy": 0.2818584091035563,
+      "levels": [
+       0.006581803353167127,
+       0.9276001631151616,
+       0.06581803353167126
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 6.404640453611328,
+      "entropy": 0.8111955773095898,
+      "levels": [
+       0.34737035825506446,
+       0.6069997887645772,
+       0.045629852980358425
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.021819482272973784,
+     0.950437412436202,
+     0.027743105290824195
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.41010001849260236
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.41010001849260236,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.18941409706377926,
+   "t_low": 0.18941409706377926
+  },
+  "weights_version": "first-guess+37"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "The paperwork is complete, the fee is paid and the insurance is valid, and the assessed risk is below the risk threshold, so the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.05821888063475998,
+ "t_high": 0.18941409706377926,
+ "t_low": 0.18941409706377926,
+ "title": "Ferry Park Charity Run 7K",
+ "unmapped_documents": []
+}

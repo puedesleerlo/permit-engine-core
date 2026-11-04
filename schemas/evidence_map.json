@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence map",
+  "type": "object",
+  "required": ["version", "owner", "never_sources", "form_values", "date_formats", "evidence_types", "requirements", "does_not_count"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "integer"},
+    "owner": {"const": "steward"},
+    "never_sources": {"type": "array", "items": {"type": "string"}},
+    "form_values": {"type": "array", "items": {"type": "string"}},
+    "date_formats": {"type": "array", "items": {"type": "string"}},
+    "evidence_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "allowed_sources", "whole_document", "terms", "claim", "fields"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "allowed_sources": {"type": "array", "minItems": 1, "items": {"enum": ["attachment"]}},
+          "whole_document": {"type": "boolean"},
+          "terms": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "claim": {"type": "string"},
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "type"],
+              "additionalProperties": false,
+              "properties": {
+                "name": {"type": "string"},
+                "type": {"enum": ["string", "date", "number"]},
+                "compare": {
+                  "type": "object",
+                  "required": ["form_field", "kind", "on_differ"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "form_field": {"type": "string"},
+                    "kind": {"enum": ["same_text", "contains_form_value", "same_date", "on_or_before_form_date", "on_or_after_form_date"]},
+                    "on_differ": {"enum": ["field_failed", "field_mismatch"]}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "evidence_type", "clause"],
+        "additionalProperties": false,
+        "properties": {"id": {"type": "string"}, "name": {"type": "string"}, "evidence_type": {"type": "string"}, "clause": {"type": "string"}}
+      }
+    },
+    "does_not_count": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["what", "reason", "clause"],
+        "additionalProperties": false,
+        "properties": {"what": {"type": "string"}, "reason": {"type": "string"}, "clause": {"type": "string"}}
+      }
+    }
+  }
+}

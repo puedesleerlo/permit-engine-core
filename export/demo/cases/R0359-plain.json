@@ -1,0 +1,93 @@
+{
+ "case_id": "R0359-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": false
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": null,
+ "decision": {
+  "clauses": [
+   "ORD-3.2"
+  ],
+  "reason_code": "form_returned",
+  "route": "returned",
+  "row": 0,
+  "text": "The form is incomplete, so it goes back to the applicant."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "Clocktower Spring Dash Half Marathon - crowd notes\nSunday 19 September 2027 / contact Tomas Reyes 555-0160\ntotal 1200 incl 1200 runners. We do not expect spectators in any number beyond the runners' own companions.\n\nVIEWING\nspectators wherever along course, mostly start + finish. stall near finish. signs to help ppl find their way\n\nSTART\n3 waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave\n\nSTEWARDS\n24 stewards (approx 1:50), 3 supervisors, rota by position, briefing 1hr before\n\nEXIT\nprizes then tea. people head off when ready. buses nearby\n\nfamilies welcome. local shops supportive, some open. prizes at end + tea queue\n\nCONTROL\nTomas Reyes on the day, sorts stuff out as it comes up. lots of experience\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Clocktower Spring Dash Half Marathon, Sunday 19 September 2027\n\nFrom Tomas Reyes, Volunteer Coordinator, Clocktower Merchants' Guild\n\nThe race is a half marathon with 1200 runners and starts at 08:00. We are not booking a dedicated ambulance for this race.\n\nFirst aid\nWe'll have 3 first aid posts, at the start, the finish and halfway, with 10 trained first aiders between them, so nobody on the course is more than about a kilometre and a half from help. We also have two first aiders on bikes, carrying defibrillators.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nThe nearest emergency department is at St. Brigid's Hospital, 9 km from the finish. We've walked the route out from the pick-up point at the rowing club with the first aiders, and we've told the hospital the date and how many are coming.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nWho's responsible\nOur medical lead is Ellis Grant, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Clocktower Spring Dash Half Marathon - race notes\nClocktower Merchants' Guild / contact Tomas Reyes 555-0160\nSunday 19 September 2027, gun 08:00, course closes 11:30\nhalf marathon (21k), approx 1200 entered\n\nROUTE\nReservoir Walk then Ferry Park ring path. no roads, no closures. finish the lock keeper's cottage\n\nWIDTHS\nReservoir Walk 10m, open ground beside. Ferry Park ring path 8m thru parkland, grass both sides. start wide on grass\n\nOTHER\nnumbers from the rowing club 1hr before. chip timing. water on course. results online same day\n"
+   }
+  ],
+  "cover_letter": "1 August 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nPlease find our application below.\n\nWe are applying for a street race permit for the Clocktower Spring Dash Half Marathon on Sunday 19 September 2027. We expect 1200 runners over half marathon, starting at 08:00 in the Kingsway Gardens area. The completed form and the attachments (crowd_plan.txt, medical_plan.txt, race_plan.txt) are enclosed. We are fully insured for the event, as we are every year, so there's no concern there.\n\nPlease let me know if you need anything else.\n\nYours faithfully,\n\nTomas Reyes\nVolunteer Coordinator, Clocktower Merchants' Guild\ntomas@clocktowerguild.example / 555-0160\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Clocktower Spring Dash Half Marathon: a half marathon race on the paths around Kingsway Gardens, organised by Clocktower. No road closures. We carry full public liability insurance.",
+   "event_date": "2027-09-19",
+   "event_name": "Clocktower Spring Dash Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 1200,
+   "fee_paid": true,
+   "hospital_distance_km": null,
+   "organizer": "Clocktower Merchants' Guild",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Kingsway Gardens"
+  }
+ },
+ "events": [
+  1274,
+  1275,
+  1276
+ ],
+ "evidence": [],
+ "hazards": [],
+ "highest_severity": 0.0,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21957302654607286,
+   "t_low": 0.1793003753250711
+  },
+  "weights_version": "first-guess+107"
+ },
+ "officer": null,
+ "requirements": [],
+ "risk": 0.0,
+ "t_high": 0.21957302654607286,
+ "t_low": 0.1793003753250711,
+ "title": "Clocktower Spring Dash Half Marathon",
+ "unmapped_documents": []
+}

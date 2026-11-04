@@ -1,0 +1,2044 @@
+{
+  "configuration" : { },
+  "description" : "A decision system for public-event permits, shown on synthetic street-race applications. An agentic LLM reads the evidence, Jev answers narrow questions, code does the arithmetic, Rego decides, and an officer settles the rest.",
+  "documentation" : { },
+  "id" : 0,
+  "model" : {
+    "deploymentNodes" : [ {
+      "containerInstances" : [ {
+        "containerId" : "13",
+        "environment" : "Demo",
+        "id" : "105",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "8788cb36-2130-4695-9fb3-49fba68d2544"
+        },
+        "relationships" : [ {
+          "description" : "Runs as a subprocess",
+          "destinationId" : "106",
+          "id" : "107",
+          "linkedRelationshipId" : "51",
+          "sourceId" : "105"
+        }, {
+          "description" : "Reads",
+          "destinationId" : "108",
+          "id" : "109",
+          "linkedRelationshipId" : "49",
+          "sourceId" : "105"
+        }, {
+          "description" : "Reads",
+          "destinationId" : "110",
+          "id" : "111",
+          "linkedRelationshipId" : "50",
+          "sourceId" : "105"
+        }, {
+          "description" : "Writes and reads one record per case",
+          "destinationId" : "113",
+          "id" : "114",
+          "linkedRelationshipId" : "53",
+          "sourceId" : "105"
+        }, {
+          "description" : "Reads and writes",
+          "destinationId" : "115",
+          "id" : "116",
+          "linkedRelationshipId" : "54",
+          "sourceId" : "105"
+        }, {
+          "description" : "Writes every stage as an event",
+          "destinationId" : "117",
+          "id" : "118",
+          "linkedRelationshipId" : "55",
+          "sourceId" : "105"
+        }, {
+          "description" : "Writes the finished run",
+          "destinationId" : "119",
+          "id" : "120",
+          "linkedRelationshipId" : "56",
+          "sourceId" : "105"
+        }, {
+          "description" : "Sends two fixed passes",
+          "destinationId" : "124",
+          "id" : "125",
+          "linkedRelationshipId" : "57",
+          "sourceId" : "105"
+        }, {
+          "description" : "Sends one request per case",
+          "destinationId" : "126",
+          "id" : "127",
+          "linkedRelationshipId" : "58",
+          "sourceId" : "105"
+        } ],
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "23",
+        "environment" : "Demo",
+        "id" : "106",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "2ca17386-e271-4720-aa65-516404275111"
+        },
+        "relationships" : [ {
+          "description" : "Loads Rego",
+          "destinationId" : "110",
+          "id" : "112",
+          "linkedRelationshipId" : "52",
+          "sourceId" : "106"
+        } ],
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "11",
+        "environment" : "Demo",
+        "id" : "108",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "b33ea484-2748-4ab0-bf8e-286925eb7ddb"
+        },
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "12",
+        "environment" : "Demo",
+        "id" : "110",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "7a9f6d78-7784-45b6-ba82-96ef4a73e9c0"
+        },
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "24",
+        "environment" : "Demo",
+        "id" : "113",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "249030c4-e8f0-457c-8174-1edc1b09f5be"
+        },
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "25",
+        "environment" : "Demo",
+        "id" : "115",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "5a7d2ceb-6185-4ffd-a09e-ef09bb19d400"
+        },
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "26",
+        "environment" : "Demo",
+        "id" : "117",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "c9bb195b-bbb4-44e3-bcb2-23e87e18ad73"
+        },
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "27",
+        "environment" : "Demo",
+        "id" : "119",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "5df14070-c885-456f-8a22-e7922d04dc58"
+        },
+        "tags" : "Container Instance"
+      }, {
+        "containerId" : "28",
+        "environment" : "Demo",
+        "id" : "121",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "a001d84a-4752-4be8-a2bb-d3fa56836fac"
+        },
+        "relationships" : [ {
+          "description" : "Serves",
+          "destinationId" : "119",
+          "id" : "122",
+          "linkedRelationshipId" : "60",
+          "sourceId" : "121"
+        } ],
+        "tags" : "Container Instance"
+      } ],
+      "description" : "Cases are read, decided and ruled here, ahead of time.",
+      "environment" : "Demo",
+      "id" : "104",
+      "instances" : "1",
+      "name" : "Project owner's Mac",
+      "properties" : {
+        "structurizr.dsl.identifier" : "d37f110b-2ad5-4eba-a6d9-062b90033d3d"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "macOS"
+    }, {
+      "description" : "Called from the Mac, ahead of time only. Visitors never reach them.",
+      "environment" : "Demo",
+      "id" : "123",
+      "instances" : "1",
+      "name" : "Model providers",
+      "properties" : {
+        "structurizr.dsl.identifier" : "e46f2e13-365b-41c5-b533-87520413af71"
+      },
+      "softwareSystemInstances" : [ {
+        "environment" : "Demo",
+        "id" : "124",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "095c0879-5cb7-413d-8c9c-b4d66ba7e79b"
+        },
+        "softwareSystemId" : "6",
+        "tags" : "Software System Instance"
+      }, {
+        "environment" : "Demo",
+        "id" : "126",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "2c708038-48dc-42e0-ad1d-d4202ebbc765"
+        },
+        "softwareSystemId" : "7",
+        "tags" : "Software System Instance"
+      } ],
+      "tags" : "Element,Deployment Node",
+      "technology" : "Hosted APIs"
+    }, {
+      "description" : "Sends reads from one public hostname to the file server.",
+      "environment" : "Demo",
+      "id" : "128",
+      "instances" : "1",
+      "name" : "Cloudflare",
+      "properties" : {
+        "structurizr.dsl.identifier" : "612b6f65-e0d9-4015-bfd6-e48f69ec4b41"
+      },
+      "softwareSystemInstances" : [ {
+        "environment" : "Demo",
+        "id" : "129",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "3a6ef987-aa8d-402c-bcd1-7fcd145c2e3e"
+        },
+        "relationships" : [ {
+          "description" : "Forwards reads to",
+          "destinationId" : "121",
+          "id" : "130",
+          "linkedRelationshipId" : "100",
+          "sourceId" : "129"
+        } ],
+        "softwareSystemId" : "9",
+        "tags" : "Software System Instance"
+      } ],
+      "tags" : "Element,Deployment Node",
+      "technology" : "Named tunnel"
+    }, {
+      "containerInstances" : [ {
+        "containerId" : "29",
+        "environment" : "Demo",
+        "id" : "132",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "e86ba564-b3b3-4fe3-8faf-8fae4d2c6c78"
+        },
+        "relationships" : [ {
+          "description" : "Loads the page and JSON",
+          "destinationId" : "121",
+          "id" : "133",
+          "linkedRelationshipId" : "61",
+          "sourceId" : "132"
+        } ],
+        "tags" : "Container Instance"
+      } ],
+      "description" : "Plays the run from static files. No model call and no key.",
+      "environment" : "Demo",
+      "id" : "131",
+      "instances" : "1",
+      "name" : "Visitor's device",
+      "properties" : {
+        "structurizr.dsl.identifier" : "cff135f6-5dad-447a-9cce-cdce3dee025b"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "A web browser"
+    }, {
+      "description" : "This site, at the address on the printed poster.",
+      "environment" : "Demo",
+      "id" : "134",
+      "instances" : "1",
+      "name" : "GitHub Pages",
+      "properties" : {
+        "structurizr.dsl.identifier" : "9e5d74de-c23b-445a-a7f8-30e5495f7550"
+      },
+      "softwareSystemInstances" : [ {
+        "environment" : "Demo",
+        "id" : "135",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "d9c6348c-452b-46b1-a646-091babd1e50e"
+        },
+        "relationships" : [ {
+          "description" : "Links to",
+          "destinationId" : "129",
+          "id" : "136",
+          "linkedRelationshipId" : "103",
+          "sourceId" : "135"
+        } ],
+        "softwareSystemId" : "8",
+        "tags" : "Software System Instance"
+      } ],
+      "tags" : "Element,Deployment Node",
+      "technology" : "Static pages"
+    } ],
+    "people" : [ {
+      "description" : "Sends a form, a cover letter and attachments. In this demo a script writes them.",
+      "id" : "1",
+      "name" : "Applicant",
+      "properties" : {
+        "structurizr.dsl.identifier" : "applicant"
+      },
+      "relationships" : [ {
+        "description" : "Submits a form, a cover letter and attachments",
+        "destinationId" : "10",
+        "id" : "38",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Sends",
+        "destinationId" : "11",
+        "id" : "45",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person,Stand-in"
+    }, {
+      "description" : "Rules on cases the decision table sends to an officer. In this demo an LLM stands in.",
+      "id" : "2",
+      "name" : "Officer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "officer"
+      },
+      "tags" : "Element,Person,Stand-in"
+    }, {
+      "description" : "Owns the trees, thresholds and settings, and releases new versions.",
+      "id" : "3",
+      "name" : "Policy owner",
+      "properties" : {
+        "structurizr.dsl.identifier" : "policyOwner"
+      },
+      "relationships" : [ {
+        "description" : "Sets the trees and settings, and releases new versions",
+        "destinationId" : "10",
+        "id" : "40",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Edits trees and settings",
+        "destinationId" : "12",
+        "id" : "47",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Runs train, thresholds and release",
+        "destinationId" : "13",
+        "id" : "48",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Runs train, thresholds and release",
+        "destinationId" : "20",
+        "id" : "79",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Reads the validation result",
+        "destinationId" : "25",
+        "id" : "80",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Owns the evidence map: which documents count as proof of what.",
+      "id" : "4",
+      "name" : "Steward",
+      "properties" : {
+        "structurizr.dsl.identifier" : "steward"
+      },
+      "relationships" : [ {
+        "description" : "Keeps the evidence map",
+        "destinationId" : "10",
+        "id" : "41",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Edits the evidence map",
+        "destinationId" : "12",
+        "id" : "46",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Opens any decision in the replay and reads how it was reached. Changes nothing.",
+      "id" : "5",
+      "name" : "Visitor",
+      "properties" : {
+        "structurizr.dsl.identifier" : "visitor"
+      },
+      "relationships" : [ {
+        "description" : "Opens any decision and reads how it was reached",
+        "destinationId" : "10",
+        "id" : "42",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Watches, and opens any case",
+        "destinationId" : "29",
+        "id" : "62",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Opens the replay through",
+        "destinationId" : "9",
+        "id" : "101",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Reads",
+        "destinationId" : "8",
+        "id" : "102",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "A hosted language model. Reads documents in two fixed passes with no tools. It never decides.",
+      "documentation" : { },
+      "id" : "6",
+      "name" : "Agentic LLM",
+      "properties" : {
+        "structurizr.dsl.identifier" : "llm"
+      },
+      "tags" : "Element,Software System,External"
+    }, {
+      "description" : "A TypeSafe model with fixed weights. Answers narrow questions as probabilities.",
+      "documentation" : { },
+      "id" : "7",
+      "name" : "Jev",
+      "properties" : {
+        "structurizr.dsl.identifier" : "jev"
+      },
+      "tags" : "Element,Software System,External"
+    }, {
+      "description" : "Static pages at the address on the printed poster. Built from this model and the report files.",
+      "documentation" : { },
+      "id" : "8",
+      "name" : "Architecture site",
+      "properties" : {
+        "structurizr.dsl.identifier" : "site"
+      },
+      "relationships" : [ {
+        "description" : "Links to",
+        "destinationId" : "9",
+        "id" : "103",
+        "sourceId" : "8",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System,External"
+    }, {
+      "description" : "A named tunnel to one public hostname. The only way in from outside.",
+      "documentation" : { },
+      "id" : "9",
+      "name" : "Cloudflare tunnel",
+      "properties" : {
+        "structurizr.dsl.identifier" : "tunnel"
+      },
+      "relationships" : [ {
+        "description" : "Forwards reads to",
+        "destinationId" : "28",
+        "id" : "100",
+        "sourceId" : "9",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System,External"
+    }, {
+      "containers" : [ {
+        "description" : "The form, cover letter and attachments of each case.",
+        "documentation" : { },
+        "id" : "11",
+        "name" : "Applications",
+        "properties" : {
+          "structurizr.dsl.identifier" : "applications"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "Files"
+      }, {
+        "description" : "The ordinance, evidence map, trees, Rego and settings. Changing a value needs no code change.",
+        "documentation" : { },
+        "id" : "12",
+        "name" : "Rule files",
+        "properties" : {
+          "structurizr.dsl.identifier" : "rules"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "YAML, JSON, Rego"
+      }, {
+        "components" : [ {
+          "description" : "Runs the reading stages once per case and stores the answers.",
+          "documentation" : { },
+          "id" : "14",
+          "name" : "Reader",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reader"
+          },
+          "relationships" : [ {
+            "description" : "Loads the form, letter and attachments",
+            "destinationId" : "11",
+            "id" : "63",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Reads the kinds of proof and the questions",
+            "destinationId" : "12",
+            "id" : "64",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Asks for basic checks and the hazard screen",
+            "destinationId" : "23",
+            "id" : "65",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Sends the two fixed passes",
+            "destinationId" : "6",
+            "id" : "66",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Checks quotes",
+            "destinationId" : "15",
+            "id" : "67",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Sends one request",
+            "destinationId" : "7",
+            "id" : "68",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Writes one reading record",
+            "destinationId" : "24",
+            "id" : "69",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "The quote check and the field comparison. Plain code with no policy values.",
+          "documentation" : { },
+          "id" : "15",
+          "name" : "Code checks",
+          "properties" : {
+            "structurizr.dsl.identifier" : "checks"
+          },
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "Turns a stored record, weights and thresholds into a decision. A pure function of its inputs.",
+          "documentation" : { },
+          "id" : "16",
+          "name" : "Case pipeline",
+          "properties" : {
+            "structurizr.dsl.identifier" : "pipeline"
+          },
+          "relationships" : [ {
+            "description" : "Reads the record",
+            "destinationId" : "24",
+            "id" : "71",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Compares fields with the form",
+            "destinationId" : "15",
+            "id" : "72",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Asks for statuses, rule answers and the decision",
+            "destinationId" : "23",
+            "id" : "73",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Asks for likelihood, severity and risk",
+            "destinationId" : "17",
+            "id" : "74",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "Sends a case down each tree and gives likelihood, severity, the risk sum and the highest severity.",
+          "documentation" : { },
+          "id" : "17",
+          "name" : "Tree arithmetic",
+          "properties" : {
+            "structurizr.dsl.identifier" : "arithmetic"
+          },
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "Takes cases in order, decides each, asks for a review, teaches the trees and writes the log.",
+          "documentation" : { },
+          "id" : "18",
+          "name" : "Run builder",
+          "properties" : {
+            "structurizr.dsl.identifier" : "builder"
+          },
+          "relationships" : [ {
+            "description" : "Decides each case with the weights of the moment",
+            "destinationId" : "16",
+            "id" : "70",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Asks for a review",
+            "destinationId" : "19",
+            "id" : "75",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Applies each review and re-chooses thresholds",
+            "destinationId" : "20",
+            "id" : "77",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Writes every stage as an event",
+            "destinationId" : "26",
+            "id" : "78",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "Hands a case to the officer and brings back the ruling.",
+          "documentation" : { },
+          "id" : "19",
+          "name" : "Officer desk",
+          "properties" : {
+            "structurizr.dsl.identifier" : "officerDesk"
+          },
+          "relationships" : [ {
+            "description" : "Hands over the case",
+            "destinationId" : "2",
+            "id" : "76",
+            "sourceId" : "19",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "Applies a review to leaf counts, fits candidates, chooses thresholds and releases versions.",
+          "documentation" : { },
+          "id" : "20",
+          "name" : "Learning",
+          "properties" : {
+            "structurizr.dsl.identifier" : "learning"
+          },
+          "relationships" : [ {
+            "description" : "Reads, with no model calls",
+            "destinationId" : "24",
+            "id" : "81",
+            "sourceId" : "20",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Writes candidates and released versions",
+            "destinationId" : "25",
+            "id" : "82",
+            "sourceId" : "20",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "Writes a finished run as JSON, and scans every file for vendor names and keys first.",
+          "documentation" : { },
+          "id" : "21",
+          "name" : "Exporter",
+          "properties" : {
+            "structurizr.dsl.identifier" : "exporter"
+          },
+          "relationships" : [ {
+            "description" : "Reads the finished run",
+            "destinationId" : "26",
+            "id" : "83",
+            "sourceId" : "21",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Writes static JSON",
+            "destinationId" : "27",
+            "id" : "84",
+            "sourceId" : "21",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        }, {
+          "description" : "Reruns a logged decision with no model calls, and refuses if what it used has changed.",
+          "documentation" : { },
+          "id" : "22",
+          "name" : "Reproduce",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reproduce"
+          },
+          "relationships" : [ {
+            "description" : "Reads a logged decision",
+            "destinationId" : "26",
+            "id" : "85",
+            "sourceId" : "22",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Reruns it with no model calls",
+            "destinationId" : "16",
+            "id" : "86",
+            "sourceId" : "22",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "Python"
+        } ],
+        "description" : "The program that reads, decides, learns and publishes. It holds no policy values.",
+        "documentation" : { },
+        "id" : "13",
+        "name" : "Engine",
+        "properties" : {
+          "structurizr.dsl.identifier" : "core"
+        },
+        "relationships" : [ {
+          "description" : "Reads",
+          "destinationId" : "11",
+          "id" : "49",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Reads",
+          "destinationId" : "12",
+          "id" : "50",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Runs as a subprocess",
+          "destinationId" : "23",
+          "id" : "51",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Writes and reads one record per case",
+          "destinationId" : "24",
+          "id" : "53",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Reads and writes",
+          "destinationId" : "25",
+          "id" : "54",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Writes every stage as an event",
+          "destinationId" : "26",
+          "id" : "55",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Writes the finished run",
+          "destinationId" : "27",
+          "id" : "56",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Sends two fixed passes",
+          "destinationId" : "6",
+          "id" : "57",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Sends one request per case",
+          "destinationId" : "7",
+          "id" : "58",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Asks for a ruling",
+          "destinationId" : "2",
+          "id" : "59",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Fits weights and re-chooses thresholds from labelled cases",
+          "destinationId" : "33",
+          "id" : "90",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Asks for a ruling, in this demo",
+          "destinationId" : "35",
+          "id" : "91",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Python, command line"
+      }, {
+        "description" : "Runs the Rego policies, with no network, time or random functions.",
+        "documentation" : { },
+        "id" : "23",
+        "name" : "OPA",
+        "properties" : {
+          "structurizr.dsl.identifier" : "opa"
+        },
+        "relationships" : [ {
+          "description" : "Loads Rego",
+          "destinationId" : "12",
+          "id" : "52",
+          "sourceId" : "23",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Open Policy Agent, subprocess"
+      }, {
+        "description" : "One reading record per case, and every model call keyed by a hash of its input.",
+        "documentation" : { },
+        "id" : "24",
+        "name" : "Stored answers",
+        "properties" : {
+          "structurizr.dsl.identifier" : "stored"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "JSON files"
+      }, {
+        "description" : "Candidate and released weights with their thresholds. Released versions never change in place.",
+        "documentation" : { },
+        "id" : "25",
+        "name" : "Weights and versions",
+        "properties" : {
+          "structurizr.dsl.identifier" : "weights"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "JSON files"
+      }, {
+        "description" : "One file per run. Triggers reject updates and deletes. Holds the hashes of what each decision used.",
+        "documentation" : { },
+        "id" : "26",
+        "name" : "Event log",
+        "properties" : {
+          "structurizr.dsl.identifier" : "log"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "SQLite"
+      }, {
+        "description" : "One finished run as a folder of static files.",
+        "documentation" : { },
+        "id" : "27",
+        "name" : "Exported run",
+        "properties" : {
+          "structurizr.dsl.identifier" : "run"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "JSON"
+      }, {
+        "description" : "Serves that one folder from 127.0.0.1. Holds no keys and has no model client.",
+        "documentation" : { },
+        "id" : "28",
+        "name" : "File server",
+        "properties" : {
+          "structurizr.dsl.identifier" : "server"
+        },
+        "relationships" : [ {
+          "description" : "Serves",
+          "destinationId" : "27",
+          "id" : "60",
+          "sourceId" : "28",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Python http.server"
+      }, {
+        "description" : "Plays the finished run in each visitor's browser. No action buttons.",
+        "documentation" : { },
+        "id" : "29",
+        "name" : "Browser replay",
+        "properties" : {
+          "structurizr.dsl.identifier" : "replay"
+        },
+        "relationships" : [ {
+          "description" : "Loads the page and JSON",
+          "destinationId" : "28",
+          "id" : "61",
+          "sourceId" : "29",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "React, Vite"
+      } ],
+      "description" : "Reads an application, assesses risk with trees that can learn, and decides by written rules. Every decision can be retraced.",
+      "documentation" : { },
+      "id" : "10",
+      "name" : "Permit Engine",
+      "properties" : {
+        "structurizr.dsl.identifier" : "engine"
+      },
+      "relationships" : [ {
+        "description" : "Sends cases to rule on, and gets back a ruling, a reason and risk levels",
+        "destinationId" : "2",
+        "id" : "39",
+        "sourceId" : "10",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Sends documents, and gets back fields with quotes and verdicts",
+        "destinationId" : "6",
+        "id" : "43",
+        "sourceId" : "10",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Sends typed values and plans, and gets back probabilities",
+        "destinationId" : "7",
+        "id" : "44",
+        "sourceId" : "10",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "containers" : [ {
+        "description" : "Writes every application, its hidden facts and its labels from one seed.",
+        "documentation" : { },
+        "id" : "31",
+        "name" : "Synthetic data generator",
+        "properties" : {
+          "structurizr.dsl.identifier" : "generator"
+        },
+        "relationships" : [ {
+          "description" : "Writes forms, letters and attachments",
+          "destinationId" : "11",
+          "id" : "87",
+          "sourceId" : "31",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Writes the hidden facts",
+          "destinationId" : "32",
+          "id" : "88",
+          "sourceId" : "31",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Writes levels, risky or not, and the right route",
+          "destinationId" : "33",
+          "id" : "89",
+          "sourceId" : "31",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Python"
+      }, {
+        "description" : "The hidden facts of each case. Never read by the models or the pipeline.",
+        "documentation" : { },
+        "id" : "32",
+        "name" : "Case cards",
+        "properties" : {
+          "structurizr.dsl.identifier" : "cards"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "JSON Lines"
+      }, {
+        "description" : "Risk levels, risky or not, and the right route, set by a hidden truth table.",
+        "documentation" : { },
+        "id" : "33",
+        "name" : "Labels",
+        "properties" : {
+          "structurizr.dsl.identifier" : "labels"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "JSON Lines"
+      }, {
+        "description" : "The truth table in plain words. Only the simulated officer reads it.",
+        "documentation" : { },
+        "id" : "34",
+        "name" : "Expert rubric",
+        "properties" : {
+          "structurizr.dsl.identifier" : "rubric"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "Markdown"
+      }, {
+        "description" : "An LLM following the expert rubric, standing in for a person. No tools. Always labelled as simulated.",
+        "documentation" : { },
+        "id" : "35",
+        "name" : "Simulated officer",
+        "properties" : {
+          "structurizr.dsl.identifier" : "standIn"
+        },
+        "relationships" : [ {
+          "description" : "Reads",
+          "destinationId" : "34",
+          "id" : "92",
+          "sourceId" : "35",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Sends one call with no tools",
+          "destinationId" : "6",
+          "id" : "93",
+          "sourceId" : "35",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Python"
+      }, {
+        "description" : "Runs each arm, the sealed test and the tone test, and scores them.",
+        "documentation" : { },
+        "id" : "36",
+        "name" : "Evaluation",
+        "properties" : {
+          "structurizr.dsl.identifier" : "evaluation"
+        },
+        "relationships" : [ {
+          "description" : "Runs each arm through the pipeline",
+          "destinationId" : "13",
+          "id" : "94",
+          "sourceId" : "36",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Scores against",
+          "destinationId" : "33",
+          "id" : "95",
+          "sourceId" : "36",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Checks readings against",
+          "destinationId" : "32",
+          "id" : "96",
+          "sourceId" : "36",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Writes",
+          "destinationId" : "37",
+          "id" : "97",
+          "sourceId" : "36",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Asks directly, as the baseline",
+          "destinationId" : "6",
+          "id" : "98",
+          "sourceId" : "36",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Asks directly, for comparison",
+          "destinationId" : "7",
+          "id" : "99",
+          "sourceId" : "36",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Python"
+      }, {
+        "description" : "The reports, the spend meter and the ledger that lets the sealed test run once.",
+        "documentation" : { },
+        "id" : "37",
+        "name" : "Reports and ledger",
+        "properties" : {
+          "structurizr.dsl.identifier" : "results"
+        },
+        "tags" : "Element,Container,Store",
+        "technology" : "JSON, Markdown"
+      } ],
+      "description" : "Makes the synthetic cases and scores the engine against them. It plays no part in how a case is decided.",
+      "documentation" : { },
+      "id" : "30",
+      "name" : "Test bench",
+      "properties" : {
+        "structurizr.dsl.identifier" : "bench"
+      },
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Permit Engine",
+  "properties" : {
+    "structurizr.inspection.error" : "91",
+    "structurizr.dsl" : "LyoKICogUGVybWl0IEVuZ2luZTogQzQgbW9kZWwgYXMgY29kZSAoU3RydWN0dXJpenIgRFNMKS4gSXQgZGVzY3JpYmVzIHdoYXQgZXhpc3RzIGZvciB0aGUgMjAyNi0xMS0wNCBkZW1vLgogKiBQdWJsaWMgd29yZGluZzogdGhlIExMTSBpcyBjYWxsZWQgImFnZW50aWMgTExNIiwgYW5kIG5vIHZlbmRvciBvciBtb2RlbCBpcyBuYW1lZCBoZXJlIG9yIGluIHRoZSBleHBvcnQuCiAqCiAqIFZhbGlkYXRlIGFuZCBleHBvcnQgd2l0aCB0aGUgbG9jYWwgaW1hZ2UsIGZyb20gdGhlIHJlcG9zaXRvcnkgcm9vdDoKICogICBkb2NrZXIgcnVuIC0tcm0gLS1wdWxsPW5ldmVyIC12ICIkUFdEL2FyY2hpdGVjdHVyZSI6L3cgc3RydWN0dXJpenIvc3RydWN0dXJpenIgdmFsaWRhdGUgLXcgL3cvd29ya3NwYWNlLmRzbAogKiAgIGRvY2tlciBydW4gLS1ybSAtLXB1bGw9bmV2ZXIgLXYgIiRQV0QvYXJjaGl0ZWN0dXJlIjovdyBzdHJ1Y3R1cml6ci9zdHJ1Y3R1cml6ciBleHBvcnQgLXcgL3cvd29ya3NwYWNlLmRzbCAtZiBqc29uIC1vIC93L2V4cG9ydAogKgogKiBIb3cgdGhlIGxldmVscyBhcmUgdXNlZDoKICogICBMZXZlbCAxLCBzeXN0ZW0gY29udGV4dDogdmlldyAiQ29udGV4dCIKICogICBMZXZlbCAyLCBjb250YWluZXJzOiB2aWV3ICJDb250YWluZXJzIi4gQSBjb250YWluZXIgaXMgc29tZXRoaW5nIHRoYXQgcnVucyBvciBob2xkcyBkYXRhIG9uIGl0cyBvd24uCiAqICAgTGV2ZWwgMywgY29tcG9uZW50czogdmlldyAiQ29tcG9uZW50cyIuIFRoZSBwYXJ0cyBpbnNpZGUgdGhlIEVuZ2luZSBjb250YWluZXIuCiAqICAgRmxvd3M6IHRoZSBkeW5hbWljIHZpZXdzIFJlYWRBcHBsaWNhdGlvbiwgRGVjaWRlQ2FzZSwgUmV2aWV3QW5kTGVhcm4sIFJlbGVhc2VDaGFuZ2UgYW5kIFB1Ymxpc2hBbmRDaGVjay4KICogICBFYWNoIHN0ZXAncyBkZXNjcmlwdGlvbiBpcyAiVGl0bGU6IHdoYXQgaGFwcGVucyIsIGFuZCB0aGUgc2l0ZSBzcGxpdHMgaXQgYXQgdGhlIGZpcnN0IGNvbG9uLgogKiAgIEhvdyB0aGUgc3lzdGVtIHdhcyB0ZXN0ZWQgaXMgdGhlIHNlcGFyYXRlIFRlc3QgYmVuY2ggc3lzdGVtLCBkcmF3biBvbmx5IG9uIHRoZSBUZXN0aW5nIHBhZ2UgKHZpZXcgIlRlc3RCZW5jaCIpLgogKgogKiBnb3ZfZGVzaWduL3NpdGUvYnVpbGQubWpzIHJlYWRzIGV4cG9ydC93b3Jrc3BhY2UuanNvbiBhbmQgZHJhd3MgdGhlc2Ugdmlld3MuIEJveCBwb3NpdGlvbnMgYXJlIGluCiAqIGdvdl9kZXNpZ24vc2l0ZS9saWIvYXJjaGl0ZWN0dXJlLnRzeCwgc28gYSBuZXcgZWxlbWVudCBpbiBhIHZpZXcgbmVlZHMgYSBwb3NpdGlvbiB0aGVyZSBvciB0aGUgYnVpbGQgc3RvcHMuCiAqCiAqIFJlbGF0aW9uc2hpcHMgYXJlIHdyaXR0ZW4gYnkgaGFuZCBhdCBlYWNoIGxldmVsLCBzbyBpbXBsaWVkIHJlbGF0aW9uc2hpcHMgYXJlIG9mZi4KICovCndvcmtzcGFjZSAiUGVybWl0IEVuZ2luZSIgIkEgZGVjaXNpb24gc3lzdGVtIGZvciBwdWJsaWMtZXZlbnQgcGVybWl0cywgc2hvd24gb24gc3ludGhldGljIHN0cmVldC1yYWNlIGFwcGxpY2F0aW9ucy4gQW4gYWdlbnRpYyBMTE0gcmVhZHMgdGhlIGV2aWRlbmNlLCBKZXYgYW5zd2VycyBuYXJyb3cgcXVlc3Rpb25zLCBjb2RlIGRvZXMgdGhlIGFyaXRobWV0aWMsIFJlZ28gZGVjaWRlcywgYW5kIGFuIG9mZmljZXIgc2V0dGxlcyB0aGUgcmVzdC4iIHsKCiAgICAhaW1wbGllZFJlbGF0aW9uc2hpcHMgZmFsc2UKCiAgICBtb2RlbCB7CiAgICAgICAgYXBwbGljYW50ID0gcGVyc29uICJBcHBsaWNhbnQiICJTZW5kcyBhIGZvcm0sIGEgY292ZXIgbGV0dGVyIGFuZCBhdHRhY2htZW50cy4gSW4gdGhpcyBkZW1vIGEgc2NyaXB0IHdyaXRlcyB0aGVtLiIgIlN0YW5kLWluIgogICAgICAgIG9mZmljZXIgPSBwZXJzb24gIk9mZmljZXIiICJSdWxlcyBvbiBjYXNlcyB0aGUgZGVjaXNpb24gdGFibGUgc2VuZHMgdG8gYW4gb2ZmaWNlci4gSW4gdGhpcyBkZW1vIGFuIExMTSBzdGFuZHMgaW4uIiAiU3RhbmQtaW4iCiAgICAgICAgcG9saWN5T3duZXIgPSBwZXJzb24gIlBvbGljeSBvd25lciIgIk93bnMgdGhlIHRyZWVzLCB0aHJlc2hvbGRzIGFuZCBzZXR0aW5ncywgYW5kIHJlbGVhc2VzIG5ldyB2ZXJzaW9ucy4iCiAgICAgICAgc3Rld2FyZCA9IHBlcnNvbiAiU3Rld2FyZCIgIk93bnMgdGhlIGV2aWRlbmNlIG1hcDogd2hpY2ggZG9jdW1lbnRzIGNvdW50IGFzIHByb29mIG9mIHdoYXQuIgogICAgICAgIHZpc2l0b3IgPSBwZXJzb24gIlZpc2l0b3IiICJPcGVucyBhbnkgZGVjaXNpb24gaW4gdGhlIHJlcGxheSBhbmQgcmVhZHMgaG93IGl0IHdhcyByZWFjaGVkLiBDaGFuZ2VzIG5vdGhpbmcuIgoKICAgICAgICBsbG0gPSBzb2Z0d2FyZVN5c3RlbSAiQWdlbnRpYyBMTE0iICJBIGhvc3RlZCBsYW5ndWFnZSBtb2RlbC4gUmVhZHMgZG9jdW1lbnRzIGluIHR3byBmaXhlZCBwYXNzZXMgd2l0aCBubyB0b29scy4gSXQgbmV2ZXIgZGVjaWRlcy4iICJFeHRlcm5hbCIKICAgICAgICBqZXYgPSBzb2Z0d2FyZVN5c3RlbSAiSmV2IiAiQSBUeXBlU2FmZSBtb2RlbCB3aXRoIGZpeGVkIHdlaWdodHMuIEFuc3dlcnMgbmFycm93IHF1ZXN0aW9ucyBhcyBwcm9iYWJpbGl0aWVzLiIgIkV4dGVybmFsIgogICAgICAgIHNpdGUgPSBzb2Z0d2FyZVN5c3RlbSAiQXJjaGl0ZWN0dXJlIHNpdGUiICJTdGF0aWMgcGFnZXMgYXQgdGhlIGFkZHJlc3Mgb24gdGhlIHByaW50ZWQgcG9zdGVyLiBCdWlsdCBmcm9tIHRoaXMgbW9kZWwgYW5kIHRoZSByZXBvcnQgZmlsZXMuIiAiRXh0ZXJuYWwiCiAgICAgICAgdHVubmVsID0gc29mdHdhcmVTeXN0ZW0gIkNsb3VkZmxhcmUgdHVubmVsIiAiQSBuYW1lZCB0dW5uZWwgdG8gb25lIHB1YmxpYyBob3N0bmFtZS4gVGhlIG9ubHkgd2F5IGluIGZyb20gb3V0c2lkZS4iICJFeHRlcm5hbCIKCiAgICAgICAgZW5naW5lID0gc29mdHdhcmVTeXN0ZW0gIlBlcm1pdCBFbmdpbmUiICJSZWFkcyBhbiBhcHBsaWNhdGlvbiwgYXNzZXNzZXMgcmlzayB3aXRoIHRyZWVzIHRoYXQgY2FuIGxlYXJuLCBhbmQgZGVjaWRlcyBieSB3cml0dGVuIHJ1bGVzLiBFdmVyeSBkZWNpc2lvbiBjYW4gYmUgcmV0cmFjZWQuIiB7CiAgICAgICAgICAgIGFwcGxpY2F0aW9ucyA9IGNvbnRhaW5lciAiQXBwbGljYXRpb25zIiAiVGhlIGZvcm0sIGNvdmVyIGxldHRlciBhbmQgYXR0YWNobWVudHMgb2YgZWFjaCBjYXNlLiIgIkZpbGVzIiAiU3RvcmUiCiAgICAgICAgICAgIHJ1bGVzID0gY29udGFpbmVyICJSdWxlIGZpbGVzIiAiVGhlIG9yZGluYW5jZSwgZXZpZGVuY2UgbWFwLCB0cmVlcywgUmVnbyBhbmQgc2V0dGluZ3MuIENoYW5naW5nIGEgdmFsdWUgbmVlZHMgbm8gY29kZSBjaGFuZ2UuIiAiWUFNTCwgSlNPTiwgUmVnbyIgIlN0b3JlIgogICAgICAgICAgICBjb3JlID0gY29udGFpbmVyICJFbmdpbmUiICJUaGUgcHJvZ3JhbSB0aGF0IHJlYWRzLCBkZWNpZGVzLCBsZWFybnMgYW5kIHB1Ymxpc2hlcy4gSXQgaG9sZHMgbm8gcG9saWN5IHZhbHVlcy4iICJQeXRob24sIGNvbW1hbmQgbGluZSIgewogICAgICAgICAgICAgICAgcmVhZGVyID0gY29tcG9uZW50ICJSZWFkZXIiICJSdW5zIHRoZSByZWFkaW5nIHN0YWdlcyBvbmNlIHBlciBjYXNlIGFuZCBzdG9yZXMgdGhlIGFuc3dlcnMuIiAiUHl0aG9uIgogICAgICAgICAgICAgICAgY2hlY2tzID0gY29tcG9uZW50ICJDb2RlIGNoZWNrcyIgIlRoZSBxdW90ZSBjaGVjayBhbmQgdGhlIGZpZWxkIGNvbXBhcmlzb24uIFBsYWluIGNvZGUgd2l0aCBubyBwb2xpY3kgdmFsdWVzLiIgIlB5dGhvbiIKICAgICAgICAgICAgICAgIHBpcGVsaW5lID0gY29tcG9uZW50ICJDYXNlIHBpcGVsaW5lIiAiVHVybnMgYSBzdG9yZWQgcmVjb3JkLCB3ZWlnaHRzIGFuZCB0aHJlc2hvbGRzIGludG8gYSBkZWNpc2lvbi4gQSBwdXJlIGZ1bmN0aW9uIG9mIGl0cyBpbnB1dHMuIiAiUHl0aG9uIgogICAgICAgICAgICAgICAgYXJpdGhtZXRpYyA9IGNvbXBvbmVudCAiVHJlZSBhcml0aG1ldGljIiAiU2VuZHMgYSBjYXNlIGRvd24gZWFjaCB0cmVlIGFuZCBnaXZlcyBsaWtlbGlob29kLCBzZXZlcml0eSwgdGhlIHJpc2sgc3VtIGFuZCB0aGUgaGlnaGVzdCBzZXZlcml0eS4iICJQeXRob24iCiAgICAgICAgICAgICAgICBidWlsZGVyID0gY29tcG9uZW50ICJSdW4gYnVpbGRlciIgIlRha2VzIGNhc2VzIGluIG9yZGVyLCBkZWNpZGVzIGVhY2gsIGFza3MgZm9yIGEgcmV2aWV3LCB0ZWFjaGVzIHRoZSB0cmVlcyBhbmQgd3JpdGVzIHRoZSBsb2cuIiAiUHl0aG9uIgogICAgICAgICAgICAgICAgb2ZmaWNlckRlc2sgPSBjb21wb25lbnQgIk9mZmljZXIgZGVzayIgIkhhbmRzIGEgY2FzZSB0byB0aGUgb2ZmaWNlciBhbmQgYnJpbmdzIGJhY2sgdGhlIHJ1bGluZy4iICJQeXRob24iCiAgICAgICAgICAgICAgICBsZWFybmluZyA9IGNvbXBvbmVudCAiTGVhcm5pbmciICJBcHBsaWVzIGEgcmV2aWV3IHRvIGxlYWYgY291bnRzLCBmaXRzIGNhbmRpZGF0ZXMsIGNob29zZXMgdGhyZXNob2xkcyBhbmQgcmVsZWFzZXMgdmVyc2lvbnMuIiAiUHl0aG9uIgogICAgICAgICAgICAgICAgZXhwb3J0ZXIgPSBjb21wb25lbnQgIkV4cG9ydGVyIiAiV3JpdGVzIGEgZmluaXNoZWQgcnVuIGFzIEpTT04sIGFuZCBzY2FucyBldmVyeSBmaWxlIGZvciB2ZW5kb3IgbmFtZXMgYW5kIGtleXMgZmlyc3QuIiAiUHl0aG9uIgogICAgICAgICAgICAgICAgcmVwcm9kdWNlID0gY29tcG9uZW50ICJSZXByb2R1Y2UiICJSZXJ1bnMgYSBsb2dnZWQgZGVjaXNpb24gd2l0aCBubyBtb2RlbCBjYWxscywgYW5kIHJlZnVzZXMgaWYgd2hhdCBpdCB1c2VkIGhhcyBjaGFuZ2VkLiIgIlB5dGhvbiIKICAgICAgICAgICAgfQogICAgICAgICAgICBvcGEgPSBjb250YWluZXIgIk9QQSIgIlJ1bnMgdGhlIFJlZ28gcG9saWNpZXMsIHdpdGggbm8gbmV0d29yaywgdGltZSBvciByYW5kb20gZnVuY3Rpb25zLiIgIk9wZW4gUG9saWN5IEFnZW50LCBzdWJwcm9jZXNzIgogICAgICAgICAgICBzdG9yZWQgPSBjb250YWluZXIgIlN0b3JlZCBhbnN3ZXJzIiAiT25lIHJlYWRpbmcgcmVjb3JkIHBlciBjYXNlLCBhbmQgZXZlcnkgbW9kZWwgY2FsbCBrZXllZCBieSBhIGhhc2ggb2YgaXRzIGlucHV0LiIgIkpTT04gZmlsZXMiICJTdG9yZSIKICAgICAgICAgICAgd2VpZ2h0cyA9IGNvbnRhaW5lciAiV2VpZ2h0cyBhbmQgdmVyc2lvbnMiICJDYW5kaWRhdGUgYW5kIHJlbGVhc2VkIHdlaWdodHMgd2l0aCB0aGVpciB0aHJlc2hvbGRzLiBSZWxlYXNlZCB2ZXJzaW9ucyBuZXZlciBjaGFuZ2UgaW4gcGxhY2UuIiAiSlNPTiBmaWxlcyIgIlN0b3JlIgogICAgICAgICAgICBsb2cgPSBjb250YWluZXIgIkV2ZW50IGxvZyIgIk9uZSBmaWxlIHBlciBydW4uIFRyaWdnZXJzIHJlamVjdCB1cGRhdGVzIGFuZCBkZWxldGVzLiBIb2xkcyB0aGUgaGFzaGVzIG9mIHdoYXQgZWFjaCBkZWNpc2lvbiB1c2VkLiIgIlNRTGl0ZSIgIlN0b3JlIgogICAgICAgICAgICBydW4gPSBjb250YWluZXIgIkV4cG9ydGVkIHJ1biIgIk9uZSBmaW5pc2hlZCBydW4gYXMgYSBmb2xkZXIgb2Ygc3RhdGljIGZpbGVzLiIgIkpTT04iICJTdG9yZSIKICAgICAgICAgICAgc2VydmVyID0gY29udGFpbmVyICJGaWxlIHNlcnZlciIgIlNlcnZlcyB0aGF0IG9uZSBmb2xkZXIgZnJvbSAxMjcuMC4wLjEuIEhvbGRzIG5vIGtleXMgYW5kIGhhcyBubyBtb2RlbCBjbGllbnQuIiAiUHl0aG9uIGh0dHAuc2VydmVyIgogICAgICAgICAgICByZXBsYXkgPSBjb250YWluZXIgIkJyb3dzZXIgcmVwbGF5IiAiUGxheXMgdGhlIGZpbmlzaGVkIHJ1biBpbiBlYWNoIHZpc2l0b3IncyBicm93c2VyLiBObyBhY3Rpb24gYnV0dG9ucy4iICJSZWFjdCwgVml0ZSIKICAgICAgICB9CgogICAgICAgIGJlbmNoID0gc29mdHdhcmVTeXN0ZW0gIlRlc3QgYmVuY2giICJNYWtlcyB0aGUgc3ludGhldGljIGNhc2VzIGFuZCBzY29yZXMgdGhlIGVuZ2luZSBhZ2FpbnN0IHRoZW0uIEl0IHBsYXlzIG5vIHBhcnQgaW4gaG93IGEgY2FzZSBpcyBkZWNpZGVkLiIgewogICAgICAgICAgICBnZW5lcmF0b3IgPSBjb250YWluZXIgIlN5bnRoZXRpYyBkYXRhIGdlbmVyYXRvciIgIldyaXRlcyBldmVyeSBhcHBsaWNhdGlvbiwgaXRzIGhpZGRlbiBmYWN0cyBhbmQgaXRzIGxhYmVscyBmcm9tIG9uZSBzZWVkLiIgIlB5dGhvbiIKICAgICAgICAgICAgY2FyZHMgPSBjb250YWluZXIgIkNhc2UgY2FyZHMiICJUaGUgaGlkZGVuIGZhY3RzIG9mIGVhY2ggY2FzZS4gTmV2ZXIgcmVhZCBieSB0aGUgbW9kZWxzIG9yIHRoZSBwaXBlbGluZS4iICJKU09OIExpbmVzIiAiU3RvcmUiCiAgICAgICAgICAgIGxhYmVscyA9IGNvbnRhaW5lciAiTGFiZWxzIiAiUmlzayBsZXZlbHMsIHJpc2t5IG9yIG5vdCwgYW5kIHRoZSByaWdodCByb3V0ZSwgc2V0IGJ5IGEgaGlkZGVuIHRydXRoIHRhYmxlLiIgIkpTT04gTGluZXMiICJTdG9yZSIKICAgICAgICAgICAgcnVicmljID0gY29udGFpbmVyICJFeHBlcnQgcnVicmljIiAiVGhlIHRydXRoIHRhYmxlIGluIHBsYWluIHdvcmRzLiBPbmx5IHRoZSBzaW11bGF0ZWQgb2ZmaWNlciByZWFkcyBpdC4iICJNYXJrZG93biIgIlN0b3JlIgogICAgICAgICAgICBzdGFuZEluID0gY29udGFpbmVyICJTaW11bGF0ZWQgb2ZmaWNlciIgIkFuIExMTSBmb2xsb3dpbmcgdGhlIGV4cGVydCBydWJyaWMsIHN0YW5kaW5nIGluIGZvciBhIHBlcnNvbi4gTm8gdG9vbHMuIEFsd2F5cyBsYWJlbGxlZCBhcyBzaW11bGF0ZWQuIiAiUHl0aG9uIgogICAgICAgICAgICBldmFsdWF0aW9uID0gY29udGFpbmVyICJFdmFsdWF0aW9uIiAiUnVucyBlYWNoIGFybSwgdGhlIHNlYWxlZCB0ZXN0IGFuZCB0aGUgdG9uZSB0ZXN0LCBhbmQgc2NvcmVzIHRoZW0uIiAiUHl0aG9uIgogICAgICAgICAgICByZXN1bHRzID0gY29udGFpbmVyICJSZXBvcnRzIGFuZCBsZWRnZXIiICJUaGUgcmVwb3J0cywgdGhlIHNwZW5kIG1ldGVyIGFuZCB0aGUgbGVkZ2VyIHRoYXQgbGV0cyB0aGUgc2VhbGVkIHRlc3QgcnVuIG9uY2UuIiAiSlNPTiwgTWFya2Rvd24iICJTdG9yZSIKICAgICAgICB9CgogICAgICAgICMgTGV2ZWwgMTogdGhlIHN5c3RlbSBhbmQgd2hhdCBzdXJyb3VuZHMgaXQuCiAgICAgICAgYXBwbGljYW50IC0+IGVuZ2luZSAiU3VibWl0cyBhIGZvcm0sIGEgY292ZXIgbGV0dGVyIGFuZCBhdHRhY2htZW50cyIKICAgICAgICBlbmdpbmUgLT4gb2ZmaWNlciAiU2VuZHMgY2FzZXMgdG8gcnVsZSBvbiwgYW5kIGdldHMgYmFjayBhIHJ1bGluZywgYSByZWFzb24gYW5kIHJpc2sgbGV2ZWxzIgogICAgICAgIHBvbGljeU93bmVyIC0+IGVuZ2luZSAiU2V0cyB0aGUgdHJlZXMgYW5kIHNldHRpbmdzLCBhbmQgcmVsZWFzZXMgbmV3IHZlcnNpb25zIgogICAgICAgIHN0ZXdhcmQgLT4gZW5naW5lICJLZWVwcyB0aGUgZXZpZGVuY2UgbWFwIgogICAgICAgIHZpc2l0b3IgLT4gZW5naW5lICJPcGVucyBhbnkgZGVjaXNpb24gYW5kIHJlYWRzIGhvdyBpdCB3YXMgcmVhY2hlZCIKICAgICAgICBlbmdpbmUgLT4gbGxtICJTZW5kcyBkb2N1bWVudHMsIGFuZCBnZXRzIGJhY2sgZmllbGRzIHdpdGggcXVvdGVzIGFuZCB2ZXJkaWN0cyIKICAgICAgICBlbmdpbmUgLT4gamV2ICJTZW5kcyB0eXBlZCB2YWx1ZXMgYW5kIHBsYW5zLCBhbmQgZ2V0cyBiYWNrIHByb2JhYmlsaXRpZXMiCgogICAgICAgICMgTGV2ZWwgMjogd2hhdCBydW5zIGFuZCB3aGF0IGhvbGRzIGRhdGEuCiAgICAgICAgYXBwbGljYW50IC0+IGFwcGxpY2F0aW9ucyAiU2VuZHMiCiAgICAgICAgc3Rld2FyZCAtPiBydWxlcyAiRWRpdHMgdGhlIGV2aWRlbmNlIG1hcCIKICAgICAgICBwb2xpY3lPd25lciAtPiBydWxlcyAiRWRpdHMgdHJlZXMgYW5kIHNldHRpbmdzIgogICAgICAgIHBvbGljeU93bmVyIC0+IGNvcmUgIlJ1bnMgdHJhaW4sIHRocmVzaG9sZHMgYW5kIHJlbGVhc2UiCiAgICAgICAgY29yZSAtPiBhcHBsaWNhdGlvbnMgIlJlYWRzIgogICAgICAgIGNvcmUgLT4gcnVsZXMgIlJlYWRzIgogICAgICAgIGNvcmUgLT4gb3BhICJSdW5zIGFzIGEgc3VicHJvY2VzcyIKICAgICAgICBvcGEgLT4gcnVsZXMgIkxvYWRzIFJlZ28iCiAgICAgICAgY29yZSAtPiBzdG9yZWQgIldyaXRlcyBhbmQgcmVhZHMgb25lIHJlY29yZCBwZXIgY2FzZSIKICAgICAgICBjb3JlIC0+IHdlaWdodHMgIlJlYWRzIGFuZCB3cml0ZXMiCiAgICAgICAgY29yZSAtPiBsb2cgIldyaXRlcyBldmVyeSBzdGFnZSBhcyBhbiBldmVudCIKICAgICAgICBjb3JlIC0+IHJ1biAiV3JpdGVzIHRoZSBmaW5pc2hlZCBydW4iCiAgICAgICAgY29yZSAtPiBsbG0gIlNlbmRzIHR3byBmaXhlZCBwYXNzZXMiCiAgICAgICAgY29yZSAtPiBqZXYgIlNlbmRzIG9uZSByZXF1ZXN0IHBlciBjYXNlIgogICAgICAgIGNvcmUgLT4gb2ZmaWNlciAiQXNrcyBmb3IgYSBydWxpbmciCiAgICAgICAgc2VydmVyIC0+IHJ1biAiU2VydmVzIgogICAgICAgIHJlcGxheSAtPiBzZXJ2ZXIgIkxvYWRzIHRoZSBwYWdlIGFuZCBKU09OIgogICAgICAgIHZpc2l0b3IgLT4gcmVwbGF5ICJXYXRjaGVzLCBhbmQgb3BlbnMgYW55IGNhc2UiCgogICAgICAgICMgTGV2ZWwgMzogaW5zaWRlIHRoZSBFbmdpbmUgY29udGFpbmVyLgogICAgICAgIHJlYWRlciAtPiBhcHBsaWNhdGlvbnMgIkxvYWRzIHRoZSBmb3JtLCBsZXR0ZXIgYW5kIGF0dGFjaG1lbnRzIgogICAgICAgIHJlYWRlciAtPiBydWxlcyAiUmVhZHMgdGhlIGtpbmRzIG9mIHByb29mIGFuZCB0aGUgcXVlc3Rpb25zIgogICAgICAgIHJlYWRlciAtPiBvcGEgIkFza3MgZm9yIGJhc2ljIGNoZWNrcyBhbmQgdGhlIGhhemFyZCBzY3JlZW4iCiAgICAgICAgcmVhZGVyIC0+IGxsbSAiU2VuZHMgdGhlIHR3byBmaXhlZCBwYXNzZXMiCiAgICAgICAgcmVhZGVyIC0+IGNoZWNrcyAiQ2hlY2tzIHF1b3RlcyIKICAgICAgICByZWFkZXIgLT4gamV2ICJTZW5kcyBvbmUgcmVxdWVzdCIKICAgICAgICByZWFkZXIgLT4gc3RvcmVkICJXcml0ZXMgb25lIHJlYWRpbmcgcmVjb3JkIgogICAgICAgIGJ1aWxkZXIgLT4gcGlwZWxpbmUgIkRlY2lkZXMgZWFjaCBjYXNlIHdpdGggdGhlIHdlaWdodHMgb2YgdGhlIG1vbWVudCIKICAgICAgICBwaXBlbGluZSAtPiBzdG9yZWQgIlJlYWRzIHRoZSByZWNvcmQiCiAgICAgICAgcGlwZWxpbmUgLT4gY2hlY2tzICJDb21wYXJlcyBmaWVsZHMgd2l0aCB0aGUgZm9ybSIKICAgICAgICBwaXBlbGluZSAtPiBvcGEgIkFza3MgZm9yIHN0YXR1c2VzLCBydWxlIGFuc3dlcnMgYW5kIHRoZSBkZWNpc2lvbiIKICAgICAgICBwaXBlbGluZSAtPiBhcml0aG1ldGljICJBc2tzIGZvciBsaWtlbGlob29kLCBzZXZlcml0eSBhbmQgcmlzayIKICAgICAgICBidWlsZGVyIC0+IG9mZmljZXJEZXNrICJBc2tzIGZvciBhIHJldmlldyIKICAgICAgICBvZmZpY2VyRGVzayAtPiBvZmZpY2VyICJIYW5kcyBvdmVyIHRoZSBjYXNlIgogICAgICAgIGJ1aWxkZXIgLT4gbGVhcm5pbmcgIkFwcGxpZXMgZWFjaCByZXZpZXcgYW5kIHJlLWNob29zZXMgdGhyZXNob2xkcyIKICAgICAgICBidWlsZGVyIC0+IGxvZyAiV3JpdGVzIGV2ZXJ5IHN0YWdlIGFzIGFuIGV2ZW50IgogICAgICAgIHBvbGljeU93bmVyIC0+IGxlYXJuaW5nICJSdW5zIHRyYWluLCB0aHJlc2hvbGRzIGFuZCByZWxlYXNlIgogICAgICAgIHBvbGljeU93bmVyIC0+IHdlaWdodHMgIlJlYWRzIHRoZSB2YWxpZGF0aW9uIHJlc3VsdCIKICAgICAgICBsZWFybmluZyAtPiBzdG9yZWQgIlJlYWRzLCB3aXRoIG5vIG1vZGVsIGNhbGxzIgogICAgICAgIGxlYXJuaW5nIC0+IHdlaWdodHMgIldyaXRlcyBjYW5kaWRhdGVzIGFuZCByZWxlYXNlZCB2ZXJzaW9ucyIKICAgICAgICBleHBvcnRlciAtPiBsb2cgIlJlYWRzIHRoZSBmaW5pc2hlZCBydW4iCiAgICAgICAgZXhwb3J0ZXIgLT4gcnVuICJXcml0ZXMgc3RhdGljIEpTT04iCiAgICAgICAgcmVwcm9kdWNlIC0+IGxvZyAiUmVhZHMgYSBsb2dnZWQgZGVjaXNpb24iCiAgICAgICAgcmVwcm9kdWNlIC0+IHBpcGVsaW5lICJSZXJ1bnMgaXQgd2l0aCBubyBtb2RlbCBjYWxscyIKCiAgICAgICAgIyBUaGUgdGVzdCBiZW5jaC4gRHJhd24gb25seSBvbiB0aGUgVGVzdGluZyBwYWdlLgogICAgICAgIGdlbmVyYXRvciAtPiBhcHBsaWNhdGlvbnMgIldyaXRlcyBmb3JtcywgbGV0dGVycyBhbmQgYXR0YWNobWVudHMiCiAgICAgICAgZ2VuZXJhdG9yIC0+IGNhcmRzICJXcml0ZXMgdGhlIGhpZGRlbiBmYWN0cyIKICAgICAgICBnZW5lcmF0b3IgLT4gbGFiZWxzICJXcml0ZXMgbGV2ZWxzLCByaXNreSBvciBub3QsIGFuZCB0aGUgcmlnaHQgcm91dGUiCiAgICAgICAgY29yZSAtPiBsYWJlbHMgIkZpdHMgd2VpZ2h0cyBhbmQgcmUtY2hvb3NlcyB0aHJlc2hvbGRzIGZyb20gbGFiZWxsZWQgY2FzZXMiCiAgICAgICAgY29yZSAtPiBzdGFuZEluICJBc2tzIGZvciBhIHJ1bGluZywgaW4gdGhpcyBkZW1vIgogICAgICAgIHN0YW5kSW4gLT4gcnVicmljICJSZWFkcyIKICAgICAgICBzdGFuZEluIC0+IGxsbSAiU2VuZHMgb25lIGNhbGwgd2l0aCBubyB0b29scyIKICAgICAgICBldmFsdWF0aW9uIC0+IGNvcmUgIlJ1bnMgZWFjaCBhcm0gdGhyb3VnaCB0aGUgcGlwZWxpbmUiCiAgICAgICAgZXZhbHVhdGlvbiAtPiBsYWJlbHMgIlNjb3JlcyBhZ2FpbnN0IgogICAgICAgIGV2YWx1YXRpb24gLT4gY2FyZHMgIkNoZWNrcyByZWFkaW5ncyBhZ2FpbnN0IgogICAgICAgIGV2YWx1YXRpb24gLT4gcmVzdWx0cyAiV3JpdGVzIgogICAgICAgIGV2YWx1YXRpb24gLT4gbGxtICJBc2tzIGRpcmVjdGx5LCBhcyB0aGUgYmFzZWxpbmUiCiAgICAgICAgZXZhbHVhdGlvbiAtPiBqZXYgIkFza3MgZGlyZWN0bHksIGZvciBjb21wYXJpc29uIgoKICAgICAgICAjIFdoZXJlIGl0IHJ1bnMuCiAgICAgICAgdHVubmVsIC0+IHNlcnZlciAiRm9yd2FyZHMgcmVhZHMgdG8iCiAgICAgICAgdmlzaXRvciAtPiB0dW5uZWwgIk9wZW5zIHRoZSByZXBsYXkgdGhyb3VnaCIKICAgICAgICB2aXNpdG9yIC0+IHNpdGUgIlJlYWRzIgogICAgICAgIHNpdGUgLT4gdHVubmVsICJMaW5rcyB0byIKCiAgICAgICAgZGVtbyA9IGRlcGxveW1lbnRFbnZpcm9ubWVudCAiRGVtbyIgewogICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiUHJvamVjdCBvd25lcidzIE1hYyIgIkNhc2VzIGFyZSByZWFkLCBkZWNpZGVkIGFuZCBydWxlZCBoZXJlLCBhaGVhZCBvZiB0aW1lLiIgIm1hY09TIiB7CiAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBjb3JlCiAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBvcGEKICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIGFwcGxpY2F0aW9ucwogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcnVsZXMKICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIHN0b3JlZAogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2Ugd2VpZ2h0cwogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgbG9nCiAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBydW4KICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIHNlcnZlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJNb2RlbCBwcm92aWRlcnMiICJDYWxsZWQgZnJvbSB0aGUgTWFjLCBhaGVhZCBvZiB0aW1lIG9ubHkuIFZpc2l0b3JzIG5ldmVyIHJlYWNoIHRoZW0uIiAiSG9zdGVkIEFQSXMiIHsKICAgICAgICAgICAgICAgIHNvZnR3YXJlU3lzdGVtSW5zdGFuY2UgbGxtCiAgICAgICAgICAgICAgICBzb2Z0d2FyZVN5c3RlbUluc3RhbmNlIGpldgogICAgICAgICAgICB9CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJDbG91ZGZsYXJlIiAiU2VuZHMgcmVhZHMgZnJvbSBvbmUgcHVibGljIGhvc3RuYW1lIHRvIHRoZSBmaWxlIHNlcnZlci4iICJOYW1lZCB0dW5uZWwiIHsKICAgICAgICAgICAgICAgIHNvZnR3YXJlU3lzdGVtSW5zdGFuY2UgdHVubmVsCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIlZpc2l0b3IncyBkZXZpY2UiICJQbGF5cyB0aGUgcnVuIGZyb20gc3RhdGljIGZpbGVzLiBObyBtb2RlbCBjYWxsIGFuZCBubyBrZXkuIiAiQSB3ZWIgYnJvd3NlciIgewogICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgcmVwbGF5CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkdpdEh1YiBQYWdlcyIgIlRoaXMgc2l0ZSwgYXQgdGhlIGFkZHJlc3Mgb24gdGhlIHByaW50ZWQgcG9zdGVyLiIgIlN0YXRpYyBwYWdlcyIgewogICAgICAgICAgICAgICAgc29mdHdhcmVTeXN0ZW1JbnN0YW5jZSBzaXRlCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgZW5naW5lICJDb250ZXh0IiAiTGV2ZWwgMS4gUGVybWl0IEVuZ2luZSwgd2hvIHVzZXMgaXQsIGFuZCB0aGUgdHdvIG1vZGVscyBpdCBjYWxscy4iIHsKICAgICAgICAgICAgaW5jbHVkZSBlbmdpbmUgYXBwbGljYW50IG9mZmljZXIgcG9saWN5T3duZXIgc3Rld2FyZCB2aXNpdG9yIGxsbSBqZXYKICAgICAgICAgICAgYXV0b0xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgY29udGFpbmVyIGVuZ2luZSAiQ29udGFpbmVycyIgIkxldmVsIDIuIFdoYXQgcnVucyBhbmQgd2hhdCBob2xkcyBkYXRhIGluc2lkZSBQZXJtaXQgRW5naW5lLiIgewogICAgICAgICAgICBpbmNsdWRlIGFwcGxpY2FudCBvZmZpY2VyIHBvbGljeU93bmVyIHN0ZXdhcmQgdmlzaXRvciBsbG0gamV2CiAgICAgICAgICAgIGluY2x1ZGUgYXBwbGljYXRpb25zIHJ1bGVzIGNvcmUgb3BhIHN0b3JlZCB3ZWlnaHRzIGxvZyBydW4gc2VydmVyIHJlcGxheQogICAgICAgICAgICBhdXRvTGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgY29yZSAiQ29tcG9uZW50cyIgIkxldmVsIDMuIFRoZSBwYXJ0cyBpbnNpZGUgdGhlIEVuZ2luZSwgYW5kIHdoYXQgZWFjaCBvbmUgdXNlcy4iIHsKICAgICAgICAgICAgaW5jbHVkZSByZWFkZXIgY2hlY2tzIHBpcGVsaW5lIGFyaXRobWV0aWMgYnVpbGRlciBvZmZpY2VyRGVzayBsZWFybmluZyBleHBvcnRlciByZXByb2R1Y2UKICAgICAgICAgICAgaW5jbHVkZSBhcHBsaWNhdGlvbnMgcnVsZXMgb3BhIHN0b3JlZCB3ZWlnaHRzIGxvZyBydW4gbGxtIGpldiBvZmZpY2VyIHBvbGljeU93bmVyCiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgY29yZSAiUmVhZEFwcGxpY2F0aW9uIiAiUmVhZGluZyBvbmUgYXBwbGljYXRpb24uIEl0IHJ1bnMgb25jZSBwZXIgY2FzZSwgYW5kIHRoZSBhbnN3ZXJzIGFyZSBzdG9yZWQuIiB7CiAgICAgICAgICAgIHJlYWRlciAtPiBhcHBsaWNhdGlvbnMgIk9wZW4gdGhlIGFwcGxpY2F0aW9uOiBUaGUgUmVhZGVyIGxvYWRzIHRoZSBmb3JtLCB0aGUgY292ZXIgbGV0dGVyIGFuZCB0aGUgYXR0YWNobWVudHMgb2Ygb25lIGNhc2UuIgogICAgICAgICAgICByZWFkZXIgLT4gb3BhICJCYXNpYyBjaGVja3M6IElzIHRoZSBmZWUgcGFpZCwgaXMgdGhlIGZvcm0gY29tcGxldGUsIGlzIHRoZSBkYXRlIGFsbG93ZWQ/IEEgZmFpbHVyZSBzdG9wcyB0aGUgY2FzZSBoZXJlLCBiZWZvcmUgYW55IG1vZGVsIGlzIGNhbGxlZC4iCiAgICAgICAgICAgIHJlYWRlciAtPiBsbG0gIkxpbmsgYW5kIGV4dHJhY3Q6IEluIHRoZSBmaXJzdCBwYXNzLCBmb3IgZWFjaCBraW5kIG9mIHByb29mIGEgcmFjZSBjYW4gbmVlZCwgdGhlIExMTSBzYXlzIGZvdW5kIG9yIGFic2VudCwgZ2l2ZXMgZmllbGRzIHdpdGggcXVvdGVzLCBhbmQgbGlzdHMgZG9jdW1lbnRzIHRoYXQgZml0IG5vIGtpbmQuIFRoaXMgaXMgdGhlIG9ubHkgcGFzcyB0aGF0IHJlYWRzIHRoZSBjb3ZlciBsZXR0ZXIuIgogICAgICAgICAgICByZWFkZXIgLT4gY2hlY2tzICJRdW90ZSBjaGVjazogRWFjaCBxdW90ZSBtdXN0IGFwcGVhciBpbiB0aGUgbmFtZWQgYXR0YWNobWVudCBhbmQgZWFjaCB2YWx1ZSBpbnNpZGUgaXRzIHF1b3RlLCBvciB0aGUgZmllbGQgY291bnRzIGFzIGFic2VudC4gVGhlIGZvcm0gYW5kIHRoZSBjb3ZlciBsZXR0ZXIgYXJlIG5ldmVyIGFsbG93ZWQgYXMgc291cmNlcywgc28gYSBsZXR0ZXIgY2Fubm90IGJlY29tZSBldmlkZW5jZS4iCiAgICAgICAgICAgIHJlYWRlciAtPiBsbG0gIkp1ZGdlOiBJbiB0aGUgc2Vjb25kIHBhc3MsIGluIGEgZnJlc2ggY29udGV4dCwgdGhlIExMTSBnZXRzIHRoZSBhdHRhY2htZW50cyBiZWhpbmQgdmVyaWZpZWQgZmllbGRzIGFuZCB0aGUgY2FzZSdzIHR5cGVkIHZhbHVlcywgbmV2ZXIgdGhlIGNvdmVyIGxldHRlci4gSXQgZ2l2ZXMgb25lIHZlcmRpY3QgcGVyIGtpbmQgb2YgcHJvb2Y6IHN1cHBvcnRlZCwgdW5zdXBwb3J0ZWQgb3IgY29udHJhZGljdGVkLiIKICAgICAgICAgICAgcmVhZGVyIC0+IG9wYSAiSGF6YXJkIHNjcmVlbjogQnkgcnVsZXMgb25seSwgdHJhZmZpYyBhcHBsaWVzIGlmIGEgcm9hZCBjbG9zZXMsIGNyb3dkIHByZXNzdXJlIGlmIHRoZSBjcm93ZCBpcyAzMDAgb3IgbW9yZSwgYW5kIG1lZGljYWwgYWx3YXlzLiIKICAgICAgICAgICAgcmVhZGVyIC0+IGpldiAiVHJlZSBxdWVzdGlvbnM6IE9uZSBKZXYgcmVxdWVzdCBwZXIgY2FzZSwgd2l0aCB0eXBlZCB2YWx1ZXMsIGV2aWRlbmNlIHJlY29yZHMgYW5kIHdob2xlIHBsYW4gZG9jdW1lbnRzLiBKZXYgcmV0dXJucyBhIHByb2JhYmlsaXR5IGZvciBlYWNoIHF1ZXN0aW9uIG9uIHRoZSBoYXphcmRzIHRoYXQgYXBwbHkuIEl0IG5ldmVyIHNlZXMgdGhlIGNvdmVyIGxldHRlci4iCiAgICAgICAgICAgIHJlYWRlciAtPiBzdG9yZWQgIlN0b3JlIHRoZSBhbnN3ZXJzOiBBbGwgb2YgdGhpcyBiZWNvbWVzIG9uZSByZWFkaW5nIHJlY29yZC4gRnJvbSBoZXJlIG9uLCB0aGUgY2FzZSBuZWVkcyBubyBtb2RlbCBjYWxsLiIKICAgICAgICAgICAgYXV0b0xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBjb3JlICJEZWNpZGVDYXNlIiAiRGVjaWRpbmcgb25lIGNhc2UuIE5vIG1vZGVsIGlzIGNhbGxlZCwgc28gYW55IGRlY2lzaW9uIGNhbiBiZSByZXByb2R1Y2VkLiIgewogICAgICAgICAgICBidWlsZGVyIC0+IHBpcGVsaW5lICJQaWNrIHVwIHRoZSBjYXNlOiBUaGUgUnVuIGJ1aWxkZXIgaGFuZHMgdGhlIGNhc2UgdG8gdGhlIHBpcGVsaW5lLCB3aXRoIHRoZSB3ZWlnaHRzIGFuZCB0aHJlc2hvbGRzIG9mIHRoZSBtb21lbnQuIgogICAgICAgICAgICBwaXBlbGluZSAtPiBzdG9yZWQgIkxvYWQgdGhlIHJlYWRpbmcgcmVjb3JkOiBUaGUgcGlwZWxpbmUgc3RhcnRzIGZyb20gdGhlIHN0b3JlZCBhbnN3ZXJzLCBub3QgZnJvbSBhIG5ldyBtb2RlbCBjYWxsLiIKICAgICAgICAgICAgcGlwZWxpbmUgLT4gY2hlY2tzICJDb21wYXJlIGZpZWxkcyB3aXRoIHRoZSBmb3JtOiBDb2RlIGNvbXBhcmVzIGVhY2ggZXh0cmFjdGVkIGZpZWxkIHdpdGggdGhlIGZvcm0uIEEgbWlzbWF0Y2gsIHN1Y2ggYXMgYSBsZXR0ZXIgbmFtaW5nIGFub3RoZXIgZGF0ZSwgbWFrZXMgdGhlIHJlY29yZCBjb250cmFkaWN0ZWQgd2hhdGV2ZXIgdGhlIExMTSBzYWlkLiIKICAgICAgICAgICAgcGlwZWxpbmUgLT4gb3BhICJSZXF1aXJlbWVudHMgYW5kIHJ1bGUgYW5zd2VyczogUmVnbyBnaXZlcyBlYWNoIHJlcXVpcmVtZW50IGEgc3RhdHVzIChtZXQsIGZhaWxlZCwgbWlzc2luZyBvciB1bmNsZWFyKSwgYW5kIGFuc3dlcnMgZXZlcnkgcXVlc3Rpb24gdGhlIGZvcm0gY2FuIHNldHRsZS4iCiAgICAgICAgICAgIHBpcGVsaW5lIC0+IGFyaXRobWV0aWMgIldvcmsgb3V0IHRoZSByaXNrOiBBbnN3ZXJzIHNlbmQgdGhlIGNhc2UgZG93biB1cCB0byBzaXggdHJlZXMuIEVhY2ggaGF6YXJkJ3MgbGlrZWxpaG9vZCB0aW1lcyBpdHMgc2V2ZXJpdHksIHN1bW1lZCBvdmVyIHRoZSBoYXphcmRzIHRoYXQgYXBwbHksIGdpdmVzIHRoZSByaXNrLiIKICAgICAgICAgICAgcGlwZWxpbmUgLT4gb3BhICJBcHBseSB0aGUgZGVjaXNpb24gdGFibGU6IFJlZ28gcmVhZHMgdGhlIHRhYmxlIGZyb20gdGhlIHRvcCwgYW5kIHRoZSBmaXJzdCBtYXRjaCB3aW5zOiByZXR1cm5lZCwgcHJvcG9zZWQgZGVuaWFsLCBvZmZpY2VyIG9yIGFwcHJvdmVkLCB3aXRoIHRoZSByb3csIHRoZSByZWFzb24gYW5kIHRoZSBjbGF1c2UuIgogICAgICAgICAgICBidWlsZGVyIC0+IGxvZyAiTG9nIHRoZSBkZWNpc2lvbjogRXZlcnkgc3RhZ2UgaXMgd3JpdHRlbiBhcyBhbiBldmVudCwgd2l0aCB0aGUgaGFzaGVzIG9mIGV2ZXJ5dGhpbmcgdGhlIGRlY2lzaW9uIHVzZWQuIElmIHRoZSB3cml0ZSBmYWlscywgdGhlIGRlY2lzaW9uIGRvZXMgbm90IHRha2UgZWZmZWN0LiIKICAgICAgICAgICAgYXV0b0xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBjb3JlICJSZXZpZXdBbmRMZWFybiIgIkFuIG9mZmljZXIgcmV2aWV3cyBhIGNhc2UsIGFuZCB0aGUgdHJlZXMgbGVhcm4gZnJvbSBpdC4iIHsKICAgICAgICAgICAgYnVpbGRlciAtPiBvZmZpY2VyRGVzayAiU2VuZCBpdCB0byByZXZpZXc6IEV2ZXJ5IGNhc2UgZXhjZXB0IGEgcmV0dXJuZWQgZm9ybSBnb2VzIG9uLiBBIGNhc2Ugc2VudCB0byBhbiBvZmZpY2VyIGdldHMgYSBydWxpbmcsIGFuZCBhbnkgb3RoZXIgY2FzZSBnZXRzIGEgcmV2aWV3IG9mIHdoYXQgdGhlIHN5c3RlbSBkaWQuIgogICAgICAgICAgICBvZmZpY2VyRGVzayAtPiBvZmZpY2VyICJUaGUgb2ZmaWNlciBydWxlczogVGhlIG9mZmljZXIgc2VlcyB0aGUgZG9jdW1lbnRzLCB0aGUgZGVjaXNpb24sIHRoZSByaXNrIGFuZCB0aGUgdHJlZXMgdG8gZ2l2ZSBhIGxldmVsIGZvci4gVGhleSByZXR1cm4gYSBydWxpbmcsIHJpc2t5IG9yIG5vdCwgYSBvbmUtbGluZSByZWFzb24gYW5kIGEgbGV2ZWwgcGVyIHRyZWUuIEEgcmVhbCBkZXBsb3ltZW50IHdvdWxkIHVzZSBhIHBlcnNvbi4gSW4gdGhpcyBkZW1vIGFuIExMTSBzdGFuZHMgaW4sIGFsd2F5cyBsYWJlbGxlZCBhcyBzaW11bGF0ZWQuIgogICAgICAgICAgICBidWlsZGVyIC0+IGxvZyAiTG9nIHRoZSBydWxpbmc6IFRoZSBydWxpbmcgaXMgbG9nZ2VkIHdpdGggd2hvIG1hZGUgaXQuIEEgcGVybWl0IGlzIG9ubHkgaXNzdWVkIHdpdGggYSBsb2dnZWQgZGVjaXNpb24gb3IgcnVsaW5nIGFzIGl0cyBwYXJlbnQuIgogICAgICAgICAgICBidWlsZGVyIC0+IGxlYXJuaW5nICJUZWFjaCB0aGUgdHJlZXM6IEV2ZXJ5IHJldmlldyB0ZWFjaGVzLCBub3Qgb25seSBkaXNhZ3JlZW1lbnRzLiBBIEJheWVzaWFuIG5ldHdvcmsgd29ya3MgYmFjayBmcm9tIHRoZSBvdXRjb21lIGFuZCB0aGUgbmFtZWQgbGV2ZWxzLCBhbmQgYWRkcyBzaGFyZXMgdG8gdGhlIGNvdW50cyBvbiB0aGUgbGVhdmVzIHRoaXMgY2FzZSByZWFjaGVkLCBhZnRlciBkaXNjb3VudGluZyB0aGVpciBvbGQgY291bnRzLiIKICAgICAgICAgICAgYnVpbGRlciAtPiBsb2cgIkxvZyB0aGUgbmV3IHdlaWdodHM6IFRoZSBuZXcgd2VpZ2h0cyB2ZXJzaW9uIGlzIGxvZ2dlZC4gSWYgdGhlIHJldmlldyBkaXNhZ3JlZWQgd2l0aCB0aGUgc3lzdGVtJ3MgZXN0aW1hdGUsIGl0IGlzIGFsc28gbG9nZ2VkIGFzIGEgY29ycmVjdGlvbiwgd2l0aCBvbGQgYW5kIG5ldyB2YWx1ZXMuIgogICAgICAgICAgICBidWlsZGVyIC0+IGxlYXJuaW5nICJSZS1jaG9vc2UgdGhlIHRocmVzaG9sZHM6IEF0IGEgc2V0IGludGVydmFsIG9mIHJldmlld3MsIHRoZSB0d28gdGhyZXNob2xkcyBhcmUgY2hvc2VuIGFnYWluLCBiZWNhdXNlIHRocmVzaG9sZHMgZml0dGVkIHRvIG9uZSBzZXQgb2Ygd2VpZ2h0cyBkbyBub3QgZml0IHRoZSBuZXh0LiIKICAgICAgICAgICAgYnVpbGRlciAtPiBwaXBlbGluZSAiRGVjaWRlIHRoZSBuZXh0IGNhc2U6IExhdGVyIGNhc2VzIHVzZSB0aGUgbmV3IHdlaWdodHMgYW5kIHRocmVzaG9sZHMsIGFuZCBlYWNoIHJlY29yZHMgdGhlIHZlcnNpb24gaXQgdXNlZC4iCiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgY29yZSAiUmVsZWFzZUNoYW5nZSIgIkEgcGVyc29uIG1ha2VzIGEgY2hhbmdlIG9mZmljaWFsLiIgewogICAgICAgICAgICBwb2xpY3lPd25lciAtPiBydWxlcyAiRWRpdCBhIHJ1bGUgZmlsZTogQSBjaGFuZ2UgaXMgZGF0YSwgbm90IGNvZGU6IGEgdHJlZSBxdWVzdGlvbiwgYSBzZXR0aW5nIG9yIGEgZmlyc3QgZ3Vlc3MuIEEgbGludCBjb21tYW5kIGNoZWNrcyB0aGUgcnVsZSBmaWxlcywgYW5kIGEgc2V0dGluZyBvdXRzaWRlIGl0cyBsaW1pdHMgc3RvcHMgdGhlIHJ1bi4iCiAgICAgICAgICAgIHBvbGljeU93bmVyIC0+IGxlYXJuaW5nICJGaXQgYSBjYW5kaWRhdGU6IFRoZSBwb2xpY3kgb3duZXIgcnVucyB0cmFpbiBhbmQgdGhyZXNob2xkcy4gTW9kZWxzIGFyZSBub3QgY2FsbGVkIGFnYWluLiIKICAgICAgICAgICAgbGVhcm5pbmcgLT4gc3RvcmVkICJSZWFkIHRoZSBzdG9yZWQgYW5zd2VyczogRml0dGluZyByZWFkcyB0aGUgYW5zd2VycyBhbHJlYWR5IHN0b3JlZCBmb3IgZWFjaCBjYXNlLCBzbyBpdCBtYWtlcyBubyBtb2RlbCBjYWxsLiIKICAgICAgICAgICAgbGVhcm5pbmcgLT4gd2VpZ2h0cyAiV3JpdGUgdGhlIGNhbmRpZGF0ZTogQ2FuZGlkYXRlIHdlaWdodHMgYW5kIHRocmVzaG9sZHMgYXJlIHdyaXR0ZW4gYmVzaWRlIHRoZSByZWxlYXNlZCBvbmVzLiBOb3RoaW5nIHVzZXMgdGhlbSB5ZXQuIgogICAgICAgICAgICBwb2xpY3lPd25lciAtPiB3ZWlnaHRzICJSZWFkIHRoZSByZXN1bHQ6IFRoZSBwb2xpY3kgb3duZXIgcmVhZHMgdGhlIGNhbmRpZGF0ZSdzIHZhbGlkYXRpb24gcmVzdWx0LCBhbmQgZWl0aGVyIHJlbGVhc2VzIGl0IG9yIGxlYXZlcyBpdC4iCiAgICAgICAgICAgIHBvbGljeU93bmVyIC0+IGxlYXJuaW5nICJSZWxlYXNlOiBUaGUgcG9saWN5IG93bmVyIHJ1bnMgcmVsZWFzZSB1bmRlciBhIG5ldyB2ZXJzaW9uIG5hbWUuIgogICAgICAgICAgICBsZWFybmluZyAtPiB3ZWlnaHRzICJLZWVwIGV2ZXJ5IHZlcnNpb246IFJlbGVhc2UgY29waWVzIHRoZSBjYW5kaWRhdGUgdG8gdGhlIG5ldyB2ZXJzaW9uLCB3aXRoIHRoZSByb2xlIGFuZCB0aGUgaGFzaGVzIGl0IHdhcyBmaXR0ZWQgb24uIFJlbGVhc2VkIHZlcnNpb25zIG5ldmVyIGNoYW5nZSBpbiBwbGFjZSwgYW5kIGl0IHJlZnVzZXMgdG8gb3ZlcndyaXRlIG9uZS4iCiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgY29yZSAiUHVibGlzaEFuZENoZWNrIiAiQSBmaW5pc2hlZCBydW4gcmVhY2hlcyBhIHZpc2l0b3IsIGFuZCBhbnkgZGVjaXNpb24gaW4gaXQgY2FuIGJlIGNoZWNrZWQuIiB7CiAgICAgICAgICAgIGV4cG9ydGVyIC0+IGxvZyAiUmVhZCB0aGUgZmluaXNoZWQgcnVuOiBUaGUgRXhwb3J0ZXIgcmVhZHMgdGhlIGxvZyBvZiBvbmUgZmluaXNoZWQgcnVuLiIKICAgICAgICAgICAgZXhwb3J0ZXIgLT4gcnVuICJXcml0ZSBzdGF0aWMgZmlsZXM6IEl0IHdyaXRlcyB0aGUgcnVuIGFzIEpTT04gYW5kIHNjYW5zIGV2ZXJ5IGZpbGUgZm9yIHZlbmRvciBuYW1lcyBhbmQga2V5cy4gT25seSB0aGVuIGRvZXMgaXQgcmVwbGFjZSB0aGUgb2xkIGZvbGRlci4iCiAgICAgICAgICAgIHNlcnZlciAtPiBydW4gIlNlcnZlIG9uZSBmb2xkZXI6IEEgcGxhaW4gZmlsZSBzZXJ2ZXIgc2VuZHMgdGhhdCBmb2xkZXIuIEl0IGhvbGRzIG5vIGtleXMgYW5kIHJ1bnMgbm8gYXBwbGljYXRpb24gY29kZS4iCiAgICAgICAgICAgIHZpc2l0b3IgLT4gcmVwbGF5ICJPcGVuIHRoZSBwYWdlOiBBbnkgdmlzaXRvciBjYW4gb3BlbiB0aGUgcmVwbGF5IGFuZCBhbnkgY2FzZSwgd2l0aCBubyBsb2dpbi4gVGhlcmUgYXJlIG5vIGFjdGlvbiBidXR0b25zLiIKICAgICAgICAgICAgcmVwbGF5IC0+IHNlcnZlciAiUGxheSB0aGUgcnVuOiBUaGUgYnJvd3NlciBsb2FkcyB0aGUgSlNPTiBhbmQgcGxheXMgdGhlIHJ1bi4gTm90aGluZyBpcyBjb21wdXRlZCBmb3IgdGhlIHZpc2l0b3IsIGFuZCBubyBtb2RlbCBpcyBjYWxsZWQuIgogICAgICAgICAgICByZXByb2R1Y2UgLT4gbG9nICJQaWNrIGEgZGVjaXNpb24gdG8gY2hlY2s6IFRoZSByZXBsYXkgY29tbWFuZCByZWFkcyBhIGxvZ2dlZCBkZWNpc2lvbiBhbmQgdGhlIGhhc2hlcyBvZiB3aGF0IGl0IHVzZWQuIgogICAgICAgICAgICByZXByb2R1Y2UgLT4gcGlwZWxpbmUgIlJ1biBpdCBhZ2FpbjogSXQgcmVydW5zIHRoZSBkZWNpc2lvbiB3aXRoIG5vIG1vZGVsIGNhbGxzIGFuZCBjaGVja3MgdGhhdCB0aGUgcmVzdWx0IGlzIGlkZW50aWNhbC4gSXQgcmVmdXNlcyBpZiB0aGUgcnVsZXMsIHRoZSBzZXR0aW5ncywgdGhlIGFwcGxpY2F0aW9uIG9yIHRoZSBhcml0aG1ldGljIGhhdmUgY2hhbmdlZC4iCiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBiZW5jaCAiVGVzdEJlbmNoIiAiSG93IHRoZSB0ZXN0IGJlbmNoIHdyYXBzIHRoZSBlbmdpbmUuIEl0IHdyaXRlcyB0aGUgY2FzZXMsIGhvbGRzIHRoZSBsYWJlbHMgYW5kIHNjb3JlcyB0aGUgcmVzdWx0cy4iIHsKICAgICAgICAgICAgaW5jbHVkZSBnZW5lcmF0b3IgY2FyZHMgbGFiZWxzIHJ1YnJpYyBzdGFuZEluIGV2YWx1YXRpb24gcmVzdWx0cyBhcHBsaWNhdGlvbnMgY29yZSBsbG0gamV2CiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIGRlcGxveW1lbnQgZW5naW5lICJEZW1vIiAiRGVwbG95bWVudCIgIldoZXJlIGVhY2ggcGFydCBydW5zIGR1cmluZyB0aGUgZGVtby4iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIlBlcnNvbiIgewogICAgICAgICAgICAgICAgc2hhcGUgcGVyc29uCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwZjJhNGEKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJTdGFuZC1pbiIgewogICAgICAgICAgICAgICAgYm9yZGVyIGRhc2hlZAogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbnRhaW5lciIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMGYyYTRhCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29tcG9uZW50IiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICNlYWYxZjkKICAgICAgICAgICAgICAgIGNvbG9yICMwZjJhNGEKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJTdG9yZSIgewogICAgICAgICAgICAgICAgc2hhcGUgY3lsaW5kZXIKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgI2VhZjFmOQogICAgICAgICAgICAgICAgY29sb3IgIzBmMmE0YQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkV4dGVybmFsIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICNmZmZmZmYKICAgICAgICAgICAgICAgIGNvbG9yICMwZjJhNGEKICAgICAgICAgICAgICAgIGJvcmRlciBkYXNoZWQKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQ==",
+    "structurizr.inspection.info" : "0",
+    "structurizr.inspection.ignore" : "0",
+    "structurizr.inspection.warning" : "0"
+  },
+  "views" : {
+    "componentViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "13",
+      "description" : "Level 3. The parts inside the Engine, and what each one uses.",
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "Components",
+      "name" : "Component View: Permit Engine - Engine",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "47"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "63"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "69"
+      }, {
+        "id" : "70"
+      }, {
+        "id" : "71"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "73"
+      }, {
+        "id" : "74"
+      }, {
+        "id" : "75"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "77"
+      }, {
+        "id" : "78"
+      }, {
+        "id" : "79"
+      }, {
+        "id" : "80"
+      }, {
+        "id" : "81"
+      }, {
+        "id" : "82"
+      }, {
+        "id" : "83"
+      }, {
+        "id" : "84"
+      }, {
+        "id" : "85"
+      }, {
+        "id" : "86"
+      } ]
+    } ],
+    "configuration" : {
+      "styles" : {
+        "elements" : [ {
+          "background" : "#eaf1f9",
+          "color" : "#0f2a4a",
+          "tag" : "Component"
+        }, {
+          "background" : "#0f2a4a",
+          "color" : "#ffffff",
+          "tag" : "Container"
+        }, {
+          "background" : "#ffffff",
+          "border" : "Dashed",
+          "color" : "#0f2a4a",
+          "tag" : "External"
+        }, {
+          "background" : "#0f2a4a",
+          "color" : "#ffffff",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "border" : "Dashed",
+          "tag" : "Stand-in"
+        }, {
+          "background" : "#eaf1f9",
+          "color" : "#0f2a4a",
+          "shape" : "Cylinder",
+          "tag" : "Store"
+        } ]
+      },
+      "terminology" : { }
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "Level 2. What runs and what holds data inside Permit Engine.",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "Containers",
+      "name" : "Container View: Permit Engine",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "45"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "48"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "80"
+      } ],
+      "softwareSystemId" : "10"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "How the test bench wraps the engine. It writes the cases, holds the labels and scores the results.",
+      "elements" : [ {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "31",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "32",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "34",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "35",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "36",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "37",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "TestBench",
+      "name" : "Container View: Test bench",
+      "order" : 9,
+      "relationships" : [ {
+        "id" : "49"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "87"
+      }, {
+        "id" : "88"
+      }, {
+        "id" : "89"
+      }, {
+        "id" : "90"
+      }, {
+        "id" : "91"
+      }, {
+        "id" : "92"
+      }, {
+        "id" : "93"
+      }, {
+        "id" : "94"
+      }, {
+        "id" : "95"
+      }, {
+        "id" : "96"
+      }, {
+        "id" : "97"
+      }, {
+        "id" : "98"
+      }, {
+        "id" : "99"
+      } ],
+      "softwareSystemId" : "30"
+    } ],
+    "deploymentViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "Where each part runs during the demo.",
+      "elements" : [ {
+        "id" : "104",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "105",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "106",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "108",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "110",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "113",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "115",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "117",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "119",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "121",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "123",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "124",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "126",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "128",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "129",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "131",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "132",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "134",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "135",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "environment" : "Demo",
+      "key" : "Deployment",
+      "name" : "Deployment View: Permit Engine - Demo",
+      "order" : 10,
+      "relationships" : [ {
+        "id" : "107"
+      }, {
+        "id" : "109"
+      }, {
+        "id" : "111"
+      }, {
+        "id" : "112"
+      }, {
+        "id" : "114"
+      }, {
+        "id" : "116"
+      }, {
+        "id" : "118"
+      }, {
+        "id" : "120"
+      }, {
+        "id" : "122"
+      }, {
+        "id" : "125"
+      }, {
+        "id" : "127"
+      }, {
+        "id" : "130"
+      }, {
+        "id" : "133"
+      }, {
+        "id" : "136"
+      } ],
+      "softwareSystemId" : "10"
+    } ],
+    "dynamicViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "Reading one application. It runs once per case, and the answers are stored.",
+      "elementId" : "13",
+      "elements" : [ {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "ReadApplication",
+      "name" : "Dynamic View: Permit Engine - Engine",
+      "order" : 4,
+      "relationships" : [ {
+        "description" : "Open the application: The Reader loads the form, the cover letter and the attachments of one case.",
+        "id" : "63",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Basic checks: Is the fee paid, is the form complete, is the date allowed? A failure stops the case here, before any model is called.",
+        "id" : "65",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Link and extract: In the first pass, for each kind of proof a race can need, the LLM says found or absent, gives fields with quotes, and lists documents that fit no kind. This is the only pass that reads the cover letter.",
+        "id" : "66",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "Quote check: Each quote must appear in the named attachment and each value inside its quote, or the field counts as absent. The form and the cover letter are never allowed as sources, so a letter cannot become evidence.",
+        "id" : "67",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "Judge: In the second pass, in a fresh context, the LLM gets the attachments behind verified fields and the case's typed values, never the cover letter. It gives one verdict per kind of proof: supported, unsupported or contradicted.",
+        "id" : "66",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "Hazard screen: By rules only, traffic applies if a road closes, crowd pressure if the crowd is 300 or more, and medical always.",
+        "id" : "65",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "Tree questions: One Jev request per case, with typed values, evidence records and whole plan documents. Jev returns a probability for each question on the hazards that apply. It never sees the cover letter.",
+        "id" : "68",
+        "order" : "7",
+        "response" : false
+      }, {
+        "description" : "Store the answers: All of this becomes one reading record. From here on, the case needs no model call.",
+        "id" : "69",
+        "order" : "8",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "Deciding one case. No model is called, so any decision can be reproduced.",
+      "elementId" : "13",
+      "elements" : [ {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "DecideCase",
+      "name" : "Dynamic View: Permit Engine - Engine",
+      "order" : 5,
+      "relationships" : [ {
+        "description" : "Pick up the case: The Run builder hands the case to the pipeline, with the weights and thresholds of the moment.",
+        "id" : "70",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Load the reading record: The pipeline starts from the stored answers, not from a new model call.",
+        "id" : "71",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Compare fields with the form: Code compares each extracted field with the form. A mismatch, such as a letter naming another date, makes the record contradicted whatever the LLM said.",
+        "id" : "72",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "Requirements and rule answers: Rego gives each requirement a status (met, failed, missing or unclear), and answers every question the form can settle.",
+        "id" : "73",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "Work out the risk: Answers send the case down up to six trees. Each hazard's likelihood times its severity, summed over the hazards that apply, gives the risk.",
+        "id" : "74",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "Apply the decision table: Rego reads the table from the top, and the first match wins: returned, proposed denial, officer or approved, with the row, the reason and the clause.",
+        "id" : "73",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "Log the decision: Every stage is written as an event, with the hashes of everything the decision used. If the write fails, the decision does not take effect.",
+        "id" : "78",
+        "order" : "7",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "An officer reviews a case, and the trees learn from it.",
+      "elementId" : "13",
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "ReviewAndLearn",
+      "name" : "Dynamic View: Permit Engine - Engine",
+      "order" : 6,
+      "relationships" : [ {
+        "description" : "Send it to review: Every case except a returned form goes on. A case sent to an officer gets a ruling, and any other case gets a review of what the system did.",
+        "id" : "75",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "The officer rules: The officer sees the documents, the decision, the risk and the trees to give a level for. They return a ruling, risky or not, a one-line reason and a level per tree. A real deployment would use a person. In this demo an LLM stands in, always labelled as simulated.",
+        "id" : "76",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Log the ruling: The ruling is logged with who made it. A permit is only issued with a logged decision or ruling as its parent.",
+        "id" : "78",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "Teach the trees: Every review teaches, not only disagreements. A Bayesian network works back from the outcome and the named levels, and adds shares to the counts on the leaves this case reached, after discounting their old counts.",
+        "id" : "77",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "Log the new weights: The new weights version is logged. If the review disagreed with the system's estimate, it is also logged as a correction, with old and new values.",
+        "id" : "78",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "Re-choose the thresholds: At a set interval of reviews, the two thresholds are chosen again, because thresholds fitted to one set of weights do not fit the next.",
+        "id" : "77",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "Decide the next case: Later cases use the new weights and thresholds, and each records the version it used.",
+        "id" : "70",
+        "order" : "7",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "A person makes a change official.",
+      "elementId" : "13",
+      "elements" : [ {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "ReleaseChange",
+      "name" : "Dynamic View: Permit Engine - Engine",
+      "order" : 7,
+      "relationships" : [ {
+        "description" : "Edit a rule file: A change is data, not code: a tree question, a setting or a first guess. A lint command checks the rule files, and a setting outside its limits stops the run.",
+        "id" : "47",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Fit a candidate: The policy owner runs train and thresholds. Models are not called again.",
+        "id" : "79",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Read the stored answers: Fitting reads the answers already stored for each case, so it makes no model call.",
+        "id" : "81",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "Write the candidate: Candidate weights and thresholds are written beside the released ones. Nothing uses them yet.",
+        "id" : "82",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "Read the result: The policy owner reads the candidate's validation result, and either releases it or leaves it.",
+        "id" : "80",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "Release: The policy owner runs release under a new version name.",
+        "id" : "79",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "Keep every version: Release copies the candidate to the new version, with the role and the hashes it was fitted on. Released versions never change in place, and it refuses to overwrite one.",
+        "id" : "82",
+        "order" : "7",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "A finished run reaches a visitor, and any decision in it can be checked.",
+      "elementId" : "13",
+      "elements" : [ {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "PublishAndCheck",
+      "name" : "Dynamic View: Permit Engine - Engine",
+      "order" : 8,
+      "relationships" : [ {
+        "description" : "Read the finished run: The Exporter reads the log of one finished run.",
+        "id" : "83",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "Write static files: It writes the run as JSON and scans every file for vendor names and keys. Only then does it replace the old folder.",
+        "id" : "84",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "Serve one folder: A plain file server sends that folder. It holds no keys and runs no application code.",
+        "id" : "60",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "Open the page: Any visitor can open the replay and any case, with no login. There are no action buttons.",
+        "id" : "62",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "Play the run: The browser loads the JSON and plays the run. Nothing is computed for the visitor, and no model is called.",
+        "id" : "61",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "Pick a decision to check: The replay command reads a logged decision and the hashes of what it used.",
+        "id" : "85",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "Run it again: It reruns the decision with no model calls and checks that the result is identical. It refuses if the rules, the settings, the application or the arithmetic have changed.",
+        "id" : "86",
+        "order" : "7",
+        "response" : false
+      } ]
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "Level 1. Permit Engine, who uses it, and the two models it calls.",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "Context",
+      "name" : "System Context View: Permit Engine",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "38"
+      }, {
+        "id" : "39"
+      }, {
+        "id" : "40"
+      }, {
+        "id" : "41"
+      }, {
+        "id" : "42"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "44"
+      } ],
+      "softwareSystemId" : "10"
+    } ]
+  }
+}

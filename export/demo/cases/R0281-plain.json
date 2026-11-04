@@ -1,0 +1,558 @@
+{
+ "case_id": "R0281-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.0058631065665575716,
+     0.963113985456268,
+     0.031022907977174462
+    ],
+    "before": [
+     0.005864373123719334,
+     0.9633220387983021,
+     0.030813588077978623
+    ],
+    "count_after": 10.95621012002771,
+    "count_before": 11.00963039312879,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.0007981655443967394,
+     0.019516596866884357,
+     0.979685237588719
+    ],
+    "before": [
+     0.0008709179480449029,
+     0.02129552523965847,
+     0.9778335568122966
+    ],
+    "count_after": 11.942658675143003,
+    "count_before": 11.709210497011416,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.007380996457241305,
+     0.9852380070855175,
+     0.007380996457241305
+    ],
+    "before": [
+     0.008001290017065071,
+     0.9839974199658698,
+     0.008001290017065071
+    ],
+    "count_after": 11.635458561268406,
+    "count_before": 11.457868528926053,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.003433341678859877,
+     0.9622332415325414,
+     0.034333416788598775
+    ],
+    "before": [
+     0.003467482882509344,
+     0.9618576882923972,
+     0.03467482882509344
+    ],
+    "count_after": 9.950172569934546,
+    "count_before": 9.923960292595492,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": true
+    },
+    "tree_id": "medical.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "Halden Medical Transport\nBookings Office\n\nMarch 23, 2027\n\nDear Maria Ostrowski,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Westbrook City Race Half Marathon on July 4, 2027. One ambulance and two paramedics will be on site at the rowing club, in place by 08:15, and will stay until the race has finished. Booking reference PH-32874.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nInes Moreau\nBookings Manager\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "Atlas Casualty Group\nCertificate of Insurance\n\nWe certify that a policy of event public liability insurance has been issued as follows.\n\nPolicy: EL-190132\nInsured: Westbrook Youth League\nEvent covered: Westbrook City Race Half Marathon\nLocation of event: Beacon Hill\nCover starts: July 3, 2027\nCover ends: July 5, 2027\nLimit of indemnity: $1,000,000 any one event\n\nSigned on behalf of the insurer, March 23, 2027\nCertificate reference PH-64434\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nWestbrook City Race Half Marathon, Sunday 4 July 2027\nApplicant: Westbrook Youth League\nIssue: 1.3\n\n1. Event summary\nA half marathon race with 80 runners, starting at 09:30 in the Beacon Hill area of Port Halden. An ambulance from Halden Medical Transport is on site for the race; the paperwork is attached.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 8 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is Valley Regional Hospital, 16 km from the finish. The transfer route and the pick-up point at the rowing club have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nMembers of the team will have their mobile phones with them, and a list of contact numbers will be circulated in the week before the event. Coverage in the area is generally reported to be good.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n\n6. Clinical lead\nResponsibility for welfare on the day rests with the race director, supported by the wider committee, all of whom take the wellbeing of participants extremely seriously.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nWestbrook City Race Half Marathon | Sunday 4 July 2027\nOrganiser: Westbrook Youth League\nRace director: Maria Ostrowski\nReference: EV-29328\n\nOverview\nThe Westbrook City Race Half Marathon is a half marathon race of 21 km for 80 entrants, based in the Beacon Hill area of Port Halden. The start is at 09:30 and the course closes at 13:00.\n\nCourse\nThe course stays entirely on the Gardens Loop and the Old Mill Trail, away from the highway, and no road is closed for the race. The finish is at the boathouse.\n\nCourse dimensions\nUsable width on the Gardens Loop is 8 m and on the Old Mill Trail 12 m, with lawn or open paving beside the course for almost the whole distance. The finish area measures roughly 120 m by 60 m.\n\nSupport\nEntrants collect numbers from the rowing club from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Westbrook website the same day.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nPlease find our application below.\n\nHere is our application for the Westbrook City Race Half Marathon, Sunday 4 July 2027. 80 runners, half marathon, off at 09:30, around Beacon Hill. I've attached ambulance_agreement.txt, insurance.txt, medical_plan.txt, race_plan.txt.\n\nPlease let me know if you need anything else.\n\nThanks,\nMaria\n\nMaria Ostrowski, Westbrook Youth League\n555-0122\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "Westbrook City Race Half Marathon: a half marathon race on the paths around Beacon Hill, organised by Westbrook. No road closures.",
+   "event_date": "2027-07-04",
+   "event_name": "Westbrook City Race Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 80,
+   "fee_paid": true,
+   "hospital_distance_km": 16,
+   "organizer": "Westbrook Youth League",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Beacon Hill"
+  }
+ },
+ "events": [
+  956,
+  957,
+  958,
+  959,
+  960,
+  961,
+  962,
+  963,
+  964,
+  965,
+  966,
+  967
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "Halden Medical Transport",
+     "value": "Halden Medical Transport",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the Westbrook City Race Half Marathon on July 4, 2027",
+     "value": "July 4, 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "Insured: Westbrook Youth League",
+     "value": "Westbrook Youth League",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "Location of event: Beacon Hill",
+     "value": "Beacon Hill",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Cover starts: July 3, 2027",
+     "value": "July 3, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Cover ends: July 5, 2027",
+     "value": "July 5, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "Limit of indemnity: $1,000,000 any one event",
+     "value": "$1,000,000 any one event",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.3053948304908516,
+    "leaves": [
+     {
+      "contribution": 0.007398549743598874,
+      "count": 11.00963039312879,
+      "entropy": 0.1733582464042114,
+      "levels": [
+       0.005864373123719334,
+       0.9633220387983021,
+       0.030813588077978623
+      ],
+      "reach": 0.07,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 12.361735729954798,
+      "entropy": 0.17490730640249286,
+      "levels": [
+       0.9620785512704889,
+       0.033514226207007544,
+       0.004407222522503562
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.2748122452717526,
+      "count": 11.709210497011416,
+      "entropy": 0.11002736491448976,
+      "levels": [
+       0.0008709179480449029,
+       0.02129552523965847,
+       0.9778335568122966
+      ],
+      "reach": 0.9299999999999999,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.129102658808614,
+      "entropy": 0.19972332578370408,
+      "levels": [
+       0.03279238370596829,
+       0.9572649575036968,
+       0.009942658790334853
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0012204598103421132,
+     0.08723738118876354,
+     0.9115421590008943
+    ],
+    "questions": [
+     {
+      "answer": 0.07,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.2822107950153515
+   },
+   "name": "Medical emergency",
+   "product": 0.11405177144624978,
+   "severity": {
+    "entropy": 0.10337276298564749,
+    "leaves": [
+     {
+      "contribution": 0.3621603483046075,
+      "count": 11.457868528926053,
+      "entropy": 0.09313674700433057,
+      "levels": [
+       0.008001290017065071,
+       0.9839974199658698,
+       0.008001290017065071
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 12.988690605327529,
+      "entropy": 0.09835267863139709,
+      "levels": [
+       0.9817505754485824,
+       0.015794245204209946,
+       0.00245517934720771
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.041976465243030316,
+      "count": 9.923960292595492,
+      "entropy": 0.1736142217560273,
+      "levels": [
+       0.003467482882509344,
+       0.9618576882923972,
+       0.03467482882509344
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 10.556167701793141,
+      "entropy": 0.4882684821028045,
+      "levels": [
+       0.15312805807009175,
+       0.8355328621801507,
+       0.011339079749757616
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.007547909303609499,
+     0.9817834467985225,
+     0.010668643897867907
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.4041368135476379
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": false,
+   "id": "traffic_conflict",
+   "likelihood": null,
+   "name": "Traffic conflict",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The race closes a road."
+  }
+ ],
+ "highest_severity": 0.4041368135476379,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.23164046323858928,
+   "t_low": 0.1838103154407427
+  },
+  "weights_version": "first-guess+80"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 1,
+    "tree_id": "medical.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order, and with no road closures and a small field the overall risk is below the threshold, so the race is approved.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.11405177144624978,
+ "t_high": 0.23164046323858928,
+ "t_low": 0.1838103154407427,
+ "title": "Westbrook City Race Half Marathon",
+ "unmapped_documents": []
+}

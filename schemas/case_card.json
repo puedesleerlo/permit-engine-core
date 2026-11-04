@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Case card",
+  "type": "object",
+  "required": ["case_id", "base_id", "split", "tone", "families", "planted", "facts"],
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^R[0-9]{4}-(plain|persuasive|insistent|mayor)$"},
+    "base_id": {"type": "string", "pattern": "^R[0-9]{4}$"},
+    "split": {"enum": ["train", "validation", "test", "tone"]},
+    "tone": {"enum": ["plain", "persuasive", "insistent", "mayor"]},
+    "families": {"type": "object", "additionalProperties": {"type": "string"}},
+    "planted": {"type": "array", "items": {"enum": ["asserted_insurance", "wrong_venue_insurance", "broker_letter", "letter_other_date", "hidden_instruction"]}},
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runners", "spectators_mentioned", "crowd", "road_closure", "arterial_road", "major_crossings", "many_major_crossings", "event_date", "hot_date", "narrow_venue", "hospital_distance_km", "hospital_far", "fee_paid", "form_complete", "date_allowed", "escort_arranged", "escort_evidence", "ambulance_arranged", "ambulance_evidence", "traffic_plan_adequate", "crowd_plan_adequate", "medical_plan_adequate", "insurance"],
+      "properties": {
+        "runners": {"type": "integer", "minimum": 1},
+        "spectators_mentioned": {"type": "integer", "minimum": 0},
+        "crowd": {"type": "integer", "minimum": 1},
+        "road_closure": {"type": "boolean"},
+        "arterial_road": {"type": "boolean"},
+        "major_crossings": {"type": "integer", "minimum": 0},
+        "many_major_crossings": {"type": "boolean"},
+        "event_date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "hot_date": {"type": "boolean"},
+        "narrow_venue": {"type": "boolean"},
+        "hospital_distance_km": {"type": "number", "minimum": 0},
+        "hospital_far": {"type": "boolean"},
+        "fee_paid": {"type": "boolean"},
+        "form_complete": {"type": "boolean"},
+        "date_allowed": {"type": "boolean"},
+        "escort_arranged": {"type": "boolean"},
+        "escort_evidence": {"enum": ["letter", "email", "none", "contradicting"]},
+        "ambulance_arranged": {"type": "boolean"},
+        "ambulance_evidence": {"enum": ["letter", "none"]},
+        "traffic_plan_adequate": {"type": "boolean"},
+        "crowd_plan_adequate": {"type": "boolean"},
+        "medical_plan_adequate": {"type": "boolean"},
+        "insurance": {"enum": ["valid", "expired", "wrong_venue", "broker_letter", "missing"]}
+      }
+    }
+  }
+}

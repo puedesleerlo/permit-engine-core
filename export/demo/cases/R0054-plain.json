@@ -1,0 +1,858 @@
+{
+ "case_id": "R0054-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.02233377667877743,
+     0.8853627539339561,
+     0.09230346938726638
+    ],
+    "before": [
+     0.026639564502601066,
+     0.8632615363312527,
+     0.11009889916614628
+    ],
+    "count_after": 6.171423537372988,
+    "count_before": 5.55932779166214,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.012607000179527547,
+     0.21510566040617515,
+     0.7722873394142973
+    ],
+    "before": [
+     0.012615176612934332,
+     0.21459660700666194,
+     0.7727882163804036
+    ],
+    "count_after": 3.8644309680169804,
+    "count_before": 3.8647299095069876,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.8475558692845101,
+     0.12703677559624155,
+     0.025407355119248312
+    ],
+    "before": [
+     0.8163190286901207,
+     0.15306747609156607,
+     0.030613495218313212
+    ],
+    "count_after": 5.6786330585300515,
+    "count_before": 5.031015942708971,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.2728138472991275,
+     0.4999404799818499,
+     0.22724567271902263
+    ],
+    "before": [
+     0.2608692205667498,
+     0.5081524108603594,
+     0.23097836857289064
+    ],
+    "count_after": 2.121855753204336,
+    "count_before": 2.102770493148919,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.7231020370653817,
+     0.2227107452791235,
+     0.0541872176554949
+    ],
+    "before": [
+     0.7249101663387355,
+     0.22076711992159018,
+     0.05432271373967428
+    ],
+    "count_after": 2.8358234391943373,
+    "count_before": 2.8305982628389783,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.08288016740087872,
+     0.45942842092078295,
+     0.45769141167833843
+    ],
+    "before": [
+     0.08573334661542342,
+     0.44081905221690076,
+     0.47344760116767587
+    ],
+    "count_after": 4.2911139511026795,
+    "count_before": 4.175792807269164,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.19198071756127372,
+     0.5019156933639489,
+     0.3061035890747773
+    ],
+    "before": [
+     0.19946508261442936,
+     0.4824978850263886,
+     0.318037032359182
+    ],
+    "count_after": 3.7080017050866276,
+    "count_before": 3.5899097925348844,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.012819330824783535,
+     0.33654828360322975,
+     0.6506323855719868
+    ],
+    "before": [
+     0.014610380137519013,
+     0.24385430784684112,
+     0.7415353120156398
+    ],
+    "count_after": 5.799838219018844,
+    "count_before": 5.4004777899612115,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.8787721788965847,
+     0.10183136972686893,
+     0.019396451376546463
+    ],
+    "before": [
+     0.8531895959748893,
+     0.12332073938109298,
+     0.02348966464401771
+    ],
+    "count_after": 5.7386857486,
+    "count_before": 5.09536102,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "St. Luke Ambulance Brigade\nBookings Office\n\nApril 5, 2027\n\nDear Daniel Mwangi,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Saltmarsh Harvest Run Half Marathon on June 19, 2027. One ambulance and two paramedics will be on site at the top of Weir Street, in place by 08:30, and will stay until the race has finished. Booking reference EV-90848.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nFatima Haddad\nBookings Manager\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERTIFICATE OF LIABILITY INSURANCE\nCertificate no. AG-30884\nIssued: April 5, 2027\n\nINSURER: Atlas Casualty Group\nPOLICY NUMBER: GL-519657\n\nNAMED INSURED: Saltmarsh Running Group\nDESCRIPTION OF OPERATIONS: Public liability for a foot race, the Saltmarsh Harvest Run Half Marathon\nVENUE: Cathedral Green, Port Halden\n\nPOLICY PERIOD\nEffective: January 1, 2027\nExpiry: December 31, 2027\n\nLIMIT OF LIABILITY: $1,000,000 each occurrence\n\nThis certificate is issued for information only and confers no rights upon the holder beyond those of the policy.\n\nCertificate holder: City of Port Halden, Events Office\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "EVENT MEDICAL PLAN\nSaltmarsh Harvest Run Half Marathon, Saturday 19 June 2027\nApplicant: Saltmarsh Running Group\nIssue: 3.2\n\n1. Event summary\nA half marathon race with 200 runners, starting at 10:00 in the Cathedral Green area of Port Halden. An ambulance from St. Luke Ambulance Brigade is on site for the race; the paperwork is attached.\n\nSome background. Our committee has run this race for a number of years and takes the welfare of runners to heart. One of our longtime members is a retired paramedic who usually runs the race herself and is not on duty that day.\n\n2. First aid cover\n3 first aid posts will operate, at the start, at the finish and at the course midpoint, staffed by 6 qualified first aiders. Posts are placed so that no part of the course is more than 1.5 km from one. Two cycle responders move along the course with defibrillators.\n\n3. Weather and hydration\nWater is available every 2.5 km. The race director checks the forecast 48 hours and 2 hours before the start. Above 28 degrees C the start is brought forward or the course shortened, and above 32 degrees C the race is cancelled. In cold or wet conditions, foil blankets and a warm shelter are at the finish.\n\n4. Transfer to hospital\nThe receiving hospital is St. Brigid's Hospital, 4 km from the finish. The transfer route and the pick-up point at the top of Weir Street have been walked with the first aid team. The hospital's emergency department has been told the date and the expected numbers.\n\n5. Communications\nEvery first aid post and cycle responder carries a radio on the medical channel, with phones as backup. All calls for an ambulance go through the medical lead, who gives the crew the access point and the nearest barrier to open.\n\n6. Clinical lead\nThe medical lead is Helen Achterberg, a registered paramedic, who is on site from an hour before the start until the last runner is cleared. The lead can have any runner withdrawn on medical grounds.\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "Saltmarsh Harvest Run Half Marathon: how the race will work\n\nPrepared by Daniel Mwangi (Event Secretary), Saltmarsh Running Group. Last updated 5 April 2027.\n\nThis is our plan for race day, Saturday 19 June 2027. We expect 200 runners over half marathon (21 km). Numbers can be collected from the top of Weir Street from an hour before we go at 10:00, and we aim to have the last finisher home by 13:30.\n\nThe route takes in Weir Street, Abbey Road, Rope Walk, Chapel Row and Vine Street, and the City would need to close all of these for us. On the way round we cross Cross Avenue. We finish in Foundry Yard.\n\nIt's a lovely route through the old part of town, though there isn't much room. We measured Weir Street at 5.5 metres and Vine Street at 5 metres, doorstep to doorstep. Two cars can't pass on Rope Walk. People watching tend to stand in doorways.\n\nOur club has put on races for some years now and we keep to the same simple format: chip timing, water on the course, and a hot drink at the end. Results go up on our website the same evening.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "TRAFFIC MANAGEMENT PLAN\nEvent: Saltmarsh Harvest Run Half Marathon\nDate: Saturday 19 June 2027\nApplicant: Saltmarsh Running Group\nPrepared by: Tessera Event Transport\nIssue: 3.2\n\n1. Scope\nThis plan describes how traffic will be managed for the Saltmarsh Harvest Run Half Marathon, a half marathon race in the Cathedral Green area of Port Halden with a 10:00 start. It has been prepared to accompany the permit application and should be read with the race plan. We have a verbal assurance that the police will be there on the day.\n\n2. Road closures\nThe principal closure will be on Weir Street. Elsewhere on the course, traffic will be held dynamically by the appointed contractor as the field passes, in line with accepted industry practice. Pathfinder Road Crews will confirm the detailed arrangements following a pre-event site visit.\n\n3. Major crossings\nBusier junctions along the course will receive appropriate supervision during the event. Staffing levels will be determined by Pathfinder Road Crews on the morning, taking account of conditions at the time, with resources deployed flexibly to where they are most needed.\n\n4. Diversions\nSigned diversions will operate for the duration of the closures.\n- Weir Street: traffic diverted via Tram Street and Victoria Road, signed from Fenwick Street\n- Abbey Road: traffic diverted via Queen's Road and Dock Road, signed from Glebe Road\n- Rope Walk: traffic diverted via Regent Road and Ferry Road, signed from Market Row\n- Chapel Row: traffic diverted via Prince Street and Victoria Road, signed from Cooper Street\n- Vine Street: traffic diverted via Dock Road and Prince Street, signed from Glebe Road\n\nVolunteers get a short note about the day in race week, with their start time, and are asked to find a replacement if they cannot make it. Most of them have done this before and know the area well.\n\n5. Emergency vehicle access\nThe emergency services will be made aware of the event date and general location through the usual channels ahead of the day. Any vehicle attending an incident will be accommodated by staff on the ground as circumstances allow.\n\n6. Notification\nDetails of the event will be published on the organiser's website and shared through social media in the weeks leading up to race day.\n\n7. Reopening\nRoads will be reopened following the conclusion of the event, once barriers and equipment have been removed by the contractor.\n"
+   }
+  ],
+  "cover_letter": "Hello,\n\nI am writing on behalf of our organisation about this year's race.\n\nHere is our application for the Saltmarsh Harvest Run Half Marathon, Saturday 19 June 2027. 200 runners, half marathon, off at 10:00, around Cathedral Green. I've attached ambulance_agreement.txt, insurance.txt, medical_plan.txt, race_plan.txt, traffic_plan.txt. The police have said they will look after the escort, though I haven't got anything in writing yet.\n\nPlease let me know if you need anything else.\n\nThanks,\nDaniel\n\nDaniel Mwangi, Saltmarsh Running Group\n555-0131\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A half marathon race for 200 runners around Cathedral Green. Requires temporary road closures. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-06-19",
+   "event_name": "Saltmarsh Harvest Run Half Marathon",
+   "event_type": "street_race",
+   "expected_runners": 200,
+   "fee_paid": true,
+   "hospital_distance_km": 4,
+   "organizer": "Saltmarsh Running Group",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 1,
+    "road_closure": true
+   },
+   "venue": "Cathedral Green"
+  }
+ },
+ "events": [
+  159,
+  160,
+  161,
+  162,
+  163,
+  164,
+  165,
+  166,
+  167,
+  168,
+  169,
+  170
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "St. Luke Ambulance Brigade",
+     "value": "St. Luke Ambulance Brigade",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "ambulance cover at the Saltmarsh Harvest Run Half Marathon on June 19, 2027",
+     "value": "June 19, 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "NAMED INSURED: Saltmarsh Running Group",
+     "value": "Saltmarsh Running Group",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "VENUE: Cathedral Green, Port Halden",
+     "value": "Cathedral Green, Port Halden",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "Effective: January 1, 2027",
+     "value": "January 1, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "Expiry: December 31, 2027",
+     "value": "December 31, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "LIMIT OF LIABILITY: $1,000,000 each occurrence",
+     "value": "$1,000,000 each occurrence",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": null,
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_letter",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": false,
+   "id": "crowd_pressure",
+   "likelihood": null,
+   "name": "Crowd pressure",
+   "product": 0.0,
+   "severity": null,
+   "why": "This does not apply here. It applies when: The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.47936828320291,
+    "leaves": [
+     {
+      "contribution": 0.11868972852629096,
+      "count": 5.55932779166214,
+      "entropy": 0.4664294332537809,
+      "levels": [
+       0.026639564502601066,
+       0.8632615363312527,
+       0.11009889916614628
+      ],
+      "reach": 0.99,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 3.7736747590741495,
+      "entropy": 0.7488596836075266,
+      "levels": [
+       0.6887333627702177,
+       0.2661867829061216,
+       0.04507985432366066
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0025354842914704617,
+      "count": 3.8647299095069876,
+      "entropy": 0.5846138466833223,
+      "levels": [
+       0.012615176612934332,
+       0.21459660700666194,
+       0.7727882163804036
+      ],
+      "reach": 0.010000000000000009,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 4.99000508717969,
+      "entropy": 0.4962166069977639,
+      "levels": [
+       0.06178421774558259,
+       0.8619991540191482,
+       0.07621662823526913
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.026499320623704397,
+     0.8567748870380069,
+     0.11672579233828886
+    ],
+    "questions": [
+     {
+      "answer": 0.99,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.12122521281776144
+   },
+   "name": "Medical emergency",
+   "product": 0.024506619317618404,
+   "severity": {
+    "entropy": 0.6736822644101925,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 4.66483724798422,
+      "entropy": 0.4892884141707913,
+      "levels": [
+       0.0674865497428606,
+       0.8650269005142787,
+       0.0674865497428606
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.15612514967155655,
+      "count": 5.031015942708971,
+      "entropy": 0.5596889809137836,
+      "levels": [
+       0.8163190286901207,
+       0.15306747609156607,
+       0.030613495218313212
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 6.0728061171712655,
+      "entropy": 0.402957836613927,
+      "levels": [
+       0.01088838305151991,
+       0.880227786433281,
+       0.10888383051519908
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.04603262549737093,
+      "count": 2.102770493148919,
+      "entropy": 1.0330281885756594,
+      "levels": [
+       0.2608692205667498,
+       0.5081524108603594,
+       0.23097836857289064
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.7607740478777837,
+     0.1885759695684454,
+     0.050649982553770956
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.2021577751689275
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.7550888348697798,
+    "leaves": [
+     {
+      "contribution": 0.00047584556496752407,
+      "count": 2.8305982628389783,
+      "entropy": 0.7249421274792494,
+      "levels": [
+       0.7249101663387355,
+       0.22076711992159018,
+       0.05432271373967428
+      ],
+      "reach": 0.009,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.017092607577891418,
+      "count": 4.175792807269164,
+      "entropy": 0.9256925876745112,
+      "levels": [
+       0.08573334661542342,
+       0.44081905221690076,
+       0.47344760116767587
+      ],
+      "reach": 0.09100000000000001,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.011959666188877246,
+      "count": 3.5899097925348844,
+      "entropy": 1.0375343016303846,
+      "levels": [
+       0.19946508261442936,
+       0.4824978850263886,
+       0.318037032359182
+      ],
+      "reach": 0.081,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.20240621200155157,
+      "count": 5.4004777899612115,
+      "entropy": 0.6276103366085987,
+      "levels": [
+       0.014610380137519013,
+       0.24385430784684112,
+       0.7415353120156398
+      ],
+      "reach": 0.8190000000000001,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.042448499063449004,
+     0.2809004446447326,
+     0.6766510562918184
+    ],
+    "questions": [
+     {
+      "answer": 0.1,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.09,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.23193433133328775
+   },
+   "name": "Traffic conflict",
+   "product": 0.036677380797900984,
+   "severity": {
+    "entropy": 0.48168439224434134,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 2.0,
+      "entropy": 0.8451132568429528,
+      "levels": [
+       0.05,
+       0.4,
+       0.55
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 2.8600000000000003,
+      "entropy": 0.7934270068588588,
+      "levels": [
+       0.06503496503496503,
+       0.6748251748251748,
+       0.2601398601398601
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.7386857486,
+      "entropy": 0.4140870078692604,
+      "levels": [
+       0.07273669266204923,
+       0.8908949610069262,
+       0.03636834633102461
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.15813691999394383,
+      "count": 5.09536102,
+      "entropy": 0.48168439224434134,
+      "levels": [
+       0.8531895959748893,
+       0.12332073938109298,
+       0.02348966464401771
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.8531895959748893,
+     0.12332073938109298,
+     0.02348966464401771
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.15813691999394383
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.2021577751689275,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.19714787312166646,
+   "t_low": 0.1831142813095249
+  },
+  "weights_version": "first-guess+13"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 1,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Fee, date and insurance are in order. The ambulance is booked, the hospital is near and the medical plan is complete, so overall risk is low even though the traffic plan has gaps and the race is in summer.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.06118400011551939,
+ "t_high": 0.19714787312166646,
+ "t_low": 0.1831142813095249,
+ "title": "Saltmarsh Harvest Run Half Marathon",
+ "unmapped_documents": []
+}

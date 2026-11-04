@@ -1,0 +1,28 @@
+{
+ "answers": "real",
+ "note": "Near zero flips would be a valid finding: it would mean Jev adds little on these cases.",
+ "questions": {
+  "crowd_plan_adequate": {
+   "cases": 115,
+   "flips": 5,
+   "mean": 0.46828947368421053
+  },
+  "medical_plan_adequate": {
+   "cases": 115,
+   "flips": 3,
+   "mean": 0.4445217391304348
+  },
+  "narrow_venue": {
+   "cases": 115,
+   "flips": 0,
+   "mean": 0.43684210526315786
+  },
+  "traffic_plan_adequate": {
+   "cases": 115,
+   "flips": 4,
+   "mean": 0.5373913043478261
+  }
+ },
+ "split": "validation",
+ "synthetic": true
+}

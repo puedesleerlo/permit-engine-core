@@ -1,0 +1,1159 @@
+{
+ "case_id": "R0158-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": {
+  "bucket": "confirmed",
+  "changes": [
+   {
+    "after": [
+     0.9568101909410416,
+     0.03631918043180734,
+     0.0068706286271511706
+    ],
+    "before": [
+     0.9508144653926142,
+     0.04136110682040668,
+     0.007824427786979176
+    ],
+    "count_after": 7.951819014915056,
+    "count_before": 7.399868734369391,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": true
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.12643201470981813,
+     0.787126341734288,
+     0.08644164355589398
+    ],
+    "before": [
+     0.12034403662892101,
+     0.7926118998088357,
+     0.08704406356224322
+    ],
+    "count_after": 4.431792414327072,
+    "count_before": 4.465464883350274,
+    "leaf": {
+     "crowd_over_800": false,
+     "crowd_plan_adequate": false
+    },
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "after": [
+     0.0540339416603983,
+     0.9049444056499149,
+     0.04102165268968685
+    ],
+    "before": [
+     0.05376895920656487,
+     0.9051978971859779,
+     0.0410331436074573
+    ],
+    "count_after": 6.34089735396515,
+    "count_before": 6.352937717321266,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": true
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.945136185893052,
+     0.048751485632242256,
+     0.00611232847470572
+    ],
+    "before": [
+     0.9348429060777648,
+     0.057898000346757454,
+     0.007259093575477785
+    ],
+    "count_after": 6.318821149011097,
+    "count_before": 5.708629969471838,
+    "leaf": {
+     "crowd_over_800": false,
+     "narrow_venue": false
+    },
+    "tree_id": "crowd.severity"
+   },
+   {
+    "after": [
+     0.009746407010790227,
+     0.9415928825005744,
+     0.04866071048863544
+    ],
+    "before": [
+     0.009747552263854839,
+     0.9417035245179973,
+     0.04854892321814783
+    ],
+    "count_after": 8.887791316176191,
+    "count_before": 8.899654790385135,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": true
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.002331148372049169,
+     0.044457945445915026,
+     0.9532109061820359
+    ],
+    "before": [
+     0.002599283183883658,
+     0.049571615163218175,
+     0.9478291016528981
+    ],
+    "count_after": 9.68381872651689,
+    "count_before": 9.325018040869258,
+    "leaf": {
+     "hot_date": true,
+     "medical_plan_adequate": false
+    },
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "after": [
+     0.9560103597573664,
+     0.03729048744702934,
+     0.006699152795604374
+    ],
+    "before": [
+     0.9516549696161495,
+     0.040982598146096866,
+     0.007362432237753619
+    ],
+    "count_after": 10.652903225177822,
+    "count_before": 10.347415792070203,
+    "leaf": {
+     "ambulance_on_site": true,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.36354542082345886,
+     0.5919556367153104,
+     0.044498942461230644
+    ],
+    "before": [
+     0.35950103626564256,
+     0.5957172503706656,
+     0.04478171336369191
+    ],
+    "count_after": 6.379509862441425,
+    "count_before": 6.385398448335911,
+    "leaf": {
+     "ambulance_on_site": false,
+     "hospital_far": false
+    },
+    "tree_id": "medical.severity"
+   },
+   {
+    "after": [
+     0.49362114979217975,
+     0.48130276491764373,
+     0.025076085290176534
+    ],
+    "before": [
+     0.5574776775636563,
+     0.41420230860419494,
+     0.0283200138321489
+    ],
+    "count_after": 7.089026171559418,
+    "count_before": 6.6744622702928105,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.03508786314542831,
+     0.6398631660462478,
+     0.3250489708083239
+    ],
+    "before": [
+     0.0354352276453167,
+     0.6362978662530048,
+     0.32826690610167847
+    ],
+    "count_after": 8.1224218403922,
+    "count_before": 8.074379452098068,
+    "leaf": {
+     "escort_confirmed": true,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.15164127718197223,
+     0.4900724935795629,
+     0.3582862292384649
+    ],
+    "before": [
+     0.153990873411955,
+     0.4821714539093931,
+     0.3638376726786519
+    ],
+    "count_after": 6.883552255047449,
+    "count_before": 6.824921614443604,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": true
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.007884528462540466,
+     0.2400016807212134,
+     0.7521137908162461
+    ],
+    "before": [
+     0.007887856512772417,
+     0.23968088632053683,
+     0.7524312571666908
+    ],
+    "count_after": 7.898330468050063,
+    "count_before": 7.898436420018869,
+    "leaf": {
+     "escort_confirmed": false,
+     "traffic_plan_adequate": false
+    },
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "after": [
+     0.9668245716886004,
+     0.02786735978157567,
+     0.005308068529823937
+    ],
+    "before": [
+     0.9631984866186197,
+     0.030913271240359474,
+     0.005888242141020852
+    ],
+    "count_after": 10.149103694794457,
+    "count_before": 9.837745908381136,
+    "leaf": {
+     "arterial_road": false,
+     "crowd_over_800": false
+    },
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false
+ },
+ "decision": {
+  "clauses": [
+   "ORD-20.1"
+  ],
+  "reason_code": "approved",
+  "route": "approved",
+  "row": 4,
+  "text": "Every check passed and the risk is below the lower threshold, so the race is approved."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "ambulance_agreement.txt",
+    "text": "St. Luke Ambulance Brigade\nBookings Office\n\n6 May 2027\n\nDear Helen Achterberg,\n\nThank you for your booking and payment. This letter is your agreement with us for ambulance cover at the Riverside Open Race 10K on 1 August 2027. One ambulance and two paramedics will be on site at the top of Dyer Street, in place by 06:45, and will stay until the race has finished. Booking reference EV-10957.\n\nOur crew leader will find your race director when they arrive.\n\nKind regards,\nLucas Ferreira\nBookings Manager\n"
+   },
+   {
+    "name": "crowd_plan.txt",
+    "text": "Riverside Open Race 10K - crowd notes\nSunday 1 August 2027 / contact Helen Achterberg 555-0159\ntotal 300 incl 300 runners. We do not expect spectators in any number beyond the runners' own companions.\n\nVIEWING\n3 barriered areas: finish Ferry Park lawn, turn at Glebe Road, start the top of Dyer Street. approx 400 total @ 2 per sqm. over expected numbers\n\nbg: committee done this race yrs. attendance growing slowly. helpers mostly members + family, many on rota before\n\nSTART\n3 waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave\n\nSTEWARDS\n6 stewards (approx 1:50), 2 supervisors, rota by position, briefing 1hr before\n\nEXIT\nrunners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins\n\nCONTROL\nHelen Achterberg at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF AG-23702\nNorthern Shield Assurance   POL NO GL-476465\nINSURED ....... Riverside Runners\nRISK LOCATION .. Tanners Row\nFROM .......... July 31, 2027\nTO ............ August 2, 2027\nINDEMNITY ..... $1,000,000\nACTIVITY ...... Foot race (Riverside Open Race 10K)\nISSUED ........ May 6, 2027\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Medical cover for the Riverside Open Race 10K, Sunday 1 August 2027\n\nFrom Helen Achterberg, Volunteer Coordinator, Riverside Runners\n\nThe race is a 10K with 300 runners and starts at 08:00. On-site ambulance cover is set out in the attached paperwork from St. Luke Ambulance Brigade.\n\nFirst aid\nSeveral of our members have done the first aid course through work, and they're happy to help out. We keep a good first aid box at the HQ tent, and another one goes in the lead car. In all our years we've only ever had blisters and scraped knees.\n\nHeat, cold and water\nThere's water every 2.5 km. We look at the forecast two days before and again two hours before. Over 28 degrees we start earlier or cut the course, and over 32 degrees we call it off. If it's cold or wet, we have foil blankets and a warm tent at the finish.\n\nIf someone needs hospital\nIf someone needed the hospital we'd dial 911 and the paramedics would take it from there. They know what they're doing far better than we do, and the city's service is very good.\n\nRunners get an email in race week telling them to dress for the weather and to keep a phone with them if they can. Most have run with us before. The list of entrants includes an emergency contact for each runner, which is kept at the start.\n\nStaying in touch\nEveryone at a post and both bike first aiders has a radio on our medical channel, with phones as backup. Calls for an ambulance go through our medical lead, who tells the crew which barrier to come to.\n\nWho's responsible\nOur medical lead is Rhys Morgan, a registered paramedic, who'll be there from an hour before the start until the last runner is in and has the final word on pulling any runner out.\n"
+   },
+   {
+    "name": "police_letter.txt",
+    "text": "PORT HALDEN POLICE SERVICE\nTraffic and Events Division\n200 Prince Street, Port Halden\n\nMay 6, 2027\n\nHelen Achterberg\nRiverside Runners\n\nRe: Riverside Open Race 10K, August 1, 2027\n\nDear Helen Achterberg,\n\nI confirm that this Division will provide a police escort for the above event on August 1, 2027. Two motorcycle officers will accompany the lead runner along the route through Tanners Row, and one traffic unit will be stationed at Dyer Street from 06:45 until the last runner has cleared the course.\n\nPlease send your final course map to this office no later than seven days before the event.\n\nYours sincerely,\n\nSgt. Karen Holt\nTraffic and Events Division\nReference AG-26358\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nRiverside Open Race 10K | Sunday 1 August 2027\nOrganiser: Riverside Runners\nRace director: Helen Achterberg\nReference: EV-25766\n\nOverview\nThe Riverside Open Race 10K is a 10K race of 10 km for 300 entrants, based in the Tanners Row area of Port Halden. The start is at 08:00 and the course closes at 10:00.\n\nCourse\nThe course runs in order along Dyer Street, Glebe Road and Rope Walk, all of which are closed to traffic for the race. Major roads crossed: High Street, Ferry Road and Regent Road. The finish is in Ferry Park lawn.\n\nCourse dimensions\nThe course uses wide carriageways throughout. Dyer Street offers 16 m kerb to kerb, Glebe Road about 9 m and Rope Walk about 14 m, with footways of a further 3 m on each side. The field assembles on Dyer Street, and the finish is in Ferry Park lawn, an open paved area of around one and a half hectares.\n\nSupport\nEntrants collect numbers from the top of Dyer Street from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Riverside website the same day.\n"
+   },
+   {
+    "name": "traffic_plan.txt",
+    "text": "Traffic arrangements for the Riverside Open Race 10K, Sunday 1 August 2027\n\nFrom Helen Achterberg, Volunteer Coordinator, Riverside Runners\n\nWe have tried to think through what happens on the roads on race day. The race is a 10K, it starts at 08:00, and it goes through the Tanners Row area. Police attendance is covered in the attached correspondence.\n\nClosing the roads\nWe need the following closures, and Northline Barriers will put out the barriers and signs for us. Dyer Street from Chapel Row to Bridge Row, 06:45 until 10:30. Glebe Road from Salter Way to Bell Street, 06:45 until 10:30. Rope Walk from Bell Street to Chapel Row, 06:45 until 10:30.\n\nCrossings\nWhere we cross a major road we will have people stationed from 06:45 until the last runner is through. At High Street, where it meets Dyer Street, there will be 4 traffic marshals with stop/go boards and a supervisor. At Ferry Road, where it meets Glebe Road, there will be 2 traffic marshals with stop/go boards and a supervisor. At Regent Road, where it meets Rope Walk, there will be 3 traffic marshals with stop/go boards and a supervisor.\n\nGetting around the closures\nWe've worked out the way round for drivers and Northline Barriers will sign it. Traffic off Dyer Street goes via Queen's Road and Cross Avenue, signed from Salter Way. Traffic off Glebe Road goes via Tram Street and Prince Street, signed from Bridge Row. Traffic off Rope Walk goes via Prince Street and Station Road, signed from Salter Way.\n\nEmergency vehicles\nWe keep one lane clear the whole way, 3.5 metres or more, for ambulances and fire engines. Every barrier has someone with a radio on our channel, and they can have it open within two minutes. Our controller on the day has direct numbers for police and ambulance control.\n\nLetting people know\nWe put the race on our Facebook page and in the club newsletter, and the local paper usually gives us a mention.\n\nAfterwards\nOur sweep vehicle follows the last runner, and each closure comes off in turn once it has passed and the road is clear. Everything will be open again by 10:30.\n"
+   }
+  ],
+  "cover_letter": "6 May 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Riverside Open Race 10K on Sunday 1 August 2027. We expect 300 runners over 10K, starting at 08:00 in the Tanners Row area. The completed form and the attachments (ambulance_agreement.txt, crowd_plan.txt, insurance.txt, medical_plan.txt, police_letter.txt, race_plan.txt, traffic_plan.txt) are enclosed.\n\nWe look forward to hearing from you.\n\nYours faithfully,\n\nHelen Achterberg\nVolunteer Coordinator, Riverside Runners\nhelen@riversiderunners.example / 555-0159\n",
+  "form": {
+   "attachments": [
+    "ambulance_agreement.txt",
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "police_letter.txt",
+    "race_plan.txt",
+    "traffic_plan.txt"
+   ],
+   "description": "A 10K race for 300 runners around Tanners Row. Requires temporary road closures. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-08-01",
+   "event_name": "Riverside Open Race 10K",
+   "event_type": "street_race",
+   "expected_runners": 300,
+   "fee_paid": true,
+   "hospital_distance_km": 5,
+   "organizer": "Riverside Runners",
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 3,
+    "road_closure": true
+   },
+   "venue": "Tanners Row"
+  }
+ },
+ "events": [
+  530,
+  531,
+  532,
+  533,
+  534,
+  535,
+  536,
+  537,
+  538,
+  539,
+  540,
+  541
+ ],
+ "evidence": [
+  {
+   "document": "ambulance_agreement.txt",
+   "evidence_type": "ambulance_agreement",
+   "fields": [
+    {
+     "matches_form": null,
+     "name": "provider",
+     "quote": "St. Luke Ambulance Brigade",
+     "value": "St. Luke Ambulance Brigade",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "This letter is your agreement with us for ambulance cover at the Riverside Open Race 10K on 1 August 2027.",
+     "value": "1 August 2027",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "insurance.txt",
+   "evidence_type": "certificate_of_insurance",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "named_insured",
+     "quote": "INSURED ....... Riverside Runners",
+     "value": "Riverside Runners",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "venue",
+     "quote": "RISK LOCATION .. Tanners Row",
+     "value": "Tanners Row",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "start_date",
+     "quote": "FROM .......... July 31, 2027",
+     "value": "July 31, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": true,
+     "name": "end_date",
+     "quote": "TO ............ August 2, 2027",
+     "value": "August 2, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "coverage",
+     "quote": "INDEMNITY ..... $1,000,000",
+     "value": "$1,000,000",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "crowd_plan.txt",
+   "evidence_type": "crowd_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "medical_plan.txt",
+   "evidence_type": "medical_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": null,
+   "evidence_type": "police_escort_email",
+   "fields": [],
+   "reason": "no_evidence",
+   "source": "stored",
+   "status": "absent",
+   "verdict": null
+  },
+  {
+   "document": "police_letter.txt",
+   "evidence_type": "police_escort_letter",
+   "fields": [
+    {
+     "matches_form": true,
+     "name": "event_date",
+     "quote": "I confirm that this Division will provide a police escort for the above event on August 1, 2027.",
+     "value": "August 1, 2027",
+     "verified": true
+    },
+    {
+     "matches_form": null,
+     "name": "signed_by",
+     "quote": "Sgt. Karen Holt",
+     "value": "Sgt. Karen Holt",
+     "verified": true
+    }
+   ],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": "supported"
+  },
+  {
+   "document": "race_plan.txt",
+   "evidence_type": "race_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  },
+  {
+   "document": "traffic_plan.txt",
+   "evidence_type": "traffic_plan",
+   "fields": [],
+   "reason": null,
+   "source": "stored",
+   "status": "found",
+   "verdict": null
+  }
+ ],
+ "hazards": [
+  {
+   "applies": true,
+   "id": "crowd_pressure",
+   "likelihood": {
+    "entropy": 0.5954400285045414,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 6.637702144564424,
+      "entropy": 0.420121316036623,
+      "levels": [
+       0.060355125053345046,
+       0.8907318146319188,
+       0.0489130603147362
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.020399782660789366,
+      "count": 7.399868734369391,
+      "entropy": 0.21766027604089971,
+      "levels": [
+       0.9508144653926142,
+       0.04136110682040668,
+       0.007824427786979176
+      ],
+      "reach": 0.8,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 9.077538342004082,
+      "entropy": 0.20887849172726225,
+      "levels": [
+       0.005213040603834099,
+       0.04272331735995827,
+       0.9520636420362077
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "crowd_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.021556257956426985,
+      "count": 4.465464883350274,
+      "entropy": 0.6515408818540216,
+      "levels": [
+       0.12034403662892101,
+       0.7926118998088357,
+       0.08704406356224322
+      ],
+      "reach": 0.19999999999999996,
+      "when": {
+       "crowd_over_800": false,
+       "crowd_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.7847203796398756,
+     0.19161126541809245,
+     0.02366835494203198
+    ],
+    "questions": [
+     {
+      "answer": 0.8,
+      "clause": "ORD-14.1",
+      "id": "crowd_plan_adequate",
+      "kind": "jev",
+      "text": "Is the crowd plan adequate?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.likelihood",
+    "value": 0.041956040617216354
+   },
+   "name": "Crowd pressure",
+   "product": 0.005556665686574498,
+   "severity": {
+    "entropy": 0.33397648227819915,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 8.286168616523822,
+      "entropy": 0.2752939493361463,
+      "levels": [
+       0.00587911903659968,
+       0.9294505715608038,
+       0.0646703094025965
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.01225467595207515,
+      "count": 6.352937717321266,
+      "entropy": 0.37836329738836694,
+      "levels": [
+       0.05376895920656487,
+       0.9051978971859779,
+       0.0410331436074573
+      ],
+      "reach": 0.03,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.439638348047609,
+      "entropy": 0.3030904348535829,
+      "levels": [
+       0.059781280934618715,
+       0.9252733988317265,
+       0.014945320233654679
+      ],
+      "reach": 0.0,
+      "when": {
+       "crowd_over_800": true,
+       "narrow_venue": false
+      }
+     },
+     {
+      "contribution": 0.12018550679229853,
+      "count": 5.708629969471838,
+      "entropy": 0.2636969678734098,
+      "levels": [
+       0.9348429060777648,
+       0.057898000346757454,
+       0.007259093575477785
+      ],
+      "reach": 0.97,
+      "when": {
+       "crowd_over_800": false,
+       "narrow_venue": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9084106876716287,
+     0.08331699725193406,
+     0.00827231507643717
+    ],
+    "questions": [
+     {
+      "answer": 0.03,
+      "clause": "ORD-14.2",
+      "id": "narrow_venue",
+      "kind": "jev",
+      "text": "Is the venue too confined for people to spread out?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "crowd.severity",
+    "value": 0.13244018274437366
+   },
+   "why": "The crowd is 300 or more."
+  },
+  {
+   "applies": true,
+   "id": "medical_emergency",
+   "likelihood": {
+    "entropy": 0.2656217565819194,
+    "leaves": [
+     {
+      "contribution": 0.002178599609250424,
+      "count": 8.899654790385135,
+      "entropy": 0.24857097968986105,
+      "levels": [
+       0.009747552263854839,
+       0.9417035245179973,
+       0.04854892321814783
+      ],
+      "reach": 0.02,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.93332405800158,
+      "entropy": 0.3636482252256501,
+      "levels": [
+       0.8996723928897127,
+       0.0877632237850721,
+       0.012564383325215207
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.28357072012235157,
+      "count": 9.325018040869258,
+      "entropy": 0.21518780903035492,
+      "levels": [
+       0.002599283183883658,
+       0.049571615163218175,
+       0.9478291016528981
+      ],
+      "reach": 0.98,
+      "when": {
+       "hot_date": true,
+       "medical_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 7.613640557671327,
+      "entropy": 0.3723751039361415,
+      "levels": [
+       0.06810728900005951,
+       0.9044825027486291,
+       0.02741020825131141
+      ],
+      "reach": 0.0,
+      "when": {
+       "hot_date": false,
+       "medical_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.0027422485654830814,
+     0.06741425335031376,
+     0.9298434980842032
+    ],
+    "questions": [
+     {
+      "answer": 0.02,
+      "clause": "ORD-16.1",
+      "id": "medical_plan_adequate",
+      "kind": "jev",
+      "text": "Is the medical plan adequate?"
+     },
+     {
+      "answer": 1.0,
+      "clause": "ORD-1.3",
+      "id": "hot_date",
+      "kind": "rule",
+      "text": "Is the race on a hot date?"
+     }
+    ],
+    "tree_id": "medical.likelihood",
+    "value": 0.285749319731602
+   },
+   "name": "Medical emergency",
+   "product": 0.03969936539517568,
+   "severity": {
+    "entropy": 0.377109407184384,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 9.39329321838957,
+      "entropy": 0.1714843548955223,
+      "levels": [
+       0.01694242448507592,
+       0.9661151510298481,
+       0.01694242448507592
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.1070288716120266,
+      "count": 10.347415792070203,
+      "entropy": 0.21424002486671867,
+      "levels": [
+       0.9516549696161495,
+       0.040982598146096866,
+       0.007362432237753619
+      ],
+      "reach": 0.9,
+      "when": {
+       "ambulance_on_site": true,
+       "hospital_far": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.363477169967751,
+      "entropy": 0.2521818694442584,
+      "levels": [
+       0.005662229842546086,
+       0.937715471731993,
+       0.05662229842546086
+      ],
+      "reach": 0.0,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": true
+      }
+     },
+     {
+      "contribution": 0.03190187171385223,
+      "count": 6.385398448335911,
+      "entropy": 0.8154483689112886,
+      "levels": [
+       0.35950103626564256,
+       0.5957172503706656,
+       0.04478171336369191
+      ],
+      "reach": 0.09999999999999998,
+      "when": {
+       "ambulance_on_site": false,
+       "hospital_far": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.8924395762810988,
+     0.09645606336855372,
+     0.011104360350347446
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-16.2",
+      "id": "ambulance_on_site",
+      "kind": "evidence",
+      "text": "Is an ambulance on site?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-16.3",
+      "id": "hospital_far",
+      "kind": "rule",
+      "text": "Is the hospital more than 10 km away?"
+     }
+    ],
+    "tree_id": "medical.severity",
+    "value": 0.13893074332587882
+   },
+   "why": "Always, for a race."
+  },
+  {
+   "applies": true,
+   "id": "traffic_conflict",
+   "likelihood": {
+    "entropy": 0.9154259138419829,
+    "leaves": [
+     {
+      "contribution": 0.05166165712289135,
+      "count": 6.6744622702928105,
+      "entropy": 0.7917685412729586,
+      "levels": [
+       0.5574776775636563,
+       0.41420230860419494,
+       0.0283200138321489
+      ],
+      "reach": 0.846,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.008792202402470367,
+      "count": 8.074379452098068,
+      "entropy": 0.7716841115387102,
+      "levels": [
+       0.0354352276453167,
+       0.6362978662530048,
+       0.32826690610167847
+      ],
+      "reach": 0.05400000000000005,
+      "when": {
+       "escort_confirmed": true,
+       "traffic_plan_adequate": false
+      }
+     },
+     {
+      "contribution": 0.01508213687830075,
+      "count": 6.824921614443604,
+      "entropy": 1.0076754471685065,
+      "levels": [
+       0.153990873411955,
+       0.4821714539093931,
+       0.3638376726786519
+      ],
+      "reach": 0.09399999999999997,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": true
+      }
+     },
+     {
+      "contribution": 0.0014991313374738992,
+      "count": 7.898436420018869,
+      "entropy": 0.5945936040209174,
+      "levels": [
+       0.007887856512772417,
+       0.23968088632053683,
+       0.7524312571666908
+      ],
+      "reach": 0.006000000000000004,
+      "when": {
+       "escort_confirmed": false,
+       "traffic_plan_adequate": false
+      }
+     }
+    ],
+    "level_names": [
+     "rare",
+     "possible",
+     "likely"
+    ],
+    "levels": [
+     0.48806208675150076,
+     0.4315374398422173,
+     0.08040047340628204
+    ],
+    "questions": [
+     {
+      "answer": 0.9,
+      "clause": "ORD-12.4",
+      "id": "escort_confirmed",
+      "kind": "evidence",
+      "text": "Is the police escort confirmed?"
+     },
+     {
+      "answer": 0.94,
+      "clause": "ORD-12.2",
+      "id": "traffic_plan_adequate",
+      "kind": "jev",
+      "text": "Is the traffic plan adequate?"
+     }
+    ],
+    "tree_id": "traffic.likelihood",
+    "value": 0.07703512774113636
+   },
+   "name": "Traffic conflict",
+   "product": 0.00882617645073674,
+   "severity": {
+    "entropy": 0.1738229490185062,
+    "leaves": [
+     {
+      "contribution": 0.0,
+      "count": 4.403614,
+      "entropy": 0.504227855477891,
+      "levels": [
+       0.01826583801395854,
+       0.1461267041116683,
+       0.8356074578743733
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 5.7386857486,
+      "entropy": 0.4300269174768139,
+      "levels": [
+       0.024245564220683077,
+       0.8787721788965847,
+       0.0969822568827323
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": true,
+       "crowd_over_800": false
+      }
+     },
+     {
+      "contribution": 0.0,
+      "count": 8.339645940368685,
+      "entropy": 0.23827670406594795,
+      "levels": [
+       0.03482034925510738,
+       0.947769476117339,
+       0.01741017462755369
+      ],
+      "reach": 0.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": true
+      }
+     },
+     {
+      "contribution": 0.11457339929902663,
+      "count": 9.837745908381136,
+      "entropy": 0.1738229490185062,
+      "levels": [
+       0.9631984866186197,
+       0.030913271240359474,
+       0.005888242141020852
+      ],
+      "reach": 1.0,
+      "when": {
+       "arterial_road": false,
+       "crowd_over_800": false
+      }
+     }
+    ],
+    "level_names": [
+     "minor",
+     "serious",
+     "critical"
+    ],
+    "levels": [
+     0.9631984866186197,
+     0.030913271240359474,
+     0.005888242141020852
+    ],
+    "questions": [
+     {
+      "answer": 0.0,
+      "clause": "ORD-12.3",
+      "id": "arterial_road",
+      "kind": "rule",
+      "text": "Does the route use an arterial road?"
+     },
+     {
+      "answer": 0.0,
+      "clause": "ORD-1.2",
+      "id": "crowd_over_800",
+      "kind": "rule",
+      "text": "Is the crowd over 800?"
+     }
+    ],
+    "tree_id": "traffic.severity",
+    "value": 0.11457339929902663
+   },
+   "why": "The race closes a road."
+  }
+ ],
+ "highest_severity": 0.13893074332587882,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.21376493779963796,
+   "t_low": 0.18382375716334348
+  },
+  "weights_version": "first-guess+44"
+ },
+ "officer": {
+  "agrees_with_label": true,
+  "kind": "review",
+  "label": "Simulated officer: an LLM following the expert rubric",
+  "named": [
+   {
+    "level": 0,
+    "tree_id": "crowd.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "crowd.severity"
+   },
+   {
+    "level": 2,
+    "tree_id": "medical.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "medical.severity"
+   },
+   {
+    "level": 1,
+    "tree_id": "traffic.likelihood"
+   },
+   {
+    "level": 0,
+    "tree_id": "traffic.severity"
+   }
+  ],
+  "outcome_risky": false,
+  "reason": "Insurance, fee and date are in order. Police, traffic, crowd and ambulance arrangements are solid. The medical plan has gaps and the race is in August, but overall risk stays below the threshold.",
+  "ruling": "approve"
+ },
+ "requirements": [
+  {
+   "clause": "ORD-7.1",
+   "evidence_type": "certificate_of_insurance",
+   "id": "event_insurance",
+   "status": "met"
+  }
+ ],
+ "risk": 0.054082207532486916,
+ "t_high": 0.21376493779963796,
+ "t_low": 0.18382375716334348,
+ "title": "Riverside Open Race 10K",
+ "unmapped_documents": []
+}

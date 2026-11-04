@@ -1,0 +1,97 @@
+{
+ "case_id": "R0320-plain",
+ "ceiling": 0.85,
+ "checks": [
+  {
+   "clause": "ORD-3.1",
+   "id": "fee_paid",
+   "passed": true
+  },
+  {
+   "clause": "ORD-3.2",
+   "id": "form_complete",
+   "passed": false
+  },
+  {
+   "clause": "ORD-3.3",
+   "id": "date_allowed",
+   "passed": true
+  }
+ ],
+ "correction": null,
+ "decision": {
+  "clauses": [
+   "ORD-3.2"
+  ],
+  "reason_code": "form_returned",
+  "route": "returned",
+  "row": 0,
+  "text": "The form is incomplete, so it goes back to the applicant."
+ },
+ "documents": {
+  "attachments": [
+   {
+    "name": "crowd_plan.txt",
+    "text": "Stonebridge Harvest Run 5K - crowd notes\nSunday 10 October 2027 / contact Fatima Haddad 555-0120\ntotal 1200 incl 1200 runners. Few people come just to watch.\n\nVIEWING\n3 barriered areas: finish the rowing club, turn at Old Mill Trail, start the old mill car park. approx 1600 total @ 2 per sqm. over expected numbers\n\nSTART\n3 waves, 4 min gaps, seeded by expected time. pens close 5 min before each wave\n\nSTEWARDS\n24 stewards (approx 1:50), 3 supervisors, rota by position, briefing 1hr before\n\nEXIT\nrunners one-way funnel to recovery, out north gate. spectators 2 marked exits, steward on each. clear in 25 mins\n\nbg: committee done this race yrs. attendance growing slowly. helpers mostly members + family, many on rota before\n\nCONTROL\nFatima Haddad at control w/ radio to all supervisors. can hold wave, stop race, use PA. sups call in if area getting full\n"
+   },
+   {
+    "name": "insurance.txt",
+    "text": "CERT OF INS.   REF PH-46981\nMeridian Mutual Insurance   POL NO PL-404383\nINSURED ....... Stonebridge Neighbourhood Council\nRISK LOCATION .. Kingsway Gardens\nFROM .......... 1 January 2027\nTO ............ 31 December 2027\nINDEMNITY ..... $5,000,000\nACTIVITY ...... Foot race (Stonebridge Harvest Run 5K)\nISSUED ........ 11 July 2027\n"
+   },
+   {
+    "name": "medical_plan.txt",
+    "text": "Stonebridge Harvest Run 5K - medical notes\nSunday 10 October 2027 / gun 10:00 / 1200 runners / 5K\ncontact Fatima Haddad 555-0120\nNo ambulance will be stationed at the race; any ambulance would come through the 911 system.\n\nFIRST AID\ncommittee members w/ work first aid certs. kit at HQ tent + kit in lead car\n\nWEATHER / WATER\nwater every 2.5k. forecast check -48h and -2h. >28C earlier start or shorter course. >32C cancel. foil + warm tent at finish if cold/wet\n\nHOSPITAL\ncall 911 if needed, paramedics handle it from there\n\nCOMMS\nradios on medical channel at all posts + bikes, phones backup. amb calls go via medical lead, who gives crew the barrier to come to\n\nLEAD\nPriya Raman, registered paramedic, on site from -1hr til last runner in. can withdraw any runner\n"
+   },
+   {
+    "name": "race_plan.txt",
+    "text": "RACE PLAN\nStonebridge Harvest Run 5K | Sunday 10 October 2027\nOrganiser: Stonebridge Neighbourhood Council\nRace director: Fatima Haddad\nReference: EV-12083\n\nOverview\nThe Stonebridge Harvest Run 5K is a 5K race of 5 km for 1200 entrants, based in the Kingsway Gardens area of Port Halden. The start is at 10:00 and the course closes at 11:15.\n\nCourse\nThe course stays entirely on the Pier Promenade and the Old Mill Trail, away from the highway, and no road is closed for the race. The finish is at the rowing club.\n\nCourse dimensions\nUsable width on the Pier Promenade is 12 m and on the Old Mill Trail 12 m, with lawn or open paving beside the course for almost the whole distance. The finish area measures roughly 120 m by 60 m.\n\nSupport\nEntrants collect numbers from the old mill car park from one hour before the start. Timing is by chip, with mats at the start and finish. Results are posted on the Stonebridge website the same day.\n"
+   }
+  ],
+  "cover_letter": "11 July 2027\n\nEvents Office\nCity of Port Halden\n\nDear Events Officer,\n\nI am writing on behalf of our organisation about this year's race.\n\nWe are applying for a street race permit for the Stonebridge Harvest Run 5K on Sunday 10 October 2027. We expect 1200 runners over 5K, starting at 10:00 in the Kingsway Gardens area. The completed form and the attachments (crowd_plan.txt, insurance.txt, medical_plan.txt, race_plan.txt) are enclosed.\n\nPlease let me know if you need anything else.\n\nYours faithfully,\n\nFatima Haddad\nRace Director, Stonebridge Neighbourhood Council\nfatima@stonebridgenc.example / 555-0120\n",
+  "form": {
+   "attachments": [
+    "crowd_plan.txt",
+    "insurance.txt",
+    "medical_plan.txt",
+    "race_plan.txt"
+   ],
+   "description": "A 5K race for 1200 runners on off-road paths at Kingsway Gardens. It's mainly a participants' event, and we don't expect people to come specially to watch.",
+   "event_date": "2027-10-10",
+   "event_name": "Stonebridge Harvest Run 5K",
+   "event_type": "street_race",
+   "expected_runners": 1200,
+   "fee_paid": true,
+   "hospital_distance_km": 9,
+   "route": {
+    "arterial_road": false,
+    "major_crossings": 0,
+    "road_closure": false
+   },
+   "venue": "Kingsway Gardens"
+  }
+ },
+ "events": [
+  1132,
+  1133,
+  1134
+ ],
+ "evidence": [],
+ "hazards": [],
+ "highest_severity": 0.0,
+ "manifest": {
+  "rules_hash": "d3139ed35675ff46e58215c6ab9f397a18da7464fde239cca77eb5f4b4e09ac0",
+  "source": "stored",
+  "thresholds": {
+   "t_high": 0.2321834711919719,
+   "t_low": 0.1859683449237186
+  },
+  "weights_version": "first-guess+95"
+ },
+ "officer": null,
+ "requirements": [],
+ "risk": 0.0,
+ "t_high": 0.2321834711919719,
+ "t_low": 0.1859683449237186,
+ "title": "Stonebridge Harvest Run 5K",
+ "unmapped_documents": []
+}
